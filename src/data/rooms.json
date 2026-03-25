@@ -1,0 +1,2474 @@
+[
+  {
+    "index": 1,
+    "name": "Misty Riverside",
+    "status": "In Game",
+    "x": 3,
+    "y": 1,
+    "z": 1,
+    "exits": [
+      20
+    ],
+    "description": "The air is quiet and the trees grow thick overhead. In each direction the murky river disappears into mist and darkness.",
+    "node": {
+      "name": "Misty Riverside",
+      "affinity": "Eerie",
+      "levelLimit": 15,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 100,
+      "droptableName": "Stones & Bottle",
+      "droptable": {
+        "name": "Stones & Bottle",
+        "indices": [
+          1002,
+          1003
+        ],
+        "tiers": [
+          9,
+          7
+        ],
+        "items": [
+          "Stone",
+          "Plastic Bottle"
+        ]
+      }
+    }
+  },
+  {
+    "index": 2,
+    "name": "Tunnel of Trees",
+    "status": "In Game",
+    "x": 3,
+    "y": 3,
+    "z": 1,
+    "exits": [
+      13
+    ],
+    "description": "A gate marks the boundary between the forest and the plains. The incongruous \"SHOP\" door has a cool glow.",
+    "node": {
+      "name": "Tunnel of Trees",
+      "affinity": "Normal",
+      "levelLimit": 15,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 100,
+      "droptableName": "Sticks & Stones",
+      "droptable": {
+        "name": "Sticks & Stones",
+        "indices": [
+          1001,
+          1002
+        ],
+        "tiers": [
+          9,
+          9
+        ],
+        "items": [
+          "Wooden Stick",
+          "Stone"
+        ]
+      }
+    }
+  },
+  {
+    "index": 3,
+    "name": "Torii Gate",
+    "status": "In Game",
+    "x": 3,
+    "y": 4,
+    "z": 1,
+    "exits": [],
+    "description": "The Torii gate standing here radiates an aura of spiritual significance. Piles of scrap and garbage rise like mountains on the horizon.",
+    "node": {
+      "name": "Torii Gate",
+      "affinity": "Normal",
+      "levelLimit": 15,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 100,
+      "droptableName": "Stick Stone Rename",
+      "droptable": {
+        "name": "Stick Stone Rename",
+        "indices": [
+          1001,
+          1002,
+          11011
+        ],
+        "tiers": [
+          9,
+          9,
+          4
+        ],
+        "items": [
+          "Wooden Stick",
+          "Stone",
+          "Holy Dust"
+        ]
+      }
+    }
+  },
+  {
+    "index": 4,
+    "name": "Vending Machine",
+    "status": "In Game",
+    "x": 3,
+    "y": 6,
+    "z": 1,
+    "exits": [],
+    "description": "A vending machine stands deep in the scrap, well stocked and operating despite the remote location and cut power cord.",
+    "node": null
+  },
+  {
+    "index": 5,
+    "name": "Restricted Area",
+    "status": "In Game",
+    "x": 3,
+    "y": 9,
+    "z": 1,
+    "exits": [],
+    "description": "A restricted area, but no one is watching. Follow this road lined with cherry trees to reach an office complex.",
+    "node": {
+      "name": "Restricted Area",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 100,
+      "droptableName": "Sticks & Stones",
+      "droptable": {
+        "name": "Sticks & Stones",
+        "indices": [
+          1001,
+          1002
+        ],
+        "tiers": [
+          9,
+          9
+        ],
+        "items": [
+          "Wooden Stick",
+          "Stone"
+        ]
+      }
+    }
+  },
+  {
+    "index": 6,
+    "name": "Labs Entrance",
+    "status": "In Game",
+    "x": 4,
+    "y": 10,
+    "z": 1,
+    "exits": [
+      28
+    ],
+    "description": "The exterior of this building was designed to resemble a shrine almost as much as an office.",
+    "node": {
+      "name": "Labs Entrance",
+      "affinity": "Eerie",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 100,
+      "droptableName": "Stone Only",
+      "droptable": {
+        "name": "Stone Only",
+        "indices": [
+          1002
+        ],
+        "tiers": [
+          9
+        ],
+        "items": [
+          "Stone"
+        ]
+      }
+    }
+  },
+  {
+    "index": 9,
+    "name": "Forest: Old Growth",
+    "status": "In Game",
+    "x": 5,
+    "y": 8,
+    "z": 1,
+    "exits": [],
+    "description": "You step into the forest and seem to enter a primordial age. The buzz of giant insects overwhelms your hearing.",
+    "node": {
+      "name": "Forest: Old Growth",
+      "affinity": "Insect",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Stick Cone Poppy",
+      "droptable": {
+        "name": "Stick Cone Poppy",
+        "indices": [
+          1001,
+          1004,
+          1010
+        ],
+        "tiers": [
+          9,
+          7,
+          2
+        ],
+        "items": [
+          "Wooden Stick",
+          "Pine Cone",
+          "Black Poppy"
+        ]
+      }
+    }
+  },
+  {
+    "index": 10,
+    "name": "Forest: Insect Node",
+    "status": "In Game",
+    "x": 5,
+    "y": 5,
+    "z": 1,
+    "exits": [],
+    "description": "The buzzing is loudest here. This mound draws insects of all types toward it. They writhe together in a trance.",
+    "node": {
+      "name": "Forest: Insect Node",
+      "affinity": "Insect",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Stick Cone Rename",
+      "droptable": {
+        "name": "Stick Cone Rename",
+        "indices": [
+          1001,
+          1004,
+          11011
+        ],
+        "tiers": [
+          9,
+          7,
+          4
+        ],
+        "items": [
+          "Wooden Stick",
+          "Pine Cone",
+          "Holy Dust"
+        ]
+      }
+    }
+  },
+  {
+    "index": 11,
+    "name": "Temple by the Waterfall",
+    "status": "In Game",
+    "x": 6,
+    "y": 11,
+    "z": 1,
+    "exits": [
+      24,
+      15
+    ],
+    "description": "A humble shrine lends this waterfall basin a peaceful aura, but the air has an unpleasant aroma like dirty laundry.",
+    "node": null
+  },
+  {
+    "index": 12,
+    "name": "Scrap Confluence",
+    "status": "In Game",
+    "x": 1,
+    "y": 6,
+    "z": 1,
+    "exits": [],
+    "description": "A collection of strange and hard to identify objects buried deep in the scrapyard. It could be dangerous to get close.",
+    "node": {
+      "name": "Scrap Confluence",
+      "affinity": "Scrap",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 500,
+      "droptableName": "Scrap Burger Rename Driver",
+      "droptable": {
+        "name": "Scrap Burger Rename Driver",
+        "indices": [
+          1005,
+          11302,
+          11011,
+          23102
+        ],
+        "tiers": [
+          9,
+          8,
+          6,
+          2
+        ],
+        "items": [
+          "Scrap Metal",
+          "Cheeseburger",
+          "Holy Dust",
+          "Screwdriver"
+        ]
+      }
+    }
+  },
+  {
+    "index": 13,
+    "name": "Convenience Store",
+    "status": "In Game",
+    "x": 4,
+    "y": 3,
+    "z": 2,
+    "exits": [
+      2
+    ],
+    "description": "The glowing blue door seems to lead to a convenience store. Where is this? That \"Exit\" sign might let you leave.",
+    "node": null
+  },
+  {
+    "index": 15,
+    "name": "Temple Cave",
+    "status": "In Game",
+    "x": 5,
+    "y": 7,
+    "z": 3,
+    "exits": [
+      11
+    ],
+    "description": "A cave behind the waterfall. Friendly statues line a path to the back of the cave, away from ancient-looking temple ruins.",
+    "node": {
+      "name": "Temple Cave",
+      "affinity": "Scrap",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 100,
+      "droptableName": "Pipe Butt Burger",
+      "droptable": {
+        "name": "Pipe Butt Burger",
+        "indices": [
+          1017,
+          1018,
+          11302
+        ],
+        "tiers": [
+          9,
+          9,
+          7
+        ],
+        "items": [
+          "Patinated Pipe",
+          "Cigarette Butt",
+          "Cheeseburger"
+        ]
+      }
+    }
+  },
+  {
+    "index": 16,
+    "name": "Techno Temple",
+    "status": "In Game",
+    "x": 6,
+    "y": 7,
+    "z": 3,
+    "exits": [],
+    "description": "Inside the ruined temple. This place might have been traditional once, but now it sparks and rumbles with technology.",
+    "node": {
+      "name": "Techno Temple",
+      "affinity": "Eerie, Scrap",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 500,
+      "droptableName": "Pipe Burger Cone Hearing",
+      "droptable": {
+        "name": "Pipe Burger Cone Hearing",
+        "indices": [
+          1017,
+          11302,
+          1004,
+          6001
+        ],
+        "tiers": [
+          9,
+          7,
+          7,
+          5
+        ],
+        "items": [
+          "Patinated Pipe",
+          "Cheeseburger",
+          "Pine Cone",
+          "Essence of Hearing"
+        ]
+      }
+    }
+  },
+  {
+    "index": 18,
+    "name": "Cave Crossroads",
+    "status": "In Game",
+    "x": 5,
+    "y": 6,
+    "z": 3,
+    "exits": [],
+    "description": "Deep in the cave the path branches. The bioluminescent fungi make it nearly as bright as day. You can hear bells in the air.",
+    "node": {
+      "name": "Cave Crossroads",
+      "affinity": "Insect",
+      "levelLimit": 0,
+      "yieldIndex": 2,
+      "yieldName": "VIPP",
+      "scavCost": 200,
+      "droptableName": "Stems Shroom Scale Talisman",
+      "droptable": {
+        "name": "Stems Shroom Scale Talisman",
+        "indices": [
+          1016,
+          1013,
+          11312,
+          11412
+        ],
+        "tiers": [
+          9,
+          8,
+          6,
+          4
+        ],
+        "items": [
+          "Dried Stems",
+          "Sanguine Shroom",
+          "Honeydew Scale",
+          "Flash Talisman"
+        ]
+      }
+    }
+  },
+  {
+    "index": 19,
+    "name": "Temple of the Wheel",
+    "status": "To Update",
+    "x": 2,
+    "y": 4,
+    "z": 3,
+    "exits": [
+      59
+    ],
+    "description": "Half eroded stone and mossy growth, half gleaming metal and glowing crystal. Whether temple or technology, it unsettles you.",
+    "node": {
+      "name": "Temple of the Wheel",
+      "affinity": "Eerie, Scrap",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 300,
+      "droptableName": "Butt Pipe Daffodil Mint",
+      "droptable": {
+        "name": "Butt Pipe Daffodil Mint",
+        "indices": [
+          1018,
+          1017,
+          1011,
+          1012
+        ],
+        "tiers": [
+          9,
+          9,
+          7,
+          4
+        ],
+        "items": [
+          "Cigarette Butt",
+          "Patinated Pipe",
+          "Daffodil",
+          "Mint"
+        ]
+      }
+    }
+  },
+  {
+    "index": 25,
+    "name": "Lost Skeleton",
+    "status": "In Game",
+    "x": 6,
+    "y": 9,
+    "z": 1,
+    "exits": [],
+    "description": "A crumbling human skeleton lies prone on the ground. It looks to have been decomposing for decades.",
+    "node": {
+      "name": "Lost Skeleton",
+      "affinity": "Eerie",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Stick Cone Berry",
+      "droptable": {
+        "name": "Stick Cone Berry",
+        "indices": [
+          1001,
+          1004,
+          1014
+        ],
+        "tiers": [
+          8,
+          6,
+          6
+        ],
+        "items": [
+          "Wooden Stick",
+          "Pine Cone",
+          "Chalkberry"
+        ]
+      }
+    }
+  },
+  {
+    "index": 26,
+    "name": "Trash-Strewn Graves",
+    "status": "In Game",
+    "x": 2,
+    "y": 8,
+    "z": 1,
+    "exits": [],
+    "description": "Ancient gravestones emerge from the thinning piles of trash at the farthest edge of the scrapyard.",
+    "node": {
+      "name": "Trash-Strewn Graves",
+      "affinity": "Eerie",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 100,
+      "droptableName": "Stone Bottle Burger",
+      "droptable": {
+        "name": "Stone Bottle Burger",
+        "indices": [
+          1002,
+          1003,
+          11302
+        ],
+        "tiers": [
+          9,
+          7,
+          6
+        ],
+        "items": [
+          "Stone",
+          "Plastic Bottle",
+          "Cheeseburger"
+        ]
+      }
+    }
+  },
+  {
+    "index": 29,
+    "name": "Misty Forest Path",
+    "status": "In Game",
+    "x": 3,
+    "y": 2,
+    "z": 1,
+    "exits": [],
+    "description": "Dense mist and canopy blocks the sky. It would be impossible to navigate in this forest of illusion. Just follow the path.",
+    "node": {
+      "name": "Misty Forest Path",
+      "affinity": "Insect",
+      "levelLimit": 15,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 100,
+      "droptableName": "Stick Stone Resin",
+      "droptable": {
+        "name": "Stick Stone Resin",
+        "indices": [
+          1001,
+          1002,
+          11311
+        ],
+        "tiers": [
+          8,
+          8,
+          7
+        ],
+        "items": [
+          "Wooden Stick",
+          "Stone",
+          "Resin"
+        ]
+      }
+    }
+  },
+  {
+    "index": 30,
+    "name": "Scrapyard Entrance",
+    "status": "In Game",
+    "x": 3,
+    "y": 5,
+    "z": 1,
+    "exits": [],
+    "description": "The detritus ahead stands in dark mountain peaks. A path has been dug for you through the towering piles of garbage.",
+    "node": {
+      "name": "Scrapyard Entrance",
+      "affinity": "Scrap",
+      "levelLimit": 15,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 100,
+      "droptableName": "Stone Scrap Burger",
+      "droptable": {
+        "name": "Stone Scrap Burger",
+        "indices": [
+          1002,
+          1005,
+          11302
+        ],
+        "tiers": [
+          9,
+          7,
+          6
+        ],
+        "items": [
+          "Stone",
+          "Scrap Metal",
+          "Cheeseburger"
+        ]
+      }
+    }
+  },
+  {
+    "index": 31,
+    "name": "Scrapyard Exit",
+    "status": "In Game",
+    "x": 3,
+    "y": 8,
+    "z": 1,
+    "exits": [],
+    "description": "A literal and metaphorical fork in the road. Nature, man's work and its leftovers.",
+    "node": {
+      "name": "Scrapyard Exit",
+      "affinity": "Scrap",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 100,
+      "droptableName": "Stone Scrap Burger",
+      "droptable": {
+        "name": "Stone Scrap Burger",
+        "indices": [
+          1002,
+          1005,
+          11302
+        ],
+        "tiers": [
+          9,
+          7,
+          6
+        ],
+        "items": [
+          "Stone",
+          "Scrap Metal",
+          "Cheeseburger"
+        ]
+      }
+    }
+  },
+  {
+    "index": 32,
+    "name": "Road To Labs",
+    "status": "In Game",
+    "x": 3,
+    "y": 10,
+    "z": 1,
+    "exits": [],
+    "description": "A paved road curled between green hills. The blacktop cracks as the world around it grows.",
+    "node": {
+      "name": "Road To Labs",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 100,
+      "droptableName": "Sticks & Stones",
+      "droptable": {
+        "name": "Sticks & Stones",
+        "indices": [
+          1001,
+          1002
+        ],
+        "tiers": [
+          9,
+          9
+        ],
+        "items": [
+          "Wooden Stick",
+          "Stone"
+        ]
+      }
+    }
+  },
+  {
+    "index": 33,
+    "name": "Forest Entrance",
+    "status": "In Game",
+    "x": 4,
+    "y": 8,
+    "z": 1,
+    "exits": [],
+    "description": "The forest canopy blots out the sky above. An eerie silence overwhelms the expected sounds of life.",
+    "node": {
+      "name": "Forest Entrance",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Sticks & Cones",
+      "droptable": {
+        "name": "Sticks & Cones",
+        "indices": [
+          1001,
+          1004
+        ],
+        "tiers": [
+          9,
+          7
+        ],
+        "items": [
+          "Wooden Stick",
+          "Pine Cone"
+        ]
+      }
+    }
+  },
+  {
+    "index": 34,
+    "name": "Deeper Into Scrap",
+    "status": "In Game",
+    "x": 2,
+    "y": 6,
+    "z": 1,
+    "exits": [],
+    "description": "Deeper into the scrapyard down a narrow path. After every turn, the mountains of trash grow taller and more precarious.",
+    "node": {
+      "name": "Deeper Into Scrap",
+      "affinity": "Scrap",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 300,
+      "droptableName": "Scrap Burger",
+      "droptable": {
+        "name": "Scrap Burger",
+        "indices": [
+          1005,
+          11302
+        ],
+        "tiers": [
+          9,
+          7
+        ],
+        "items": [
+          "Scrap Metal",
+          "Cheeseburger"
+        ]
+      }
+    }
+  },
+  {
+    "index": 35,
+    "name": "Elder Path",
+    "status": "In Game",
+    "x": 5,
+    "y": 6,
+    "z": 1,
+    "exits": [],
+    "description": "The forest grows so thick that the road is barely visible at times. The air is still, but the trees sway and twist in the darkness.",
+    "node": {
+      "name": "Elder Path",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Stick Cone Poppy",
+      "droptable": {
+        "name": "Stick Cone Poppy",
+        "indices": [
+          1001,
+          1004,
+          1010
+        ],
+        "tiers": [
+          9,
+          7,
+          2
+        ],
+        "items": [
+          "Wooden Stick",
+          "Pine Cone",
+          "Black Poppy"
+        ]
+      }
+    }
+  },
+  {
+    "index": 36,
+    "name": "Parting Path",
+    "status": "In Game",
+    "x": 5,
+    "y": 9,
+    "z": 1,
+    "exits": [],
+    "description": "It seems as if the trees are parting to clear a path ahead, then shuffling back together.",
+    "node": {
+      "name": "Parting Path",
+      "affinity": "Insect",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Stick Resin Poppy",
+      "droptable": {
+        "name": "Stick Resin Poppy",
+        "indices": [
+          1001,
+          11311,
+          1010
+        ],
+        "tiers": [
+          9,
+          7,
+          2
+        ],
+        "items": [
+          "Wooden Stick",
+          "Resin",
+          "Black Poppy"
+        ]
+      }
+    }
+  },
+  {
+    "index": 37,
+    "name": "Hollow Path",
+    "status": "In Game",
+    "x": 6,
+    "y": 10,
+    "z": 1,
+    "exits": [],
+    "description": "The mist is thinner here and the sky can be seen through holes in the canopy.",
+    "node": {
+      "name": "Hollow Path",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Sticks & Cones",
+      "droptable": {
+        "name": "Sticks & Cones",
+        "indices": [
+          1001,
+          1004
+        ],
+        "tiers": [
+          9,
+          7
+        ],
+        "items": [
+          "Wooden Stick",
+          "Pine Cone"
+        ]
+      }
+    }
+  },
+  {
+    "index": 47,
+    "name": "Scrap Paths",
+    "status": "In Game",
+    "x": 3,
+    "y": 7,
+    "z": 1,
+    "exits": [],
+    "description": "The mountains of trash look more like hills, but the forest is no longer visible on the horizon.",
+    "node": {
+      "name": "Scrap Paths",
+      "affinity": "Scrap",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 100,
+      "droptableName": "Stone Scrap Burger",
+      "droptable": {
+        "name": "Stone Scrap Burger",
+        "indices": [
+          1002,
+          1005,
+          11302
+        ],
+        "tiers": [
+          9,
+          7,
+          6
+        ],
+        "items": [
+          "Stone",
+          "Scrap Metal",
+          "Cheeseburger"
+        ]
+      }
+    }
+  },
+  {
+    "index": 48,
+    "name": "Murky Forest Path",
+    "status": "In Game",
+    "x": 5,
+    "y": 7,
+    "z": 1,
+    "exits": [],
+    "description": "The forest is dark and impenetrable. Thick tree trunks stretch high above.",
+    "node": {
+      "name": "Murky Forest Path",
+      "affinity": "Insect",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Stick Resin Poppy",
+      "droptable": {
+        "name": "Stick Resin Poppy",
+        "indices": [
+          1001,
+          11311,
+          1010
+        ],
+        "tiers": [
+          9,
+          7,
+          2
+        ],
+        "items": [
+          "Wooden Stick",
+          "Resin",
+          "Black Poppy"
+        ]
+      }
+    }
+  },
+  {
+    "index": 49,
+    "name": "Clearing",
+    "status": "In Game",
+    "x": 7,
+    "y": 9,
+    "z": 1,
+    "exits": [],
+    "description": "A secluded clearing, away from both the illusory mists of the labyrinthine forest and the towering trash maze of the scrapyard.",
+    "node": {
+      "name": "Clearing",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 300,
+      "droptableName": "Stick Stone Mint",
+      "droptable": {
+        "name": "Stick Stone Mint",
+        "indices": [
+          1001,
+          1002,
+          1012
+        ],
+        "tiers": [
+          9,
+          9,
+          4
+        ],
+        "items": [
+          "Wooden Stick",
+          "Stone",
+          "Mint"
+        ]
+      }
+    }
+  },
+  {
+    "index": 50,
+    "name": "Ancient Forest Entrance",
+    "status": "In Game",
+    "x": 6,
+    "y": 5,
+    "z": 1,
+    "exits": [],
+    "description": "The undergrowth here is very thick; there's only a few paths to follow through the trees. The forest here feels packed, almost a jungle.",
+    "node": {
+      "name": "Ancient Forest Entrance",
+      "affinity": "Insect",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Stone Shroom",
+      "droptable": {
+        "name": "Stone Shroom",
+        "indices": [
+          1002,
+          1013
+        ],
+        "tiers": [
+          9,
+          7
+        ],
+        "items": [
+          "Stone",
+          "Sanguine Shroom"
+        ]
+      }
+    }
+  },
+  {
+    "index": 51,
+    "name": "Scrap-Littered Undergrowth",
+    "status": "In Game",
+    "x": 7,
+    "y": 5,
+    "z": 1,
+    "exits": [],
+    "description": "There are fragments of scrap metal littered around the forest here.",
+    "node": {
+      "name": "Scrap-Littered Undergrowth",
+      "affinity": "Insect",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 300,
+      "droptableName": "Bottle Scrap Resin",
+      "droptable": {
+        "name": "Bottle Scrap Resin",
+        "indices": [
+          1003,
+          1005,
+          11311
+        ],
+        "tiers": [
+          9,
+          9,
+          7
+        ],
+        "items": [
+          "Plastic Bottle",
+          "Scrap Metal",
+          "Resin"
+        ]
+      }
+    }
+  },
+  {
+    "index": 52,
+    "name": "Airplane Crash",
+    "status": "In Game",
+    "x": 8,
+    "y": 5,
+    "z": 1,
+    "exits": [
+      54
+    ],
+    "description": "The wreckage of a plane is resting here, deep in the forest.",
+    "node": {
+      "name": "Airplane Crash",
+      "affinity": "Eerie",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 300,
+      "droptableName": "Bottle Scrap Jar",
+      "droptable": {
+        "name": "Bottle Scrap Jar",
+        "indices": [
+          1003,
+          1005,
+          1006
+        ],
+        "tiers": [
+          9,
+          9,
+          6
+        ],
+        "items": [
+          "Plastic Bottle",
+          "Scrap Metal",
+          "Glass Jar"
+        ]
+      }
+    }
+  },
+  {
+    "index": 53,
+    "name": "Blooming Tree",
+    "status": "In Game",
+    "x": 7,
+    "y": 4,
+    "z": 1,
+    "exits": [],
+    "description": "This tree has been... struck by lightning, perhaps?",
+    "node": {
+      "name": "Blooming Tree",
+      "affinity": "Eerie",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 300,
+      "droptableName": "Stick Cone Amber",
+      "droptable": {
+        "name": "Stick Cone Amber",
+        "indices": [
+          1001,
+          1004,
+          1007
+        ],
+        "tiers": [
+          9,
+          7,
+          4
+        ],
+        "items": [
+          "Wooden Stick",
+          "Pine Cone",
+          "Red Amber Crystal"
+        ]
+      }
+    }
+  },
+  {
+    "index": 54,
+    "name": "Plane Interior",
+    "status": "In Game",
+    "x": 8,
+    "y": 5,
+    "z": 2,
+    "exits": [
+      52
+    ],
+    "description": "The air inside this airplane is... sterile. Something's wrong here.",
+    "node": null
+  },
+  {
+    "index": 55,
+    "name": "Shady Path",
+    "status": "In Game",
+    "x": 4,
+    "y": 3,
+    "z": 1,
+    "exits": [],
+    "description": "The path runs along the edge of the forest for a little while. It's quiet here.",
+    "node": {
+      "name": "Shady Path",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Stick Stone Daffodil",
+      "droptable": {
+        "name": "Stick Stone Daffodil",
+        "indices": [
+          1001,
+          1002,
+          1011
+        ],
+        "tiers": [
+          9,
+          9,
+          8
+        ],
+        "items": [
+          "Wooden Stick",
+          "Stone",
+          "Daffodil"
+        ]
+      }
+    }
+  },
+  {
+    "index": 56,
+    "name": "Butterfly Forest",
+    "status": "In Game",
+    "x": 5,
+    "y": 3,
+    "z": 1,
+    "exits": [],
+    "description": "The forest here grows thicker once more. The blue butterflies seem particularly common in this place.",
+    "node": {
+      "name": "Butterfly Forest",
+      "affinity": "Insect",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Stick Stone Resin",
+      "droptable": {
+        "name": "Stick Stone Resin",
+        "indices": [
+          1001,
+          1002,
+          11311
+        ],
+        "tiers": [
+          8,
+          8,
+          7
+        ],
+        "items": [
+          "Wooden Stick",
+          "Stone",
+          "Resin"
+        ]
+      }
+    }
+  },
+  {
+    "index": 57,
+    "name": "River Crossing",
+    "status": "In Game",
+    "x": 6,
+    "y": 3,
+    "z": 1,
+    "exits": [],
+    "description": "This seems like a natural spot to try to cross the river... and indeed, there was once a bridge...",
+    "node": {
+      "name": "River Crossing",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Stick Stone Cone",
+      "droptable": {
+        "name": "Stick Stone Cone",
+        "indices": [
+          1001,
+          1002,
+          1004
+        ],
+        "tiers": [
+          9,
+          9,
+          6
+        ],
+        "items": [
+          "Wooden Stick",
+          "Stone",
+          "Pine Cone"
+        ]
+      }
+    }
+  },
+  {
+    "index": 58,
+    "name": "Mouth of Scrap",
+    "status": "In Game",
+    "x": 1,
+    "y": 5,
+    "z": 1,
+    "exits": [],
+    "description": "This path through the junkyard is hard to spot. Towering piles of scrap obscure the entrance.",
+    "node": {
+      "name": "Mouth of Scrap",
+      "affinity": "Scrap",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 100,
+      "droptableName": "Stone Scrap Burger",
+      "droptable": {
+        "name": "Stone Scrap Burger",
+        "indices": [
+          1002,
+          1005,
+          11302
+        ],
+        "tiers": [
+          9,
+          7,
+          6
+        ],
+        "items": [
+          "Stone",
+          "Scrap Metal",
+          "Cheeseburger"
+        ]
+      }
+    }
+  },
+  {
+    "index": 59,
+    "name": "Black Pool",
+    "status": "To Update",
+    "x": 1,
+    "y": 4,
+    "z": 1,
+    "exits": [
+      19
+    ],
+    "description": "Six huge stone towers loom over a pool of black ooze. An eerie feeling is in the air.",
+    "node": {
+      "name": "Black Pool",
+      "affinity": "Eerie",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 100,
+      "droptableName": "Pipe Butt Burger",
+      "droptable": {
+        "name": "Pipe Butt Burger",
+        "indices": [
+          1017,
+          1018,
+          11302
+        ],
+        "tiers": [
+          9,
+          9,
+          7
+        ],
+        "items": [
+          "Patinated Pipe",
+          "Cigarette Butt",
+          "Cheeseburger"
+        ]
+      }
+    }
+  },
+  {
+    "index": 60,
+    "name": "Scrap Trees",
+    "status": "In Game",
+    "x": 5,
+    "y": 1,
+    "z": 1,
+    "exits": [],
+    "description": "A clearing on the border between the forest and scrapyard. You see a shovel and a notebook lying on the grass, each bisected down the middle. The cuts are perfectly clean.",
+    "node": {
+      "name": "Scrap Trees",
+      "affinity": "Scrap",
+      "levelLimit": 0,
+      "yieldIndex": 2,
+      "yieldName": "VIPP",
+      "scavCost": 500,
+      "droptableName": "Scrap Daffodil Driver",
+      "droptable": {
+        "name": "Scrap Daffodil Driver",
+        "indices": [
+          1005,
+          1011,
+          23102
+        ],
+        "tiers": [
+          9,
+          7,
+          2
+        ],
+        "items": [
+          "Scrap Metal",
+          "Daffodil",
+          "Screwdriver"
+        ]
+      }
+    }
+  },
+  {
+    "index": 61,
+    "name": "Musty Forest Path",
+    "status": "In Game",
+    "x": 7,
+    "y": 1,
+    "z": 1,
+    "exits": [],
+    "description": "Dead stumps and knotted trees tell you the forest here is in declining health. Giant centipedes march back and forth; a living trail that leads deeper into the woods.",
+    "node": {
+      "name": "Musty Forest Path",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 2,
+      "yieldName": "VIPP",
+      "scavCost": 200,
+      "droptableName": "Stick Cone Rename",
+      "droptable": {
+        "name": "Stick Cone Rename",
+        "indices": [
+          1001,
+          1004,
+          11011
+        ],
+        "tiers": [
+          9,
+          7,
+          4
+        ],
+        "items": [
+          "Wooden Stick",
+          "Pine Cone",
+          "Holy Dust"
+        ]
+      }
+    }
+  },
+  {
+    "index": 62,
+    "name": "Centipedes",
+    "status": "In Game",
+    "x": 8,
+    "y": 1,
+    "z": 1,
+    "exits": [],
+    "description": "A dark hollow beneath a dying tree choked with polypore fungi. Mushrooms coat every tree in this part of the forest. The centipedes seem to like this place.",
+    "node": {
+      "name": "Centipedes",
+      "affinity": "Insect",
+      "levelLimit": 0,
+      "yieldIndex": 2,
+      "yieldName": "VIPP",
+      "scavCost": 300,
+      "droptableName": "Stone Resin Mint",
+      "droptable": {
+        "name": "Stone Resin Mint",
+        "indices": [
+          1002,
+          11311,
+          1012
+        ],
+        "tiers": [
+          9,
+          8,
+          4
+        ],
+        "items": [
+          "Stone",
+          "Resin",
+          "Mint"
+        ]
+      }
+    }
+  },
+  {
+    "index": 63,
+    "name": "Deeper Forest Path",
+    "status": "In Game",
+    "x": 6,
+    "y": 2,
+    "z": 1,
+    "exits": [],
+    "description": "A stretch of forest road with light canopy and open sky. Wildflowers grow just off the path.",
+    "node": {
+      "name": "Deeper Forest Path",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 2,
+      "yieldName": "VIPP",
+      "scavCost": 300,
+      "droptableName": "Stone Daffodil Pinecone Poppy",
+      "droptable": {
+        "name": "Stone Daffodil Pinecone Poppy",
+        "indices": [
+          1002,
+          1011,
+          1004,
+          1010
+        ],
+        "tiers": [
+          9,
+          7,
+          7,
+          2
+        ],
+        "items": [
+          "Stone",
+          "Daffodil",
+          "Pine Cone",
+          "Black Poppy"
+        ]
+      }
+    }
+  },
+  {
+    "index": 64,
+    "name": "Burning Room",
+    "status": "In Game",
+    "x": 5,
+    "y": 5,
+    "z": 2,
+    "exits": [
+      65
+    ],
+    "description": "In the center of the hut, a large cauldron bubbles over a low fire. Dried flowers and herbs hang overhead, and jars with suspicious labels sit on a shelf in the back. Someone was just here brewing something, but the hut is empty for now.",
+    "node": null
+  },
+  {
+    "index": 65,
+    "name": "Forest Hut",
+    "status": "In Game",
+    "x": 6,
+    "y": 1,
+    "z": 1,
+    "exits": [
+      64
+    ],
+    "description": "Smoke rises from a small reed hut that sits tucked behind boulders in a secluded part of the forest. The door is open.",
+    "node": {
+      "name": "Forest Hut",
+      "affinity": "Eerie",
+      "levelLimit": 0,
+      "yieldIndex": 2,
+      "yieldName": "VIPP",
+      "scavCost": 200,
+      "droptableName": "Bottle Stick Burger",
+      "droptable": {
+        "name": "Bottle Stick Burger",
+        "indices": [
+          1003,
+          1001,
+          11302
+        ],
+        "tiers": [
+          9,
+          9,
+          7
+        ],
+        "items": [
+          "Plastic Bottle",
+          "Wooden Stick",
+          "Cheeseburger"
+        ]
+      }
+    }
+  },
+  {
+    "index": 66,
+    "name": "Marketplace",
+    "status": "In Game",
+    "x": 2,
+    "y": 2,
+    "z": 1,
+    "exits": [],
+    "description": "A strange machine adorned with Asphodel flowers sits here, deep in the forest. What could it be for?",
+    "node": null
+  },
+  {
+    "index": 67,
+    "name": "Boulder Tunnel",
+    "status": "In Game",
+    "x": 4,
+    "y": 6,
+    "z": 3,
+    "exits": [],
+    "description": "The air is humid and salty. Stalagmites and stalactites crust over ancient stone construction. The tunnel ahead is blocked by what seems to be a roof collapse.",
+    "node": {
+      "name": "Boulder Tunnel",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Chunk Butt Pansy",
+      "droptable": {
+        "name": "Chunk Butt Pansy",
+        "indices": [
+          1020,
+          1018,
+          11314
+        ],
+        "tiers": [
+          9,
+          9,
+          9
+        ],
+        "items": [
+          "Bone Chunk",
+          "Cigarette Butt",
+          "Blue Pansy"
+        ]
+      }
+    }
+  },
+  {
+    "index": 68,
+    "name": "Slippery Pit",
+    "status": "In Game",
+    "x": 3,
+    "y": 6,
+    "z": 3,
+    "exits": [],
+    "description": "These ladders prove you're not the first to explore this cave.",
+    "node": {
+      "name": "Slippery Pit",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Chunk Butt Pansy",
+      "droptable": {
+        "name": "Chunk Butt Pansy",
+        "indices": [
+          1020,
+          1018,
+          11314
+        ],
+        "tiers": [
+          9,
+          9,
+          9
+        ],
+        "items": [
+          "Bone Chunk",
+          "Cigarette Butt",
+          "Blue Pansy"
+        ]
+      }
+    }
+  },
+  {
+    "index": 69,
+    "name": "Lotus Pool",
+    "status": "In Game",
+    "x": 3,
+    "y": 7,
+    "z": 3,
+    "exits": [],
+    "description": "Unsteady lights glimmer just outside your vision like will-o'-the-wisps. You can see a cluster of small craters filled with water. A colorful lotus flower grows in the largest pool.",
+    "node": {
+      "name": "Lotus Pool",
+      "affinity": "Eerie",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 500,
+      "droptableName": "Butt Stems Berry Smell",
+      "droptable": {
+        "name": "Butt Stems Berry Smell",
+        "indices": [
+          1018,
+          1016,
+          1014,
+          6002
+        ],
+        "tiers": [
+          9,
+          9,
+          8,
+          6
+        ],
+        "items": [
+          "Cigarette Butt",
+          "Dried Stems",
+          "Chalkberry",
+          "Essence of Smell"
+        ]
+      }
+    }
+  },
+  {
+    "index": 70,
+    "name": "Still Stream",
+    "status": "In Game",
+    "x": 2,
+    "y": 7,
+    "z": 3,
+    "exits": [],
+    "description": "An arcing tunnel filled with still and shallow water. The air is salty and has a faint taste of metal.",
+    "node": {
+      "name": "Still Stream",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 100,
+      "droptableName": "Chunk Pipe Pansy",
+      "droptable": {
+        "name": "Chunk Pipe Pansy",
+        "indices": [
+          1020,
+          1017,
+          11314
+        ],
+        "tiers": [
+          9,
+          9,
+          8
+        ],
+        "items": [
+          "Bone Chunk",
+          "Patinated Pipe",
+          "Blue Pansy"
+        ]
+      }
+    }
+  },
+  {
+    "index": 71,
+    "name": "Shabby Deck",
+    "status": "In Game",
+    "x": 1,
+    "y": 7,
+    "z": 3,
+    "exits": [],
+    "description": "An observation deck above a pool of still water. Albino centipedes scurry away from a pile of bones as you enter. A grappling hook has been attached to the deck through a broken window.",
+    "node": {
+      "name": "Shabby Deck",
+      "affinity": "Insect",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Butt Pipe Scale",
+      "droptable": {
+        "name": "Butt Pipe Scale",
+        "indices": [
+          1018,
+          1017,
+          11312
+        ],
+        "tiers": [
+          9,
+          9,
+          8
+        ],
+        "items": [
+          "Cigarette Butt",
+          "Patinated Pipe",
+          "Honeydew Scale"
+        ]
+      }
+    }
+  },
+  {
+    "index": 72,
+    "name": "Hatch to Nowhere",
+    "status": "In Game",
+    "x": 1,
+    "y": 6,
+    "z": 3,
+    "exits": [
+      88
+    ],
+    "description": "This facility seems ransacked as well as timeworn. A reinforced door is ajar, a tunnel up into the room above is broken, machinery has wires ripped out, a sticky ooze seeps from the vents, and spiderwebs fill the corners. The red light in the ceiling is dead, but it would flash a warning if there were any power.",
+    "node": {
+      "name": "Hatch to Nowhere",
+      "affinity": "Insect, Scrap",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 500,
+      "droptableName": "Chunk Pipe Shroom Touch",
+      "droptable": {
+        "name": "Chunk Pipe Shroom Touch",
+        "indices": [
+          1016,
+          1017,
+          1013,
+          6005
+        ],
+        "tiers": [
+          9,
+          9,
+          8,
+          6
+        ],
+        "items": [
+          "Dried Stems",
+          "Patinated Pipe",
+          "Sanguine Shroom",
+          "Essence of Touch"
+        ]
+      }
+    }
+  },
+  {
+    "index": 73,
+    "name": "Broken Tube",
+    "status": "In Game",
+    "x": 1,
+    "y": 5,
+    "z": 3,
+    "exits": [],
+    "description": "Some kind of observation and testing environment. Readings indicate everything in this facility is ancient; even older than the graveyard under the scrap. Must be a bug.",
+    "node": {
+      "name": "Broken Tube",
+      "affinity": "Scrap",
+      "levelLimit": 0,
+      "yieldIndex": 2,
+      "yieldName": "VIPP",
+      "scavCost": 300,
+      "droptableName": "Butt Pipe Driver",
+      "droptable": {
+        "name": "Butt Pipe Driver",
+        "indices": [
+          1018,
+          1017,
+          23102
+        ],
+        "tiers": [
+          9,
+          9,
+          2
+        ],
+        "items": [
+          "Cigarette Butt",
+          "Patinated Pipe",
+          "Screwdriver"
+        ]
+      }
+    }
+  },
+  {
+    "index": 74,
+    "name": "Engraved Door",
+    "status": "In Game",
+    "x": 2,
+    "y": 5,
+    "z": 3,
+    "exits": [],
+    "description": "The narrow room is flanked by high walls cut from black crystal. Gargantuan stone stairs lead to an ornate engraved door. No matter how hard you and your kami try, you won't get it open without more help.",
+    "node": {
+      "name": "Engraved Door",
+      "affinity": "Eerie",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Butt Chunk Apple Dust",
+      "droptable": {
+        "name": "Butt Chunk Apple Dust",
+        "indices": [
+          1018,
+          1020,
+          11313,
+          11011
+        ],
+        "tiers": [
+          9,
+          9,
+          6,
+          4
+        ],
+        "items": [
+          "Cigarette Butt",
+          "Bone Chunk",
+          "Golden Apple",
+          "Holy Dust"
+        ]
+      }
+    }
+  },
+  {
+    "index": 75,
+    "name": "Flood Mural",
+    "status": "In Game",
+    "x": 3,
+    "y": 5,
+    "z": 3,
+    "exits": [],
+    "description": "A flat steel wall with a high-tech door cuts through an otherwise natural cave room. The door is splintered into pieces and the frame is broken. There's a large mural painted across the curved rear wall.",
+    "node": {
+      "name": "Flood Mural",
+      "affinity": "Eerie",
+      "levelLimit": 0,
+      "yieldIndex": 2,
+      "yieldName": "VIPP",
+      "scavCost": 200,
+      "droptableName": "Chunk Berry Floss",
+      "droptable": {
+        "name": "Chunk Berry Floss",
+        "indices": [
+          1020,
+          1014,
+          21205
+        ],
+        "tiers": [
+          9,
+          7,
+          6
+        ],
+        "items": [
+          "Bone Chunk",
+          "Chalkberry",
+          "Rock Candyfloss"
+        ]
+      }
+    }
+  },
+  {
+    "index": 76,
+    "name": "Fungus Garden",
+    "status": "In Game",
+    "x": 5,
+    "y": 5,
+    "z": 3,
+    "exits": [],
+    "description": "Two types of colorful fungus are cultivated here along the path. Seems like a garden.",
+    "node": {
+      "name": "Fungus Garden",
+      "affinity": "Insect",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 500,
+      "droptableName": "Stems Shroom Taste",
+      "droptable": {
+        "name": "Stems Shroom Taste",
+        "indices": [
+          1016,
+          1013,
+          6004
+        ],
+        "tiers": [
+          9,
+          7,
+          5
+        ],
+        "items": [
+          "Dried Stems",
+          "Sanguine Shroom",
+          "Essence of Taste"
+        ]
+      }
+    }
+  },
+  {
+    "index": 77,
+    "name": "Thriving Mushrooms",
+    "status": "In Game",
+    "x": 5,
+    "y": 4,
+    "z": 3,
+    "exits": [],
+    "description": "This fork in the road is flanked with fast-growing fungi. The mushrooms are slightly luminescent, and have steel-hard stalks. Exits to the north and east are blocked by the fungi.",
+    "node": {
+      "name": "Thriving Mushrooms",
+      "affinity": "Insect",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 100,
+      "droptableName": "Stems Chunk Scale",
+      "droptable": {
+        "name": "Stems Chunk Scale",
+        "indices": [
+          1016,
+          1020,
+          11312
+        ],
+        "tiers": [
+          9,
+          9,
+          7
+        ],
+        "items": [
+          "Dried Stems",
+          "Bone Chunk",
+          "Honeydew Scale"
+        ]
+      }
+    }
+  },
+  {
+    "index": 78,
+    "name": "Toadstool Platforms",
+    "status": "In Game",
+    "x": 5,
+    "y": 3,
+    "z": 3,
+    "exits": [],
+    "description": "The stony mushrooms here have grown to a truly gargantuan size. The air is dry. A rope ladder hangs down from a cliff high above.",
+    "node": {
+      "name": "Toadstool Platforms",
+      "affinity": "Insect",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Stems Butt Burger",
+      "droptable": {
+        "name": "Stems Butt Burger",
+        "indices": [
+          1016,
+          1018,
+          11302
+        ],
+        "tiers": [
+          9,
+          9,
+          7
+        ],
+        "items": [
+          "Dried Stems",
+          "Cigarette Butt",
+          "Cheeseburger"
+        ]
+      }
+    }
+  },
+  {
+    "index": 79,
+    "name": "Abandoned Campsite",
+    "status": "In Game",
+    "x": 5,
+    "y": 2,
+    "z": 3,
+    "exits": [],
+    "description": "An abandoned campsite. There's a charcoal drawing of a strange fish-like creature on one wall.",
+    "node": {
+      "name": "Abandoned Campsite",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 2,
+      "yieldName": "VIPP",
+      "scavCost": 100,
+      "droptableName": "Butt Stems Shroom Pansy",
+      "droptable": {
+        "name": "Butt Stems Shroom Pansy",
+        "indices": [
+          1018,
+          1016,
+          11314,
+          1013
+        ],
+        "tiers": [
+          9,
+          9,
+          8,
+          7
+        ],
+        "items": [
+          "Cigarette Butt",
+          "Dried Stems",
+          "Blue Pansy",
+          "Sanguine Shroom"
+        ]
+      }
+    }
+  },
+  {
+    "index": 80,
+    "name": "Radiant Crystal",
+    "status": "In Game",
+    "x": 6,
+    "y": 2,
+    "z": 3,
+    "exits": [],
+    "description": "A blue crystal that radiates with a soft glow illuminating the cave. Roots grasp tightly around the crystal, supporting it against the ceiling.",
+    "node": {
+      "name": "Radiant Crystal",
+      "affinity": "Eerie",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Stems Pipe Berry Apple Root",
+      "droptable": {
+        "name": "Stems Pipe Berry Apple Root",
+        "indices": [
+          1016,
+          1017,
+          1014,
+          11313,
+          1021
+        ],
+        "tiers": [
+          9,
+          9,
+          8,
+          6,
+          6
+        ],
+        "items": [
+          "Dried Stems",
+          "Patinated Pipe",
+          "Chalkberry",
+          "Golden Apple",
+          "Irradiated Root"
+        ]
+      }
+    }
+  },
+  {
+    "index": 81,
+    "name": "Flower Mural",
+    "status": "In Game",
+    "x": 7,
+    "y": 2,
+    "z": 3,
+    "exits": [],
+    "description": "Someone has burned a pile of books to make charcoal soot, then used a brush to draw a flower on the wall.",
+    "node": {
+      "name": "Flower Mural",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Chunk Butt Pansy",
+      "droptable": {
+        "name": "Chunk Butt Pansy",
+        "indices": [
+          1020,
+          1018,
+          11314
+        ],
+        "tiers": [
+          9,
+          9,
+          9
+        ],
+        "items": [
+          "Bone Chunk",
+          "Cigarette Butt",
+          "Blue Pansy"
+        ]
+      }
+    }
+  },
+  {
+    "index": 82,
+    "name": "Geometric Cliffs",
+    "status": "In Game",
+    "x": 7,
+    "y": 3,
+    "z": 3,
+    "exits": [],
+    "description": "Sheer cliffs of jagged, geometric rock. The room is dark, but illuminated by a lantern glowing blue.",
+    "node": {
+      "name": "Geometric Cliffs",
+      "affinity": "Scrap",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 500,
+      "droptableName": "Chunk Butt Floss Sight",
+      "droptable": {
+        "name": "Chunk Butt Floss Sight",
+        "indices": [
+          1020,
+          1018,
+          21205,
+          6003
+        ],
+        "tiers": [
+          9,
+          9,
+          7,
+          6
+        ],
+        "items": [
+          "Bone Chunk",
+          "Cigarette Butt",
+          "Rock Candyfloss",
+          "Essence of Sight"
+        ]
+      }
+    }
+  },
+  {
+    "index": 83,
+    "name": "Canyon Bridge",
+    "status": "In Game",
+    "x": 7,
+    "y": 4,
+    "z": 3,
+    "exits": [],
+    "description": "A rickety bridge over a dark canyon. There is an exit visible to the west, across the bridge and up an overlook. Close by, a long ladder allows descent into the dark.",
+    "node": {
+      "name": "Canyon Bridge",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 2,
+      "yieldName": "VIPP",
+      "scavCost": 100,
+      "droptableName": "Chunk Pipe Pansy",
+      "droptable": {
+        "name": "Chunk Pipe Pansy",
+        "indices": [
+          1020,
+          1017,
+          11314
+        ],
+        "tiers": [
+          9,
+          9,
+          8
+        ],
+        "items": [
+          "Bone Chunk",
+          "Patinated Pipe",
+          "Blue Pansy"
+        ]
+      }
+    }
+  },
+  {
+    "index": 84,
+    "name": "Reinforced Tunnel",
+    "status": "In Game",
+    "x": 6,
+    "y": 4,
+    "z": 3,
+    "exits": [],
+    "description": "A mined and reinforced tunnel. There's a note posted on the wall and a single book tucked behind a pole. Fast-growing luminous mushrooms peek through from the room to the west.",
+    "node": {
+      "name": "Reinforced Tunnel",
+      "affinity": "Scrap",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Stems Butt Burger",
+      "droptable": {
+        "name": "Stems Butt Burger",
+        "indices": [
+          1016,
+          1018,
+          11302
+        ],
+        "tiers": [
+          9,
+          9,
+          7
+        ],
+        "items": [
+          "Dried Stems",
+          "Cigarette Butt",
+          "Cheeseburger"
+        ]
+      }
+    }
+  },
+  {
+    "index": 85,
+    "name": "Giant's Palm",
+    "status": "In Game",
+    "x": 7,
+    "y": 5,
+    "z": 3,
+    "exits": [],
+    "description": "The dark bottom of the canyon. A cave mouth is blocked by what appears to be a giant skeletal hand. The hand is fixed in place by some force and cannot be easily moved.",
+    "node": {
+      "name": "Giant's Palm",
+      "affinity": "Normal",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Chunk Pansy Talisman",
+      "droptable": {
+        "name": "Chunk Pansy Talisman",
+        "indices": [
+          1020,
+          11314,
+          11412
+        ],
+        "tiers": [
+          9,
+          8,
+          5
+        ],
+        "items": [
+          "Bone Chunk",
+          "Blue Pansy",
+          "Flash Talisman"
+        ]
+      }
+    }
+  },
+  {
+    "index": 86,
+    "name": "Guardian Skull",
+    "status": "In Game",
+    "x": 8,
+    "y": 5,
+    "z": 3,
+    "exits": [],
+    "description": "A giant's skull is embedded into one wall and has roots growing through it. The rest of the giant's spine and ribcage is used to line a large pit in the ground.",
+    "node": {
+      "name": "Guardian Skull",
+      "affinity": "Eerie, Insect",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 500,
+      "droptableName": "Chunk Scale Thought Crystal",
+      "droptable": {
+        "name": "Chunk Scale Thought Crystal",
+        "indices": [
+          1020,
+          11312,
+          6006,
+          1007
+        ],
+        "tiers": [
+          9,
+          7,
+          5,
+          4
+        ],
+        "items": [
+          "Bone Chunk",
+          "Honeydew Scale",
+          "Essence of Thought",
+          "Red Amber Crystal"
+        ]
+      }
+    }
+  },
+  {
+    "index": 87,
+    "name": "Sacrarium",
+    "status": "In Game",
+    "x": 8,
+    "y": 6,
+    "z": 3,
+    "exits": [],
+    "description": "A flooded and ruined temple built around the spine and pelvis of a giant skeleton. Black liquid floods the pit. The temple columns have crumbled.",
+    "node": {
+      "name": "Sacrarium",
+      "affinity": "Eerie",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 300,
+      "droptableName": "Chunk Berry Floss Dust",
+      "droptable": {
+        "name": "Chunk Berry Floss Dust",
+        "indices": [
+          1020,
+          1014,
+          21205,
+          11011
+        ],
+        "tiers": [
+          9,
+          7,
+          6,
+          4
+        ],
+        "items": [
+          "Bone Chunk",
+          "Chalkberry",
+          "Rock Candyfloss",
+          "Holy Dust"
+        ]
+      }
+    }
+  },
+  {
+    "index": 88,
+    "name": "Treasure Hoard",
+    "status": "In Game",
+    "x": 3,
+    "y": 1,
+    "z": 4,
+    "exits": [
+      72
+    ],
+    "description": "You find yourself in a medieval castle built from glassy purple bricks. In front of you is a large hoard of glittering treasure. You're rich! But who uses gold in this economy?",
+    "node": {
+      "name": "Treasure Hoard",
+      "affinity": "Scrap",
+      "levelLimit": 0,
+      "yieldIndex": 2,
+      "yieldName": "VIPP",
+      "scavCost": 300,
+      "droptableName": "Coin Apple Jar",
+      "droptable": {
+        "name": "Coin Apple Jar",
+        "indices": [
+          1019,
+          11313,
+          1006
+        ],
+        "tiers": [
+          9,
+          7,
+          5
+        ],
+        "items": [
+          "Otherworld Coin",
+          "Golden Apple",
+          "Glass Jar"
+        ]
+      }
+    }
+  },
+  {
+    "index": 89,
+    "name": "Trophies of the Hunt",
+    "status": "In Game",
+    "x": 2,
+    "y": 1,
+    "z": 4,
+    "exits": [],
+    "description": "Stuffed trophies of strange creatures rest on pedestals and sit mounted on walls all across this side of the room.",
+    "node": {
+      "name": "Trophies of the Hunt",
+      "affinity": "Insect",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 300,
+      "droptableName": "Coin Dust Tablet",
+      "droptable": {
+        "name": "Coin Dust Tablet",
+        "indices": [
+          1019,
+          11011,
+          19301
+        ],
+        "tiers": [
+          9,
+          6,
+          3
+        ],
+        "items": [
+          "Otherworld Coin",
+          "Holy Dust",
+          "Curse Tablet"
+        ]
+      }
+    }
+  },
+  {
+    "index": 90,
+    "name": "Scenic View",
+    "status": "In Game",
+    "x": 1,
+    "y": 1,
+    "z": 4,
+    "exits": [],
+    "description": "You can see this castle is on an island of some kind. The tower you're standing in is impossibly high in the air. Dragons fly through the clouds below.",
+    "node": {
+      "name": "Scenic View",
+      "affinity": "Eerie",
+      "levelLimit": 0,
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
+      "scavCost": 200,
+      "droptableName": "Coin Resin",
+      "droptable": {
+        "name": "Coin Resin",
+        "indices": [
+          1019,
+          11311
+        ],
+        "tiers": [
+          9,
+          7
+        ],
+        "items": [
+          "Otherworld Coin",
+          "Resin"
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,1207 @@
+[
+  {
+    "index": 1,
+    "name": "Brew XP Potion",
+    "status": "To Update",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 11401,
+      "name": "XP Potion",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1003,
+        "name": "Plastic Bottle",
+        "amount": 1
+      },
+      {
+        "index": 1104,
+        "name": "Pine Pollen",
+        "amount": 250
+      }
+    ],
+    "staminaCost": 20,
+    "xpOutput": 50,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 2,
+    "name": "Brew Greater XP Potion",
+    "status": "To Update",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 11402,
+      "name": "Greater XP Potion",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1006,
+        "name": "Glass Jar",
+        "amount": 1
+      },
+      {
+        "index": 1104,
+        "name": "Pine Pollen",
+        "amount": 2500
+      }
+    ],
+    "staminaCost": 50,
+    "xpOutput": 1000,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 3,
+    "name": "Brew Respec Potion",
+    "status": "To Update",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 11403,
+      "name": "Respec Potion",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1003,
+        "name": "Plastic Bottle",
+        "amount": 1
+      },
+      {
+        "index": 1112,
+        "name": "Shredded Mint",
+        "amount": 500
+      }
+    ],
+    "staminaCost": 50,
+    "xpOutput": 200,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 4,
+    "name": "Brew Grace Potion",
+    "status": "To Update",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 11404,
+      "name": "Grace Potion",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1003,
+        "name": "Plastic Bottle",
+        "amount": 1
+      },
+      {
+        "index": 1111,
+        "name": "Essence of Daffodil",
+        "amount": 100
+      },
+      {
+        "index": 1110,
+        "name": "Black Poppy Extract",
+        "amount": 50
+      }
+    ],
+    "staminaCost": 25,
+    "xpOutput": 150,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 5,
+    "name": "Brew Bless Potion",
+    "status": "To Update",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 11405,
+      "name": "Bless Potion",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1003,
+        "name": "Plastic Bottle",
+        "amount": 1
+      },
+      {
+        "index": 1111,
+        "name": "Essence of Daffodil",
+        "amount": 100
+      }
+    ],
+    "staminaCost": 15,
+    "xpOutput": 50,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 6,
+    "name": "Extract Pine Pollen",
+    "status": "In Game",
+    "type": "REAGENT",
+    "output": {
+      "index": 1104,
+      "name": "Pine Pollen",
+      "amount": 500
+    },
+    "inputs": [
+      {
+        "index": 1004,
+        "name": "Pine Cone",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 10,
+    "xpOutput": 25,
+    "tool": {
+      "index": 23100,
+      "name": "Spice Grinder"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 7,
+    "name": "Extract Microplastics",
+    "status": "In Game",
+    "type": "REAGENT",
+    "output": {
+      "index": 1103,
+      "name": "Microplastics",
+      "amount": 500
+    },
+    "inputs": [
+      {
+        "index": 1003,
+        "name": "Plastic Bottle",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 30,
+    "xpOutput": 100,
+    "tool": {
+      "index": 23100,
+      "name": "Spice Grinder"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 8,
+    "name": "Extract Daffodil",
+    "status": "In Game",
+    "type": "REAGENT",
+    "output": {
+      "index": 1111,
+      "name": "Essence of Daffodil",
+      "amount": 500
+    },
+    "inputs": [
+      {
+        "index": 1011,
+        "name": "Daffodil",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 10,
+    "xpOutput": 25,
+    "tool": {
+      "index": 23100,
+      "name": "Spice Grinder"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 9,
+    "name": "Extract Mint",
+    "status": "In Game",
+    "type": "REAGENT",
+    "output": {
+      "index": 1112,
+      "name": "Shredded Mint",
+      "amount": 500
+    },
+    "inputs": [
+      {
+        "index": 1012,
+        "name": "Mint",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 20,
+    "xpOutput": 100,
+    "tool": {
+      "index": 23100,
+      "name": "Spice Grinder"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 10,
+    "name": "Extract Black Poppy",
+    "status": "In Game",
+    "type": "REAGENT",
+    "output": {
+      "index": 1110,
+      "name": "Black Poppy Extract",
+      "amount": 500
+    },
+    "inputs": [
+      {
+        "index": 1010,
+        "name": "Black Poppy",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 20,
+    "xpOutput": 250,
+    "tool": {
+      "index": 23100,
+      "name": "Spice Grinder"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 11,
+    "name": "Assemble Aetheric Sextant",
+    "status": "In Game",
+    "type": "SPECIAL",
+    "output": {
+      "index": 100004,
+      "name": "Aetheric Sextant",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 100003,
+        "name": "Disc-Shaped Map",
+        "amount": 1
+      },
+      {
+        "index": 100001,
+        "name": "Astrolabe Disk",
+        "amount": 1
+      },
+      {
+        "index": 100002,
+        "name": "Ancient Machine Part",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 100,
+    "xpOutput": 5000,
+    "tool": null,
+    "minLevel": 1
+  },
+  {
+    "index": 12,
+    "name": "Grind Berry Chalk",
+    "status": "In Game",
+    "type": "REAGENT",
+    "output": {
+      "index": 1114,
+      "name": "Berry Chalk",
+      "amount": 500
+    },
+    "inputs": [
+      {
+        "index": 1014,
+        "name": "Chalkberry",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 10,
+    "xpOutput": 50,
+    "tool": {
+      "index": 23100,
+      "name": "Spice Grinder"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 13,
+    "name": "Crush Red Amber",
+    "status": "In Game",
+    "type": "REAGENT",
+    "output": {
+      "index": 1107,
+      "name": "Powdered Red Amber",
+      "amount": 500
+    },
+    "inputs": [
+      {
+        "index": 1007,
+        "name": "Red Amber Crystal",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 20,
+    "xpOutput": 250,
+    "tool": {
+      "index": 23100,
+      "name": "Spice Grinder"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 14,
+    "name": "Mix Holy Syrup",
+    "status": "To Update",
+    "type": "REAGENT",
+    "output": {
+      "index": 1201,
+      "name": "Holy Syrup",
+      "amount": 500
+    },
+    "inputs": [
+      {
+        "index": 11011,
+        "name": "Holy Dust",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 20,
+    "xpOutput": 100,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 15,
+    "name": "Process Resin",
+    "status": "To Update",
+    "type": "REAGENT",
+    "output": {
+      "index": 1202,
+      "name": "Resin Tincture",
+      "amount": 500
+    },
+    "inputs": [
+      {
+        "index": 11311,
+        "name": "Resin",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 10,
+    "xpOutput": 25,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 16,
+    "name": "Extract Powder",
+    "status": "In Game",
+    "type": "REAGENT",
+    "output": {
+      "index": 1113,
+      "name": "Sanguineous Powder",
+      "amount": 500
+    },
+    "inputs": [
+      {
+        "index": 1013,
+        "name": "Sanguine Shroom",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 10,
+    "xpOutput": 25,
+    "tool": {
+      "index": 23100,
+      "name": "Spice Grinder"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 17,
+    "name": "Chisel Cup",
+    "status": "In Game",
+    "type": "MATERIAL",
+    "output": {
+      "index": 1102,
+      "name": "Empty Cup",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1002,
+        "name": "Stone",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 25,
+    "xpOutput": 30,
+    "tool": {
+      "index": 23102,
+      "name": "Screwdriver"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 18,
+    "name": "Brew Hostility Potion",
+    "status": "To Update",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 11410,
+      "name": "Hostility Potion",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1102,
+        "name": "Empty Cup",
+        "amount": 1
+      },
+      {
+        "index": 1113,
+        "name": "Sanguineous Powder",
+        "amount": 250
+      },
+      {
+        "index": 1104,
+        "name": "Pine Pollen",
+        "amount": 250
+      }
+    ],
+    "staminaCost": 20,
+    "xpOutput": 75,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 19,
+    "name": "Brew Energy Drink",
+    "status": "To Update",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 11409,
+      "name": "Energy Drink",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1005,
+        "name": "Scrap Metal",
+        "amount": 1
+      },
+      {
+        "index": 1114,
+        "name": "Berry Chalk",
+        "amount": 250
+      },
+      {
+        "index": 1202,
+        "name": "Resin Tincture",
+        "amount": 250
+      }
+    ],
+    "staminaCost": 20,
+    "xpOutput": 75,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 20,
+    "name": "Write Apology Letter",
+    "status": "In Game",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 11406,
+      "name": "Apology Letter",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1001,
+        "name": "Wooden Stick",
+        "amount": 2
+      },
+      {
+        "index": 1113,
+        "name": "Sanguineous Powder",
+        "amount": 125
+      },
+      {
+        "index": 1202,
+        "name": "Resin Tincture",
+        "amount": 125
+      }
+    ],
+    "staminaCost": 20,
+    "xpOutput": 75,
+    "tool": {
+      "index": 23100,
+      "name": "Spice Grinder"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 21,
+    "name": "Craft Festival Chime",
+    "status": "In Game",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 11408,
+      "name": "Festival Chime",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1005,
+        "name": "Scrap Metal",
+        "amount": 3
+      },
+      {
+        "index": 1201,
+        "name": "Holy Syrup",
+        "amount": 250
+      }
+    ],
+    "staminaCost": 25,
+    "xpOutput": 100,
+    "tool": {
+      "index": 23102,
+      "name": "Screwdriver"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 22,
+    "name": "Craft $MUSU Magnet",
+    "status": "In Game",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 11407,
+      "name": "MUSU Magnet",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1002,
+        "name": "Stone",
+        "amount": 1
+      },
+      {
+        "index": 1107,
+        "name": "Powdered Red Amber",
+        "amount": 50
+      },
+      {
+        "index": 1201,
+        "name": "Holy Syrup",
+        "amount": 100
+      }
+    ],
+    "staminaCost": 25,
+    "xpOutput": 100,
+    "tool": {
+      "index": 23102,
+      "name": "Screwdriver"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 23,
+    "name": "Craft Spirit Glue",
+    "status": "To Update",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 19001,
+      "name": "Spirit Glue",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1003,
+        "name": "Plastic Bottle",
+        "amount": 1
+      },
+      {
+        "index": 1103,
+        "name": "Microplastics",
+        "amount": 200
+      },
+      {
+        "index": 1114,
+        "name": "Berry Chalk",
+        "amount": 200
+      }
+    ],
+    "staminaCost": 20,
+    "xpOutput": 75,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 24,
+    "name": "Craft Animistic Poison",
+    "status": "To Update",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 19101,
+      "name": "Animistic Poison",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1202,
+        "name": "Resin Tincture",
+        "amount": 150
+      },
+      {
+        "index": 11314,
+        "name": "Blue Pansy",
+        "amount": 5
+      },
+      {
+        "index": 1113,
+        "name": "Sanguineous Powder",
+        "amount": 150
+      }
+    ],
+    "staminaCost": 25,
+    "xpOutput": 200,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 15
+  },
+  {
+    "index": 25,
+    "name": "Craft Cthonic Blight",
+    "status": "To Update",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 19201,
+      "name": "Cthonic Blight",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1201,
+        "name": "Holy Syrup",
+        "amount": 100
+      },
+      {
+        "index": 11312,
+        "name": "Honeydew Scale",
+        "amount": 1
+      },
+      {
+        "index": 11227,
+        "name": "Fetid Egg",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 25,
+    "xpOutput": 300,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 15
+  },
+  {
+    "index": 26,
+    "name": "Craft Flash Talisman",
+    "status": "In Game",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 11412,
+      "name": "Flash Talisman",
+      "amount": 7
+    },
+    "inputs": [
+      {
+        "index": 1016,
+        "name": "Dried Stems",
+        "amount": 2
+      },
+      {
+        "index": 6005,
+        "name": "Essence of Touch",
+        "amount": 1
+      },
+      {
+        "index": 1103,
+        "name": "Microplastics",
+        "amount": 500
+      }
+    ],
+    "staminaCost": 50,
+    "xpOutput": 1500,
+    "tool": null,
+    "minLevel": 20
+  },
+  {
+    "index": 28,
+    "name": "Craft Toadstool Liquor",
+    "status": "To Update",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 11501,
+      "name": "Toadstool Liquor",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1113,
+        "name": "Sanguineous Powder",
+        "amount": 5000
+      },
+      {
+        "index": 1110,
+        "name": "Black Poppy Extract",
+        "amount": 250
+      },
+      {
+        "index": 1114,
+        "name": "Berry Chalk",
+        "amount": 250
+      }
+    ],
+    "staminaCost": 50,
+    "xpOutput": 1000,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 15
+  },
+  {
+    "index": 29,
+    "name": "Craft Fortified XP Potion",
+    "status": "To Update",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 11411,
+      "name": "Fortified XP Potion",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 11402,
+        "name": "Greater XP Potion",
+        "amount": 1
+      },
+      {
+        "index": 1107,
+        "name": "Powdered Red Amber",
+        "amount": 300
+      },
+      {
+        "index": 6006,
+        "name": "Essence of Thought",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 75,
+    "xpOutput": 7500,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 20
+  },
+  {
+    "index": 30,
+    "name": "Craft Pure Essence",
+    "status": "In Game",
+    "type": "REAGENT",
+    "output": {
+      "index": 6007,
+      "name": "Pure Essence",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 6001,
+        "name": "Essence of Hearing",
+        "amount": 1
+      },
+      {
+        "index": 6005,
+        "name": "Essence of Touch",
+        "amount": 1
+      },
+      {
+        "index": 6003,
+        "name": "Essence of Sight",
+        "amount": 1
+      },
+      {
+        "index": 6002,
+        "name": "Essence of Smell",
+        "amount": 1
+      },
+      {
+        "index": 6004,
+        "name": "Essence of Taste",
+        "amount": 1
+      },
+      {
+        "index": 6006,
+        "name": "Essence of Thought",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 75,
+    "xpOutput": 10000,
+    "tool": null,
+    "minLevel": 20
+  },
+  {
+    "index": 31,
+    "name": "Craft Timber with Stems",
+    "status": "In Game",
+    "type": "MATERIAL",
+    "output": {
+      "index": 1302,
+      "name": "Timber",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1016,
+        "name": "Dried Stems",
+        "amount": 100
+      }
+    ],
+    "staminaCost": 50,
+    "xpOutput": 300,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 15
+  },
+  {
+    "index": 32,
+    "name": "Craft Ingot with Pipes",
+    "status": "In Game",
+    "type": "MATERIAL",
+    "output": {
+      "index": 1303,
+      "name": "Ingot",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1017,
+        "name": "Patinated Pipe",
+        "amount": 100
+      }
+    ],
+    "staminaCost": 50,
+    "xpOutput": 300,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 15
+  },
+  {
+    "index": 33,
+    "name": "Craft Ashlar with Bone",
+    "status": "In Game",
+    "type": "MATERIAL",
+    "output": {
+      "index": 1301,
+      "name": "Ashlar",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1020,
+        "name": "Bone Chunk",
+        "amount": 100
+      }
+    ],
+    "staminaCost": 50,
+    "xpOutput": 300,
+    "tool": {
+      "index": 23100,
+      "name": "Spice Grinder"
+    },
+    "minLevel": 15
+  },
+  {
+    "index": 34,
+    "name": "Craft Timber with Stick",
+    "status": "In Game",
+    "type": "MATERIAL",
+    "output": {
+      "index": 1302,
+      "name": "Timber",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1001,
+        "name": "Wooden Stick",
+        "amount": 100
+      }
+    ],
+    "staminaCost": 50,
+    "xpOutput": 300,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 15
+  },
+  {
+    "index": 35,
+    "name": "Craft Ingot with Scrap",
+    "status": "In Game",
+    "type": "MATERIAL",
+    "output": {
+      "index": 1303,
+      "name": "Ingot",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1005,
+        "name": "Scrap Metal",
+        "amount": 100
+      }
+    ],
+    "staminaCost": 50,
+    "xpOutput": 300,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 15
+  },
+  {
+    "index": 36,
+    "name": "Craft Ashlar with Stone",
+    "status": "In Game",
+    "type": "MATERIAL",
+    "output": {
+      "index": 1301,
+      "name": "Ashlar",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1002,
+        "name": "Stone",
+        "amount": 100
+      }
+    ],
+    "staminaCost": 50,
+    "xpOutput": 300,
+    "tool": {
+      "index": 23100,
+      "name": "Spice Grinder"
+    },
+    "minLevel": 15
+  },
+  {
+    "index": 37,
+    "name": "Craft Uninteresting Paste",
+    "status": "In Game",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 21206,
+      "name": "Uninteresting Paste",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1018,
+        "name": "Cigarette Butt",
+        "amount": 20
+      },
+      {
+        "index": 6004,
+        "name": "Essence of Taste",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 50,
+    "xpOutput": 1500,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 15
+  },
+  {
+    "index": 38,
+    "name": "Extract Microplastics From Cigs",
+    "status": "In Game",
+    "type": "REAGENT",
+    "output": {
+      "index": 1103,
+      "name": "Microplastics",
+      "amount": 250
+    },
+    "inputs": [
+      {
+        "index": 1018,
+        "name": "Cigarette Butt",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 15,
+    "xpOutput": 50,
+    "tool": {
+      "index": 23100,
+      "name": "Spice Grinder"
+    },
+    "minLevel": 1
+  },
+  {
+    "index": 39,
+    "name": "Extract Irradiated Root",
+    "status": "To Deploy",
+    "type": "REAGENT",
+    "output": {
+      "index": 1121,
+      "name": "Pallid Root Extract",
+      "amount": 500
+    },
+    "inputs": [
+      {
+        "index": 1021,
+        "name": "Irradiated Root",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 30,
+    "xpOutput": 250,
+    "tool": {
+      "index": 23100,
+      "name": "Spice Grinder"
+    },
+    "minLevel": 15
+  },
+  {
+    "index": 40,
+    "name": "Craft Pale Potion",
+    "status": "To Deploy",
+    "type": "CONSUMABLE",
+    "output": {
+      "index": 11004,
+      "name": "Pale Potion",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1003,
+        "name": "Plastic Bottle",
+        "amount": 1
+      },
+      {
+        "index": 1121,
+        "name": "Pallid Root Extract",
+        "amount": 200
+      },
+      {
+        "index": 1112,
+        "name": "Shredded Mint",
+        "amount": 100
+      }
+    ],
+    "staminaCost": 50,
+    "xpOutput": 500,
+    "tool": {
+      "index": 23101,
+      "name": "Portable Burner"
+    },
+    "minLevel": 15
+  },
+  {
+    "index": 41,
+    "name": "Assemble Dowsing Rod",
+    "status": "To Deploy",
+    "type": "SPECIAL",
+    "output": {
+      "index": 100010,
+      "name": "Dowsing Rod",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1021,
+        "name": "Irradiated Root",
+        "amount": 1
+      },
+      {
+        "index": 1303,
+        "name": "Ingot",
+        "amount": 1
+      },
+      {
+        "index": 6003,
+        "name": "Essence of Sight",
+        "amount": 1
+      }
+    ],
+    "staminaCost": 100,
+    "xpOutput": 2500,
+    "tool": null,
+    "minLevel": 1
+  },
+  {
+    "index": 10001,
+    "name": "Craft Wonder Egg",
+    "status": "In Game",
+    "type": "HIDDEN",
+    "output": {
+      "index": 21003,
+      "name": "Wonder Egg",
+      "amount": 1
+    },
+    "inputs": [
+      {
+        "index": 1015,
+        "name": "Obol",
+        "amount": 5
+      }
+    ],
+    "staminaCost": 0,
+    "xpOutput": 0,
+    "tool": null,
+    "minLevel": 1
+  }
+]

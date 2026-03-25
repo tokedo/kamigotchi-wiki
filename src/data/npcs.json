@@ -1,0 +1,14 @@
+[
+  {
+    "index": 1,
+    "name": "Mina",
+    "roomIndex": 13,
+    "roomName": "Convenience Store"
+  },
+  {
+    "index": 2,
+    "name": "Vending Machine",
+    "roomIndex": 18,
+    "roomName": "Cave Crossroads"
+  }
+]

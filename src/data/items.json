@@ -1,0 +1,3403 @@
+[
+  {
+    "index": 1,
+    "name": "MUSU",
+    "type": "Misc",
+    "rarity": "Common",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Kamigotchi kurrency"
+  },
+  {
+    "index": 2,
+    "name": "VIPP",
+    "type": "Consumable",
+    "rarity": "Common",
+    "forTarget": "Account",
+    "flags": [],
+    "effects": [
+      {
+        "name": "VIP1",
+        "type": "VIP",
+        "descriptor": "",
+        "index": 0,
+        "value": 1,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": "VIP_ROOM",
+    "status": "In Game",
+    "description": "Sacred paper which can be sacrificed for VIP status."
+  },
+  {
+    "index": 10,
+    "name": "Gacha Ticket",
+    "type": "Misc",
+    "rarity": "Legendary",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Redeemable for one Kami. You should take this to the vending machine..."
+  },
+  {
+    "index": 11,
+    "name": "Reroll Ticket",
+    "type": "Misc",
+    "rarity": "Epic",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Allows you to reroll a Kami once. You should take this to the vending machine..."
+  },
+  {
+    "index": 12,
+    "name": "Coat Check Ticket",
+    "type": "Misc",
+    "rarity": "Epic",
+    "forTarget": "Account",
+    "flags": [
+      "NOT_TRADABLE"
+    ],
+    "effects": [],
+    "requirements": null,
+    "status": "To Deploy",
+    "description": "This ticket says it can be exchanged for an exclusive Operator cosmetic item. But who will take the ticket?"
+  },
+  {
+    "index": 20,
+    "name": "Kamigotchi World Passport (Yellow)",
+    "type": "NFT",
+    "rarity": "Rare",
+    "forTarget": "Passport_slot",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Your ticket to great fortunes. In yellow."
+  },
+  {
+    "index": 21,
+    "name": "Kamigotchi World Passport (Orange)",
+    "type": "NFT",
+    "rarity": "Rare",
+    "forTarget": "Passport_slot",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Your ticket to great fortunes. In orange."
+  },
+  {
+    "index": 22,
+    "name": "Kamigotchi World Passport (Pink)",
+    "type": "NFT",
+    "rarity": "Rare",
+    "forTarget": "Passport_slot",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Your ticket to great fortunes. In pink."
+  },
+  {
+    "index": 23,
+    "name": "Kamigotchi World Passport (Red)",
+    "type": "NFT",
+    "rarity": "Rare",
+    "forTarget": "Passport_slot",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Your ticket to great fortunes. In red."
+  },
+  {
+    "index": 24,
+    "name": "Kamigotchi World Passport (Blue)",
+    "type": "NFT",
+    "rarity": "Rare",
+    "forTarget": "Passport_slot",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Your ticket to great fortunes. In blue."
+  },
+  {
+    "index": 25,
+    "name": "Kamigotchi World Passport (Green)",
+    "type": "NFT",
+    "rarity": "Rare",
+    "forTarget": "Passport_slot",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Your ticket to great fortunes. In green."
+  },
+  {
+    "index": 26,
+    "name": "Kamigotchi World Passport (White)",
+    "type": "NFT",
+    "rarity": "Epic",
+    "forTarget": "Passport_slot",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Your ticket to great fortunes. In white."
+  },
+  {
+    "index": 27,
+    "name": "Kamigotchi World Passport (Grey)",
+    "type": "NFT",
+    "rarity": "Epic",
+    "forTarget": "Passport_slot",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Your ticket to great fortunes. In grey."
+  },
+  {
+    "index": 28,
+    "name": "Kamigotchi World Passport (Purple)",
+    "type": "NFT",
+    "rarity": "Epic",
+    "forTarget": "Passport_slot",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Your ticket to great fortunes. In purple."
+  },
+  {
+    "index": 29,
+    "name": "Kamigotchi World Passport (Lime Green)",
+    "type": "NFT",
+    "rarity": "Epic",
+    "forTarget": "Passport_slot",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Your ticket to great fortunes. In lime green."
+  },
+  {
+    "index": 30,
+    "name": "Kamigotchi World Passport (1-bit Red and White)",
+    "type": "NFT",
+    "rarity": "Legendary",
+    "forTarget": "Passport_slot",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Your ticket to great fortunes. In 1-bit red."
+  },
+  {
+    "index": 31,
+    "name": "Kamigotchi World Passport (1-bit Pink)",
+    "type": "NFT",
+    "rarity": "Legendary",
+    "forTarget": "Passport_slot",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Your ticket to great fortunes. In 1-bit pink."
+  },
+  {
+    "index": 32,
+    "name": "Kamigotchi World Passport (1-bit Green)",
+    "type": "NFT",
+    "rarity": "Legendary",
+    "forTarget": "Passport_slot",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Your ticket to great fortunes. In 1-bit green."
+  },
+  {
+    "index": 33,
+    "name": "Kamigotchi World Passport (1-bit Black and White)",
+    "type": "NFT",
+    "rarity": "Legendary",
+    "forTarget": "Passport_slot",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Your ticket to great fortunes. In 1-bit black."
+  },
+  {
+    "index": 100,
+    "name": "Onyx Shard",
+    "type": "ERC20",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Kamigotchi World's premium game currency. You want this. You want this so bad."
+  },
+  {
+    "index": 1001,
+    "name": "Wooden Stick",
+    "type": "Material",
+    "rarity": "Common",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Wood in its unprocessed form. Grows on trees."
+  },
+  {
+    "index": 1002,
+    "name": "Stone",
+    "type": "Material",
+    "rarity": "Common",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "It's just a stone. Can be used to get Stone."
+  },
+  {
+    "index": 1003,
+    "name": "Plastic Bottle",
+    "type": "Material",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Can be reprocessed into valuable raw Microplastics."
+  },
+  {
+    "index": 1004,
+    "name": "Pine Cone",
+    "type": "Material",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "It's a pine cone. Slightly sacred."
+  },
+  {
+    "index": 1005,
+    "name": "Scrap Metal",
+    "type": "Material",
+    "rarity": "Common",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A small chunk of scrap metal. Maybe useful if processed."
+  },
+  {
+    "index": 1006,
+    "name": "Glass Jar",
+    "type": "Material",
+    "rarity": "Rare",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A somehow-unbroken jar of clear glass."
+  },
+  {
+    "index": 1007,
+    "name": "Red Amber Crystal",
+    "type": "Material",
+    "rarity": "Epic",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A crystal of pure red amber, formed deep in the forest."
+  },
+  {
+    "index": 1010,
+    "name": "Black Poppy",
+    "type": "Material",
+    "rarity": "Rare",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "You can't tell whether it's a very dark purple or actually black. A rare flower."
+  },
+  {
+    "index": 1011,
+    "name": "Daffodil",
+    "type": "Material",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A reflection of fallen Narcissus... Has its own uses and applications."
+  },
+  {
+    "index": 1012,
+    "name": "Mint",
+    "type": "Material",
+    "rarity": "Epic",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A herb with many applications. Not often found here..."
+  },
+  {
+    "index": 1013,
+    "name": "Sanguine Shroom",
+    "type": "Material",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A mushroom that bruises and bleeds like flesh. Some believe that they feed on decaying spirits."
+  },
+  {
+    "index": 1014,
+    "name": "Chalkberry",
+    "type": "Material",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A dry and bitter berry coated with chalky white fungus. The berry itself is inedible; useless except as a medium for a unique wild yeast."
+  },
+  {
+    "index": 1015,
+    "name": "Obol",
+    "type": "Misc",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "An ancient coin. Despite a worn and dull finish, it still glitters in the light. Valuable to certain individuals."
+  },
+  {
+    "index": 1016,
+    "name": "Dried Stems",
+    "type": "Material",
+    "rarity": "Common",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Long-stemmed mushrooms dried in a small bundle. Although this mushroom has no known medicinal, culinary, or recreational use, it may be a functional building material."
+  },
+  {
+    "index": 1017,
+    "name": "Patinated Pipe",
+    "type": "Material",
+    "rarity": "Common",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "These verdigris-coated pipes jut from the cave walls with no connection to any apparent plumbing system. Their presence defies conventional explanation."
+  },
+  {
+    "index": 1018,
+    "name": "Cigarette Butt",
+    "type": "Material",
+    "rarity": "Common",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Even something as small and disposable as a cigarette can be tied to a memory and be given a spiritual essence. You can break this down into Microplastics."
+  },
+  {
+    "index": 1019,
+    "name": "Otherworld Coin",
+    "type": "Material",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The woman on the face of this coin has long pointed ears like a caracal. The language inscribed is incomprehensible. Unless you find a collector, this coin is only valuable as scrap."
+  },
+  {
+    "index": 1020,
+    "name": "Bone Chunk",
+    "type": "Material",
+    "rarity": "Common",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Petrified bone in the form of a large stony chunk. If this fragment came from the skeleton of an animal, it must have been the size of a whale."
+  },
+  {
+    "index": 1021,
+    "name": "Irradiated Root",
+    "type": "Material",
+    "rarity": "Rare",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A dried root found wrapped around a glowing crystal. The tips have turned blue and taken on a waxen texture."
+  },
+  {
+    "index": 1102,
+    "name": "Empty Cup",
+    "type": "Material",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A small reusable cup crafted from stone. Useful for drinking potions or other beverages."
+  },
+  {
+    "index": 1103,
+    "name": "Microplastics",
+    "type": "Material",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Fine translucent powder. A promising new substance in hexerei."
+  },
+  {
+    "index": 1104,
+    "name": "Pine Pollen",
+    "type": "Material",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Some people think this is very good for you."
+  },
+  {
+    "index": 1107,
+    "name": "Powdered Red Amber",
+    "type": "Material",
+    "rarity": "Epic",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Fine powder made from crushing a red amber crystal. Can be used to sand and polish metals."
+  },
+  {
+    "index": 1110,
+    "name": "Black Poppy Extract",
+    "type": "Material",
+    "rarity": "Rare",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Useful alkaloids in a sticky black goo. One of the most ancient ingredients."
+  },
+  {
+    "index": 1111,
+    "name": "Essence of Daffodil",
+    "type": "Material",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Poisonous to living things, but useful when making medicines and potions."
+  },
+  {
+    "index": 1112,
+    "name": "Shredded Mint",
+    "type": "Material",
+    "rarity": "Epic",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Makes a cooling and relaxing tea. Also used in various magical applications."
+  },
+  {
+    "index": 1113,
+    "name": "Sanguineous Powder",
+    "type": "Material",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A dark, reddish powder that resembles dried blood, or maybe just coffee. Edible, but can also be used as an ink or dye."
+  },
+  {
+    "index": 1114,
+    "name": "Berry Chalk",
+    "type": "Material",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A chalky fungus scraped from a rare berry. Can ferment certain materials to produce a rejuvenating beverage."
+  },
+  {
+    "index": 1121,
+    "name": "Pallid Root Extract",
+    "type": "Material",
+    "rarity": "Rare",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The waxen paste extracted from an Irradiated Root. The jar has a pale gleam even in the deepest darkness."
+  },
+  {
+    "index": 1201,
+    "name": "Holy Syrup",
+    "type": "Material",
+    "rarity": "Rare",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Holy Dust diluted into a quantity of water. Forms a thin syrup that can be measured out for crafting."
+  },
+  {
+    "index": 1202,
+    "name": "Resin Tincture",
+    "type": "Material",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A sweet, spicy syrup made from the natural resin found in the trees of Kamigotchi World. Useful for a number of recipes."
+  },
+  {
+    "index": 1203,
+    "name": "Fuliginous Ooze",
+    "type": "Material",
+    "rarity": "Epic",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Like crude oil with the texture of clay. It seems to absorb the light around it. Could be an ingredient in powerful magic."
+  },
+  {
+    "index": 1301,
+    "name": "Ashlar",
+    "type": "Material",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A heavy block of unpolished and imperfect stone. Symbolic of unrefined potential. Masters can craft this into something useful."
+  },
+  {
+    "index": 1302,
+    "name": "Timber",
+    "type": "Material",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Laminated timber made from thin strips of material that have been pressed and glued together. It can be cut into useful planks after a large mass has been shaped and dried."
+  },
+  {
+    "index": 1303,
+    "name": "Ingot",
+    "type": "Material",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A rough ingot of greenish metal. Soft enough to shape with force and heat and strong enough to hold an edge. Only .888 percent pure, so be careful when you work."
+  },
+  {
+    "index": 6001,
+    "name": "Essence of Hearing",
+    "type": "Material",
+    "rarity": "Rare",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "One of the six essences. A coil of roaring blue flame."
+  },
+  {
+    "index": 6002,
+    "name": "Essence of Smell",
+    "type": "Material",
+    "rarity": "Rare",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "One of the six essences. A skyfish in a perfumed cloud."
+  },
+  {
+    "index": 6003,
+    "name": "Essence of Sight",
+    "type": "Material",
+    "rarity": "Rare",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "One of the six essences. A weeping orb of sludge."
+  },
+  {
+    "index": 6004,
+    "name": "Essence of Taste",
+    "type": "Material",
+    "rarity": "Rare",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "One of the six essences. A stone flower bud."
+  },
+  {
+    "index": 6005,
+    "name": "Essence of Touch",
+    "type": "Material",
+    "rarity": "Rare",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "One of the six essences. A hole in space with grasping tentacles."
+  },
+  {
+    "index": 6006,
+    "name": "Essence of Thought",
+    "type": "Material",
+    "rarity": "Rare",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "One of the six essences. A leafless tree with a reflective surface."
+  },
+  {
+    "index": 6007,
+    "name": "Pure Essence",
+    "type": "Material",
+    "rarity": "Epic",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The combined six essences. A ball of pure sensation."
+  },
+  {
+    "index": 11001,
+    "name": "Red Ribbon Gummy",
+    "type": "Revive",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "STATE-RESTING",
+        "type": "STATE",
+        "descriptor": "RESTING",
+        "index": 0,
+        "value": 0,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "HP+10",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 10,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "This candy ribbon is so delicious that it can bring a Kami back after it's been liquidated. They can't say no to the flavor."
+  },
+  {
+    "index": 11002,
+    "name": "Melkarth's Heroic Awakening Spell Card",
+    "type": "Revive",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [
+      "NOT_TRADABLE"
+    ],
+    "effects": [
+      {
+        "name": "STATE-RESTING",
+        "type": "STATE",
+        "descriptor": "RESTING",
+        "index": 0,
+        "value": 0,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "HP+50",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 50,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The card depicts the figure of an ancient god silhouetted by a wreath of energy. Melkarth grants a blessing of rebirth to fallen warriors. Activating this Spell Card will revive a Kamigotchi that has been incapacitated."
+  },
+  {
+    "index": 11003,
+    "name": "Djed Pillar",
+    "type": "Consumable",
+    "rarity": "Epic",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "STATE-RESTING",
+        "type": "STATE",
+        "descriptor": "RESTING",
+        "index": 0,
+        "value": 0,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "HP+5",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 5,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "An artifact that carries the magic of resurrection. Scholars say it resembles a sheaf of reeds, or a spine, or a tree. Use this on a liquidated Kami to bring it back from death."
+  },
+  {
+    "index": 11004,
+    "name": "Pale Potion",
+    "type": "Potion",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "STATE-RESTING",
+        "type": "STATE",
+        "descriptor": "RESTING",
+        "index": 0,
+        "value": 0,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "HP+75",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 75,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A unique potion that can draw a Kami back from beyond. The bottle glows blue with a wan phosphorescence."
+  },
+  {
+    "index": 11011,
+    "name": "Holy Dust",
+    "type": "Misc",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "This sacred dust can be used to rename Kamigotchi... At the proper place."
+  },
+  {
+    "index": 11020,
+    "name": "Cleaning Fluid",
+    "type": "Potion",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "CLEARALL",
+        "type": "BONUS",
+        "descriptor": "",
+        "index": 0,
+        "value": 0,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A suspension of pleasant-smelling reagents in holy syrup. Used for ritual purification and ablution."
+  },
+  {
+    "index": 11110,
+    "name": "Gaokerena Mochi",
+    "type": "Food",
+    "rarity": "Epic",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "HEALTH+10",
+        "type": "STAT",
+        "descriptor": "HEALTH",
+        "index": 0,
+        "value": 10,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": "MOCHI_LIMIT",
+    "status": "In Game",
+    "description": "A glossy purple mochi. It's filled with a green and fibrous root paste confection made with milk. Permanently adds +10 to a Kamigotchi's Health."
+  },
+  {
+    "index": 11120,
+    "name": "Sunset Apple Mochi",
+    "type": "Food",
+    "rarity": "Epic",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "POWER+1",
+        "type": "STAT",
+        "descriptor": "POWER",
+        "index": 0,
+        "value": 1,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": "MOCHI_LIMIT",
+    "status": "In Game",
+    "description": "A deep red and orange mochi. It's filled with a golden apple jam that has a warm, heavenly flavor. Permanently adds +1 to a Kamigotchi's Power."
+  },
+  {
+    "index": 11130,
+    "name": "Kami Mochi",
+    "type": "Food",
+    "rarity": "Epic",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "VIOLENCE+1",
+        "type": "STAT",
+        "descriptor": "VIOLENCE",
+        "index": 0,
+        "value": 1,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": "MOCHI_LIMIT",
+    "status": "In Game",
+    "description": "A deep blue mochi with a butterfly stamp. It's filled with soft, white curds that resemble a fresh cheese. Permanently adds +1 to a Kamigotchi's Violence."
+  },
+  {
+    "index": 11140,
+    "name": "Mana Mochi",
+    "type": "Food",
+    "rarity": "Epic",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "HARMONY+1",
+        "type": "STAT",
+        "descriptor": "HARMONY",
+        "index": 0,
+        "value": 1,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": "MOCHI_LIMIT",
+    "status": "In Game",
+    "description": "A sky blue mochi. It's filled with small white grains that burst with a honey-sweet flavor. Permanently adds +1 to a Kamigotchi's Harmony."
+  },
+  {
+    "index": 11201,
+    "name": "XP Candy (Small)",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [
+      "NOT_TRADABLE"
+    ],
+    "effects": [
+      {
+        "name": "HP+5",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 5,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "XP+25",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 25,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Feed this to a Kamigotchi to give them a little bit of experience."
+  },
+  {
+    "index": 11202,
+    "name": "XP Candy (Medium)",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [
+      "NOT_TRADABLE"
+    ],
+    "effects": [
+      {
+        "name": "HP+10",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 10,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "XP+100",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 100,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Provides a decent amount of XP when fed to a Kami."
+  },
+  {
+    "index": 11203,
+    "name": "XP Candy (Large)",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [
+      "NOT_TRADABLE"
+    ],
+    "effects": [
+      {
+        "name": "HP+20",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 20,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "XP+200",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 200,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "This gives a lot of XP when fed to a Kamigotchi."
+  },
+  {
+    "index": 11204,
+    "name": "XP Candy (Huge)",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [
+      "NOT_TRADABLE"
+    ],
+    "effects": [
+      {
+        "name": "HP+50",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 50,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "XP+1000",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 1000,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "This is far larger than any XP Candy you've seen before. Gives a huge amount of XP when fed to a Kamigotchi."
+  },
+  {
+    "index": 11211,
+    "name": "Cultivation I Spell Card",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [
+      "NOT_TRADABLE"
+    ],
+    "effects": [
+      {
+        "name": "XP+100",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 100,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "HP+20",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 20,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The card depicts a pale sprout emerging from rich, black soil. Activating this Spell Card on a Kamigotchi will restore 20 HP and grant 100 XP."
+  },
+  {
+    "index": 11212,
+    "name": "Cultivation II Spell Card",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [
+      "NOT_TRADABLE"
+    ],
+    "effects": [
+      {
+        "name": "XP+200",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 200,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "HP+50",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 50,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The card depicts a teardrop-shaped flowerbud growing out of light brown soil. Activating this Spell Card on a Kamigotchi will restore 50 HP and grant 200 XP."
+  },
+  {
+    "index": 11213,
+    "name": "Cultivation III Spell Card",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [
+      "NOT_TRADABLE"
+    ],
+    "effects": [
+      {
+        "name": "XP+1000",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 1000,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "HP+100",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 100,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The card depicts a flower heartily blooming in pale and sandy earth. Activating this Spell Card on a Kamigotchi will restore 100 HP and grant 1000 XP."
+  },
+  {
+    "index": 11214,
+    "name": "Cultivation IV Spell Card",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [
+      "NOT_TRADABLE"
+    ],
+    "effects": [
+      {
+        "name": "XP+5000",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 5000,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "HP+100",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 100,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The card depicts a massive flower spreading across the frame. A baby sleeps in the center. Activating this Spell Card on a Kamigotchi will restore 100 HP and grant 5000 XP."
+  },
+  {
+    "index": 11221,
+    "name": "Full Heart Crystal",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "XP+15000",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 15000,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "It pulses with warmth. Give this to your Kami to grant it a large amount of XP."
+  },
+  {
+    "index": 11222,
+    "name": "Half Heart Crystal",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "XP+1000",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 1000,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "It feels slightly warm in your hand. Give this to your Kami to grant it a moderate amount of XP."
+  },
+  {
+    "index": 11223,
+    "name": "Great Heart Crystal",
+    "type": "Food",
+    "rarity": "Epic",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "XP+50000",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 50000,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The crystal beats like a real heart. It radiates with heat enough to warm your surroundings. Give this to your kami to grant it a very large amount of XP."
+  },
+  {
+    "index": 11224,
+    "name": "Inverted Teardrop Jewel",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "ATR+10%",
+        "type": "BONUS",
+        "descriptor": "ATK_THRESHOLD_RATIO",
+        "index": 0,
+        "value": 100,
+        "terminator": "UPON_LIQUIDATION",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A rare gem with an incandescent color. Some say the stone has a wild spirit and will leap out of your pack if unattended."
+  },
+  {
+    "index": 11225,
+    "name": "Teardrop Jewel",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "HFB+50%",
+        "type": "BONUS",
+        "descriptor": "HARV_FERTILITY_BOOST",
+        "index": 0,
+        "value": 500,
+        "terminator": "UPON_HARVEST_ACTION",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A rare gem with a tranquil color. Some say that if you drop it into water, it won't disturb the surface. This jewel boosts a kami's Fertility, enhancing its type advantages when harvesting."
+  },
+  {
+    "index": 11226,
+    "name": "Ash Pearl",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "TEMP1HARMONY",
+        "type": "BONUS",
+        "descriptor": "STAT_HARMONY_SHIFT",
+        "index": 0,
+        "value": 1,
+        "terminator": "UPON_DEATH",
+        "droptable": null
+      },
+      {
+        "name": "TEMP1VIOLENCE",
+        "type": "BONUS",
+        "descriptor": "STAT_VIOLENCE_SHIFT",
+        "index": 0,
+        "value": 1,
+        "terminator": "UPON_DEATH",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The Wonder Egg was filled with soot and ash, but also a large blue pearl. Give this pearl to your Kami to grant it a temporary +1 to Harmony and Violence. If your Kami is liquidated, the pearl breaks and the power is lost."
+  },
+  {
+    "index": 11227,
+    "name": "Fetid Egg",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "HP+35",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 35,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "This egg seems fresh, and refuses to spoil even out of the shell. Still, it reeks of sulfur. Your Kami can eat this to restore HP."
+  },
+  {
+    "index": 11233,
+    "name": "Gingerbread Cookie",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "XP+1000",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 1000,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "HP+25",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 25,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A gingerbread cookie... feed this to a Kamigotchi for some extra experience."
+  },
+  {
+    "index": 11301,
+    "name": "Maple-Flavor Ghost Gum",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "HP+25",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 25,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The most basic form of food available in this world - restores 25 Health to a Kamigotchi."
+  },
+  {
+    "index": 11302,
+    "name": "Cheeseburger",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "HP+50",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 50,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "These burgers, still in their original wrapping, are occasionally found in the scrapyard. Apparently Kamigotchi love them."
+  },
+  {
+    "index": 11303,
+    "name": "Pom-Pom Fruit Candy",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "HP+50",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 50,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "These fruit candies contain a huge amount of energy. Restores 50 Health to a Kamigotchi."
+  },
+  {
+    "index": 11304,
+    "name": "Gakki Cookie Sticks",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "HP+100",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 100,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Heavy duty rations by a Kami's standards. Restores 100 Health to a Kamigotchi."
+  },
+  {
+    "index": 11305,
+    "name": "Paeon's Field of Flowers Spell Card",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [
+      "NOT_TRADABLE"
+    ],
+    "effects": [
+      {
+        "name": "HP+100",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 100,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The card depicts a mortally wounded man lying in a field of flowers. Some flowers take root on his body and knit the wounds closed while others bloom from the spilled blood. Activating this Spell Card on a Kamigotchi will restore 100 Health."
+  },
+  {
+    "index": 11311,
+    "name": "Resin",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "HP+35",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 35,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Sticky sap with a flavor like spiced honey. An energizing snack by itself, but also useful in a number of recipes."
+  },
+  {
+    "index": 11312,
+    "name": "Honeydew Scale",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "HP+75",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 75,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A sweet confection that appears on mushrooms and bones. Close inspection reveals this candy is actually the honeydew of a scale insect."
+  },
+  {
+    "index": 11313,
+    "name": "Golden Apple",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "HP+150",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 150,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Sweet golden apples on a dry silver branch. Said to be a divine gift, they are extremely rare. They're more often found in places without trees."
+  },
+  {
+    "index": 11314,
+    "name": "Blue Pansy",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "HP+25",
+        "type": "STAT",
+        "descriptor": "HP",
+        "index": 0,
+        "value": 25,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A deep blue flower with a shape reminiscent of the blue butterflies common across the Kamigotchi World. It has a crisp, sweet, and refreshing flavor."
+  },
+  {
+    "index": 11401,
+    "name": "XP Potion",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "XP+1000",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 1000,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "ITEM1003",
+        "type": "ITEM",
+        "descriptor": "",
+        "index": 1003,
+        "value": 1,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Give to a Kami to increase their XP by 1000."
+  },
+  {
+    "index": 11402,
+    "name": "Greater XP Potion",
+    "type": "Food",
+    "rarity": "Epic",
+    "forTarget": "Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "XP+15000",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 15000,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "ITEM1006",
+        "type": "ITEM",
+        "descriptor": "",
+        "index": 1006,
+        "value": 1,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Give to a Kami to increase their XP by 15000."
+  },
+  {
+    "index": 11403,
+    "name": "Respec Potion",
+    "type": "Misc",
+    "rarity": "Epic",
+    "forTarget": "Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "ITEM1003",
+        "type": "ITEM",
+        "descriptor": "",
+        "index": 1003,
+        "value": 1,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Give to a Kami to reset their skill points."
+  },
+  {
+    "index": 11404,
+    "name": "Grace Potion",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "STRAIN-25%",
+        "type": "BONUS",
+        "descriptor": "STND_STRAIN_BOOST",
+        "index": 0,
+        "value": -250,
+        "terminator": "UPON_HARVEST_ACTION",
+        "droptable": null
+      },
+      {
+        "name": "ITEM1003",
+        "type": "ITEM",
+        "descriptor": "",
+        "index": 1003,
+        "value": 1,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Give to a Kami to decrease loss of health during the next Harvest by 25%."
+  },
+  {
+    "index": 11405,
+    "name": "Bless Potion",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "BOUNTY+25%",
+        "type": "BONUS",
+        "descriptor": "HARV_BOUNTY_BOOST",
+        "index": 0,
+        "value": 250,
+        "terminator": "UPON_HARVEST_ACTION",
+        "droptable": null
+      },
+      {
+        "name": "ITEM1003",
+        "type": "ITEM",
+        "descriptor": "",
+        "index": 1003,
+        "value": 1,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Give to a Kami to increase the MUSU gained from the next Harvest by 25%."
+  },
+  {
+    "index": 11406,
+    "name": "Apology Letter",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "ARB-25%",
+        "type": "BONUS",
+        "descriptor": "ATK_RECOIL_BOOST",
+        "index": 0,
+        "value": -250,
+        "terminator": "UPON_LIQUIDATION",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A letter written by a Kami with sincere remorse for its actions. Lowers Recoil when liquidating other Kami."
+  },
+  {
+    "index": 11407,
+    "name": "MUSU Magnet",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "DSR+25%",
+        "type": "BONUS",
+        "descriptor": "DEF_SALVAGE_RATIO",
+        "index": 0,
+        "value": 250,
+        "terminator": "UPON_DEATH",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "This shiny purple rock attracts grains of $MUSU. It dramatically increases the proportion of $MUSU a kami retains when it's liquidated."
+  },
+  {
+    "index": 11408,
+    "name": "Festival Chime",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "HIB+25",
+        "type": "BONUS",
+        "descriptor": "HARV_INTENSITY_BOOST",
+        "index": 0,
+        "value": 25,
+        "terminator": "UPON_HARVEST_ACTION",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Magical bells that gradually increase Harvest Intensity over the next long-term harvest. Your Kami will ring this chime until it breaks."
+  },
+  {
+    "index": 11409,
+    "name": "Energy Drink",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "COOLDOWN-30s",
+        "type": "BONUS",
+        "descriptor": "STND_COOLDOWN_SHIFT",
+        "index": 0,
+        "value": -30,
+        "terminator": "UPON_HARVEST_ACTION",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A lightly fermented beverage that grants a burst of spiritual energy. Dramatically reduces Cooldown Shift for a kami's next action."
+  },
+  {
+    "index": 11410,
+    "name": "Hostility Potion",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "ATS+3%",
+        "type": "BONUS",
+        "descriptor": "ATK_THRESHOLD_SHIFT",
+        "index": 0,
+        "value": 30,
+        "terminator": "UPON_LIQUIDATION",
+        "droptable": null
+      },
+      {
+        "name": "ITEM1102",
+        "type": "ITEM",
+        "descriptor": "",
+        "index": 1102,
+        "value": 1,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Most Kamigotchi find this bitter potion unpleasant, but some thrive on it. Expands a Kami's Attack Threshold Shift by a small percentage."
+  },
+  {
+    "index": 11411,
+    "name": "Fortified XP Potion",
+    "type": "Potion",
+    "rarity": "Epic",
+    "forTarget": "Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "XP+50000",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 50000,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "ITEM1006",
+        "type": "ITEM",
+        "descriptor": "",
+        "index": 1006,
+        "value": 1,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A deep-green potion with a grainy texture and dense mouthfeel. Fortified with rare red amber and the essences of old memories."
+  },
+  {
+    "index": 11412,
+    "name": "Flash Talisman",
+    "type": "Potion",
+    "rarity": "Epic",
+    "forTarget": "Enemy_Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "ATR+10%_KK",
+        "type": "BONUS",
+        "descriptor": "ATK_THRESHOLD_RATIO",
+        "index": 0,
+        "value": 100,
+        "terminator": "UPON_KILL_OR_KILLED",
+        "droptable": null
+      },
+      {
+        "name": "DTR-10%_KK",
+        "type": "BONUS",
+        "descriptor": "DEF_THRESHOLD_RATIO",
+        "index": 0,
+        "value": -100,
+        "terminator": "UPON_KILL_OR_KILLED",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "To Update",
+    "description": "A magical talisman that burns easily. Using this on a Kami intensifies their overall sensitivity to Types, buffing their advantages on liquidations but nerfing their advantages on defense."
+  },
+  {
+    "index": 11413,
+    "name": "Mistletoe",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "BOUNTY+25%",
+        "type": "BONUS",
+        "descriptor": "HARV_BOUNTY_BOOST",
+        "index": 0,
+        "value": 250,
+        "terminator": "UPON_HARVEST_ACTION",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Sacred, at this time of year... can be used on Kami to Bless them!"
+  },
+  {
+    "index": 11501,
+    "name": "Toadstool Liquor",
+    "type": "Potion",
+    "rarity": "Rare",
+    "forTarget": "Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "TEMP10HEALTH",
+        "type": "BONUS",
+        "descriptor": "STAT_HEALTH_SHIFT",
+        "index": 0,
+        "value": 10,
+        "terminator": "UPON_DEATH",
+        "droptable": null
+      },
+      {
+        "name": "TEMP1POWER",
+        "type": "BONUS",
+        "descriptor": "STAT_POWER_SHIFT",
+        "index": 0,
+        "value": 1,
+        "terminator": "UPON_DEATH",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Liquor distilled from a mash made from mushrooms and black poppy. An underworld favorite."
+  },
+  {
+    "index": 11502,
+    "name": "Sarcophagus Honey",
+    "type": "Potion",
+    "rarity": "Uncommon",
+    "forTarget": "Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "TEMP30HEALTH",
+        "type": "BONUS",
+        "descriptor": "STAT_HEALTH_SHIFT",
+        "index": 0,
+        "value": 30,
+        "terminator": "UPON_DEATH",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Legendary medicine believed to be the stuff of rumors. A piece of flesh has been preserved inside using ancient techniques. Give this to a Kami to grant them a temporary bonus to maximum Health."
+  },
+  {
+    "index": 19001,
+    "name": "Spirit Glue",
+    "type": "Potion",
+    "rarity": "Uncommon",
+    "forTarget": "Enemy_Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "NEXT_COOLDOWN+180",
+        "type": "COOLDOWN",
+        "descriptor": "COOLDOWN",
+        "index": 0,
+        "value": 180,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "ITEM1003",
+        "type": "ITEM",
+        "descriptor": "",
+        "index": 1003,
+        "value": 1,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "This glue even sticks to intangible things. Can be used to add additional Cooldown to an enemy Kami and temporarily lock it down to a Node."
+  },
+  {
+    "index": 19101,
+    "name": "Animistic Poison",
+    "type": "Potion",
+    "rarity": "Rare",
+    "forTarget": "Enemy_Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "STRAIN+50%",
+        "type": "BONUS",
+        "descriptor": "STND_STRAIN_BOOST",
+        "index": 0,
+        "value": 500,
+        "terminator": "UPON_HARVEST_ACTION",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Dangerous to both living and nonliving beings. When used on Kamigotchi, it causes them to lose HP at a faster rate while Harvesting."
+  },
+  {
+    "index": 19201,
+    "name": "Cthonic Blight",
+    "type": "Potion",
+    "rarity": "Rare",
+    "forTarget": "Enemy_Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
+    "effects": [
+      {
+        "name": "DTS-5%",
+        "type": "BONUS",
+        "descriptor": "DEF_THRESHOLD_SHIFT",
+        "index": 0,
+        "value": -50,
+        "terminator": "UPON_DEATH",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Highly corrosive. Can be used to clear barriers of plant or fungal matter. It can also be used on a Kamigotchi to lower its defenses."
+  },
+  {
+    "index": 19301,
+    "name": "Curse Tablet",
+    "type": "Potion",
+    "rarity": "Rare",
+    "forTarget": "Enemy_Kami",
+    "flags": [],
+    "effects": [
+      {
+        "name": "ATS-30%_KK",
+        "type": "BONUS",
+        "descriptor": "ATK_THRESHOLD_SHIFT",
+        "index": 0,
+        "value": -300,
+        "terminator": "UPON_KILL_OR_KILLED",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Also called a Defixio or Katadesmos. This ancient tablet is inscribed with a curse of weakness. Although it was meant for a long-dead human, Kami can use it on their own kind."
+  },
+  {
+    "index": 21001,
+    "name": "Giftbox",
+    "type": "Lootbox",
+    "rarity": "Uncommon",
+    "forTarget": "Account",
+    "flags": [],
+    "effects": [
+      {
+        "name": "DT OG",
+        "type": "ITEM_DROPTABLE",
+        "descriptor": "",
+        "index": 0,
+        "value": 1,
+        "terminator": null,
+        "droptable": "Drop Table 1"
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The lowest tier of giftbox. You can get XP candies, cheeseburgers, and even a few rare item drops from this!"
+  },
+  {
+    "index": 21002,
+    "name": "Kamigotchi World Citizen Giftbox",
+    "type": "Lootbox",
+    "rarity": "Rare",
+    "forTarget": "Account",
+    "flags": [],
+    "effects": [
+      {
+        "name": "DT Passport",
+        "type": "ITEM_DROPTABLE",
+        "descriptor": "",
+        "index": 0,
+        "value": 1,
+        "terminator": null,
+        "droptable": "Drop Table 2"
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A gold-trimmed and colorfully painted treasure chest. The gift inside must be particularly valuable."
+  },
+  {
+    "index": 21003,
+    "name": "Wonder Egg",
+    "type": "Lootbox",
+    "rarity": "Rare",
+    "forTarget": "Account",
+    "flags": [],
+    "effects": [
+      {
+        "name": "DT Wonder Egg",
+        "type": "ITEM_DROPTABLE",
+        "descriptor": "",
+        "index": 0,
+        "value": 1,
+        "terminator": null,
+        "droptable": "Drop Table 3"
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A cracked egg held together by blood-red wax. The contents are a surprise."
+  },
+  {
+    "index": 21004,
+    "name": "Booster Pack",
+    "type": "Lootbox",
+    "rarity": "Rare",
+    "forTarget": "Account",
+    "flags": [],
+    "effects": [
+      {
+        "name": "DT Booster Pack",
+        "type": "ITEM_DROPTABLE",
+        "descriptor": "",
+        "index": 0,
+        "value": 1,
+        "terminator": null,
+        "droptable": "Drop Table 4"
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Open this magical booster pack to receive a Spell Card. You might find something super rare!"
+  },
+  {
+    "index": 21005,
+    "name": "Mochibox",
+    "type": "Lootbox",
+    "rarity": "Epic",
+    "forTarget": "Account",
+    "flags": [],
+    "effects": [
+      {
+        "name": "DT Mochibox",
+        "type": "ITEM_DROPTABLE",
+        "descriptor": "",
+        "index": 0,
+        "value": 1,
+        "terminator": null,
+        "droptable": "DT Mochibox"
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A sacred box containing exactly one Mochi."
+  },
+  {
+    "index": 21006,
+    "name": "Atonement Box",
+    "type": "Lootbox",
+    "rarity": "Epic",
+    "forTarget": "Account",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "To Deploy",
+    "description": "A box with 'From: Dimidiatus' scrawled on it in an unsettling script. Something inside is making noise and desperate to get out."
+  },
+  {
+    "index": 21201,
+    "name": "Ice Cream",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Account",
+    "flags": [],
+    "effects": [
+      {
+        "name": "SP+20",
+        "type": "STAT",
+        "descriptor": "SP",
+        "index": 0,
+        "value": 20,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Restorative ice-cream. Food for you, personally. Restores a little bit of your stamina."
+  },
+  {
+    "index": 21202,
+    "name": "Better Ice Cream",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Account",
+    "flags": [],
+    "effects": [
+      {
+        "name": "SP+40",
+        "type": "BONUS",
+        "descriptor": "SP",
+        "index": 0,
+        "value": 40,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A slightly larger and higher-quality ice-cream. What is this made of? Restores a medium amount of stamina."
+  },
+  {
+    "index": 21203,
+    "name": "Best Ice Cream",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Account",
+    "flags": [],
+    "effects": [
+      {
+        "name": "SP+80",
+        "type": "BONUS",
+        "descriptor": "SP",
+        "index": 0,
+        "value": 80,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A huge, lavishly decorated ice-cream. It doesn't seem to be melting at all... Restores a lot of stamina."
+  },
+  {
+    "index": 21204,
+    "name": "Neith's River of Life Spell Card",
+    "type": "Food",
+    "rarity": "Rare",
+    "forTarget": "Account",
+    "flags": [
+      "NOT_TRADABLE"
+    ],
+    "effects": [
+      {
+        "name": "SP+80",
+        "type": "BONUS",
+        "descriptor": "SP",
+        "index": 0,
+        "value": 80,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The card depicts a flooding river beneath the night sky. The magical waters grant a bounty of stamina, and the reeds grow nearly as tall as the pyramids. Activating this Spell Card on an Operator will restore 80 Stamina."
+  },
+  {
+    "index": 21205,
+    "name": "Rock Candyfloss",
+    "type": "Food",
+    "rarity": "Uncommon",
+    "forTarget": "Account",
+    "flags": [],
+    "effects": [
+      {
+        "name": "SP+80",
+        "type": "BONUS",
+        "descriptor": "SP",
+        "index": 0,
+        "value": 80,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "This rare crystal formation is soft to the touch, sweet, and edible. You can consume it to restore a large amount of Stamina."
+  },
+  {
+    "index": 21206,
+    "name": "Uninteresting Paste",
+    "type": "Potion",
+    "rarity": "Rare",
+    "forTarget": "Account",
+    "flags": [],
+    "effects": [
+      {
+        "name": "SP+150",
+        "type": "STAT",
+        "descriptor": "SP",
+        "index": 0,
+        "value": 150,
+        "terminator": null,
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A matte-black paste in a plastic jar. A secret incense recipe created by Mina that allows individuals without bodies to smoke tobacco."
+  },
+  {
+    "index": 23100,
+    "name": "Spice Grinder",
+    "type": "Tool",
+    "rarity": "Rare",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Can be used to break down ingredients."
+  },
+  {
+    "index": 23101,
+    "name": "Portable Burner",
+    "type": "Tool",
+    "rarity": "Rare",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Can be used to make Potions at a riverside."
+  },
+  {
+    "index": 23102,
+    "name": "Screwdriver",
+    "type": "Tool",
+    "rarity": "Epic",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "For driving screws. May be of practical use..."
+  },
+  {
+    "index": 30001,
+    "name": "Mask of Avarice",
+    "type": "Equipment",
+    "rarity": "Common",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_POWER+3",
+        "type": "STAT",
+        "descriptor": "POWER",
+        "index": 0,
+        "value": 3,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The empty eyes of the old theatre mask stare back at you, its empty grimace seems to whisper of musu and power."
+  },
+  {
+    "index": 30002,
+    "name": "Veil of Avarice",
+    "type": "Equipment",
+    "rarity": "Uncommon",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_POWER+4",
+        "type": "STAT",
+        "descriptor": "POWER",
+        "index": 0,
+        "value": 4,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The theatre veil's eye sockets glint hungrily, its haunting whisper offers a promise of musu and power."
+  },
+  {
+    "index": 30003,
+    "name": "Visage of Avarice",
+    "type": "Equipment",
+    "rarity": "Rare",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_POWER+5",
+        "type": "STAT",
+        "descriptor": "POWER",
+        "index": 0,
+        "value": 5,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The visage of avarice hungers, greedy eyes and a haunting grimace demand the pursuit of ever greater musu and power."
+  },
+  {
+    "index": 30004,
+    "name": "Mask of Contempt",
+    "type": "Equipment",
+    "rarity": "Common",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_DTS+6%",
+        "type": "BONUS",
+        "descriptor": "DEF_THRESHOLD_SHIFT",
+        "index": 0,
+        "value": 60,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The empty eyes of the old ogre mask stare back at you, its hollow frown seems to whisper of armor and defense."
+  },
+  {
+    "index": 30005,
+    "name": "Veil of Contempt",
+    "type": "Equipment",
+    "rarity": "Uncommon",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_DTS+8%",
+        "type": "BONUS",
+        "descriptor": "DEF_THRESHOLD_SHIFT",
+        "index": 0,
+        "value": 80,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The ogre veil's eye sockets glint disdainfully, its murmuring voice offers a promise of armor and defense."
+  },
+  {
+    "index": 30006,
+    "name": "Visage of Contempt",
+    "type": "Equipment",
+    "rarity": "Rare",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_DTS+10%",
+        "type": "BONUS",
+        "descriptor": "DEF_THRESHOLD_SHIFT",
+        "index": 0,
+        "value": 100,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The visage of contempt glowers, haughty eyes and a sneering frown demand the pursuit of ever greater armor and defense."
+  },
+  {
+    "index": 30007,
+    "name": "Mask of Mischief",
+    "type": "Equipment",
+    "rarity": "Common",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_ASR+6%",
+        "type": "BONUS",
+        "descriptor": "ATK_SPOILS_RATIO",
+        "index": 0,
+        "value": 60,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The empty eyes of the old goblin mask stare back at you, its unmoving grin seems to whisper of battle and plunder."
+  },
+  {
+    "index": 30008,
+    "name": "Veil of Mischief",
+    "type": "Equipment",
+    "rarity": "Uncommon",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_ASR+8%",
+        "type": "BONUS",
+        "descriptor": "ATK_SPOILS_RATIO",
+        "index": 0,
+        "value": 80,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The goblin veil's eye sockets glint impishly, its taunting whisper offers a promise of battle and plunder."
+  },
+  {
+    "index": 30009,
+    "name": "Visage of Mischief",
+    "type": "Equipment",
+    "rarity": "Rare",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_ASR+10%",
+        "type": "BONUS",
+        "descriptor": "ATK_SPOILS_RATIO",
+        "index": 0,
+        "value": 100,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The visage of mischief snickers, malevolent eyes and a fiendish smirk demand the pursuit of ever greater battle and plunder."
+  },
+  {
+    "index": 30010,
+    "name": "Old Leafling",
+    "type": "Equipment",
+    "rarity": "Common",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_BOUNTY+12%",
+        "type": "BONUS",
+        "descriptor": "HARV_BOUNTY_BOOST",
+        "index": 0,
+        "value": 120,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The old leafling bounces happily and shares a few tricks to increase your kami's bounty."
+  },
+  {
+    "index": 30011,
+    "name": "Wise Leafling",
+    "type": "Equipment",
+    "rarity": "Uncommon",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_BOUNTY+16%",
+        "type": "BONUS",
+        "descriptor": "HARV_BOUNTY_BOOST",
+        "index": 0,
+        "value": 160,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The wise leafling hops contentedly and shares its skillful techniques to increase your kami's bounty."
+  },
+  {
+    "index": 30012,
+    "name": "Elder Leafling",
+    "type": "Equipment",
+    "rarity": "Rare",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_BOUNTY+20%",
+        "type": "BONUS",
+        "descriptor": "HARV_BOUNTY_BOOST",
+        "index": 0,
+        "value": 200,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The elder leafling wiggles affectionately and shares its foraging secrets to increase your kami's bounty."
+  },
+  {
+    "index": 30013,
+    "name": "Old Gumdrop",
+    "type": "Equipment",
+    "rarity": "Common",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "RMB+15%",
+        "type": "BONUS",
+        "descriptor": "REST_METABOLISM_BOOST",
+        "index": 0,
+        "value": 150,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The old gumdrop offers soft hugs and reminds your kami to rest and drink water."
+  },
+  {
+    "index": 30014,
+    "name": "Wise Gumdrop",
+    "type": "Equipment",
+    "rarity": "Uncommon",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "RMB+20%",
+        "type": "BONUS",
+        "descriptor": "REST_METABOLISM_BOOST",
+        "index": 0,
+        "value": 200,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The wise gumdrop offers gentle cuddles and reminds your kami to rest and drink water."
+  },
+  {
+    "index": 30015,
+    "name": "Elder Gumdrop",
+    "type": "Equipment",
+    "rarity": "Rare",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "RMB+25%",
+        "type": "BONUS",
+        "descriptor": "REST_METABOLISM_BOOST",
+        "index": 0,
+        "value": 250,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The elder gumdrop offers a shoulder to cry on and reminds your kami to rest and drink water."
+  },
+  {
+    "index": 30016,
+    "name": "Old Critter",
+    "type": "Equipment",
+    "rarity": "Common",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_HEALTH+30",
+        "type": "STAT",
+        "descriptor": "HEALTH",
+        "index": 0,
+        "value": 30,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The skittish old critter is constantly on guard for threats to your kami's health."
+  },
+  {
+    "index": 30017,
+    "name": "Wise Critter",
+    "type": "Equipment",
+    "rarity": "Uncommon",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_HEALTH+40",
+        "type": "STAT",
+        "descriptor": "HEALTH",
+        "index": 0,
+        "value": 40,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The wise experienced critter is constantly on guard for threats to your kami's health."
+  },
+  {
+    "index": 30018,
+    "name": "Elder Critter",
+    "type": "Equipment",
+    "rarity": "Rare",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_HEALTH+50",
+        "type": "STAT",
+        "descriptor": "HEALTH",
+        "index": 0,
+        "value": 50,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The esteemed elder critter is constantly on guard for threats to your kami's health."
+  },
+  {
+    "index": 30019,
+    "name": "Crawling Greed",
+    "type": "Equipment",
+    "rarity": "Common",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_HFB+18%",
+        "type": "BONUS",
+        "descriptor": "HARV_FERTILITY_BOOST",
+        "index": 0,
+        "value": 180,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A condensation of hunger and greed in the form of cute crawling ladybugs provide your kami with increased harvest fertility."
+  },
+  {
+    "index": 30020,
+    "name": "Teeming Greed",
+    "type": "Equipment",
+    "rarity": "Uncommon",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_HFB+24%",
+        "type": "BONUS",
+        "descriptor": "HARV_FERTILITY_BOOST",
+        "index": 0,
+        "value": 240,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A distillation of hunger and greed in the form of adorable teeming ladybugs provide your kami with increased harvest fertility."
+  },
+  {
+    "index": 30021,
+    "name": "Swarming Greed",
+    "type": "Equipment",
+    "rarity": "Rare",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_HFB+30%",
+        "type": "BONUS",
+        "descriptor": "HARV_FERTILITY_BOOST",
+        "index": 0,
+        "value": 300,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A crystallization of hunger and greed in the form of happily swarming ladybugs provide your kami with increased harvest fertility."
+  },
+  {
+    "index": 30022,
+    "name": "Crawling Wrath",
+    "type": "Equipment",
+    "rarity": "Common",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_VIOLENCE+3",
+        "type": "STAT",
+        "descriptor": "VIOLENCE",
+        "index": 0,
+        "value": 3,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A condensation of predatory aggression in the form of cute crawling bees fill your kami with a desire for violence."
+  },
+  {
+    "index": 30023,
+    "name": "Teeming Wrath",
+    "type": "Equipment",
+    "rarity": "Uncommon",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_VIOLENCE+4",
+        "type": "STAT",
+        "descriptor": "VIOLENCE",
+        "index": 0,
+        "value": 4,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A distillation of predatory aggression in the form of adorable teeming bees fill your kami with a desire for violence."
+  },
+  {
+    "index": 30024,
+    "name": "Swarming Wrath",
+    "type": "Equipment",
+    "rarity": "Rare",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_VIOLENCE+5",
+        "type": "STAT",
+        "descriptor": "VIOLENCE",
+        "index": 0,
+        "value": 5,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A crystallization of predatory aggression in the form of happily swarming bees fill your kami with a desire for violence."
+  },
+  {
+    "index": 30025,
+    "name": "Crawling Cope",
+    "type": "Equipment",
+    "rarity": "Common",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_DSR+6%",
+        "type": "BONUS",
+        "descriptor": "DEF_SALVAGE_RATIO",
+        "index": 0,
+        "value": 60,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A condensation of fearful cowardice in the form of cute crawling worms protect your kami's harvest from predators."
+  },
+  {
+    "index": 30026,
+    "name": "Teeming Cope",
+    "type": "Equipment",
+    "rarity": "Uncommon",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_DSR+8%",
+        "type": "BONUS",
+        "descriptor": "DEF_SALVAGE_RATIO",
+        "index": 0,
+        "value": 80,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A distillation of fearful cowardice in the form of adorable teeming worms protect your kami's harvest from predators."
+  },
+  {
+    "index": 30027,
+    "name": "Swarming Cope",
+    "type": "Equipment",
+    "rarity": "Rare",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_DSR+10%",
+        "type": "BONUS",
+        "descriptor": "DEF_SALVAGE_RATIO",
+        "index": 0,
+        "value": 100,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A crystallization of fearful cowardice in the form of happily swarming worms protect your kami's harvest from predators."
+  },
+  {
+    "index": 30028,
+    "name": "Antique Tape",
+    "type": "Equipment",
+    "rarity": "Common",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_ATS+6%",
+        "type": "BONUS",
+        "descriptor": "ATK_THRESHOLD_SHIFT",
+        "index": 0,
+        "value": 60,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "This antique tape may not be very sticky anymore, and yet still it remains filled with hatred for kami."
+  },
+  {
+    "index": 30029,
+    "name": "Heirloom Tape",
+    "type": "Equipment",
+    "rarity": "Uncommon",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_ATS+8%",
+        "type": "BONUS",
+        "descriptor": "ATK_THRESHOLD_SHIFT",
+        "index": 0,
+        "value": 80,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "What this heirloom tape has lost in stickiness has more than been made up for by its powerful hatred for kami."
+  },
+  {
+    "index": 30030,
+    "name": "Ancient Tape",
+    "type": "Equipment",
+    "rarity": "Rare",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_ATS+10%",
+        "type": "BONUS",
+        "descriptor": "ATK_THRESHOLD_SHIFT",
+        "index": 0,
+        "value": 100,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "An ancient tape from an earlier age, it's adhesiveness long gone, all that remains is a distilled and concentrated hatred for kami."
+  },
+  {
+    "index": 30031,
+    "name": "Antique Automata",
+    "type": "Equipment",
+    "rarity": "Common",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_HIB+15P",
+        "type": "BONUS",
+        "descriptor": "HARV_INTENSITY_BOOST",
+        "index": 0,
+        "value": 15,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "This antique automata may be partly broken, and yet still it drives your kami to harvest with ever greater intensity."
+  },
+  {
+    "index": 30032,
+    "name": "Heirloom Automata",
+    "type": "Equipment",
+    "rarity": "Uncommon",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_HIB+20",
+        "type": "BONUS",
+        "descriptor": "HARV_INTENSITY_BOOST",
+        "index": 0,
+        "value": 20,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "What this heirloom automata has lost in functional machinery has more than been made up for in the way it drives your kami to harvest with ever greater intensity."
+  },
+  {
+    "index": 30033,
+    "name": "Ancient Automata",
+    "type": "Equipment",
+    "rarity": "Rare",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_HIB+25P",
+        "type": "BONUS",
+        "descriptor": "HARV_INTENSITY_BOOST",
+        "index": 0,
+        "value": 25,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "An ancient automata from an earlier age, it's gears long frozen, all that remains is a frantic force driving your kami to harvest with ever greater intensity."
+  },
+  {
+    "index": 30034,
+    "name": "Antique Ledger",
+    "type": "Equipment",
+    "rarity": "Common",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_HARMONY+3",
+        "type": "STAT",
+        "descriptor": "HARMONY",
+        "index": 0,
+        "value": 3,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "This antique ledger is mostly drained of funds, and yet it remains filled with a desire for peace and harmony among kamikind."
+  },
+  {
+    "index": 30035,
+    "name": "Heirloom Ledger",
+    "type": "Equipment",
+    "rarity": "Uncommon",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_HARMONY+4",
+        "type": "STAT",
+        "descriptor": "HARMONY",
+        "index": 0,
+        "value": 4,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "What this heirloom ledger has lost in account balance has more than been made up for by its desire for peace and harmony among kamikind."
+  },
+  {
+    "index": 30036,
+    "name": "Ancient Ledger",
+    "type": "Equipment",
+    "rarity": "Rare",
+    "forTarget": "Kami_Pet_Slot",
+    "flags": [],
+    "effects": [
+      {
+        "name": "E_HARMONY+5",
+        "type": "STAT",
+        "descriptor": "HARMONY",
+        "index": 0,
+        "value": 5,
+        "terminator": "UPON_UNEQUIP",
+        "droptable": null
+      }
+    ],
+    "requirements": null,
+    "status": "In Game",
+    "description": "An ancient ledger from an earlier age, it's wallet long emptied, all that remains is a powerful longing for peace and harmony among kamikind."
+  },
+  {
+    "index": 100001,
+    "name": "Astrolabe Disk",
+    "type": "Key Item",
+    "rarity": "Epic",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A golden disk. It resembles the tympan of an astrolabe, but the engraving doesn't look right."
+  },
+  {
+    "index": 100002,
+    "name": "Ancient Machine Part",
+    "type": "Key Item",
+    "rarity": "Epic",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A durable part of some kind of high-tech machinery. It has wear and corrosion like it's been exposed to the elements for thousands of years."
+  },
+  {
+    "index": 100003,
+    "name": "Disc-Shaped Map",
+    "type": "Key Item",
+    "rarity": "Epic",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A golden disk inlaid with other metals. It resembles an overhead map of a temple complex. Seems to depict roads, pyramids, and other structures."
+  },
+  {
+    "index": 100004,
+    "name": "Aetheric Sextant",
+    "type": "Key Item",
+    "rarity": "Legendary",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Capable of divining some things beyond the perception of mortals."
+  },
+  {
+    "index": 100005,
+    "name": "Pyramid Engine",
+    "type": "Key Item",
+    "rarity": "Epic",
+    "forTarget": null,
+    "flags": [
+      "NOT_TRADABLE"
+    ],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "This device dates to thousands of years old and is constructed in Egyptian style. It can be used to generate electrical power. The process through which this occurs is unknown."
+  },
+  {
+    "index": 100006,
+    "name": "KW Maps Data Chip",
+    "type": "Key Item",
+    "rarity": "Rare",
+    "forTarget": "Account",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Kamigotchi World Maps. A data chip found in the Lost Skeleton's laptop. It looks damaged, but it might still be readable."
+  },
+  {
+    "index": 100007,
+    "name": "Unmarked Data Chip",
+    "type": "Key Item",
+    "rarity": "Rare",
+    "forTarget": "Account",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A data chip found in the Techno Temple. Looks to be in good working condition."
+  },
+  {
+    "index": 100008,
+    "name": "Rock Crystal Lens",
+    "type": "Key Item",
+    "rarity": "Epic",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Although this lens has a slight crack, it can still be used to focus and magnify light. Scans indicate this item to be hundreds of thousands of years old."
+  },
+  {
+    "index": 100009,
+    "name": "Switchbox Imp",
+    "type": "Key Item",
+    "rarity": "Epic",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Looks like a small wired relay box on the surface. A tiny humanoid imp lives under the faceplate and manually operates the contacts. This item can be used in crafting certain complex devices."
+  },
+  {
+    "index": 100010,
+    "name": "Dowsing Rod",
+    "type": "Key Item",
+    "rarity": "Epic",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "The crystal in the caves radiates a strange power. Mina alleges that this item can sense traces of that power."
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "index": 1,
+    "name": "The Agency",
+    "key": "Agency",
+    "description": "Your relationship with the Agency who administrate Kamigotchi world, run by the Menu. A good friend to have…"
+  },
+  {
+    "index": 2,
+    "name": "The Elders",
+    "key": "Mina",
+    "description": "Your relationship with Mina and the business she runs. And her investors…."
+  },
+  {
+    "index": 3,
+    "name": "The Nursery",
+    "key": "Nursery",
+    "description": "Your relationship with the Nursery, and the mysterious forces they seek to bring into this world…"
+  }
+]
