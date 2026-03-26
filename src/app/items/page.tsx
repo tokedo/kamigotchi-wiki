@@ -1,247 +1,303 @@
-import {
-  MechanicPage,
-  InfoBox,
-  FormulaBlock,
-  StatTable,
-} from "@/components/mechanic-page";
+"use client";
 
-export default function ItemsPage() {
+import { useState, useMemo } from "react";
+import Image from "next/image";
+import itemsData from "@/data/items.json";
+import recipesData from "@/data/recipes.json";
+import { itemImagePath } from "@/lib/images";
+import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
+
+type Item = (typeof itemsData)[number];
+type Recipe = (typeof recipesData)[number];
+
+const RARITY_COLORS: Record<string, string> = {
+  Common: "bg-zinc-600 text-zinc-100",
+  Uncommon: "bg-green-700 text-green-100",
+  Rare: "bg-blue-700 text-blue-100",
+  Epic: "bg-purple-700 text-purple-100",
+  Legendary: "bg-amber-600 text-amber-100",
+};
+
+const TYPE_COLORS: Record<string, string> = {
+  Food: "bg-orange-800/60 text-orange-200",
+  Material: "bg-stone-700/60 text-stone-200",
+  Equipment: "bg-sky-800/60 text-sky-200",
+  Potion: "bg-fuchsia-800/60 text-fuchsia-200",
+  "Key Item": "bg-yellow-800/60 text-yellow-200",
+  Lootbox: "bg-indigo-800/60 text-indigo-200",
+  Tool: "bg-teal-800/60 text-teal-200",
+  Misc: "bg-gray-700/60 text-gray-200",
+  Consumable: "bg-lime-800/60 text-lime-200",
+  Revive: "bg-red-800/60 text-red-200",
+  NFT: "bg-violet-800/60 text-violet-200",
+  ERC20: "bg-emerald-800/60 text-emerald-200",
+};
+
+const ALL_TYPES = [...new Set(itemsData.map((i) => i.type).filter(Boolean))].sort();
+const ALL_RARITIES = ["Common", "Uncommon", "Rare", "Epic", "Legendary"];
+const PER_PAGE = 30;
+
+export default function ItemDatabase() {
+  const [search, setSearch] = useState("");
+  const [typeFilter, setTypeFilter] = useState<string | null>(null);
+  const [rarityFilter, setRarityFilter] = useState<string | null>(null);
+  const [expandedId, setExpandedId] = useState<number | null>(null);
+  const [page, setPage] = useState(0);
+  const [imgErrors, setImgErrors] = useState<Set<number>>(new Set());
+
+  const recipeMap = useMemo(() => {
+    const map: Record<number, { as: string; recipe: Recipe }[]> = {};
+    for (const r of recipesData) {
+      const addEntry = (idx: number, role: string) => {
+        if (!map[idx]) map[idx] = [];
+        map[idx].push({ as: role, recipe: r });
+      };
+      addEntry(r.output.index, "output");
+      for (const inp of r.inputs) addEntry(inp.index, "input");
+      if (r.tool) addEntry(r.tool.index, "tool");
+    }
+    return map;
+  }, []);
+
+  const filtered = useMemo(() => {
+    const q = search.toLowerCase();
+    return itemsData.filter((item) => {
+      if (q && !item.name.toLowerCase().includes(q) && !item.description.toLowerCase().includes(q)) return false;
+      if (typeFilter && item.type !== typeFilter) return false;
+      if (rarityFilter && item.rarity !== rarityFilter) return false;
+      return true;
+    });
+  }, [search, typeFilter, rarityFilter]);
+
+  const totalPages = Math.ceil(filtered.length / PER_PAGE);
+  const pageItems = filtered.slice(page * PER_PAGE, (page + 1) * PER_PAGE);
+
+  const resetPage = () => setPage(0);
+
   return (
-    <MechanicPage
-      title="Items"
-      subtitle="177 items across multiple categories — food, materials, equipment, potions, and more"
-      overview={<Overview />}
-      details={<Details />}
-    />
+    <article>
+      <header className="mb-6">
+        <h1 className="text-3xl font-bold tracking-tight">Item Database</h1>
+        <p className="mt-2 text-muted-foreground">
+          All {itemsData.length} items — search, filter, and explore effects,
+          recipes, and drop sources.
+        </p>
+      </header>
+
+      {/* Search */}
+      <div className="mb-4">
+        <Input
+          placeholder="Search items by name or description..."
+          value={search}
+          onChange={(e) => { setSearch(e.target.value); resetPage(); setExpandedId(null); }}
+          className="max-w-md"
+        />
+      </div>
+
+      {/* Type filters */}
+      <div className="mb-2 flex flex-wrap gap-1.5">
+        <button
+          onClick={() => { setTypeFilter(null); resetPage(); }}
+          className={`px-2.5 py-1 text-xs rounded-md border transition-colors ${!typeFilter ? "bg-foreground text-background border-foreground" : "border-border text-muted-foreground hover:text-foreground"}`}
+        >
+          All Types
+        </button>
+        {ALL_TYPES.map((t) => (
+          <button
+            key={t}
+            onClick={() => { setTypeFilter(typeFilter === t ? null : t); resetPage(); }}
+            className={`px-2.5 py-1 text-xs rounded-md border transition-colors ${typeFilter === t ? "bg-foreground text-background border-foreground" : "border-border text-muted-foreground hover:text-foreground"}`}
+          >
+            {t}
+          </button>
+        ))}
+      </div>
+
+      {/* Rarity filters */}
+      <div className="mb-4 flex flex-wrap gap-1.5">
+        <button
+          onClick={() => { setRarityFilter(null); resetPage(); }}
+          className={`px-2.5 py-1 text-xs rounded-md border transition-colors ${!rarityFilter ? "bg-foreground text-background border-foreground" : "border-border text-muted-foreground hover:text-foreground"}`}
+        >
+          All Rarities
+        </button>
+        {ALL_RARITIES.map((r) => (
+          <button
+            key={r}
+            onClick={() => { setRarityFilter(rarityFilter === r ? null : r); resetPage(); }}
+            className={`px-2.5 py-1 text-xs rounded-md border transition-colors ${rarityFilter === r ? "bg-foreground text-background border-foreground" : "border-border text-muted-foreground hover:text-foreground"}`}
+          >
+            {r}
+          </button>
+        ))}
+      </div>
+
+      {/* Count */}
+      <p className="text-sm text-muted-foreground mb-4">
+        Showing {filtered.length} of {itemsData.length} items
+        {totalPages > 1 && ` — page ${page + 1} of ${totalPages}`}
+      </p>
+
+      {/* Item grid */}
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {pageItems.map((item) => (
+          <ItemCard
+            key={item.index}
+            item={item}
+            expanded={expandedId === item.index}
+            onToggle={() => setExpandedId(expandedId === item.index ? null : item.index)}
+            recipes={recipeMap[item.index] || []}
+            imgError={imgErrors.has(item.index)}
+            onImgError={() => setImgErrors((s) => new Set(s).add(item.index))}
+          />
+        ))}
+      </div>
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="mt-6 flex items-center justify-center gap-2">
+          <button
+            onClick={() => setPage(Math.max(0, page - 1))}
+            disabled={page === 0}
+            className="px-3 py-1.5 text-sm rounded-md border border-border disabled:opacity-30 hover:bg-accent"
+          >
+            Prev
+          </button>
+          <span className="text-sm text-muted-foreground">
+            {page + 1} / {totalPages}
+          </span>
+          <button
+            onClick={() => setPage(Math.min(totalPages - 1, page + 1))}
+            disabled={page >= totalPages - 1}
+            className="px-3 py-1.5 text-sm rounded-md border border-border disabled:opacity-30 hover:bg-accent"
+          >
+            Next
+          </button>
+        </div>
+      )}
+    </article>
   );
 }
 
-function Overview() {
+function ItemCard({
+  item,
+  expanded,
+  onToggle,
+  recipes,
+  imgError,
+  onImgError,
+}: {
+  item: Item;
+  expanded: boolean;
+  onToggle: () => void;
+  recipes: { as: string; recipe: Recipe }[];
+  imgError: boolean;
+  onImgError: () => void;
+}) {
   return (
-    <>
-      <h2>What Are Items?</h2>
-      <p>
-        Items are everything your Kami and your account can hold, use, trade,
-        and craft. From the Musu currency you harvest to the healing snacks you
-        feed your Kami, items are the backbone of Kamigotchi&apos;s economy.
-      </p>
-      <p>
-        All items are <strong>fungible</strong> — meaning each Wooden Stick is
-        identical to every other Wooden Stick. Your inventory simply tracks how
-        many of each item you own.
-      </p>
+    <div
+      className={`rounded-lg border transition-colors cursor-pointer ${expanded ? "border-foreground/30 bg-accent/30" : "border-border bg-card hover:border-foreground/15"}`}
+      onClick={onToggle}
+    >
+      {/* Header row */}
+      <div className="flex items-center gap-3 p-3">
+        {/* Item image */}
+        <div className="w-10 h-10 shrink-0 rounded bg-muted/50 flex items-center justify-center overflow-hidden">
+          {!imgError ? (
+            <Image
+              src={itemImagePath(item.name)}
+              alt={item.name}
+              width={40}
+              height={40}
+              className="object-contain"
+              onError={onImgError}
+              unoptimized
+            />
+          ) : (
+            <span className="text-xs text-muted-foreground">?</span>
+          )}
+        </div>
 
-      <h2>Item Categories</h2>
-      <p>
-        Items fall into several categories based on how they behave:
-      </p>
-      <ul>
-        <li>
-          <strong>Base items</strong> — simple holdable items like Musu
-          (currency), crafting materials, and collectibles
-        </li>
-        <li>
-          <strong>Food &amp; Consumables</strong> — items you use on your Kami
-          for healing, stat buffs, or special effects
-        </li>
-        <li>
-          <strong>Equipment</strong> — gear you equip to your Kami for permanent
-          stat bonuses while worn
-        </li>
-        <li>
-          <strong>Lootboxes</strong> — items that open into random rewards
-        </li>
-        <li>
-          <strong>Potions</strong> — craftable consumables with powerful effects
-        </li>
-        <li>
-          <strong>Spell Cards</strong> — items you cast on enemy Kamis
-        </li>
-      </ul>
+        {/* Name + badges */}
+        <div className="flex-1 min-w-0">
+          <p className="font-medium text-sm truncate">{item.name}</p>
+          <div className="flex gap-1.5 mt-0.5">
+            {item.type && (
+              <span className={`text-[10px] px-1.5 py-0.5 rounded ${TYPE_COLORS[item.type] || "bg-gray-700 text-gray-200"}`}>
+                {item.type}
+              </span>
+            )}
+            {item.rarity && (
+              <span className={`text-[10px] px-1.5 py-0.5 rounded ${RARITY_COLORS[item.rarity] || "bg-gray-700 text-gray-200"}`}>
+                {item.rarity}
+              </span>
+            )}
+          </div>
+        </div>
+      </div>
 
-      <h2>How To Use Items</h2>
-      <p>
-        Items can be used in four different ways:
-      </p>
-      <StatTable
-        headers={["Action", "What It Does", "Notes"]}
-        rows={[
-          [
-            "Use on your Kami",
-            "Apply the item to one of your Kamis for healing, buffs, or effects",
-            "Your Kami must be in the same room as you",
-          ],
-          [
-            "Cast on enemy Kami",
-            "Apply the item to another player's Kami (debuffs, damage, etc.)",
-            "Costs 10 stamina. Target must be in the same room",
-          ],
-          [
-            "Burn",
-            "Permanently destroy the item. Used for quest turn-ins",
-            "Some items are marked unburnable",
-          ],
-          [
-            "Transfer",
-            "Send items to another player's account",
-            "Costs 15 Musu per item type transferred",
-          ],
-        ]}
-      />
+      {/* Expanded details */}
+      {expanded && (
+        <div className="border-t border-border p-3 text-sm space-y-3" onClick={(e) => e.stopPropagation()}>
+          <p className="text-muted-foreground">{item.description}</p>
 
-      <InfoBox variant="info">
-        When you <strong>cast</strong> a spell card on an enemy Kami, it costs
-        10 stamina. Both you and the target must be in the same room.
-      </InfoBox>
+          {item.forTarget && (
+            <div>
+              <span className="text-xs text-muted-foreground">Target: </span>
+              <Badge variant="outline" className="text-xs">{item.forTarget}</Badge>
+            </div>
+          )}
 
-      <h2>Item Flags</h2>
-      <p>
-        Some items have special flags that restrict what you can do with them:
-      </p>
-      <ul>
-        <li>
-          <strong>Soulbound</strong> — cannot be traded or transferred (tied to
-          your account)
-        </li>
-        <li>
-          <strong>Untradable</strong> — cannot be transferred between players
-        </li>
-        <li>
-          <strong>Unburnable</strong> — cannot be burned or destroyed
-        </li>
-      </ul>
+          {item.flags.length > 0 && (
+            <div className="flex flex-wrap gap-1">
+              {item.flags.map((f) => (
+                <Badge key={f} variant="secondary" className="text-xs">{f}</Badge>
+              ))}
+            </div>
+          )}
 
-      <h2>Key Items</h2>
-      <StatTable
-        headers={["Item", "What It Is"]}
-        rows={[
-          ["Musu", "The primary currency. Earned by harvesting. Used to buy items, pay fees, and trade."],
-          ["Gacha Ticket", "Spend to mint a new Kami through the Gacha system"],
-          ["Reroll Token", "Exchange an existing Kami for a new random one"],
-          ["Onyx Shards", "Premium currency. Bridgeable to/from the ERC-20 token"],
-          ["Obols", "Special collectible items"],
-        ]}
-      />
+          {item.effects.length > 0 && (
+            <div>
+              <p className="text-xs font-medium text-muted-foreground mb-1">Effects</p>
+              <div className="space-y-1">
+                {item.effects.map((e, i) => (
+                  <div key={i} className="text-xs flex items-center gap-2 text-muted-foreground">
+                    <Badge variant="outline" className="text-[10px] shrink-0">{e.type}</Badge>
+                    <span>{e.name}</span>
+                    {e.value !== 0 && <span className="font-mono">{e.value > 0 ? "+" : ""}{e.value}</span>}
+                    {e.terminator && <span className="text-muted-foreground/60">until {e.terminator}</span>}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
-      <h2>Token-Backed Items</h2>
-      <p>
-        Some items like <strong>Onyx Shards</strong> are linked to real ERC-20
-        tokens on the blockchain. You can import tokens into the game (turning
-        them into items) and export items back out (turning them into tokens)
-        through the Token Portal. See the{" "}
-        <a href="/marketplace/onyx">Onyx &amp; Token Portal</a> page for
-        details.
-      </p>
-    </>
-  );
-}
-
-function Details() {
-  return (
-    <>
-      <h2>Item Registry Constants</h2>
-      <StatTable
-        headers={["Constant", "Item Index", "Description"]}
-        rows={[
-          ["MUSU_INDEX", "1", "Musu — primary currency (harvested resource)"],
-          ["GACHA_TICKET_INDEX", "10", "Gacha mint ticket"],
-          ["REROLL_TICKET_INDEX", "11", "Gacha reroll ticket"],
-          ["ONYX_INDEX", "100", "Onyx Shards — premium currency"],
-          ["OBOL_INDEX", "1015", "Obols"],
-        ]}
-      />
-
-      <h2>Usage System Details</h2>
-
-      <h3>Use on Own Kami</h3>
-      <p>The full flow when using an item on your own Kami:</p>
-      <ol>
-        <li>Verify Kami is owned by you and in the same room</li>
-        <li>Verify Kami cooldown has expired</li>
-        <li>Verify item is for Kami targets and is enabled</li>
-        <li>Check item usage requirements against the Kami</li>
-        <li>Reset harvest-action bonuses (unless item has BYPASS_BONUS_RESET flag)</li>
-        <li>Sync Kami state (apply pending health regen, etc.)</li>
-        <li>Deduct 1 item from inventory</li>
-        <li>Apply item allocations (stat changes, effects, etc.)</li>
-        <li>Reset Kami intensity</li>
-      </ol>
-
-      <h3>Cast on Enemy Kami</h3>
-      <ol>
-        <li>Verify target is a Kami in the same room as you</li>
-        <li>Verify item is for enemy Kami targets and is enabled</li>
-        <li>Check item usage requirements against the target</li>
-        <li>Sync your account and deplete <strong>10 stamina</strong></li>
-        <li>Sync target Kami state</li>
-        <li>Deduct 1 item from inventory</li>
-        <li>Apply item effects to the target</li>
-      </ol>
-
-      <h3>Use on Account</h3>
-      <p>
-        Account-targeted items can be used in <strong>batches</strong> (unlike
-        Kami-targeted items which are always 1 at a time). The effects are
-        multiplied by the amount used.
-      </p>
-
-      <h3>Burning</h3>
-      <p>
-        Burning supports batch operations — you can burn multiple item types
-        and amounts in a single transaction. Items with the{" "}
-        <code>ITEM_UNBURNABLE</code> flag cannot be burned. Burning permanently
-        removes items with no effects applied.
-      </p>
-
-      <h2>Transfer Fee</h2>
-      <FormulaBlock label="Transfer Cost">
-        {"Fee = 15 Musu per item type transferred\n\nExample: Transferring 50 Wooden Sticks and 30 Stones costs 30 Musu\n(2 item types x 15 Musu each)"}
-      </FormulaBlock>
-      <p>
-        The fee is charged per distinct item type, not per unit. Transferring
-        1,000 of a single item type costs the same 15 Musu as transferring 1.
-      </p>
-
-      <h2>Item Effect Types</h2>
-      <p>When a consumable item is applied to a target, it can trigger:</p>
-      <StatTable
-        headers={["Effect", "Description"]}
-        rows={[
-          ["Stat effects", "Apply stat deltas (healing, buffing). Registry base -> target's permanent shift; registry sync -> target's sync."],
-          ["XP effects", "Grant experience points to the target"],
-          ["Move effects", "Teleport the target to a specific room"],
-          ["Allocation effects", "Distribute items or resources per the item's rules"],
-        ]}
-      />
-
-      <h2>Item Flags Reference</h2>
-      <StatTable
-        headers={["Flag", "Effect"]}
-        rows={[
-          ["ITEM_UNBURNABLE", "Cannot be burned"],
-          ["NOT_TRADABLE", "Cannot be transferred between players"],
-          ["BYPASS_BONUS_RESET", "Using this item does not reset harvest bonuses"],
-        ]}
-      />
-
-      <h2>ERC-20 Backed Items</h2>
-      <p>
-        Items linked to ERC-20 tokens have special handling:
-      </p>
-      <ul>
-        <li>Cannot be directly increased via normal inventory operations — must go through the Token Portal</li>
-        <li>Can be transferred between accounts</li>
-        <li>Cannot be removed from the registry while a token address is set</li>
-        <li>Have a scale factor that converts between game units and token units</li>
-      </ul>
-
-      <h2>Inventory Details</h2>
-      <p>
-        Your inventory is a simple balance-per-item system. When your balance
-        for an item reaches 0, the inventory entry is removed entirely to save
-        storage. Inventory entries are created lazily — they only exist when you
-        have a positive balance.
-      </p>
-    </>
+          {recipes.length > 0 && (
+            <div>
+              <p className="text-xs font-medium text-muted-foreground mb-1">Recipes</p>
+              <div className="space-y-1">
+                {recipes.map(({ as: role, recipe }, i) => (
+                  <div key={i} className="text-xs text-muted-foreground">
+                    <Badge
+                      variant="outline"
+                      className={`text-[10px] mr-1 ${role === "output" ? "text-green-400 border-green-400/30" : role === "tool" ? "text-amber-400 border-amber-400/30" : "text-blue-400 border-blue-400/30"}`}
+                    >
+                      {role === "output" ? "Crafted by" : role === "tool" ? "Tool for" : "Used in"}
+                    </Badge>
+                    {recipe.name}
+                    {role === "output" && (
+                      <span className="text-muted-foreground/60 ml-1">
+                        ({recipe.inputs.map((inp) => `${inp.amount}× ${inp.name}`).join(", ")})
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
   );
 }

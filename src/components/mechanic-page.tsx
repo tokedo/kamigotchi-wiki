@@ -65,21 +65,70 @@ export function InfoBox({ children, variant = "info" }: InfoBoxProps) {
   );
 }
 
+/**
+ * FormulaBlock — displays equations with optional variable definitions.
+ *
+ * variant="definition" (default) — game mechanic formula. Blue left border,
+ *   prominent label. Use for the canonical equation that defines how a system works.
+ *
+ * variant="example" — worked example with concrete numbers. Amber left border,
+ *   "Example" prefix. Use to show a formula applied with real values.
+ */
 export function FormulaBlock({
   children,
   label,
+  vars,
+  variant = "definition",
 }: {
   children: React.ReactNode;
   label?: string;
+  vars?: Record<string, string>;
+  variant?: "definition" | "example";
 }) {
+  const isExample = variant === "example";
+
   return (
-    <div className="my-4 rounded-lg border border-border bg-muted/50 p-4 font-mono text-sm">
-      {label && (
-        <p className="text-xs font-semibold text-muted-foreground mb-2">
-          {label}
-        </p>
+    <div
+      className={`my-5 rounded-lg border overflow-hidden border-l-[3px] ${
+        isExample
+          ? "border-border border-l-amber-500/60 bg-amber-500/[0.03]"
+          : "border-border border-l-blue-500/60 bg-muted/50"
+      }`}
+    >
+      <div className="p-4 font-mono text-sm">
+        {label && (
+          <p
+            className={`text-xs font-semibold mb-2 flex items-center gap-1.5 ${
+              isExample ? "text-amber-400/80" : "text-blue-400/80"
+            }`}
+          >
+            {isExample ? "Example" : "Formula"}
+            <span className="text-muted-foreground font-normal">&mdash; {label}</span>
+          </p>
+        )}
+        {!label && isExample && (
+          <p className="text-xs font-semibold mb-2 text-amber-400/80">Example</p>
+        )}
+        {!label && !isExample && null}
+        <div className="whitespace-pre-wrap">{children}</div>
+      </div>
+      {vars && Object.keys(vars).length > 0 && (
+        <div className={`border-t px-4 py-3 ${
+          isExample ? "border-amber-500/10 bg-amber-500/[0.02]" : "border-border bg-muted/30"
+        }`}>
+          <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">
+            Where
+          </p>
+          <div className="grid gap-1">
+            {Object.entries(vars).map(([name, desc]) => (
+              <div key={name} className="flex gap-2 text-xs">
+                <span className="font-mono font-medium text-foreground/80 shrink-0">{name}</span>
+                <span className="text-muted-foreground">= {desc}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       )}
-      <div className="whitespace-pre-wrap">{children}</div>
     </div>
   );
 }

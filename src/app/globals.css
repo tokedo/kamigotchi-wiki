@@ -128,3 +128,50 @@
     @apply font-sans;
   }
 }
+
+/* Prose content styling */
+.prose {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: oklch(0.78 0 0);
+}
+
+/* Section headers — prominent and well-separated */
+.prose h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid oklch(1 0 0 / 12%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: oklch(0.96 0 0);
+}
+.prose h3 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.875rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: oklch(0.90 0 0);
+}
+.prose h4 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: oklch(0.85 0 0);
+}
+.prose h2:first-child {
+  margin-top: 0;
+}
+.prose p {
+  margin-top: 0.875rem;
+  margin-bottom: 0.875rem;
+}
+.prose li {
+  margin-top: 0.375rem;
+  margin-bottom: 0.375rem;
+}
+.prose strong {
+  color: oklch(0.92 0 0);
+}

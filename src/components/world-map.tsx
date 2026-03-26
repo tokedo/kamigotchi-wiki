@@ -1,12 +1,16 @@
 "use client";
 
 import { useState, useMemo, useCallback } from "react";
+import Image from "next/image";
 import roomsData from "@/data/rooms.json";
+import roomImageMap from "@/data/room-images.json";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
 import { Search, X, MapPin, DoorOpen, Pickaxe, Layers } from "lucide-react";
+
+const roomImages = roomImageMap as Record<string, string>;
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -169,6 +173,9 @@ function GridPlane({
   highlightedIndices: Set<number>;
 }) {
   // Compute grid bounds
+  if (planeRooms.length === 0) {
+    return <p className="text-sm text-muted-foreground py-8 text-center">No rooms on this layer.</p>;
+  }
   const minX = Math.min(...planeRooms.map((r) => r.x));
   const maxX = Math.max(...planeRooms.map((r) => r.x));
   const minY = Math.min(...planeRooms.map((r) => r.y));
@@ -283,20 +290,22 @@ function GridPlane({
               return t && t.z !== room.z;
             });
 
+            const tileImg = roomImages[String(room.index)];
+
             return (
               <button
                 key={room.index}
                 onClick={() => onSelect(room)}
                 className={`
-                  absolute flex flex-col items-center justify-center rounded-lg border
+                  absolute flex flex-col items-center justify-center rounded-lg border overflow-hidden
                   transition-all duration-150 cursor-pointer group
                   ${tileBorderClass(room)}
                   ${
                     isSelected
-                      ? "bg-accent ring-2 ring-ring scale-105 z-10 shadow-lg shadow-ring/20"
+                      ? "ring-2 ring-ring scale-105 z-10 shadow-lg shadow-ring/20"
                       : isHighlighted
-                        ? "bg-accent/60 ring-1 ring-ring/50"
-                        : "bg-card/80 hover:bg-accent/50 hover:scale-102"
+                        ? "ring-1 ring-ring/50"
+                        : "hover:scale-102"
                   }
                   ${!isHighlighted && !isSelected && highlightedIndices.size > 0 ? "opacity-40" : ""}
                 `}
@@ -308,15 +317,29 @@ function GridPlane({
                 }}
                 title={room.name}
               >
+                {/* Room background image */}
+                {tileImg && (
+                  <Image
+                    src={`/img/rooms/${tileImg}`}
+                    alt=""
+                    fill
+                    className={`object-cover ${isSelected ? "opacity-40" : "opacity-20 group-hover:opacity-30"} transition-opacity`}
+                    unoptimized
+                    sizes="80px"
+                  />
+                )}
+                {!tileImg && (
+                  <div className={`absolute inset-0 ${isSelected ? "bg-accent" : isHighlighted ? "bg-accent/60" : "bg-card/80 group-hover:bg-accent/50"}`} />
+                )}
                 {/* Affinity dot */}
                 {hasNode && (
                   <span
-                    className={`w-2.5 h-2.5 rounded-full mb-1 shrink-0 ${affinityDotClass(room.node!.affinity)}`}
+                    className={`w-2.5 h-2.5 rounded-full mb-1 shrink-0 relative z-10 ${affinityDotClass(room.node!.affinity)}`}
                   />
                 )}
                 {/* Room name */}
                 <span
-                  className={`text-[10px] leading-tight text-center px-1 font-medium
+                  className={`text-[10px] leading-tight text-center px-1 font-medium relative z-10 drop-shadow-sm
                     ${isSelected ? "text-foreground" : "text-muted-foreground group-hover:text-foreground"}
                   `}
                 >
@@ -324,7 +347,7 @@ function GridPlane({
                 </span>
                 {/* Cross-plane exit indicator */}
                 {hasSpecialExit && (
-                  <DoorOpen className="w-3 h-3 text-purple-400/60 mt-0.5 shrink-0" />
+                  <DoorOpen className="w-3 h-3 text-purple-400/60 mt-0.5 shrink-0 relative z-10" />
                 )}
               </button>
             );
@@ -356,9 +379,27 @@ function DetailPanel({
   );
 
   const affinityParts = room.node?.affinity.split(",").map((s) => s.trim()) ?? [];
+  const roomImg = roomImages[String(room.index)];
+  const [imgError, setImgError] = useState(false);
 
   return (
-    <div className="rounded-xl border border-border bg-card p-5 space-y-4">
+    <div className="rounded-xl border border-border bg-card overflow-hidden">
+      {/* Room image */}
+      {roomImg && !imgError && (
+        <div className="relative w-full aspect-[16/9] bg-muted/30">
+          <Image
+            src={`/img/rooms/${roomImg}`}
+            alt={room.name}
+            fill
+            className="object-cover"
+            onError={() => setImgError(true)}
+            unoptimized
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+        </div>
+      )}
+
+      <div className="p-5 space-y-4">
       {/* Header */}
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
@@ -496,6 +537,7 @@ function DetailPanel({
           )}
         </div>
       )}
+      </div>
     </div>
   );
 }
