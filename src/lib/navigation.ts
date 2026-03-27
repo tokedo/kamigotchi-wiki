@@ -2,6 +2,7 @@ import {
   Calculator,
   Globe,
   Package,
+  ScrollText,
   type LucideIcon,
 } from "lucide-react";
 
@@ -44,6 +45,12 @@ export const navigation: NavEntry[] = [
     title: "Item Database",
     icon: Package,
     href: "/items",
+  },
+  {
+    kind: "link",
+    title: "Quest Database",
+    icon: ScrollText,
+    href: "/quests",
   },
   {
     kind: "link",
