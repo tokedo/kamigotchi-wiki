@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { navigation, type NavSection } from "@/lib/navigation";
+import { navigation, type NavSection, type NavLink, type NavEntry } from "@/lib/navigation";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 function SidebarSection({ section }: { section: NavSection }) {
@@ -55,6 +55,25 @@ function SidebarSection({ section }: { section: NavSection }) {
   );
 }
 
+function SidebarLink({ entry }: { entry: NavLink }) {
+  const pathname = usePathname();
+  const isActive = pathname === entry.href;
+  const Icon = entry.icon;
+
+  return (
+    <Link
+      href={entry.href}
+      className={cn(
+        "flex items-center gap-2 px-3 py-2 text-sm font-semibold rounded-md hover:bg-accent transition-colors",
+        isActive ? "bg-accent text-accent-foreground" : "text-muted-foreground"
+      )}
+    >
+      <Icon className="h-4 w-4 shrink-0" />
+      {entry.title}
+    </Link>
+  );
+}
+
 export function Sidebar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -98,9 +117,13 @@ export function Sidebar() {
         </div>
         <ScrollArea className="h-[calc(100vh-65px)] px-3 py-3">
           <nav className="space-y-1" onClick={() => setMobileOpen(false)}>
-            {navigation.map((section) => (
-              <SidebarSection key={section.title} section={section} />
-            ))}
+            {navigation.map((entry) =>
+              entry.kind === "section" ? (
+                <SidebarSection key={entry.title} section={entry} />
+              ) : (
+                <SidebarLink key={entry.title} entry={entry} />
+              )
+            )}
           </nav>
           <div className="mt-6 px-3 py-3 border-t border-border">
             <p className="text-xs text-muted-foreground">

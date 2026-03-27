@@ -16,16 +16,24 @@ type Recipe = (typeof recipesData)[number];
 /* ------------------------------------------------------------------ */
 
 const RARITY_BORDER: Record<string, string> = {
-  Common: "rgba(180, 180, 180, 0.5)",
-  Uncommon: "rgba(80, 200, 80, 0.6)",
-  Rare: "rgba(80, 140, 255, 0.6)",
-  Epic: "rgba(180, 80, 255, 0.6)",
-  Legendary: "rgba(255, 180, 40, 0.7)",
+  Common: "#6b6b6b",
+  Uncommon: "#6b6b6b",
+  Rare: "#8b4513",
+  Epic: "#d946a8",
+  Legendary: "#d4c088",
+};
+
+const RARITY_BG: Record<string, string> = {
+  Common: "#a8a8a8",
+  Uncommon: "#a8a8a8",
+  Rare: "#a8a8a8",
+  Epic: "#a8a8a8",
+  Legendary: "#b8b0a0",
 };
 
 const RARITY_GLOW: Record<string, string> = {
-  Epic: "0 0 6px rgba(180, 80, 255, 0.3)",
-  Legendary: "0 0 8px rgba(255, 180, 40, 0.4)",
+  Epic: "0 0 6px rgba(217, 70, 168, 0.4)",
+  Legendary: "0 0 8px rgba(212, 192, 136, 0.5)",
 };
 
 const ALL_TYPES = [
@@ -62,22 +70,28 @@ function InventoryTile({
   onSelect: () => void;
 }) {
   const [imgErr, setImgErr] = useState(false);
-  const border = RARITY_BORDER[item.rarity] ?? "rgba(150,150,150,0.3)";
+  const border = RARITY_BORDER[item.rarity] ?? "#6b6b6b";
+  const bg = RARITY_BG[item.rarity] ?? "#a8a8a8";
   const glow = RARITY_GLOW[item.rarity];
+  const isLegendary = item.rarity === "Legendary";
 
   return (
     <button
       onClick={onSelect}
       className="relative aspect-square cursor-pointer transition-transform hover:scale-105 active:scale-95"
       style={{
-        border: `2px solid ${isSelected ? "rgba(100, 200, 255, 0.8)" : border}`,
-        borderRadius: 6,
-        backgroundColor: isSelected
-          ? "rgba(100, 200, 255, 0.12)"
-          : "rgba(120, 120, 120, 0.15)",
+        border: isSelected
+          ? "3px solid rgba(100, 200, 255, 0.9)"
+          : isLegendary
+            ? `3px solid ${border}`
+            : `2px solid ${border}`,
+        borderRadius: 4,
+        backgroundColor: isSelected ? "rgba(100, 200, 255, 0.15)" : bg,
         boxShadow: isSelected
-          ? "0 0 10px rgba(100, 200, 255, 0.4), inset 0 0 20px rgba(100, 200, 255, 0.05)"
-          : glow || "none",
+          ? "0 0 10px rgba(100, 200, 255, 0.5), inset 0 1px 2px rgba(0,0,0,0.2)"
+          : glow
+            ? `${glow}, inset 0 1px 2px rgba(0,0,0,0.15)`
+            : "inset 0 1px 2px rgba(0,0,0,0.15)",
       }}
       title={item.name}
     >
@@ -432,24 +446,32 @@ export default function ItemDatabase() {
         {filtered.length} of {itemsData.length} items
       </p>
 
-      {/* Main layout: inventory grid + detail panel */}
+      {/* Main layout: inventory panel + detail panel */}
       <div className="flex flex-col lg:flex-row gap-5 items-start">
-        {/* Inventory grid — game-style tile layout */}
+        {/* Inventory panel — game-style container */}
         <div
-          className="grid gap-1.5 w-full"
+          className="shrink-0 rounded-lg border-2 p-3"
           style={{
-            gridTemplateColumns: "repeat(auto-fill, minmax(64px, 1fr))",
-            maxWidth: selectedItem ? "calc(100% - 340px)" : "100%",
+            backgroundColor: "#e8e4de",
+            borderColor: "#c8c4be",
+            width: "fit-content",
           }}
         >
-          {filtered.map((item) => (
-            <InventoryTile
-              key={item.index}
-              item={item}
-              isSelected={selectedItem?.index === item.index}
-              onSelect={() => handleSelect(item)}
-            />
-          ))}
+          <div
+            className="grid gap-1.5"
+            style={{
+              gridTemplateColumns: "repeat(6, 72px)",
+            }}
+          >
+            {filtered.map((item) => (
+              <InventoryTile
+                key={item.index}
+                item={item}
+                isSelected={selectedItem?.index === item.index}
+                onSelect={() => handleSelect(item)}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Item detail panel */}

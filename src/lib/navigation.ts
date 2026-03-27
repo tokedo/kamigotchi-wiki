@@ -11,13 +11,24 @@ export interface NavItem {
 }
 
 export interface NavSection {
+  kind: "section";
   title: string;
   icon: LucideIcon;
   items: NavItem[];
 }
 
-export const navigation: NavSection[] = [
+export interface NavLink {
+  kind: "link";
+  title: string;
+  icon: LucideIcon;
+  href: string;
+}
+
+export type NavEntry = NavSection | NavLink;
+
+export const navigation: NavEntry[] = [
   {
+    kind: "section",
     title: "Game Formulas",
     icon: Calculator,
     items: [
@@ -29,17 +40,15 @@ export const navigation: NavSection[] = [
     ],
   },
   {
+    kind: "link",
     title: "Item Database",
     icon: Package,
-    items: [
-      { title: "All Items", href: "/items" },
-    ],
+    href: "/items",
   },
   {
+    kind: "link",
     title: "World Map",
     icon: Globe,
-    items: [
-      { title: "Interactive Map", href: "/map" },
-    ],
+    href: "/map",
   },
 ];

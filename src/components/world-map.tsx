@@ -60,7 +60,7 @@ interface ZoneConfig {
 
 const ZONES: Record<number, ZoneConfig> = {
   1: { label: "Overworld", cols: 9, rows: 13, offsetX: 0, offsetY: 1, bg: "/img/map/z1.webp" },
-  2: { label: "Interiors", cols: 9, rows: 13, offsetX: 0, offsetY: 1, bg: "/img/map/z2.gif" },
+  2: { label: "Interiors", cols: 9, rows: 13, offsetX: 0, offsetY: 1, bg: "/img/map/z2.png" },
   3: { label: "Underground", cols: 10, rows: 13, offsetX: 0, offsetY: -1, bg: "/img/map/z3.png" },
   4: { label: "Castle", cols: 5, rows: 5, offsetX: 0, offsetY: -1, bg: "/img/map/z4.png" },
 };
@@ -679,8 +679,8 @@ export function WorldMap() {
 
       {/* Main layout: map + detail panel side by side */}
       <div className="flex flex-col lg:flex-row gap-5 items-start">
-        {/* Map — constrained width so room card fits beside it */}
-        <div className="w-full lg:max-w-[560px] xl:max-w-[640px] shrink-0">
+        {/* Map — width matches the inventory panel (6×72 grid + gaps + padding) */}
+        <div className="w-full max-w-[490px] shrink-0">
           <GameGrid
             zone={activeZone}
             planeRooms={planeRooms}
