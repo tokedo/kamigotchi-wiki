@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { Sidebar } from "@/components/sidebar";
 
@@ -37,6 +38,7 @@ export default function RootLayout({
             {children}
           </div>
         </main>
+        <GoogleAnalytics gaId="G-82F1V76GTD" />
       </body>
     </html>
   );
