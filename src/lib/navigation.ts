@@ -1,6 +1,7 @@
 import {
   Calculator,
   Globe,
+  Link2,
   Package,
   ScrollText,
   type LucideIcon,
@@ -57,5 +58,11 @@ export const navigation: NavEntry[] = [
     title: "World Map",
     icon: Globe,
     href: "/map",
+  },
+  {
+    kind: "link",
+    title: "Resources",
+    icon: Link2,
+    href: "/resources",
   },
 ];

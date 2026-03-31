@@ -89,7 +89,7 @@ export default function LiquidationsFormulasPage() {
                 "Any unsalvaged, unspoiled Musu is destroyed",
               ],
               [
-                "Takes recoil damage (karma + own strain)",
+                "Takes recoil damage (karma × strain, modified by affinity)",
                 "Kami dies — state becomes DEAD, HP drops to 0",
               ],
               [
@@ -100,11 +100,14 @@ export default function LiquidationsFormulasPage() {
           />
 
           <InfoBox variant="warning">
-            Killing is not free. The recoil damage you take scales with the
-            victim&apos;s Violence and your own harvest strain. Kill a
-            high-Violence target and you might lose so much HP that someone else
-            can immediately liquidate you. Always check your target&apos;s stats
-            before committing.
+            Killing is not free. Recoil damage now scales on a{" "}
+            <strong>smooth curve</strong> — the stronger the victim relative to
+            you, the more punishment you take. Affinity matchups matter too:
+            the defender&apos;s hand affinity vs your body affinity can increase
+            or decrease how much recoil you suffer. Kill a high-Violence target
+            with a bad affinity matchup and you might lose so much HP that
+            someone else can immediately liquidate you. Always check your
+            target&apos;s stats and affinity before committing.
           </InfoBox>
 
           <h3>Death and Revival</h3>
@@ -123,8 +126,18 @@ export default function LiquidationsFormulasPage() {
             The <strong>Predator</strong> skill tree boosts your kill power,
             spoils ratio, and cooldown speed. The <strong>Guardian</strong> tree
             improves your defense threshold, salvage rate, and survivability.
-            Various bonuses from skills and equipment can shift any encounter —
-            check the Skill Trees page for specifics.
+            Guardians can also learn skills that increase the recoil attackers
+            take when targeting them (DEF_RECOIL_BOOST) — making it costly to
+            pick on a well-built defender. Various bonuses from skills and
+            equipment can shift any encounter — check the Skill Trees page for
+            specifics.
+          </p>
+
+          <h3>Co-op in the Black Pool</h3>
+          <p>
+            Players can access the <strong>Co-op</strong> option from the Black
+            Pool dialogue in the Violence Temple. This offers cooperative play
+            as an alternative to pure PvP combat.
           </p>
 
           <h2>Sacrifice</h2>
@@ -235,11 +248,13 @@ export default function LiquidationsFormulasPage() {
 
           {/* ─── Efficacy ─── */}
 
-          <h3>Efficacy — Affinity and Bonus Modifiers</h3>
+          <h3>Threshold Efficacy — Affinity and Bonus Modifiers</h3>
           <p>
-            Efficacy adjusts the threshold based on the affinity matchup between
-            your hand and the victim&apos;s body, plus any combat bonuses from
-            skills and equipment:
+            Threshold efficacy adjusts the kill threshold based on the affinity
+            matchup between your hand and the victim&apos;s body, plus any
+            combat bonuses from skills and equipment. (This is distinct from{" "}
+            <em>Recoil Efficacy</em>, which uses the opposite affinity
+            direction — see below.)
           </p>
           <FormulaBlock
             label="Efficacy"
@@ -528,79 +543,134 @@ Plus, the attacker always receives 1 Obol per kill.`}
 
           <h3>Karma — The Victim Hits Back</h3>
           <p>
-            Karma reverses the stat check: it is based on the{" "}
-            <em>victim&apos;s</em> Violence vs <em>your</em> Harmony. A
-            high-Violence victim makes you pay dearly for the kill:
+            Karma is now a <strong>Gaussian CDF-based multiplier</strong> that
+            scales recoil damage. It reverses the stat check: the{" "}
+            <em>victim&apos;s</em> Violence vs <em>your</em> Harmony. Unlike
+            the old linear formula, this produces a smooth S-curve — recoil
+            scales gradually rather than having a hard cutoff.
           </p>
           <FormulaBlock
             label="Karma"
             vars={{
-              "rawKarma": "base karma before modifiers; if negative, karma is 0",
-              "nudge": "baseline offset ensuring some karma unless Harmony greatly exceeds victim's Violence",
-              "victimViolence": "the killed Kami's total Violence stat — higher means more karma dealt back",
+              "karma": "resulting recoil multiplier (~0 to ratio) — NOT raw HP damage",
+              "NormCdf": "Gaussian cumulative distribution function — same S-curve as animosity",
+              "ln": "natural logarithm of the stat ratio",
+              "victimViolence": "the killed Kami's total Violence stat — higher means more karma",
               "attackerHarmony": "the killer's total Harmony stat — higher absorbs more karma",
-              "karma": "final karma damage applied to the attacker's HP",
-              "reverseEfficacy": "affinity matchup with roles reversed (victim's hand vs attacker's body)",
-              "boost": "scaling multiplier applied to the karma calculation",
+              "ratio": "ceiling multiplier that caps the maximum karma output",
               "precision": "internal scaling constant (1,000) used for fixed-point math",
             }}
           >
-            {`rawKarma = nudge + victimViolence − attackerHarmony
-karma = (rawKarma × reverseEfficacy × boost) / precision
-
-If rawKarma < 0 → karma = 0 (no damage from low-Violence victims)`}
+            {`karma = NormCdf( ln(victimViolence / attackerHarmony) ) × ratio / precision`}
           </FormulaBlock>
           <StatTable
             headers={["Factor", "What It Means"]}
             rows={[
               [
-                "nudge",
-                "A baseline offset ensuring you always take some karma unless your Harmony greatly exceeds victim Violence",
-              ],
-              [
                 "victimViolence",
-                "The victim's total Violence — high-Violence victims hurt you more",
+                "The victim's total Violence — high-Violence victims deal more karma",
               ],
               [
                 "attackerHarmony",
                 "Your total Harmony — higher Harmony absorbs more karma",
               ],
               [
-                "reverseEfficacy",
-                "Affinity check with roles flipped (victim's hand vs your body)",
+                "S-curve shape",
+                "Killing a much stronger Kami is very risky (karma near max). Killing a much weaker one is safer (karma near zero). No hard cutoff.",
               ],
             ]}
           />
+          <InfoBox variant="info">
+            The switch from linear to Gaussian means karma now scales{" "}
+            <strong>smoothly</strong>. Under the old formula, there was a hard
+            cutoff where karma dropped to zero. Now it tapers off gradually —
+            even weak victims deal a small amount of karma, and very strong
+            victims are punishing but not infinite.
+          </InfoBox>
+
+          <h3>Recoil Efficacy — Affinity Affects Recoil</h3>
+          <p>
+            Recoil efficacy is a new affinity-based modifier that adjusts recoil
+            damage. It checks the <strong>defender&apos;s hand affinity</strong>{" "}
+            vs the <strong>attacker&apos;s body affinity</strong> — the{" "}
+            <em>opposite direction</em> from the kill threshold efficacy check.
+          </p>
+          <FormulaBlock
+            label="Recoil Efficacy"
+            vars={{
+              "recoilEfficacy": "affinity nudge added to karma before multiplication — floored at 0",
+              "baseEfficacy": "default recoil efficacy value before affinity modifiers",
+              "affinityShift": "shift from the defender's hand vs attacker's body matchup",
+            }}
+          >
+            {`recoilEfficacy = max(0, baseEfficacy + affinityShift)`}
+          </FormulaBlock>
+          <StatTable
+            headers={["Matchup", "Shift", "Meaning"]}
+            rows={[
+              [
+                "Advantaged (e.g., defender EERIE hand vs attacker SCRAP body)",
+                "+1000",
+                "Attacker takes more recoil",
+              ],
+              [
+                "Disadvantaged (opposite triangle edge)",
+                "+1000",
+                "Symmetric — same increase",
+              ],
+              [
+                "Neutral (different types, no edge)",
+                "0",
+                "No change",
+              ],
+              [
+                "Same non-NORMAL type",
+                "0",
+                "No change",
+              ],
+              [
+                "NORMAL vs NORMAL",
+                "+400",
+                "Special case — slight increase",
+              ],
+            ]}
+          />
+          <InfoBox variant="tip">
+            This is a new layer of defense. A defender with the right hand
+            affinity can make an attacker pay more recoil, even if the attacker
+            has great stats. When scouting targets, check their hand affinity
+            against your body — not just their Violence.
+          </InfoBox>
 
           <h3>Total Recoil</h3>
           <p>
-            Your total HP loss combines karma and the harvest strain you have
-            already accumulated:
+            Your total HP loss now uses karma and recoil efficacy as{" "}
+            <strong>multiplicative factors</strong> with harvest strain. This
+            replaced the old additive formula:
           </p>
           <FormulaBlock
             label="Recoil"
             vars={{
-              "recoilCore": "combined weighted damage from harvest strain and karma",
+              "karma": "Gaussian CDF multiplier from victim's Violence vs your Harmony (see above)",
+              "recoilEfficacy": "affinity-based nudge from defender's hand vs your body (see above)",
               "yourStrain": "attacker's accumulated harvest strain damage at the time of the kill",
-              "strainWeight": "multiplier controlling how much strain contributes to recoil",
-              "karma": "karma damage from the victim's Violence (see Karma formula above)",
-              "scaleFactor": "multiplier controlling how much karma contributes to recoil",
-              "recoilBoost": "overall recoil multiplier, modified by skills",
-              "baseBoost": "default recoil multiplier before any bonuses",
-              "ATK_RECOIL_BOOST": "bonus (or penalty) from Predator skills and equipment that modifies recoil severity",
+              "boost": "overall recoil multiplier: base + DEF_RECOIL_BOOST + ATK_RECOIL_BOOST (floored at 0)",
+              "DEF_RECOIL_BOOST": "bonus from the defender's Guardian skills — increases recoil the attacker takes",
+              "ATK_RECOIL_BOOST": "bonus from the attacker's Predator skills — can reduce recoil taken",
               "recoil": "final HP lost by the attacker after the kill",
-              "precision": "internal scaling constant (1,000) used for fixed-point math",
+              "precision": "internal scaling constant used for fixed-point math",
             }}
           >
-            {`recoilCore = yourStrain × strainWeight + karma × scaleFactor
-recoilBoost = baseBoost + ATK_RECOIL_BOOST bonus
-recoil = (recoilCore × recoilBoost) / precision`}
+            {`recoil = (karma + recoilEfficacy) × yourStrain × boost / precision
+
+boost = max(0, baseBoost + DEF_RECOIL_BOOST + ATK_RECOIL_BOOST)`}
           </FormulaBlock>
           <p>
-            This means your timing matters. If you have been harvesting for a
-            long time (high strain), the recoil from killing will be larger. An
-            attacker who just started harvesting takes less self-damage than one
-            who has been sitting on the node accumulating strain.
+            Karma and recoil efficacy are <strong>additive</strong> with each
+            other, then <strong>multiplicative</strong> with strain and boost.
+            This means your timing still matters — high strain amplifies all
+            recoil. But now the defender&apos;s affinity and skills also play a
+            direct role in how much you suffer.
           </p>
 
           <h4>Recoil Example</h4>
@@ -611,23 +681,23 @@ recoil = (recoilCore × recoilBoost) / precision`}
               "120": "victim's Violence stat in this example",
               "80": "attacker's Harmony stat in the first scenario",
               "200": "attacker's Harmony stat in the second scenario",
-              "nudge": "baseline karma offset ensuring some damage unless Harmony is much higher",
-              "reverseEfficacy": "affinity matchup with roles reversed (victim's hand vs attacker's body)",
+              "NormCdf": "Gaussian CDF (S-curve) used for karma calculation",
             }}
           >
             {`You kill a target with 120 Violence while you have 80 Harmony.
 You have accumulated moderate harvest strain.
 
-  rawKarma = nudge + 120 − 80 = nudge + 40  (positive → you take karma)
-  karma = (rawKarma × reverseEfficacy × boost) / precision
-
-  recoil = (yourStrain × weight + karma × scale) × boost / precision
+  karma = NormCdf( ln(120 / 80) ) × ratio / precision
+       = NormCdf(0.405) ≈ high multiplier (victim is stronger)
+  recoilEfficacy = affinity nudge (depends on hand/body matchup)
+  recoil = (karma + recoilEfficacy) × strain × boost / precision
 
 If you had 200 Harmony instead:
-  rawKarma = nudge + 120 − 200 = nudge − 80
-  If this goes negative → karma = 0 (no karma damage at all)
+  karma = NormCdf( ln(120 / 200) ) × ratio / precision
+       = NormCdf(-0.51) ≈ low multiplier (you outstat the victim)
 
-High Harmony predators can kill with almost no karma cost.`}
+High Harmony predators still take less karma, but it never
+drops to exactly zero — the S-curve just makes it very small.`}
           </FormulaBlock>
 
           {/* ─── Harmony vs Health analysis ─── */}
@@ -789,7 +859,8 @@ High Harmony predators can kill with almost no karma cost.`}
               ["DEF_THRESHOLD_SHIFT", "Defender", "Flat decrease to kill threshold — can make you unkillable"],
               ["ATK_SPOILS_RATIO", "Attacker", "Increases the percentage of loot stolen"],
               ["DEF_SALVAGE_RATIO", "Defender", "Increases the percentage of loot retained on death"],
-              ["ATK_RECOIL_BOOST", "Attacker", "Modifies recoil HP damage taken after killing"],
+              ["ATK_RECOIL_BOOST", "Attacker", "Reduces (or increases) total recoil damage taken after killing"],
+              ["DEF_RECOIL_BOOST", "Defender", "Increases recoil the attacker takes — Guardian skills can make you costly to kill"],
               ["STND_COOLDOWN_SHIFT", "Attacker", "Reduces cooldown between kills"],
             ]}
           />

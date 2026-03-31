@@ -47,13 +47,6 @@ export default function StatsFormulasPage() {
             ]}
           />
 
-          <InfoBox variant="tip">
-            Stamina is <strong>not</strong> a Kami stat — it belongs to your
-            account. All your Kamis share the same Stamina pool, which is spent
-            on movement and crafting. You won't see it on individual Kami stat
-            sheets.
-          </InfoBox>
-
           <h2>How Stats Are Built Up</h2>
           <p>
             Your Kami's final stat values aren't just one number — they're
@@ -102,12 +95,6 @@ export default function StatsFormulasPage() {
             more than most single shifts. The takeaway: stack shifts early,
             prioritize boosts once your foundation is solid.
           </p>
-
-          <InfoBox variant="info">
-            Boosts also have a subtle trap: negative boosts are devastating on
-            high-stat Kamis. A -50% boost on a Kami with 100 effective Health
-            drops it to 50. Keep an eye on debuffs.
-          </InfoBox>
 
           <h2>The Bonus System in a Nutshell</h2>
           <p>

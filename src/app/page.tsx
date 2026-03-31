@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Calculator, Package, Globe } from "lucide-react";
+import { Calculator, Package, Globe, ScrollText, Link2 } from "lucide-react";
 
 export default function Home() {
   return (
@@ -63,6 +63,34 @@ export default function Home() {
           <p className="text-sm text-muted-foreground">
             Interactive map of all 70 rooms across 4 layers. Nodes, exits,
             affinities, scavenge droptables, and room art.
+          </p>
+        </Link>
+
+        <Link
+          href="/quests"
+          className="group rounded-xl border border-border bg-card p-6 transition-colors hover:border-foreground/20 hover:bg-accent/50"
+        >
+          <div className="flex items-center gap-3 mb-3">
+            <ScrollText className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-colors" />
+            <h2 className="text-lg font-semibold">Quest Database</h2>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            All 155 quests as an interactive dependency graph. Click any quest
+            for objectives, rewards, and prerequisites.
+          </p>
+        </Link>
+
+        <Link
+          href="/resources"
+          className="group rounded-xl border border-border bg-card p-6 transition-colors hover:border-foreground/20 hover:bg-accent/50"
+        >
+          <div className="flex items-center gap-3 mb-3">
+            <Link2 className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-colors" />
+            <h2 className="text-lg font-semibold">Resources</h2>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            Official and community-built tools, dashboards, and guides for
+            Kamigotchi players.
           </p>
         </Link>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
@@ -25,7 +26,7 @@ function SidebarSection({ section }: { section: NavSection }) {
         )}
       >
         <Icon className="h-4 w-4 shrink-0" />
-        <span className="flex-1 text-left">{section.title}</span>
+        <span className="flex-1 text-left" style={{ fontFamily: "var(--font-pixel), monospace" }}>{section.title}</span>
         <ChevronDown
           className={cn(
             "h-3.5 w-3.5 shrink-0 transition-transform",
@@ -40,11 +41,12 @@ function SidebarSection({ section }: { section: NavSection }) {
               key={item.href}
               href={item.href}
               className={cn(
-                "block px-2 py-1.5 text-sm rounded-md transition-colors",
+                "block px-2 py-1.5 text-xs rounded-md transition-colors",
                 pathname === item.href
                   ? "bg-accent text-accent-foreground font-medium"
                   : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
               )}
+              style={{ fontFamily: "var(--font-pixel), monospace" }}
             >
               {item.title}
             </Link>
@@ -69,7 +71,7 @@ function SidebarLink({ entry }: { entry: NavLink }) {
       )}
     >
       <Icon className="h-4 w-4 shrink-0" />
-      {entry.title}
+      <span style={{ fontFamily: "var(--font-pixel), monospace" }}>{entry.title}</span>
     </Link>
   );
 }
@@ -104,8 +106,17 @@ export function Sidebar() {
         )}
       >
         <div className="flex items-center justify-between px-4 py-4 border-b border-border">
-          <Link href="/" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
-            <span className="text-lg font-bold tracking-tight">Kamigotchi Wiki</span>
+          <Link href="/" className="flex items-center gap-2.5" onClick={() => setMobileOpen(false)}>
+            <Image
+              src="/img/icons/kami-mascot.png"
+              alt="Kamigotchi"
+              width={32}
+              height={32}
+              className="shrink-0"
+              style={{ imageRendering: "pixelated" }}
+              unoptimized
+            />
+            <span className="text-sm font-bold tracking-tight" style={{ fontFamily: "var(--font-pixel), monospace" }}>Kamigotchi Wiki</span>
           </Link>
           <button
             onClick={() => setMobileOpen(false)}

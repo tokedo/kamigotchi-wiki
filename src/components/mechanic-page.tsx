@@ -23,9 +23,21 @@ export function MechanicPage({
       </header>
 
       <Tabs defaultValue="overview" className="w-full">
-        <TabsList className="mb-6">
-          <TabsTrigger value="overview">Overview</TabsTrigger>
-          <TabsTrigger value="details">Details & Formulas</TabsTrigger>
+        <TabsList className="mb-8 h-auto gap-3 bg-transparent p-0">
+          <TabsTrigger
+            value="overview"
+            className="h-auto rounded-md border-2 border-muted-foreground/30 bg-muted px-5 py-2.5 text-sm data-active:border-[#ffffff] data-active:border-[4px] data-active:bg-accent data-active:text-foreground data-active:shadow-[0_0_8px_rgba(255,255,255,0.25)]"
+            style={{ fontFamily: "var(--font-pixel), monospace" }}
+          >
+            Overview
+          </TabsTrigger>
+          <TabsTrigger
+            value="details"
+            className="h-auto rounded-md border-2 border-muted-foreground/30 bg-muted px-5 py-2.5 text-sm data-active:border-[#ffffff] data-active:border-[4px] data-active:bg-accent data-active:text-foreground data-active:shadow-[0_0_8px_rgba(255,255,255,0.25)]"
+            style={{ fontFamily: "var(--font-pixel), monospace" }}
+          >
+            Details &amp; Formulas
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="overview">
           <div className="prose prose-neutral dark:prose-invert max-w-none">
