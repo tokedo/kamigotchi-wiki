@@ -339,7 +339,7 @@ function QuestDetail({
 
   return (
     <div
-      className="rounded-xl overflow-hidden"
+      className="rounded-xl overflow-hidden max-w-full"
       style={{
         border: "3px solid #7a8a6a",
         backgroundColor: "#e8ecd8",
@@ -813,7 +813,10 @@ export default function QuestDatabase() {
               className="fixed inset-0 z-40 bg-black/60 lg:hidden"
               onClick={() => setSelectedQuest(null)}
             />
-            <div className="max-lg:fixed max-lg:inset-x-3 max-lg:top-[10vh] max-lg:bottom-[5vh] max-lg:z-50 max-lg:overflow-y-auto w-auto lg:w-80 xl:w-96 shrink-0 lg:sticky lg:top-4">
+            <div
+              className="max-lg:fixed max-lg:inset-x-3 max-lg:top-[10vh] max-lg:bottom-[5vh] max-lg:z-50 max-lg:overflow-y-auto max-lg:overflow-x-hidden w-auto lg:w-80 xl:w-96 shrink-0 lg:sticky lg:top-4"
+              onClick={(e) => { if (e.target === e.currentTarget) setSelectedQuest(null); }}
+            >
               <QuestDetail
                 quest={selectedQuest}
                 onClose={() => setSelectedQuest(null)}

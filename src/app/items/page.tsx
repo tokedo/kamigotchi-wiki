@@ -482,7 +482,10 @@ export default function ItemDatabase() {
               className="fixed inset-0 z-40 bg-black/60 lg:hidden"
               onClick={() => setSelectedItem(null)}
             />
-            <div className="max-lg:fixed max-lg:inset-x-3 max-lg:top-[10vh] max-lg:bottom-[5vh] max-lg:z-50 max-lg:overflow-y-auto w-auto lg:w-80 xl:w-96 shrink-0 lg:sticky lg:top-4">
+            <div
+              className="max-lg:fixed max-lg:inset-x-3 max-lg:top-[10vh] max-lg:bottom-[5vh] max-lg:z-50 max-lg:overflow-y-auto w-auto lg:w-80 xl:w-96 shrink-0 lg:sticky lg:top-4"
+              onClick={(e) => { if (e.target === e.currentTarget) setSelectedItem(null); }}
+            >
               <ItemDetail
                 item={selectedItem}
                 onClose={() => setSelectedItem(null)}
