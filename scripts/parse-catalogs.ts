@@ -5,10 +5,17 @@
  */
 
 import { parse } from "csv-parse/sync";
-import { readFileSync, writeFileSync } from "fs";
+import { existsSync, readFileSync, writeFileSync } from "fs";
 import { join } from "path";
 
 const GDD = "/Users/anatolyzaytsev/kamigotchi-gdd/catalogs";
+
+// Skip when the GDD repo isn't available (e.g. CI / Vercel builds).
+// The pre-generated JSON in src/data/ is already committed.
+if (!existsSync(GDD)) {
+  console.log("GDD catalogs not found, skipping parse (using committed JSON).");
+  process.exit(0);
+}
 const OUT = join(__dirname, "..", "src", "data");
 
 function readCSV<T>(path: string): T[] {
