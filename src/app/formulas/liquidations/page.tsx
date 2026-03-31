@@ -126,11 +126,8 @@ export default function LiquidationsFormulasPage() {
             The <strong>Predator</strong> skill tree boosts your kill power,
             spoils ratio, and cooldown speed. The <strong>Guardian</strong> tree
             improves your defense threshold, salvage rate, and survivability.
-            Guardians can also learn skills that increase the recoil attackers
-            take when targeting them (DEF_RECOIL_BOOST) — making it costly to
-            pick on a well-built defender. Various bonuses from skills and
-            equipment can shift any encounter — check the Skill Trees page for
-            specifics.
+            Various bonuses from skills and equipment can shift any encounter
+            — check the Skill Trees page for specifics.
           </p>
 
           <h3>Co-op in the Black Pool</h3>
@@ -654,16 +651,15 @@ Plus, the attacker always receives 1 Obol per kill.`}
               "karma": "Gaussian CDF multiplier from victim's Violence vs your Harmony (see above)",
               "recoilEfficacy": "affinity-based nudge from defender's hand vs your body (see above)",
               "yourStrain": "attacker's accumulated harvest strain damage at the time of the kill",
-              "boost": "overall recoil multiplier: base + DEF_RECOIL_BOOST + ATK_RECOIL_BOOST (floored at 0)",
-              "DEF_RECOIL_BOOST": "bonus from the defender's Guardian skills — increases recoil the attacker takes",
-              "ATK_RECOIL_BOOST": "bonus from the attacker's Predator skills — can reduce recoil taken",
+              "boost": "overall recoil multiplier: base + ATK_RECOIL_BOOST (floored at 0)",
+              "ATK_RECOIL_BOOST": "bonus from the attacker's equipment — can reduce recoil taken",
               "recoil": "final HP lost by the attacker after the kill",
               "precision": "internal scaling constant used for fixed-point math",
             }}
           >
             {`recoil = (karma + recoilEfficacy) × yourStrain × boost / precision
 
-boost = max(0, baseBoost + DEF_RECOIL_BOOST + ATK_RECOIL_BOOST)`}
+boost = max(0, baseBoost + ATK_RECOIL_BOOST)`}
           </FormulaBlock>
           <p>
             Karma and recoil efficacy are <strong>additive</strong> with each
@@ -860,7 +856,6 @@ drops to exactly zero — the S-curve just makes it very small.`}
               ["ATK_SPOILS_RATIO", "Attacker", "Increases the percentage of loot stolen"],
               ["DEF_SALVAGE_RATIO", "Defender", "Increases the percentage of loot retained on death"],
               ["ATK_RECOIL_BOOST", "Attacker", "Reduces (or increases) total recoil damage taken after killing"],
-              ["DEF_RECOIL_BOOST", "Defender", "Increases recoil the attacker takes — Guardian skills can make you costly to kill"],
               ["STND_COOLDOWN_SHIFT", "Attacker", "Reduces cooldown between kills"],
             ]}
           />

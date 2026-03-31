@@ -39,7 +39,7 @@ export default function EconomyFormulasPage() {
             rows={[
               [
                 "Musu",
-                "Harvesting nodes, selling items to NPCs, receiving trades",
+                "Harvesting nodes, receiving trades",
                 "NPC shops, crafting, trade fees, item transfers, Gacha Tickets",
               ],
               [
@@ -90,15 +90,6 @@ export default function EconomyFormulasPage() {
             easily with fewer purchases &mdash; Mina is usually the cheaper
             option.
           </InfoBox>
-
-          <h3>Selling Back to NPCs</h3>
-          <p>
-            Some NPC listings let you sell items back. The sell price is always a{" "}
-            <strong>fraction of the current buy price</strong> &mdash; typically
-            around 50%. So if the dynamic buy price is sitting at 200 Musu,
-            you&apos;d get roughly 100 Musu for selling it back. The sell price
-            rises and falls in lockstep with the buy price.
-          </p>
 
           <h2>Player-to-Player Trading</h2>
           <p>
@@ -336,12 +327,8 @@ export default function EconomyFormulasPage() {
                 "NPC shop purchases (dynamic + fixed prices)",
               ],
               [
-                "Selling items back to NPCs",
-                "Trade creation fees",
-              ],
-              [
                 "Receiving Musu in player trades",
-                "Trade delivery fees",
+                "Trade creation fees + delivery fees",
               ],
               [
                 "Quest rewards",
@@ -500,27 +487,6 @@ finalPrice = ceil(cost)       (always rounded up)`}
             <br />
             Spot price = 100 * 0.50^0.333 = <strong>79 Musu</strong> (discount!)
           </InfoBox>
-
-          <h3>NPC Shop Sell Price</h3>
-          <p>
-            When an NPC listing lets you sell items back, the sell price is a
-            fixed percentage of the current buy price. The typical ratio is 50%,
-            meaning if the GDA buy price is currently 200 Musu, the sell price
-            is 100 Musu. The sell price tracks the buy price automatically
-            &mdash; it rises and falls in lockstep.
-          </p>
-          <FormulaBlock
-            label="NPC Sell Price"
-            vars={{
-              "sellPrice": "what the NPC pays you when you sell the item back",
-              "currentBuyPrice": "the item's current GDA buy price at the NPC shop",
-              "sellRatio": "fraction of the buy price the NPC offers (typically 0.50)",
-            }}
-          >
-            {`sellPrice = currentBuyPrice * sellRatio
-
-sellRatio is typically 0.50 (50% of buy price)`}
-          </FormulaBlock>
 
           <h3>Fixed-Price Listings</h3>
           <p>
@@ -1084,7 +1050,7 @@ TWAP Calculation:
               ],
               [
                 "NPC Shops",
-                "Selling items back (50% of buy price)",
+                "Fixed-price sell listings",
                 "Buying items (dynamic + fixed prices)",
               ],
               [

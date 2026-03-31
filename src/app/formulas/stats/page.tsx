@@ -78,7 +78,7 @@ export default function StatsFormulasPage() {
             unequipping it removes the bonus immediately. Finally,{" "}
             <strong>temporary effects</strong> from food, combat, or timed
             consumables give short-lived buffs that expire when certain game
-            events happen.
+            events happen (like finishing a harvest or dying).
           </p>
 
           <h2>Shift vs Boost: Which Is Better?</h2>
@@ -109,18 +109,14 @@ export default function StatsFormulasPage() {
             Some bonuses are <strong>permanent</strong> — they stick around as
             long as their source exists (an equipped weapon, a learned skill).
             Others are <strong>temporary</strong> — they disappear when a
-            specific event happens, like finishing a harvest or dying. And{" "}
-            <strong>timed bonuses</strong> simply count down and expire after a
-            set duration.
+            specific event happens, like finishing a harvest or dying.
           </p>
 
           <h2>Equipment Slots</h2>
           <p>
-            Every Kami starts with a single equipment slot. You can unlock more
-            through skills and items that grant additional slot capacity. Each
-            piece of equipment takes up one slot, so expanding your capacity is
-            essential for gearing up — especially since equipment bonuses are
-            some of the strongest in the game.
+            Every Kami has a single equipment slot. Each piece of equipment takes
+            up one slot, so choose your gear wisely — equipment bonuses are some
+            of the strongest in the game.
           </p>
 
           <h2>Strategic Considerations</h2>
@@ -330,14 +326,6 @@ Effective = (base + total shift) x (1000 + total boost) / 1000`}
             This means chugging two of the same food buff is wasteful.
           </p>
 
-          <h3>Timed Bonuses</h3>
-          <p>
-            These work like temporary bonuses but expire after a fixed real-time
-            duration instead of waiting for a game event. Each application
-            creates a separate instance with its own countdown, so timed bonuses
-            from different sources can coexist.
-          </p>
-
           <h2>When Do Temporary Bonuses Expire?</h2>
           <p>
             Each temporary bonus is tagged with an expiration trigger. Here's
@@ -456,10 +444,6 @@ Effective = (base + total shift) x (1000 + total boost) / 1000`}
             headers={["Bonus", "Effect"]}
             rows={[
               [
-                "Equipment Capacity Shift",
-                "Increases the number of gear slots beyond the base of 1",
-              ],
-              [
                 "Cooldown Shift",
                 "Modifies standard action cooldowns — negative values make actions faster",
               ],
@@ -468,24 +452,8 @@ Effective = (base + total shift) x (1000 + total boost) / 1000`}
 
           <h2>Equipment Capacity</h2>
           <p>
-            Every Kami begins with a single equipment slot. The total number of
-            slots available is simply:
-          </p>
-          <FormulaBlock
-            label="Equipment Slots"
-            vars={{
-              "Total Slots": "number of gear pieces your Kami can wear simultaneously",
-              "1": "every Kami's default starting slot",
-              "Equipment Capacity Shift bonus": "additional slots granted by skills and items",
-            }}
-          >
-            {`Total Slots = 1 + Equipment Capacity Shift bonus`}
-          </FormulaBlock>
-          <p>
-            Skills and certain items can grant Equipment Capacity Shift bonuses.
-            Since equipment bonuses are among the most impactful in the game,
-            unlocking additional slots is one of the highest-value upgrades you
-            can pursue.
+            Every Kami has exactly one equipment slot. Choose your equipped item
+            carefully — you can only wear one piece of gear at a time.
           </p>
 
           <h2>How Different Sources Apply Stats</h2>
