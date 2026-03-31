@@ -9,8 +9,8 @@ export default function Home() {
           Kamigotchi Wiki
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl">
-          Deep mechanics, exact formulas, and interactive databases for
-          Kamigotchi. The stuff the{" "}
+          Deep mechanics, exact formulas, and interactive databases —
+          complementing the{" "}
           <a
             href="https://docs.kamigotchi.io"
             target="_blank"
@@ -19,7 +19,7 @@ export default function Home() {
           >
             official docs
           </a>{" "}
-          don&apos;t cover.
+          with a complete game reference.
         </p>
       </header>
 

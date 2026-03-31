@@ -156,10 +156,34 @@ const CATEGORY_LABELS: Record<QuestCategory, string> = {
 };
 
 /* ------------------------------------------------------------------ */
-/*  Topological sort                                                   */
+/*  Graph layout                                                       */
 /* ------------------------------------------------------------------ */
 
-function topologicalSort(questList: Quest[]): Quest[] {
+const TILE_W = 80;
+const TILE_H = 64;
+const H_GAP = 80;
+const V_GAP = 24;
+const COL_PITCH = TILE_W + H_GAP;
+const ROW_PITCH = TILE_H + V_GAP;
+const GRAPH_PAD = 20;
+
+interface GraphEdge {
+  from: number;
+  to: number;
+}
+
+interface GraphLayout {
+  positions: Map<number, { x: number; y: number }>;
+  edges: GraphEdge[];
+  totalW: number;
+  totalH: number;
+}
+
+function computeGraphLayout(questList: Quest[]): GraphLayout {
+  if (questList.length === 0) {
+    return { positions: new Map(), edges: [], totalW: 100, totalH: 100 };
+  }
+
   const indexSet = new Set(questList.map((q) => q.index));
   const depthOf = new Map<number, number>();
 
@@ -176,16 +200,58 @@ function topologicalSort(questList: Quest[]): Quest[] {
 
   questList.forEach((q) => getDepth(q));
 
-  return [...questList].sort((a, b) => {
-    const da = depthOf.get(a.index) ?? 0;
-    const db = depthOf.get(b.index) ?? 0;
-    if (da !== db) return da - db;
-    const catOrder = { MSQ: 0, MIN: 1, SQ: 2 };
-    const ca = catOrder[getCategory(a.key)];
-    const cb = catOrder[getCategory(b.key)];
-    if (ca !== cb) return ca - cb;
-    return a.index - b.index;
+  // Group by depth
+  const columns = new Map<number, Quest[]>();
+  questList.forEach((q) => {
+    const d = depthOf.get(q.index) ?? 0;
+    if (!columns.has(d)) columns.set(d, []);
+    columns.get(d)!.push(q);
   });
+
+  // Sort within columns by category then index
+  const catOrder: Record<string, number> = { MSQ: 0, MIN: 1, SQ: 2 };
+  columns.forEach((col) => {
+    col.sort((a, b) => {
+      const ca = catOrder[getCategory(a.key)] ?? 2;
+      const cb = catOrder[getCategory(b.key)] ?? 2;
+      if (ca !== cb) return ca - cb;
+      return a.index - b.index;
+    });
+  });
+
+  // Compute positions
+  const positions = new Map<number, { x: number; y: number }>();
+  const maxDepth = Math.max(...depthOf.values());
+
+  for (let d = 0; d <= maxDepth; d++) {
+    const col = columns.get(d) ?? [];
+    col.forEach((q, i) => {
+      positions.set(q.index, {
+        x: GRAPH_PAD + d * COL_PITCH,
+        y: GRAPH_PAD + i * ROW_PITCH,
+      });
+    });
+  }
+
+  // Compute edges
+  const edges: GraphEdge[] = [];
+  questList.forEach((q) => {
+    const deps = getQuestDeps(q.requirements).filter((d) =>
+      indexSet.has(d.index)
+    );
+    deps.forEach((dep) => {
+      edges.push({ from: dep.index, to: q.index });
+    });
+  });
+
+  // Total size
+  const maxRowCount = Math.max(
+    ...[...columns.values()].map((c) => c.length)
+  );
+  const totalW = GRAPH_PAD * 2 + maxDepth * COL_PITCH + TILE_W;
+  const totalH = GRAPH_PAD * 2 + (maxRowCount - 1) * ROW_PITCH + TILE_H;
+
+  return { positions, edges, totalW, totalH };
 }
 
 /* ------------------------------------------------------------------ */
@@ -196,11 +262,13 @@ function QuestTile({
   quest,
   isSelected,
   isDimmed,
+  isHighlighted,
   onSelect,
 }: {
   quest: Quest;
   isSelected: boolean;
   isDimmed: boolean;
+  isHighlighted: boolean;
   onSelect: () => void;
 }) {
   const cat = getCategory(quest.key);
@@ -210,17 +278,21 @@ function QuestTile({
     <button
       onClick={onSelect}
       data-quest-index={quest.index}
-      className="relative aspect-square cursor-pointer transition-transform hover:scale-105 active:scale-95 flex flex-col items-center justify-center p-1 overflow-hidden"
+      className="relative w-full h-full cursor-pointer transition-all hover:scale-105 active:scale-95 flex flex-col items-center justify-center p-1 overflow-hidden"
       style={{
         border: isSelected
           ? `3px solid ${colors.accent}`
-          : `2px solid ${colors.border}`,
+          : isHighlighted
+            ? `2px solid ${colors.accent}`
+            : `2px solid ${colors.border}`,
         borderRadius: 4,
         backgroundColor: isSelected ? colors.glow : colors.bg,
         boxShadow: isSelected
-          ? `0 0 10px ${colors.glow}, inset 0 1px 2px rgba(0,0,0,0.15)`
-          : "inset 0 1px 2px rgba(0,0,0,0.15)",
-        opacity: isDimmed ? 0.25 : 1,
+          ? `0 0 12px ${colors.glow}, inset 0 1px 2px rgba(0,0,0,0.15)`
+          : isHighlighted
+            ? `0 0 8px ${colors.glow}`
+            : "inset 0 1px 2px rgba(0,0,0,0.15)",
+        opacity: isDimmed ? 0.15 : 1,
       }}
       title={`${quest.key}: ${quest.title}`}
     >
@@ -231,7 +303,7 @@ function QuestTile({
         {quest.key}
       </span>
       <span
-        className="text-[8px] leading-tight text-center mt-0.5 line-clamp-2"
+        className="text-[7px] leading-tight text-center mt-0.5 line-clamp-2"
         style={{ color: colors.text }}
       >
         {quest.title}
@@ -495,17 +567,27 @@ export default function QuestDatabase() {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState<QuestCategory>("ALL");
   const [selectedQuest, setSelectedQuest] = useState<Quest | null>(null);
-  const gridRef = useRef<HTMLDivElement>(null);
+  const graphContainerRef = useRef<HTMLDivElement>(null);
 
   const filteredQuests = useMemo(() => {
     if (activeCategory === "ALL") return quests;
     return quests.filter((q) => getCategory(q.key) === activeCategory);
   }, [activeCategory]);
 
-  const sortedQuests = useMemo(
-    () => topologicalSort(filteredQuests),
+  const layout = useMemo(
+    () => computeGraphLayout(filteredQuests),
     [filteredQuests]
   );
+
+  const connectedIndices = useMemo(() => {
+    if (!selectedQuest) return new Set<number>();
+    const set = new Set<number>();
+    layout.edges.forEach((e) => {
+      if (e.from === selectedQuest.index) set.add(e.to);
+      if (e.to === selectedQuest.index) set.add(e.from);
+    });
+    return set;
+  }, [selectedQuest, layout.edges]);
 
   const searchLower = search.toLowerCase().trim();
   const matchingIndices = useMemo(() => {
@@ -522,17 +604,12 @@ export default function QuestDatabase() {
     return set;
   }, [filteredQuests, searchLower]);
 
-  const handleSelect = useCallback(
-    (quest: Quest) => {
-      setSelectedQuest((prev) =>
-        prev?.index === quest.index ? null : quest
-      );
-    },
-    []
-  );
+  const handleSelect = useCallback((quest: Quest) => {
+    setSelectedQuest((prev) =>
+      prev?.index === quest.index ? null : quest
+    );
+  }, []);
 
-  // Navigate to a quest from the detail panel (e.g. clicking a requirement).
-  // Switches to "ALL" if the quest isn't visible in the current tab.
   const navigateToQuest = useCallback(
     (quest: Quest) => {
       const questCat = getCategory(quest.key);
@@ -544,16 +621,18 @@ export default function QuestDatabase() {
     [activeCategory]
   );
 
-  // Scroll the selected quest tile into view when navigating via detail panel
+  // Scroll the selected quest into view in the graph container
   useEffect(() => {
-    if (!selectedQuest || !gridRef.current) return;
-    const tile = gridRef.current.querySelector(
-      `[data-quest-index="${selectedQuest.index}"]`
-    );
-    if (tile) {
-      tile.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    }
-  }, [selectedQuest]);
+    if (!selectedQuest || !graphContainerRef.current) return;
+    const pos = layout.positions.get(selectedQuest.index);
+    if (!pos) return;
+    const container = graphContainerRef.current;
+    container.scrollTo({
+      left: pos.x - container.clientWidth / 2 + TILE_W / 2,
+      top: pos.y - container.clientHeight / 2 + TILE_H / 2,
+      behavior: "smooth",
+    });
+  }, [selectedQuest, layout.positions]);
 
   const handleCategoryChange = useCallback((cat: QuestCategory) => {
     setActiveCategory(cat);
@@ -627,44 +706,104 @@ export default function QuestDatabase() {
           : `${filteredQuests.length} quests`}
       </p>
 
-      {/* Main layout: grid + detail panel */}
+      {/* Main layout: graph + detail panel */}
       <div className="flex flex-col lg:flex-row gap-5 items-start">
-        {/* Quest grid container — matches inventory style */}
+        {/* Quest graph container */}
         <div
-          className="shrink-0 rounded-lg border-2 p-3"
+          ref={graphContainerRef}
+          className="w-full lg:flex-1 min-w-0 overflow-x-auto overflow-y-auto rounded-lg border-2"
           style={{
-            backgroundColor: "#e8e4de",
-            borderColor: "#c8c4be",
-            width: "fit-content",
+            backgroundColor: "#1a1a2e",
+            borderColor: "#2a2a3e",
+            maxHeight: "70vh",
           }}
         >
-          <div
-            ref={gridRef}
-            className="grid gap-1.5"
-            style={{ gridTemplateColumns: "repeat(6, 72px)" }}
-          >
-            {sortedQuests.length === 0 ? (
-              <div
-                className="col-span-6 py-8 text-center text-sm text-gray-500"
+          {filteredQuests.length === 0 ? (
+            <div className="py-12 text-center text-sm text-gray-500">
+              No quests found.
+            </div>
+          ) : (
+            <div
+              style={{
+                position: "relative",
+                width: layout.totalW,
+                height: layout.totalH,
+                minHeight: 300,
+              }}
+            >
+              {/* SVG connection lines */}
+              <svg
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: layout.totalW,
+                  height: layout.totalH,
+                  pointerEvents: "none",
+                }}
               >
-                No quests found.
-              </div>
-            ) : (
-              sortedQuests.map((quest) => (
-                <QuestTile
-                  key={quest.index}
-                  quest={quest}
-                  isSelected={selectedQuest?.index === quest.index}
-                  isDimmed={
-                    matchingIndices !== null &&
-                    matchingIndices.size > 0 &&
-                    !matchingIndices.has(quest.index)
-                  }
-                  onSelect={() => handleSelect(quest)}
-                />
-              ))
-            )}
-          </div>
+                {layout.edges.map(({ from, to }, i) => {
+                  const fp = layout.positions.get(from);
+                  const tp = layout.positions.get(to);
+                  if (!fp || !tp) return null;
+
+                  const x1 = fp.x + TILE_W;
+                  const y1 = fp.y + TILE_H / 2;
+                  const x2 = tp.x;
+                  const y2 = tp.y + TILE_H / 2;
+                  const dx = x2 - x1;
+                  const cx1 = x1 + dx * 0.4;
+                  const cx2 = x2 - dx * 0.4;
+
+                  const isActive =
+                    selectedQuest != null &&
+                    (from === selectedQuest.index ||
+                      to === selectedQuest.index);
+
+                  return (
+                    <path
+                      key={i}
+                      d={`M${x1},${y1} C${cx1},${y1} ${cx2},${y2} ${x2},${y2}`}
+                      fill="none"
+                      stroke={isActive ? "#c8c4be" : "#3a3a50"}
+                      strokeWidth={isActive ? 2.5 : 1.5}
+                      opacity={isActive ? 0.9 : 0.5}
+                    />
+                  );
+                })}
+              </svg>
+
+              {/* Quest nodes */}
+              {filteredQuests.map((quest) => {
+                const pos = layout.positions.get(quest.index);
+                if (!pos) return null;
+                return (
+                  <div
+                    key={quest.index}
+                    style={{
+                      position: "absolute",
+                      left: pos.x,
+                      top: pos.y,
+                      width: TILE_W,
+                      height: TILE_H,
+                    }}
+                  >
+                    <QuestTile
+                      quest={quest}
+                      isSelected={selectedQuest?.index === quest.index}
+                      isDimmed={
+                        matchingIndices !== null &&
+                        matchingIndices.size > 0 &&
+                        !matchingIndices.has(quest.index)
+                      }
+                      isHighlighted={connectedIndices.has(quest.index)}
+                      onSelect={() => handleSelect(quest)}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
 
         {/* Quest detail panel */}
