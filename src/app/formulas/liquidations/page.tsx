@@ -172,7 +172,7 @@ export default function LiquidationsFormulasPage() {
             label="Kill Threshold"
             vars={{
               "killThreshold": "HP value below which the victim can be killed",
-              "animosity": "base kill chance derived from Violence-to-Harmony ratio (S-curve, 0% to ~40%)",
+              "animosity": "base threshold factor derived from Violence-to-Harmony ratio (S-curve, 0% to ~40%)",
               "efficacy": "affinity matchup multiplier plus skill/equipment combat bonuses",
               "thresholdShift": "flat bonus or penalty from ATK/DEF_THRESHOLD_SHIFT skills and gear",
               "maxHP": "victim's maximum Health Points",
@@ -192,18 +192,19 @@ export default function LiquidationsFormulasPage() {
 
           <h3>Animosity — Violence vs Harmony</h3>
           <p>
-            Animosity represents how likely your kill attempt succeeds, based on
-            your Violence vs their Harmony. It uses a{" "}
-            <strong>Gaussian CDF</strong> (the cumulative normal distribution)
-            applied to the natural log of the stat ratio. In plain terms, this
-            produces an <strong>S-curve from 0% to ~40%</strong> based on how
-            much your Violence outweighs their Harmony:
+            Animosity determines what fraction of the victim&apos;s max HP
+            becomes the kill threshold. It uses a{" "}
+            <strong>Gaussian CDF</strong> as a mathematical S-curve function
+            applied to the natural log of the Violence/Harmony ratio. There is
+            no randomness — the result is fully deterministic. The output
+            ranges from <strong>0% to ~40%</strong> based on how much your
+            Violence outweighs their Harmony:
           </p>
           <FormulaBlock
             label="Animosity"
             vars={{
-              "animosity": "resulting base kill chance (0% to ~40% of max HP)",
-              "NormCdf": "Gaussian cumulative distribution function — produces the S-curve shape",
+              "animosity": "resulting threshold factor (0% to ~40% of max HP)",
+              "NormCdf": "Gaussian CDF — used here purely as an S-curve function, not for probability",
               "ln": "natural logarithm of the stat ratio",
               "yourViolence": "attacker's total Violence stat",
               "theirHarmony": "victim's total Harmony stat",
@@ -224,7 +225,7 @@ export default function LiquidationsFormulasPage() {
             </li>
             <li>
               When Violence is much lower, the CDF approaches zero — making the
-              kill nearly impossible through stats alone.
+              kill threshold near 0 HP.
             </li>
           </ul>
 
@@ -543,7 +544,7 @@ Plus, the attacker always receives 1 Obol per kill.`}
             label="Karma"
             vars={{
               "karma": "resulting recoil multiplier (~0 to ratio) — NOT raw HP damage",
-              "NormCdf": "Gaussian cumulative distribution function — same S-curve as animosity",
+              "NormCdf": "Gaussian CDF — same deterministic S-curve as animosity",
               "ln": "natural logarithm of the stat ratio",
               "victimViolence": "the killed Kami's total Violence stat — higher means more karma",
               "attackerHarmony": "the killer's total Harmony stat — higher absorbs more karma",
