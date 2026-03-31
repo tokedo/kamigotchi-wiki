@@ -814,7 +814,7 @@ export default function QuestDatabase() {
               onClick={() => setSelectedQuest(null)}
             />
             <div
-              className="max-lg:fixed max-lg:inset-x-3 max-lg:top-[10vh] max-lg:bottom-[5vh] max-lg:z-50 max-lg:overflow-y-auto max-lg:overflow-x-hidden w-auto lg:w-80 xl:w-96 shrink-0 lg:sticky lg:top-4"
+              className="max-lg:fixed max-lg:inset-0 max-lg:z-50 max-lg:pt-[10vh] max-lg:pb-[5vh] max-lg:px-4 max-lg:overflow-y-auto w-auto lg:w-80 xl:w-96 shrink-0 lg:sticky lg:top-4"
               onClick={(e) => { if (e.target === e.currentTarget) setSelectedQuest(null); }}
             >
               <QuestDetail

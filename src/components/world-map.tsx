@@ -700,7 +700,7 @@ export function WorldMap() {
               onClick={handleClose}
             />
             <div
-              className="max-lg:fixed max-lg:inset-x-3 max-lg:top-[10vh] max-lg:bottom-[5vh] max-lg:z-50 max-lg:overflow-y-auto lg:flex-1 lg:min-w-72 lg:max-w-96 lg:sticky lg:top-4"
+              className="max-lg:fixed max-lg:inset-0 max-lg:z-50 max-lg:pt-[10vh] max-lg:pb-[5vh] max-lg:px-4 max-lg:overflow-y-auto lg:flex-1 lg:min-w-72 lg:max-w-96 lg:sticky lg:top-4"
               onClick={(e) => { if (e.target === e.currentTarget) handleClose(); }}
             >
               <DetailPanel room={selectedRoom} onClose={handleClose} />
