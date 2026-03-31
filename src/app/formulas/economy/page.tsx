@@ -512,8 +512,6 @@ Examples:
           <StatTable
             headers={["NPC", "Item", "Currency", "Target Price", "Pricing"]}
             rows={[
-              ["Mina", "Wooden Stick", "Onyx", "0.05", "Fixed"],
-              ["Mina", "Stone", "Onyx", "1", "Fixed"],
               ["Mina", "Red Ribbon Gummy", "Musu", "100", "GDA: 300/day, 50% decay"],
               ["Mina", "Ghost Gum", "Musu", "60", "GDA: 1,500/day, 50% decay"],
               ["Mina", "Pom-Pom Fruit Candy", "Musu", "100", "GDA: 750/day, 50% decay"],

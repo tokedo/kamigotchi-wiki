@@ -1,31 +1,5 @@
 [
   {
-    "name": "Mina Stick",
-    "status": "In-game",
-    "npcIndex": 1,
-    "npcName": "Mina",
-    "itemIndex": 1001,
-    "itemName": "Wooden Stick",
-    "currencyIndex": 100,
-    "currencyName": "Onyx Shard",
-    "basePrice": 0.05,
-    "buyPriceModel": "FIXED",
-    "requirements": null
-  },
-  {
-    "name": "Mina Stone",
-    "status": "In-game",
-    "npcIndex": 1,
-    "npcName": "Mina",
-    "itemIndex": 1002,
-    "itemName": "Stone",
-    "currencyIndex": 100,
-    "currencyName": "Onyx Shard",
-    "basePrice": 1,
-    "buyPriceModel": "FIXED",
-    "requirements": null
-  },
-  {
     "name": "Mina Ribbon",
     "status": "In-game",
     "npcIndex": 1,
