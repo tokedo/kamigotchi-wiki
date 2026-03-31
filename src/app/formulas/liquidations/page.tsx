@@ -320,50 +320,50 @@ export default function LiquidationsFormulasPage() {
 
           <h3>Worked Example: Kill Threshold</h3>
           <p>
-            Suppose an attacker with 150 Violence targets a victim with 100
-            Harmony and 1,000 max HP. Both have the same affinity type (strong
+            Suppose an attacker with 30 Violence targets a victim with 20
+            Harmony and 200 max HP. Both have the same affinity type (strong
             matchup), and neither has skill bonuses:
           </p>
           <FormulaBlock
             label="Example Calculation"
             variant="example"
             vars={{
-              "150": "attacker's Violence stat in this example",
-              "100": "victim's Harmony stat in this example",
-              "1000": "victim's maximum HP in this example",
-              "NormCdf": "Gaussian cumulative distribution function (S-curve)",
+              "30": "attacker's Violence stat in this example",
+              "20": "victim's Harmony stat in this example",
+              "200": "victim's maximum HP in this example",
+              "NormCdf": "Gaussian CDF (S-curve)",
               "650 / 350": "body shift and hand shift for a strong (same-type) affinity matchup",
             }}
           >
             {`Step 1 — Animosity:
-  ln(150 / 100) = ln(1.5) ≈ 0.405
-  NormCdf(0.405) ≈ 0.657  (65.7% of the bell curve)
+  ln(30 / 20) = ln(1.5) ≈ 0.405
+  NormCdf(0.405) ≈ 0.657  (65.7% of the S-curve)
   animosity = 0.657 × ratio / precision
 
 Step 2 — Efficacy (strong matchup, no bonuses):
   efficacy = base + 650 + 350 = base + 1000
 
 Step 3 — Threshold:
-  threshold = (animosity × efficacy) × 1000 / precision
+  threshold = (animosity × efficacy) × 200 / precision
 
 The victim becomes killable once harvest strain has drained
 their HP below this threshold value.`}
           </FormulaBlock>
           <p>
-            Now compare: if the attacker had only 80 Violence against the same
-            100 Harmony victim:
+            Now compare: if the attacker had only 12 Violence against the same
+            20 Harmony victim:
           </p>
           <FormulaBlock
             label="Weaker Attacker"
             variant="example"
             vars={{
-              "80": "attacker's Violence stat (weaker than the victim's Harmony)",
-              "100": "victim's Harmony stat",
-              "NormCdf": "Gaussian cumulative distribution function (S-curve)",
+              "12": "attacker's Violence stat (weaker than the victim's Harmony)",
+              "20": "victim's Harmony stat",
+              "NormCdf": "Gaussian CDF (S-curve)",
             }}
           >
-            {`ln(80 / 100) = ln(0.8) ≈ -0.223
-NormCdf(-0.223) ≈ 0.412  (41.2% of the bell curve)
+            {`ln(12 / 20) = ln(0.6) ≈ -0.511
+NormCdf(-0.511) ≈ 0.305  (30.5% of the S-curve)
 
 A much lower animosity — the victim would need to be far deeper
 into harvest strain before they become vulnerable.`}
@@ -375,25 +375,23 @@ into harvest strain before they become vulnerable.`}
           <p>
             Because animosity uses the Gaussian CDF, Violence has sharply
             diminishing returns at high values. Consider these scenarios against
-            a victim with 100 Harmony:
+            a victim with 20 Harmony:
           </p>
           <StatTable
             headers={["Your Violence", "ln(V/H)", "NormCdf Result", "Relative Gain"]}
             rows={[
-              ["50", "-0.69", "~24.5%", "—"],
-              ["100", "0.00", "~50.0%", "+25.5 points"],
-              ["200", "+0.69", "~75.5%", "+25.5 points"],
-              ["400", "+1.39", "~91.7%", "+16.2 points"],
-              ["800", "+2.08", "~98.1%", "+6.4 points"],
-              ["1600", "+2.77", "~99.7%", "+1.6 points"],
+              ["10", "-0.69", "~24.5%", "—"],
+              ["20", "0.00", "~50.0%", "+25.5 points"],
+              ["40", "+0.69", "~75.5%", "+25.5 points"],
+              ["80", "+1.39", "~91.7%", "+16.2 points"],
+              ["160", "+2.08", "~98.1%", "+6.4 points"],
             ]}
           />
           <p>
-            Going from 100 to 200 Violence (doubling) gains you 25.5 percentage
-            points of CDF output. But going from 800 to 1600 (also doubling)
-            gains only 1.6 points. Past a certain point, investing in Violence
-            gives almost nothing. You are better off investing in Power (for
-            better spoils), Harmony (to reduce recoil karma), or equipment.
+            Going from 20 to 40 Violence (doubling) gains 25.5 percentage
+            points of CDF output. But going from 80 to 160 (also doubling)
+            gains only 6.4 points. Past a certain point, investing in Violence
+            gives diminishing returns.
           </p>
 
           <InfoBox variant="tip">
@@ -668,26 +666,26 @@ boost = max(0, baseBoost + ATK_RECOIL_BOOST)`}
             label="Example"
             variant="example"
             vars={{
-              "120": "victim's Violence stat in this example",
-              "80": "attacker's Harmony stat in the first scenario",
-              "200": "attacker's Harmony stat in the second scenario",
+              "15": "victim's Violence stat (typical harvester)",
+              "35": "victim's Violence stat (strong predator)",
+              "20": "attacker's Harmony stat in this example",
               "NormCdf": "Gaussian CDF (S-curve) used for karma calculation",
             }}
           >
-            {`You kill a target with 120 Violence while you have 80 Harmony.
-You have accumulated moderate harvest strain.
+            {`You kill a typical harvester (Violence 15) while you have 20 Harmony.
 
-  karma = NormCdf( ln(120 / 80) ) × ratio / precision
-       = NormCdf(0.405) ≈ high multiplier (victim is stronger)
+  karma = NormCdf( ln(15 / 20) ) × ratio / precision
+       = NormCdf(-0.29) ≈ low multiplier (you outstat the victim)
   recoilEfficacy = affinity nudge (depends on hand/body matchup)
   recoil = (karma + recoilEfficacy) × strain × boost / precision
 
-If you had 200 Harmony instead:
-  karma = NormCdf( ln(120 / 200) ) × ratio / precision
-       = NormCdf(-0.51) ≈ low multiplier (you outstat the victim)
+Now you kill a strong predator (Violence 35) with the same 20 Harmony:
 
-High Harmony predators still take less karma, but it never
-drops to exactly zero — the S-curve just makes it very small.`}
+  karma = NormCdf( ln(35 / 20) ) × ratio / precision
+       = NormCdf(0.56) ≈ high multiplier (victim hits back hard)
+
+Karma never drops to exactly zero — the S-curve just makes it
+very small when your Harmony exceeds the victim's Violence.`}
           </FormulaBlock>
 
           {/* ─── Harmony vs Health analysis ─── */}
