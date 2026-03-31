@@ -430,12 +430,6 @@ for precision, but the result is the same.`}
             ]}
           />
 
-          <InfoBox variant="warning">
-            A common misconception: quest XP does <strong>not</strong> help
-            your Kami level up. Quest rewards go to Account XP, which is a
-            separate pool with no level-up mechanism attached.
-          </InfoBox>
-
           <h2>How Leveling Up Works</h2>
           <p>
             When your Kami has accumulated enough XP, you can trigger a level-up
