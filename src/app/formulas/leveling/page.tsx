@@ -191,14 +191,6 @@ export default function LevelingFormulasPage() {
             powerful, then harvest and fight more effectively.
           </p>
 
-          <InfoBox variant="warning">
-            Leveling up <strong>consumes</strong> your XP — it works like
-            spending currency, not filling a progress bar. If your Kami needs
-            100 XP to reach the next level and currently holds 130 XP,
-            leveling will leave you with 30 XP. You never lose surplus, but the
-            spent XP is gone.
-          </InfoBox>
-
           <h3>Where Does XP Come From?</h3>
           <p>
             There are two separate XP pools in Kamigotchi, and it is important
