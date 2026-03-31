@@ -42,7 +42,7 @@ export default function StatsFormulasPage() {
               ],
               [
                 "Slots",
-                "How many pieces of equipment your Kami can wear at once. Every Kami starts with 1 slot.",
+                "How many pieces of equipment your Kami can wear at once. Base is 0 — slots come from traits (e.g. Octahedron body +2, Cube body +1, Lenny 1 face +1).",
               ],
             ]}
           />
@@ -114,9 +114,11 @@ export default function StatsFormulasPage() {
 
           <h2>Equipment Slots</h2>
           <p>
-            Every Kami has a single equipment slot. Each piece of equipment takes
-            up one slot, so choose your gear wisely — equipment bonuses are some
-            of the strongest in the game.
+            A Kami's equipment slots are determined entirely by its traits — the
+            base is 0. Some traits grant extra slots (e.g. Octahedron body +2,
+            Cube body +1, Lenny 1 face +1). Each piece of equipment takes up one
+            slot, so choose your gear wisely — equipment bonuses are some of the
+            strongest in the game.
           </p>
 
           <h2>Strategic Considerations</h2>
