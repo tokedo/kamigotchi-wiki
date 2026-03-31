@@ -130,13 +130,6 @@ export default function LiquidationsFormulasPage() {
             — check the Skill Trees page for specifics.
           </p>
 
-          <h3>Co-op in the Black Pool</h3>
-          <p>
-            Players can access the <strong>Co-op</strong> option from the Black
-            Pool dialogue in the Violence Temple. This offers cooperative play
-            as an alternative to pure PvP combat.
-          </p>
-
           <h2>Sacrifice</h2>
           <p>
             Sacrifice is entirely separate from PvP. You voluntarily and{" "}

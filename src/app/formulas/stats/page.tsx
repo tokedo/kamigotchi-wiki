@@ -30,7 +30,7 @@ export default function StatsFormulasPage() {
               ],
               [
                 "Power",
-                "Drives your harvest rate (Fertility) and determines how much loot you get from combat. The workhorse stat for Obols.",
+                "Drives your harvest rate (Fertility) and determines how much Musu you loot from combat (Spoils).",
               ],
               [
                 "Violence",
@@ -81,21 +81,6 @@ export default function StatsFormulasPage() {
             events happen (like finishing a harvest or dying).
           </p>
 
-          <h2>Shift vs Boost: Which Is Better?</h2>
-          <p>
-            This is one of the most important strategic questions in Kamigotchi.
-            Shifts are flat additions — predictable and always valuable. Boosts
-            are percentage multipliers — they scale with your total base + shift,
-            so they become more powerful the higher your underlying stats are.
-          </p>
-          <p>
-            Early on, when your stats are low, shifts give you more bang for your
-            buck. A +10 shift on a base of 50 is a 20% increase. But later, when
-            your base + shift is already 100, a +50% boost gives you +50 — far
-            more than most single shifts. The takeaway: stack shifts early,
-            prioritize boosts once your foundation is solid.
-          </p>
-
           <h2>The Bonus System in a Nutshell</h2>
           <p>
             Behind the scenes, every modifier on your Kami — whether from a
@@ -140,7 +125,7 @@ export default function StatsFormulasPage() {
             other Kamis and gives a harvesting bonus through Intensity. Power
             drives your base harvest rate and your spoils from combat. Aggressive
             players stack Violence for the liquidation edge; farming-focused
-            players invest in Power for consistent Obol income. Hybrid builds
+            players invest in Power for consistent Musu income. Hybrid builds
             exist, but pure specialization tends to be more efficient.
           </p>
         </>

@@ -156,16 +156,11 @@ export default function HarvestingFormulasPage() {
             Your Kami does not heal while harvesting.
           </p>
 
-          <h3>Cooldowns, Tax, and Scavenging</h3>
+          <h3>Cooldowns and Scavenging</h3>
           <p>
             After starting, collecting, or stopping a harvest, your Kami enters
             a <strong>3-minute cooldown</strong> before it can act again. Skills
             can shorten this.
-          </p>
-          <p>
-            A <strong>tax</strong> can be assigned when you start harvesting —
-            for example, paying a faction leader a cut of your output. Each
-            taxer takes up to 20% of what you collect.
           </p>
           <p>
             As you harvest, you also accumulate{" "}
