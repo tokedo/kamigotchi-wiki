@@ -24,11 +24,11 @@ const RARITY_BORDER: Record<string, string> = {
 };
 
 const RARITY_BG: Record<string, string> = {
-  Common: "#a8a8a8",
-  Uncommon: "#a8a8a8",
-  Rare: "#a8a8a8",
-  Epic: "#a8a8a8",
-  Legendary: "#b8b0a0",
+  Common: "#ffffff",
+  Uncommon: "#ffffff",
+  Rare: "#ffffff",
+  Epic: "#ffffff",
+  Legendary: "#fff8ee",
 };
 
 const RARITY_GLOW: Record<string, string> = {
@@ -109,7 +109,7 @@ function InventoryTile({
             unoptimized
           />
         ) : (
-          <span className="text-[10px] text-white/30 text-center leading-tight px-1">
+          <span className="text-[10px] text-gray-400 text-center leading-tight px-1">
             {item.name}
           </span>
         )}
@@ -135,20 +135,20 @@ function ItemDetail({
 
   return (
     <div
-      className="rounded-lg overflow-hidden shadow-2xl"
+      className="rounded-xl overflow-hidden shadow-2xl"
       style={{
-        border: `2px solid ${border}`,
-        backgroundColor: "#1a1a2e",
+        border: "3px solid #555",
+        backgroundColor: "#f5f5f0",
       }}
     >
       {/* Header: icon + name + type */}
-      <div className="flex gap-3 p-3">
+      <div className="flex gap-3 p-3" style={{ borderBottom: "2px solid #ddd" }}>
         {/* Item icon */}
         <div
           className="w-16 h-16 shrink-0 rounded-md flex items-center justify-center overflow-hidden"
           style={{
-            border: `2px solid ${border}`,
-            backgroundColor: "rgba(120, 120, 120, 0.15)",
+            border: "2px solid #888",
+            backgroundColor: "#ffffff",
           }}
         >
           {!imgErr ? (
@@ -163,19 +163,19 @@ function ItemDetail({
               unoptimized
             />
           ) : (
-            <span className="text-xs text-white/30">?</span>
+            <span className="text-xs text-gray-400">?</span>
           )}
         </div>
 
         {/* Name + type */}
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-1">
-            <h3 className="text-base font-bold text-white leading-tight">
+            <h3 className="text-base font-bold text-gray-900 leading-tight">
               {item.name}
             </h3>
             <button
               onClick={onClose}
-              className="p-0.5 rounded text-white/40 hover:text-white transition-colors shrink-0"
+              className="p-0.5 rounded text-gray-400 hover:text-gray-700 transition-colors shrink-0"
               aria-label="Close"
             >
               <X className="h-4 w-4" />
@@ -183,13 +183,13 @@ function ItemDetail({
           </div>
           <div className="flex items-center gap-2 mt-1">
             {item.type && (
-              <span className="text-xs text-white/50">
-                Type: <span className="text-white/70 uppercase">{item.type}</span>
+              <span className="text-xs text-gray-500">
+                Type: <span className="text-gray-700 uppercase">{item.type}</span>
               </span>
             )}
           </div>
           {item.rarity && (
-            <span className="text-[11px] text-white/40">
+            <span className="text-[11px] text-gray-400">
               {item.rarity}
             </span>
           )}
@@ -197,29 +197,33 @@ function ItemDetail({
       </div>
 
       {/* Description */}
-      <div className="px-3 pb-2">
-        <p className="text-xs text-white/50 leading-relaxed italic">
+      <div className="px-3 py-2">
+        <p className="text-xs text-gray-500 leading-relaxed italic">
           {item.description}
         </p>
       </div>
 
-      <div className="border-t border-white/8 mx-3" />
-
-      {/* Requirements & Effects row (game-style boxes) */}
-      <div className="p-3 flex gap-2">
-        <div className="flex-1 rounded-md bg-white/5 px-2.5 py-2 text-center">
-          <p className="text-[10px] text-white/40 uppercase tracking-wider mb-0.5">
+      {/* Requirements & Target row */}
+      <div className="px-3 pb-3 flex gap-2">
+        <div
+          className="flex-1 rounded-lg px-2.5 py-2 text-center"
+          style={{ border: "2px solid #ddd", backgroundColor: "#fafaf7" }}
+        >
+          <p className="text-[10px] text-gray-400 uppercase tracking-wider mb-0.5">
             Requirements
           </p>
-          <p className="text-xs text-white/70">
+          <p className="text-xs text-gray-700">
             {item.requirements || "None"}
           </p>
         </div>
-        <div className="flex-1 rounded-md bg-white/5 px-2.5 py-2 text-center">
-          <p className="text-[10px] text-white/40 uppercase tracking-wider mb-0.5">
+        <div
+          className="flex-1 rounded-lg px-2.5 py-2 text-center"
+          style={{ border: "2px solid #ddd", backgroundColor: "#fafaf7" }}
+        >
+          <p className="text-[10px] text-gray-400 uppercase tracking-wider mb-0.5">
             Target
           </p>
-          <p className="text-xs text-white/70">
+          <p className="text-xs text-gray-700">
             {item.forTarget || "None"}
           </p>
         </div>
@@ -228,31 +232,32 @@ function ItemDetail({
       {/* Effects */}
       {item.effects.length > 0 && (
         <div className="px-3 pb-3">
-          <span className="text-[10px] text-white/30 uppercase tracking-wider font-medium">
+          <span className="text-[10px] text-gray-400 uppercase tracking-wider font-medium">
             Effects
           </span>
           <div className="mt-1 space-y-1">
             {item.effects.map((e, i) => (
               <div
                 key={i}
-                className="flex items-center gap-2 text-xs rounded-md bg-white/5 px-2 py-1.5"
+                className="flex items-center gap-2 text-xs rounded-lg px-2 py-1.5"
+                style={{ border: "2px solid #ddd", backgroundColor: "#fafaf7" }}
               >
-                <span className="text-white/40 text-[10px] uppercase shrink-0">
+                <span className="text-gray-400 text-[10px] uppercase shrink-0">
                   {e.type}
                 </span>
-                <span className="text-white/70 flex-1 min-w-0">
+                <span className="text-gray-700 flex-1 min-w-0">
                   {e.name}
                 </span>
                 {e.value !== 0 && (
                   <span
-                    className={`font-mono shrink-0 ${e.value > 0 ? "text-green-400/80" : "text-red-400/80"}`}
+                    className={`font-mono shrink-0 ${e.value > 0 ? "text-green-600" : "text-red-500"}`}
                   >
                     {e.value > 0 ? "+" : ""}
                     {e.value}
                   </span>
                 )}
                 {e.terminator && (
-                  <span className="text-white/30 text-[10px] shrink-0">
+                  <span className="text-gray-400 text-[10px] shrink-0">
                     until {e.terminator}
                   </span>
                 )}
@@ -265,14 +270,14 @@ function ItemDetail({
       {/* Flags */}
       {item.flags.length > 0 && (
         <div className="px-3 pb-3">
-          <span className="text-[10px] text-white/30 uppercase tracking-wider font-medium">
+          <span className="text-[10px] text-gray-400 uppercase tracking-wider font-medium">
             Flags
           </span>
           <div className="flex flex-wrap gap-1 mt-1">
             {item.flags.map((f) => (
               <span
                 key={f}
-                className="text-[10px] px-1.5 py-0.5 rounded bg-white/5 text-white/50"
+                className="text-[10px] px-1.5 py-0.5 rounded bg-gray-200/60 text-gray-600"
               >
                 {f}
               </span>
@@ -284,22 +289,23 @@ function ItemDetail({
       {/* Recipes */}
       {recipes.length > 0 && (
         <div className="px-3 pb-3">
-          <span className="text-[10px] text-white/30 uppercase tracking-wider font-medium">
+          <span className="text-[10px] text-gray-400 uppercase tracking-wider font-medium">
             Recipes
           </span>
           <div className="mt-1 space-y-1">
             {recipes.map(({ as: role, recipe }, i) => (
               <div
                 key={i}
-                className="flex items-start gap-2 text-xs rounded-md bg-white/5 px-2 py-1.5"
+                className="flex items-start gap-2 text-xs rounded-lg px-2 py-1.5"
+                style={{ border: "2px solid #ddd", backgroundColor: "#fafaf7" }}
               >
                 <span
                   className={`text-[10px] uppercase shrink-0 mt-0.5 ${
                     role === "output"
-                      ? "text-green-400/70"
+                      ? "text-green-600"
                       : role === "tool"
-                        ? "text-amber-400/70"
-                        : "text-blue-400/70"
+                        ? "text-amber-600"
+                        : "text-blue-600"
                   }`}
                 >
                   {role === "output"
@@ -309,9 +315,9 @@ function ItemDetail({
                       : "Input"}
                 </span>
                 <div className="flex-1 min-w-0">
-                  <span className="text-white/70">{recipe.name}</span>
+                  <span className="text-gray-700">{recipe.name}</span>
                   {role === "output" && (
-                    <p className="text-white/30 text-[10px] mt-0.5">
+                    <p className="text-gray-400 text-[10px] mt-0.5">
                       {recipe.inputs
                         .map((inp) => `${inp.amount}× ${inp.name}`)
                         .join(", ")}

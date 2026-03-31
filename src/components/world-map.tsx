@@ -339,12 +339,15 @@ function DetailPanel({
   const [imgError, setImgError] = useState(false);
 
   return (
-    <div className="rounded-lg border-2 border-white/10 bg-[#1a1a2e] overflow-hidden shadow-2xl">
-      {/* Top row: room art + title + type/drops (game-style layout) */}
-      <div className="flex gap-3 p-3">
+    <div
+      className="rounded-xl overflow-hidden shadow-2xl"
+      style={{ border: "3px solid #555", backgroundColor: "#f5f5f0" }}
+    >
+      {/* Top row: room art + title + type/drops */}
+      <div className="flex gap-3 p-3" style={{ borderBottom: "2px solid #ddd" }}>
         {/* Room art thumbnail — square, pixelated */}
         {roomImg && !imgError ? (
-          <div className="relative w-24 h-24 shrink-0 rounded-md overflow-hidden border-2 border-white/15 bg-muted/30">
+          <div className="relative w-24 h-24 shrink-0 rounded-md overflow-hidden" style={{ border: "2px solid #888" }}>
             <Image
               src={`/img/rooms/${roomImg}`}
               alt={room.name}
@@ -356,20 +359,20 @@ function DetailPanel({
             />
           </div>
         ) : (
-          <div className="w-24 h-24 shrink-0 rounded-md border-2 border-white/15 bg-muted/30 flex items-center justify-center">
-            <MapPin className="w-8 h-8 text-muted-foreground/30" />
+          <div className="w-24 h-24 shrink-0 rounded-md flex items-center justify-center" style={{ border: "2px solid #888", backgroundColor: "#fafaf7" }}>
+            <MapPin className="w-8 h-8 text-gray-300" />
           </div>
         )}
 
         {/* Title + type + drops */}
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-1">
-            <h3 className="text-base font-bold text-white leading-tight">
+            <h3 className="text-base font-bold text-gray-900 leading-tight">
               {room.name}
             </h3>
             <button
               onClick={onClose}
-              className="p-0.5 rounded text-white/40 hover:text-white transition-colors shrink-0"
+              className="p-0.5 rounded text-gray-400 hover:text-gray-700 transition-colors shrink-0"
               aria-label="Close"
             >
               <X className="h-4 w-4" />
@@ -379,7 +382,7 @@ function DetailPanel({
           {/* Type row with affinity icons */}
           {room.node && (
             <div className="flex items-center gap-1.5 mt-1.5">
-              <span className="text-xs text-white/40">Type:</span>
+              <span className="text-xs text-gray-500">Type:</span>
               {affinityParts.map((aff) => (
                 <img
                   key={aff}
@@ -396,7 +399,7 @@ function DetailPanel({
           {/* Drops row with icons (compact) */}
           {room.node?.droptable?.items && room.node.droptable.items.length > 0 && (
             <div className="flex items-center gap-1.5 mt-1">
-              <span className="text-xs text-white/40">Drops:</span>
+              <span className="text-xs text-gray-500">Drops:</span>
               <img
                 src="/img/items/musu.png"
                 alt="Musu"
@@ -404,7 +407,7 @@ function DetailPanel({
                 className="w-5 h-5"
                 style={{ imageRendering: "pixelated" }}
               />
-              <span className="text-white/20">|</span>
+              <span className="text-gray-300">|</span>
               {room.node.droptable.items.map((item, i) => (
                 <img
                   key={i}
@@ -424,32 +427,29 @@ function DetailPanel({
       </div>
 
       {/* Description */}
-      <div className="px-3 pb-2">
-        <p className="text-xs text-white/50 leading-relaxed">
+      <div className="px-3 py-2">
+        <p className="text-xs text-gray-500 leading-relaxed italic">
           {room.description}
         </p>
       </div>
 
-      {/* Divider */}
-      <div className="border-t border-white/8 mx-3" />
-
       {/* Bottom section: node stats + exits */}
-      <div className="p-3 space-y-2.5">
+      <div className="px-3 pb-3 space-y-2.5">
         {/* Harvest node stats */}
         {room.node && (
           <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs">
             <span>
-              <span className="text-white/40">Yield </span>
-              <span className="text-white/80 font-medium">{room.node.yieldName}</span>
+              <span className="text-gray-400">Yield </span>
+              <span className="text-gray-700 font-medium">{room.node.yieldName}</span>
             </span>
             <span>
-              <span className="text-white/40">Scav </span>
-              <span className="text-white/80 font-medium">{room.node.scavCost} pts</span>
+              <span className="text-gray-400">Scav </span>
+              <span className="text-gray-700 font-medium">{room.node.scavCost} pts</span>
             </span>
             {room.node.levelLimit > 0 && (
               <span>
-                <span className="text-white/40">Lvl </span>
-                <span className="text-white/80 font-medium">{room.node.levelLimit}+</span>
+                <span className="text-gray-400">Lvl </span>
+                <span className="text-gray-700 font-medium">{room.node.levelLimit}+</span>
               </span>
             )}
           </div>
@@ -458,7 +458,7 @@ function DetailPanel({
         {/* Scavenge drop rates */}
         {room.node?.droptable?.items && room.node.droptable.items.length > 0 && (
           <div>
-            <span className="text-[10px] text-white/30 uppercase tracking-wider font-medium">
+            <span className="text-[10px] text-gray-400 uppercase tracking-wider font-medium">
               Scavenge Drops
             </span>
             <div className="mt-1 space-y-0.5">
@@ -475,15 +475,15 @@ function DetailPanel({
                         (e.target as HTMLImageElement).style.display = "none";
                       }}
                     />
-                    <span className="text-white/70 flex-1 min-w-0 truncate">
+                    <span className="text-gray-700 flex-1 min-w-0 truncate">
                       {item}
                     </span>
                     <span className={`shrink-0 font-mono tabular-nums ${
                       rates[i] >= 50
-                        ? "text-white/60"
+                        ? "text-gray-500"
                         : rates[i] >= 10
-                          ? "text-amber-400/70"
-                          : "text-red-400/70"
+                          ? "text-amber-600"
+                          : "text-red-500"
                     }`}>
                       {rates[i] < 1
                         ? rates[i].toFixed(1)
@@ -499,14 +499,14 @@ function DetailPanel({
         {/* Exits */}
         {(adjacentRooms.length > 0 || exitRooms.length > 0) && (
           <div>
-            <span className="text-[10px] text-white/30 uppercase tracking-wider font-medium">
+            <span className="text-[10px] text-gray-400 uppercase tracking-wider font-medium">
               Exits
             </span>
             <div className="flex flex-wrap gap-1 mt-1">
               {adjacentRooms.map((r) => (
                 <span
                   key={r.index}
-                  className="inline-flex items-center gap-1 text-[11px] px-1.5 py-0.5 rounded bg-white/5 text-white/60"
+                  className="inline-flex items-center gap-1 text-[11px] px-1.5 py-0.5 rounded bg-gray-200/60 text-gray-600"
                 >
                   {r.node && (
                     <span
@@ -522,11 +522,11 @@ function DetailPanel({
                   <span
                     key={`exit-${r.index}`}
                     className={`inline-flex items-center gap-1 text-[11px] px-1.5 py-0.5 rounded
-                      ${isCrossPlane ? "bg-purple-500/10 text-purple-300/80" : "bg-white/5 text-white/60"}`}
+                      ${isCrossPlane ? "bg-purple-100 text-purple-700" : "bg-gray-200/60 text-gray-600"}`}
                   >
                     {r.name}
                     {isCrossPlane && (
-                      <span className="text-[9px] opacity-50">
+                      <span className="text-[9px] opacity-60">
                         ({ZONES[r.z]?.label})
                       </span>
                     )}
