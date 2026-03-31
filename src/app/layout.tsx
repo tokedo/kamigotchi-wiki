@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Silkscreen } from "next/font/google";
+import { Inter, Pixelify_Sans } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const silkscreen = Silkscreen({
+const pixelifySans = Pixelify_Sans({
   variable: "--font-pixel",
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${geistMono.variable} ${silkscreen.variable} h-full antialiased dark`}
+      className={`${inter.variable} ${geistMono.variable} ${pixelifySans.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex">
         <Sidebar />

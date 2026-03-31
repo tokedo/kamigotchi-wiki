@@ -450,17 +450,18 @@ export default function ItemDatabase() {
       <div className="flex flex-col lg:flex-row gap-5 items-start">
         {/* Inventory panel — game-style container */}
         <div
-          className="shrink-0 rounded-lg border-2 p-3"
+          className="shrink-0 rounded-lg border-2 p-2 sm:p-3"
           style={{
             backgroundColor: "#e8e4de",
             borderColor: "#c8c4be",
             width: "fit-content",
+            maxWidth: "100%",
           }}
         >
           <div
-            className="grid gap-1.5"
+            className="grid gap-1 sm:gap-1.5"
             style={{
-              gridTemplateColumns: "repeat(6, 72px)",
+              gridTemplateColumns: "repeat(6, minmax(0, 72px))",
             }}
           >
             {filtered.map((item) => (
@@ -474,14 +475,20 @@ export default function ItemDatabase() {
           </div>
         </div>
 
-        {/* Item detail panel */}
+        {/* Item detail panel — overlay on mobile, side panel on desktop */}
         {selectedItem && (
-          <div className="w-full lg:w-80 xl:w-96 shrink-0 lg:sticky lg:top-4">
-            <ItemDetail
-              item={selectedItem}
-              onClose={() => setSelectedItem(null)}
+          <>
+            <div
+              className="fixed inset-0 z-40 bg-black/60 lg:hidden"
+              onClick={() => setSelectedItem(null)}
             />
-          </div>
+            <div className="max-lg:fixed max-lg:inset-x-3 max-lg:top-[10vh] max-lg:bottom-[5vh] max-lg:z-50 max-lg:overflow-y-auto w-auto lg:w-80 xl:w-96 shrink-0 lg:sticky lg:top-4">
+              <ItemDetail
+                item={selectedItem}
+                onClose={() => setSelectedItem(null)}
+              />
+            </div>
+          </>
         )}
       </div>
     </article>

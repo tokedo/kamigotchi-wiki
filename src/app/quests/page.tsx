@@ -806,15 +806,21 @@ export default function QuestDatabase() {
           )}
         </div>
 
-        {/* Quest detail panel */}
+        {/* Quest detail panel — overlay on mobile, side panel on desktop */}
         {selectedQuest && (
-          <div className="w-full lg:w-80 xl:w-96 shrink-0 lg:sticky lg:top-4">
-            <QuestDetail
-              quest={selectedQuest}
-              onClose={() => setSelectedQuest(null)}
-              onSelectQuest={navigateToQuest}
+          <>
+            <div
+              className="fixed inset-0 z-40 bg-black/60 lg:hidden"
+              onClick={() => setSelectedQuest(null)}
             />
-          </div>
+            <div className="max-lg:fixed max-lg:inset-x-3 max-lg:top-[10vh] max-lg:bottom-[5vh] max-lg:z-50 max-lg:overflow-y-auto w-auto lg:w-80 xl:w-96 shrink-0 lg:sticky lg:top-4">
+              <QuestDetail
+                quest={selectedQuest}
+                onClose={() => setSelectedQuest(null)}
+                onSelectQuest={navigateToQuest}
+              />
+            </div>
+          </>
         )}
       </div>
     </article>

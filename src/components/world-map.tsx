@@ -692,11 +692,17 @@ export function WorldMap() {
           />
         </div>
 
-        {/* Detail panel — right of map on desktop, below on mobile */}
+        {/* Detail panel — overlay on mobile, side panel on desktop */}
         {selectedRoom && (
-          <div className="w-full lg:flex-1 lg:min-w-72 lg:max-w-96 lg:sticky lg:top-4">
-            <DetailPanel room={selectedRoom} onClose={handleClose} />
-          </div>
+          <>
+            <div
+              className="fixed inset-0 z-40 bg-black/60 lg:hidden"
+              onClick={handleClose}
+            />
+            <div className="max-lg:fixed max-lg:inset-x-3 max-lg:top-[10vh] max-lg:bottom-[5vh] max-lg:z-50 max-lg:overflow-y-auto lg:flex-1 lg:min-w-72 lg:max-w-96 lg:sticky lg:top-4">
+              <DetailPanel room={selectedRoom} onClose={handleClose} />
+            </div>
+          </>
         )}
       </div>
     </div>
