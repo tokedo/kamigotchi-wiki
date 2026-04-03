@@ -22,7 +22,10 @@ const pixelifySans = Pixelify_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Kamigotchi Wiki — Community Game Guide",
+  title: {
+    template: "%s — Kamigotchi Wiki",
+    default: "Kamigotchi Wiki — Community Game Guide",
+  },
   description:
     "Complete guide to Kamigotchi, the on-chain MMORPG on Yominet. Mechanics, formulas, item database, quest graph, and world map.",
 };

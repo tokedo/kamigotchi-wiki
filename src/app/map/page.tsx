@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import { WorldMap } from "@/components/world-map";
+
+export const metadata: Metadata = {
+  title: "World Map",
+};
 
 export default function MapPage() {
   return (

@@ -1,9 +1,14 @@
+import type { Metadata } from "next";
 import {
   MechanicPage,
   InfoBox,
   FormulaBlock,
   StatTable,
 } from "@/components/mechanic-page";
+
+export const metadata: Metadata = {
+  title: "Stats & Bonuses",
+};
 
 export default function StatsFormulasPage() {
   return (

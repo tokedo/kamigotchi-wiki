@@ -1,9 +1,14 @@
+import type { Metadata } from "next";
 import {
   MechanicPage,
   InfoBox,
   FormulaBlock,
   StatTable,
 } from "@/components/mechanic-page";
+
+export const metadata: Metadata = {
+  title: "Harvesting",
+};
 
 export default function HarvestingFormulasPage() {
   return (

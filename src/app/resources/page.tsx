@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import { ExternalLink } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Resources",
+};
 
 interface Resource {
   name: string;

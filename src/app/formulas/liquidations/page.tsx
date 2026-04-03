@@ -1,9 +1,14 @@
+import type { Metadata } from "next";
 import {
   MechanicPage,
   FormulaBlock,
   StatTable,
   InfoBox,
 } from "@/components/mechanic-page";
+
+export const metadata: Metadata = {
+  title: "Liquidations",
+};
 
 export default function LiquidationsFormulasPage() {
   return (
