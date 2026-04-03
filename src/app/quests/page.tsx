@@ -339,7 +339,7 @@ function QuestDetail({
 
   return (
     <div
-      className="rounded-xl overflow-hidden max-w-full"
+      className="rounded-xl overflow-hidden w-full max-lg:max-w-[calc(100vw-2rem)] break-words"
       style={{
         border: "3px solid #7a8a6a",
         backgroundColor: "#e8ecd8",
@@ -806,7 +806,7 @@ export default function QuestDatabase() {
           )}
         </div>
 
-        {/* Quest detail panel — overlay on mobile, side panel on desktop */}
+        {/* Detail panel — overlay on mobile, side panel on desktop */}
         {selectedQuest && (
           <>
             <div
@@ -814,7 +814,7 @@ export default function QuestDatabase() {
               onClick={() => setSelectedQuest(null)}
             />
             <div
-              className="max-lg:fixed max-lg:inset-0 max-lg:z-50 max-lg:pt-[10vh] max-lg:pb-[5vh] max-lg:px-4 max-lg:overflow-y-auto w-auto lg:w-80 xl:w-96 shrink-0 lg:sticky lg:top-4"
+              className="max-lg:fixed max-lg:inset-0 max-lg:z-50 max-lg:pt-[10vh] max-lg:pb-[5vh] max-lg:px-4 max-lg:overflow-y-auto lg:w-80 xl:w-96 lg:shrink-0 lg:sticky lg:top-4"
               onClick={(e) => { if (e.target === e.currentTarget) setSelectedQuest(null); }}
             >
               <QuestDetail
