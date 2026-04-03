@@ -76,8 +76,12 @@ rooms.forEach((r) => roomByIndex.set(r.index, r));
 /* ------------------------------------------------------------------ */
 
 function getAffinityIcon(affinity: string): string {
-  const lower = affinity.toLowerCase().split(",")[0].trim();
+  const lower = affinity.toLowerCase().trim();
   return `/img/icons/affinities/${lower}.png`;
+}
+
+function getAffinityParts(affinity: string): string[] {
+  return affinity.split(",").map((s) => s.trim());
 }
 
 function affinityBadgeClass(affinity: string): string {
@@ -236,22 +240,60 @@ function GameGrid({
                   onMouseEnter={() => setHoveredRoom(room)}
                   onMouseLeave={() => setHoveredRoom(null)}
                 >
-                  {/* Affinity icon */}
-                  {room.node && (
-                    <img
-                      src={getAffinityIcon(room.node.affinity)}
-                      alt=""
-                      className="absolute inset-0 m-auto"
-                      style={{
-                        width: "55%",
-                        height: "55%",
-                        imageRendering: "pixelated",
-                        opacity: isSelected ? 1 : 0.85,
-                        filter: "drop-shadow(1px 1px 2px rgba(0,0,0,0.6))",
-                      }}
-                      draggable={false}
-                    />
-                  )}
+                  {/* Affinity icon(s) */}
+                  {room.node && (() => {
+                    const parts = getAffinityParts(room.node.affinity);
+                    const isDual = parts.length > 1;
+                    return isDual ? (
+                      <div
+                        className="absolute inset-0"
+                        style={{ opacity: isSelected ? 1 : 0.85 }}
+                      >
+                        <img
+                          src={getAffinityIcon(parts[0])}
+                          alt=""
+                          className="absolute"
+                          style={{
+                            width: "50%",
+                            height: "50%",
+                            top: "8%",
+                            left: "8%",
+                            imageRendering: "pixelated",
+                            filter: "drop-shadow(1px 1px 2px rgba(0,0,0,0.6))",
+                          }}
+                          draggable={false}
+                        />
+                        <img
+                          src={getAffinityIcon(parts[1])}
+                          alt=""
+                          className="absolute"
+                          style={{
+                            width: "50%",
+                            height: "50%",
+                            bottom: "8%",
+                            right: "8%",
+                            imageRendering: "pixelated",
+                            filter: "drop-shadow(1px 1px 2px rgba(0,0,0,0.6))",
+                          }}
+                          draggable={false}
+                        />
+                      </div>
+                    ) : (
+                      <img
+                        src={getAffinityIcon(parts[0])}
+                        alt=""
+                        className="absolute inset-0 m-auto"
+                        style={{
+                          width: "55%",
+                          height: "55%",
+                          imageRendering: "pixelated",
+                          opacity: isSelected ? 1 : 0.85,
+                          filter: "drop-shadow(1px 1px 2px rgba(0,0,0,0.6))",
+                        }}
+                        draggable={false}
+                      />
+                    );
+                  })()}
 
                   {/* Cross-plane exit indicator */}
                   {room.exits.some((e) => {
@@ -317,9 +359,11 @@ function computeDropRates(tiers: number[]): number[] {
 function DetailPanel({
   room,
   onClose,
+  onNavigate,
 }: {
   room: Room;
   onClose: () => void;
+  onNavigate: (room: Room) => void;
 }) {
   const exitRooms = room.exits
     .map((idx) => roomByIndex.get(idx))
@@ -504,9 +548,10 @@ function DetailPanel({
             </span>
             <div className="flex flex-wrap gap-1 mt-1">
               {adjacentRooms.map((r) => (
-                <span
+                <button
                   key={r.index}
-                  className="inline-flex items-center gap-1 text-[11px] px-1.5 py-0.5 rounded bg-gray-200/60 text-gray-600"
+                  onClick={() => onNavigate(r)}
+                  className="inline-flex items-center gap-1 text-[11px] px-1.5 py-0.5 rounded bg-gray-200/60 text-gray-600 hover:bg-gray-300/80 hover:text-gray-900 cursor-pointer transition-colors"
                 >
                   {r.node && (
                     <span
@@ -514,15 +559,16 @@ function DetailPanel({
                     />
                   )}
                   {r.name}
-                </span>
+                </button>
               ))}
               {exitRooms.map((r) => {
                 const isCrossPlane = r.z !== room.z;
                 return (
-                  <span
+                  <button
                     key={`exit-${r.index}`}
-                    className={`inline-flex items-center gap-1 text-[11px] px-1.5 py-0.5 rounded
-                      ${isCrossPlane ? "bg-purple-100 text-purple-700" : "bg-gray-200/60 text-gray-600"}`}
+                    onClick={() => onNavigate(r)}
+                    className={`inline-flex items-center gap-1 text-[11px] px-1.5 py-0.5 rounded cursor-pointer transition-colors
+                      ${isCrossPlane ? "bg-purple-100 text-purple-700 hover:bg-purple-200/80 hover:text-purple-900" : "bg-gray-200/60 text-gray-600 hover:bg-gray-300/80 hover:text-gray-900"}`}
                   >
                     {r.name}
                     {isCrossPlane && (
@@ -530,7 +576,7 @@ function DetailPanel({
                         ({ZONES[r.z]?.label})
                       </span>
                     )}
-                  </span>
+                  </button>
                 );
               })}
             </div>
@@ -552,6 +598,7 @@ export function WorldMap() {
 
   const handleSelect = useCallback((room: Room) => {
     setSelectedRoom((prev) => (prev?.index === room.index ? null : room));
+    setActiveZone(room.z);
   }, []);
 
   const handleClose = useCallback(() => {
@@ -703,7 +750,7 @@ export function WorldMap() {
               className="max-lg:fixed max-lg:inset-0 max-lg:z-50 max-lg:pt-[10vh] max-lg:pb-[5vh] max-lg:px-4 max-lg:overflow-y-auto lg:flex-1 lg:min-w-72 lg:max-w-96 lg:sticky lg:top-4"
               onClick={(e) => { if (e.target === e.currentTarget) handleClose(); }}
             >
-              <DetailPanel room={selectedRoom} onClose={handleClose} />
+              <DetailPanel room={selectedRoom} onClose={handleClose} onNavigate={handleSelect} />
             </div>
           </>
         )}
