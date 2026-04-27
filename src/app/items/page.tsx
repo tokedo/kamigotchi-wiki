@@ -172,6 +172,9 @@ function ItemDetail({
           <div className="flex items-start justify-between gap-1">
             <h3 className="text-base font-bold text-gray-900 leading-tight">
               {item.name}
+              <span className="ml-1.5 text-[11px] font-mono font-normal text-gray-600 align-middle">
+                #{item.index}
+              </span>
             </h3>
             <button
               onClick={onClose}
