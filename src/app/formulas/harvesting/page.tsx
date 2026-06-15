@@ -27,11 +27,12 @@ export default function HarvestingFormulasPage() {
           </p>
           <p>
             The catch? Harvesting hurts. Every bit of Musu your Kami earns
-            costs a little HP through <strong>strain</strong>. Push too long
-            and your Kami dies. Pull out too early and you leave Musu on the
-            table. Meanwhile, other players can <strong>liquidate</strong> your
-            Kami while it harvests — raiding your bounty and killing it in the
-            process.
+            costs a little HP through <strong>strain</strong>. Your earnings
+            cap out as HP falls — a harvest can never bank more than your HP can
+            pay for — so camping forever stops paying off. Pull out too early
+            and you leave Musu on the table. Meanwhile, other players can{" "}
+            <strong>liquidate</strong> your Kami while it harvests — raiding your
+            bounty and killing it in the process.
           </p>
           <p>
             Great harvesting is about finding the sweet spot: maximizing income
@@ -142,14 +143,21 @@ export default function HarvestingFormulasPage() {
             acts as armor against strain — higher Harmony means less HP lost per
             Musu earned. But even the toughest Kami can&apos;t harvest forever.
           </p>
+          <p>
+            Your <strong>uncollected bounty is capped by your current HP</strong>.
+            A harvest never accrues more Musu than collecting it would cost in
+            strain — so a Kami can never pile up a bounty large enough to starve
+            itself. Once your pending bounty hits that ceiling, it stops growing,
+            even if your Kami keeps sitting on the node. To keep earning you have
+            to collect (which spends HP), let your Kami heal, and start again.
+          </p>
 
           <InfoBox variant="warning">
-            A starting Kami with Power 10 and Harmony 10 can harvest roughly{" "}
-            <strong>230 Musu</strong> before its 50 HP runs out. On a neutral
-            node, that takes about <strong>15 hours</strong> — but on a
-            perfectly matched node with higher Power, you can burn through your
-            HP much faster. Investing in Harmony through skills, equipment, and
-            food buffs is essential for extending your total harvest output.
+            A starting Kami with Power 10 and Harmony 10 can hold at most about{" "}
+            <strong>230 Musu</strong> of pending bounty — all 50 HP would be
+            spent collecting it. Higher Harmony, equipment, and strain-reduction
+            food all raise this ceiling, letting each session bank more Musu
+            before you have to stop and rest.
           </InfoBox>
 
           <h3>Recovery While Resting</h3>
@@ -228,9 +236,16 @@ export default function HarvestingFormulasPage() {
           <p>
             In practice, Fertility usually dominates for short sessions. Intensity
             becomes more meaningful the longer you stay on a node, but most Kamis
-            will hit lethal strain long before Intensity becomes the bigger
-            contributor.
+            will hit the HP bounty cap (see{" "}
+            <a href="#starve-cutoff">Starve Cutoff</a> below) long before
+            Intensity becomes the bigger contributor.
           </p>
+          <InfoBox>
+            This rate is what your bounty accrues at — but the accrued total is
+            then clamped to what your current HP can sustain:{" "}
+            <code>Bounty = min(accrued, Max Musu)</code>. See{" "}
+            <a href="#starve-cutoff">Starve Cutoff</a> for the cap formula.
+          </InfoBox>
 
           <h2>Fertility (Power-Based Steady Rate)</h2>
           <p>
@@ -548,26 +563,31 @@ Fertility = 26 × 0.65 × 1.5 = 25.35 Musu per hour`}
             ]}
           />
 
-          <h3>Maximum Musu Before Death</h3>
+          <h3 id="starve-cutoff">Starve Cutoff (Bounty Cap by HP)</h3>
           <p>
-            You can estimate how much total Musu your Kami can harvest before
-            dying from strain by rearranging the formula:
+            A harvest&apos;s accrued bounty is <strong>capped</strong> so a Kami
+            can never hold more Musu than its current HP can pay for in strain.
+            Each sync, the raw bounty is clamped to this <strong>Max Musu</strong>
+            ceiling — the exact inverse of the strain formula, solved for the
+            largest amount whose strain would not exceed current HP:
           </p>
           <FormulaBlock
-            label="Max Musu Before Death"
+            label="Starve Cutoff"
             vars={{
               "Current HP": "your Kami's remaining health points",
               "Harmony": "your Kami's Harmony stat",
               "20": "base buffer added to Harmony",
               "6.5": "base strain rate constant",
               "Strain Modifier": "base 1.0x; food can reduce it (-25%) or increase it (+50%)",
-              "floor()": "rounds down to the last whole Musu your Kami can safely earn",
+              "floor()": "rounds down to the last whole Musu the cap allows",
             }}
           >
-            {`Max Musu = floor(Current HP x (Harmony + 20) / (6.5 x Strain Modifier))`}
+            {`Bounty = min(accrued bounty, Max Musu)
+
+Max Musu = floor(Current HP x (Harmony + 20) / (6.5 x Strain Modifier))`}
           </FormulaBlock>
           <StatTable
-            headers={["HP", "Harmony", "Strain Modifier", "Max Musu"]}
+            headers={["HP", "Harmony", "Strain Modifier", "Max Musu (cap)"]}
             rows={[
               ["50 (starting)", "10", "1.0x", "~230 Musu"],
               ["50", "30", "1.0x", "~384 Musu"],
@@ -577,11 +597,12 @@ Fertility = 26 × 0.65 × 1.5 = 25.35 Musu per hour`}
           />
 
           <InfoBox variant="warning">
-            A starting Kami (50 HP, Harmony 10) can only harvest about 230 Musu
-            before dying. At 15 Musu/hr (neutral node, Power 10), that&apos;s
-            roughly 15 hours — but a stronger Kami with perfect affinity match
-            can burn through HP much faster. Building Harmony and using
-            strain-reduction food are critical for extending your total output.
+            Because the cap follows your <em>current</em> HP, it shrinks as you
+            take strain. A starting Kami (50 HP, Harmony 10) can hold at most
+            ~230 Musu of pending bounty; once it reaches that ceiling the harvest
+            stops accruing until you collect and heal. Raising Harmony, wearing
+            harvest equipment, and using strain-reduction food all lift the cap
+            so each session banks more before it tops out.
           </InfoBox>
 
           <h2>Recovery While Resting</h2>
@@ -655,13 +676,13 @@ HP recovered = floor(Seconds Resting x HP per second)`}
             label="Cooldown"
             vars={{
               "180 seconds": "base cooldown duration (3 minutes)",
-              "Cooldown Shift": "modifier from skills -- a negative value shortens the wait",
+              "Cooldown Shift": "modifier from skills and items -- a negative value shortens the wait",
             }}
           >
             {`Cooldown Duration = 180 seconds + Cooldown Shift
 
-Cooldown Shift comes from skills — a negative shift shortens the wait.
-Cooldown cannot go below 0 seconds.`}
+Cooldown Shift comes from skills and items (e.g. an Energy Drink) — a
+negative shift shortens the wait. Cooldown cannot go below 0 seconds.`}
           </FormulaBlock>
 
           <h2>Tax</h2>
@@ -842,7 +863,7 @@ Leftover points carry over to the next cycle.`}
             {`Fertility = 15 × 2.0 × 1.5 = 45 Musu per hour`}
           </FormulaBlock>
 
-          <h3>3. Max Musu Before Death</h3>
+          <h3>3. Bounty Cap (Starve Cutoff)</h3>
           <FormulaBlock
             variant="example"
             vars={{
@@ -855,15 +876,16 @@ Leftover points carry over to the next cycle.`}
             {`Max Musu = floor(50 x (10 + 20) / 6.5) = floor(230.8) = 230 Musu`}
           </FormulaBlock>
 
-          <h3>4. How Long Can This Kami Harvest?</h3>
+          <h3>4. How Long Until the Cap?</h3>
           <p>
             At 45 Musu per hour from Fertility (ignoring Intensity, which adds
-            only a small amount at this scale), reaching 230 Musu takes about:
+            only a small amount at this scale), pending bounty reaches the 230
+            Musu cap in about:
           </p>
           <FormulaBlock
             variant="example"
             vars={{
-              "230": "max Musu before death (from step 3)",
+              "230": "bounty cap from step 3",
               "45": "Fertility rate in Musu per hour (from step 2)",
             }}
           >
@@ -872,19 +894,21 @@ Leftover points carry over to the next cycle.`}
 
           <h3>5. Strain Check</h3>
           <p>
-            After earning 230 Musu, the total strain would be:
+            After the cap, collecting all 230 Musu costs:
           </p>
           <FormulaBlock
             variant="example"
             vars={{
-              "230": "total Musu earned",
+              "230": "total Musu collected",
               "6.5": "base strain rate constant",
               "30": "Harmony (10) + base buffer (20)",
             }}
           >
             {`Strain = ceil(230 x 6.5 / 30) = ceil(49.8) = 50 HP
 
-50 HP = full health drained. The Kami dies exactly at this point.`}
+Collecting the full cap spends all 50 HP. The cap guarantees strain can
+never exceed your HP — the bounty stops growing here rather than letting
+the Kami starve.`}
           </FormulaBlock>
 
           <h3>6. Practical Strategy</h3>

@@ -68,7 +68,7 @@
     ],
     "effects": [],
     "requirements": null,
-    "status": "To Deploy",
+    "status": "In Game",
     "description": "This ticket says it can be exchanged for an exclusive Operator cosmetic item. But who will take the ticket?"
   },
   {
@@ -903,7 +903,7 @@
     "effects": [
       {
         "name": "CLEARALL",
-        "type": "BONUS",
+        "type": "CLEAR_BONUS",
         "descriptor": "",
         "index": 0,
         "value": 0,
@@ -1146,20 +1146,20 @@
     ],
     "effects": [
       {
-        "name": "XP+100",
-        "type": "XP",
-        "descriptor": "",
-        "index": 0,
-        "value": 100,
-        "terminator": null,
-        "droptable": null
-      },
-      {
         "name": "HP+20",
         "type": "STAT",
         "descriptor": "HP",
         "index": 0,
         "value": 20,
+        "terminator": null,
+        "droptable": null
+      },
+      {
+        "name": "XP+100",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 100,
         "terminator": null,
         "droptable": null
       }
@@ -1179,15 +1179,6 @@
     ],
     "effects": [
       {
-        "name": "XP+200",
-        "type": "XP",
-        "descriptor": "",
-        "index": 0,
-        "value": 200,
-        "terminator": null,
-        "droptable": null
-      },
-      {
         "name": "HP+50",
         "type": "STAT",
         "descriptor": "HP",
@@ -1195,11 +1186,20 @@
         "value": 50,
         "terminator": null,
         "droptable": null
+      },
+      {
+        "name": "XP+1000",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 1000,
+        "terminator": null,
+        "droptable": null
       }
     ],
     "requirements": null,
     "status": "In Game",
-    "description": "The card depicts a teardrop-shaped flowerbud growing out of light brown soil. Activating this Spell Card on a Kamigotchi will restore 50 HP and grant 200 XP."
+    "description": "The card depicts a teardrop-shaped flowerbud growing out of light brown soil. Activating this Spell Card on a Kamigotchi will restore 50 HP and grant 1000 XP."
   },
   {
     "index": 11213,
@@ -1212,15 +1212,6 @@
     ],
     "effects": [
       {
-        "name": "XP+1000",
-        "type": "XP",
-        "descriptor": "",
-        "index": 0,
-        "value": 1000,
-        "terminator": null,
-        "droptable": null
-      },
-      {
         "name": "HP+100",
         "type": "STAT",
         "descriptor": "HP",
@@ -1232,7 +1223,7 @@
     ],
     "requirements": null,
     "status": "In Game",
-    "description": "The card depicts a flower heartily blooming in pale and sandy earth. Activating this Spell Card on a Kamigotchi will restore 100 HP and grant 1000 XP."
+    "description": "The card depicts a flower heartily blooming in pale and sandy earth. Activating this Spell Card on a Kamigotchi will restore 100 HP and grant 10000 XP."
   },
   {
     "index": 11214,
@@ -1245,15 +1236,6 @@
     ],
     "effects": [
       {
-        "name": "XP+5000",
-        "type": "XP",
-        "descriptor": "",
-        "index": 0,
-        "value": 5000,
-        "terminator": null,
-        "droptable": null
-      },
-      {
         "name": "HP+100",
         "type": "STAT",
         "descriptor": "HP",
@@ -1261,11 +1243,20 @@
         "value": 100,
         "terminator": null,
         "droptable": null
+      },
+      {
+        "name": "XP+50000",
+        "type": "XP",
+        "descriptor": "",
+        "index": 0,
+        "value": 50000,
+        "terminator": null,
+        "droptable": null
       }
     ],
     "requirements": null,
     "status": "In Game",
-    "description": "The card depicts a massive flower spreading across the frame. A baby sleeps in the center. Activating this Spell Card on a Kamigotchi will restore 100 HP and grant 5000 XP."
+    "description": "The card depicts a massive flower spreading across the frame. A baby sleeps in the center. Activating this Spell Card on a Kamigotchi will restore 100 HP and grant 50000 XP."
   },
   {
     "index": 11221,
@@ -2011,7 +2002,7 @@
       }
     ],
     "requirements": null,
-    "status": "To Update",
+    "status": "In Game",
     "description": "A magical talisman that burns easily. Using this on a Kami intensifies their overall sensitivity to Types, buffing their advantages on liquidations but nerfing their advantages on defense."
   },
   {
@@ -2075,7 +2066,7 @@
     "index": 11502,
     "name": "Sarcophagus Honey",
     "type": "Potion",
-    "rarity": "Uncommon",
+    "rarity": "Epic",
     "forTarget": "Kami",
     "flags": [
       "BYPASS_BONUS_RESET"
@@ -2313,7 +2304,7 @@
     "flags": [],
     "effects": [],
     "requirements": null,
-    "status": "To Deploy",
+    "status": "In Game",
     "description": "A box with 'From: Dimidiatus' scrawled on it in an unsettling script. Something inside is making noise and desperate to get out."
   },
   {
@@ -2348,7 +2339,7 @@
     "effects": [
       {
         "name": "SP+40",
-        "type": "BONUS",
+        "type": "STAT",
         "descriptor": "SP",
         "index": 0,
         "value": 40,
@@ -2370,7 +2361,7 @@
     "effects": [
       {
         "name": "SP+80",
-        "type": "BONUS",
+        "type": "STAT",
         "descriptor": "SP",
         "index": 0,
         "value": 80,
@@ -2394,7 +2385,7 @@
     "effects": [
       {
         "name": "SP+80",
-        "type": "BONUS",
+        "type": "STAT",
         "descriptor": "SP",
         "index": 0,
         "value": 80,
@@ -2416,7 +2407,7 @@
     "effects": [
       {
         "name": "SP+80",
-        "type": "BONUS",
+        "type": "STAT",
         "descriptor": "SP",
         "index": 0,
         "value": 80,
@@ -2449,6 +2440,18 @@
     "requirements": null,
     "status": "In Game",
     "description": "A matte-black paste in a plastic jar. A secret incense recipe created by Mina that allows individuals without bodies to smoke tobacco."
+  },
+  {
+    "index": 22802,
+    "name": "Ring of Spirits",
+    "type": "Key Item",
+    "rarity": "Epic",
+    "forTarget": "Account",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "To Deploy",
+    "description": "A ring made of polished bone, twisted into the image of a skull. Allows the bearer to speak with lost souls."
   },
   {
     "index": 23100,

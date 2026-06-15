@@ -47,7 +47,7 @@ export default function Home() {
             <h2 className="text-lg font-semibold">Item Database</h2>
           </div>
           <p className="text-sm text-muted-foreground">
-            Complete catalog of all 177 items with images, effects, recipes,
+            Complete catalog of all 178 items with images, effects, recipes,
             and drop sources. Searchable and filterable.
           </p>
         </Link>
@@ -75,7 +75,7 @@ export default function Home() {
             <h2 className="text-lg font-semibold">Quest Database</h2>
           </div>
           <p className="text-sm text-muted-foreground">
-            All 150 quests as an interactive dependency graph. Click any quest
+            All 187 quests as an interactive dependency graph. Click any quest
             for objectives, rewards, and prerequisites.
           </p>
         </Link>

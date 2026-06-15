@@ -306,6 +306,13 @@ export default function EconomyFormulasPage() {
             <strong>1-hour cooldown</strong> after purchase before it can
             harvest, equip items, or take other actions.
           </p>
+          <InfoBox>
+            Equipment never travels with a Kami. Listing, selling, sending,
+            sacrificing, bridging out, or rerolling a Kami automatically{" "}
+            <strong>unequips all of its gear and returns it to the previous
+            owner&apos;s inventory</strong>. A buyer always receives a bare
+            Kami, and the seller keeps every item that was equipped on it.
+          </InfoBox>
 
           <h2>Newbie Vendor</h2>
           <p>

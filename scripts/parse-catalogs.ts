@@ -106,7 +106,11 @@ function parseItems() {
       rarity: item.Rarity,
       forTarget: item.For || null,
       flags: item.Flags ? item.Flags.split(",").map((s) => s.trim()) : [],
-      effects: effectNames.map((n) => effectMap.get(n) || { name: n, type: "", descriptor: "", index: 0, value: 0, terminator: null, droptable: null }),
+      // Skip effect keys with no matching row in effects.csv. On-chain, allo
+      // resolution is an exact name-match and any unmatched key is skipped at
+      // deploy, so such effects do not actually apply (e.g. Cultivation III's
+      // undefined XP+10000 — it grants only its HP effect).
+      effects: effectNames.map((n) => effectMap.get(n)).filter(Boolean),
       requirements: item.Requirements || null,
       status: item.Status,
       description: item.Description,

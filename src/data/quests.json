@@ -29,8 +29,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “Feel like you’re getting the hang of my interface?”\nMENU: “Great! Now that you’re oriented, you can start exploring your surroundings. You move around by using the Map Menu at the top left of your screen.” \nMENU: “Navigate over to the scrapyard and check it out!”\nMENU: “When you check back in with me. I’ll give you a Spell Card.”",
-    "resolutionDialogue": "MENU: “Here you go!”\nMENU: “Spell Cards can have different effects. This one restores your lost Stamina. Make sure to use it before you get too tired to move!”\nMENU: “You can also recover Stamina by eating the right foods.”\nMENU: “Stamina recovers with time, so even if you’re out of items, you’ll be back on your feet after a little while.”\nMENU: “Be careful!”",
+    "introDialogue": "MENU: “Feel like you’re getting the hang of my interface?”\nMENU: “Excellent! Now that you’re oriented, let's start exploring your surroundings. You can move around the world using my map screen. Do you remember where it is? Go ahead and open it now.”\nMENU: “There are two ways to move around in the world. You can move to an adjacent tile by clicking the red highlight on the map, or you can right click on any tile to show the harvest screen for that tile as well as fast traveling to it.”\nMENU: “Movement costs five stamina, which comes out of the stamina pool shown in the bottom left corner of my interface.” \nMENU: “You have one hundred stamina to start with and you recover one point of stamina every minute, so you’ll have to plan out your moves a bit so that you don’t tire yourself out too much.”\nMENU: “But go ahead and explore around for now. When you’re ready to continue, head south and you’ll see a big Torii on the edge of town.\nMENU: “Once you get there, I’ll give you a Spell Card.”",
+    "resolutionDialogue": "MENU: “Here you go!”\nMENU: “Spell Cards can have different effects. This one restores Stamina. If you get too tired to move, you can use it to restore yourself.”\nMENU: “You can also recover Stamina by eating the right foods, or by resting and letting it recover slowly.”\nMENU: “Even if you’re totally exhausted you’ll bounce back eventually, but it might take a bit of time without any items, so be careful not to run out at an inopportune moment.\nMENU: “Now, let’s head into town and find you a kami.”",
     "requirements": [
       {
         "description": "Complete MSQ001",
@@ -41,16 +41,16 @@
     ],
     "objectives": [
       {
-        "description": "Move 3 Times",
-        "deltaType": "INC",
-        "type": "MOVE",
-        "index": 0,
-        "value": 3
+        "description": "Move to Torii Gate",
+        "deltaType": "BOOL",
+        "type": "ROOM",
+        "index": 3,
+        "value": 0
       }
     ],
     "rewards": [
       {
-        "description": "1x \"Neith’s River of Life\" Spell Card",
+        "description": "1x ”Neith’s River of Life” Spell Card",
         "type": "ITEM",
         "index": 21204,
         "value": 1,
@@ -66,8 +66,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “Now you’re oriented and on your feet, all you need to do is make friends with a Kami yourself!”\nMENU: “Have you seen the Vending Machine out in the junkyard?”\nMENU: “Believe it or not, we’ve got it powered on and fully stocked!”\nMENU: “Don’t worry about how, just go get yourself a Kami.”",
-    "resolutionDialogue": "MENU: “Congratulations! You’ve got yourself a Kamigotchi!”\nMENU: “Aren’t they just adorable?”\n",
+    "introDialogue": "MENU: “Uh oh.”\nMENU: “Something very peculiar seems to be going on with my sensors.”\nMENU: “Where did that junkyard come from? Where is the town?”\nMENU: “This is terrible. My databases are super messed up and the main questline is totally broken. Where is everything?”\nMENU: “At least Zevana is still here. I’m gonna try and figure out what’s going on. While I’m doing that, you should talk to Zevana, she’ll set you up with your first kami.”\nMENU: “I know she looks intimidating, but she’s really friendly once you get to know her!”",
+    "resolutionDialogue": "MENU: “Good job operator! You’ve acquired your first kami!”\nMENU: “Isn’t it just adorable? These cute little spirits are very useful, they’ll be your primary tool for interacting with the kamigotchi world.”\nMENU: “Well, besides me, I’m also pretty primary I suppose.”\nMENU: “But there’s lots of things that kami can do which I can’t.”\nMENU: “Continue your journey and I’ll tell you more.”",
     "requirements": [
       {
         "description": "Complete MSQ002",
@@ -103,8 +103,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “Kamigotchi will rest and stay healthy when being held. Being with an Operator seems to comfort them.”\nMENU: “When you set a Kami down, they’ll hang out by the closest spiritual node.”\nMENU: “A Kami on a node is considered to be Harvesting, but they’re not working up a sweat. It’s something that happens passively.”\nMENU: “When your Kami is out in the world, they draw energy out of the environment and into themselves.”\nMENU: “We call this energy $MUSU. I’ll explain more about it later.”\nMENU: “You can wander around while your Kami harvest, but don’t forget where you left them! Tired Kami are vulnerable to predators.”",
-    "resolutionDialogue": "MENU: “Great! As a reward, here’s another Spell Card!”\nMENU: “You can use this one to help your Kamigotchi level up.”",
+    "introDialogue": "MENU: “Alright, time to teach you how to use your kami. My world data might be messed up but these basic mechanics shouldn’t be too different, I hope.”\nMENU: “So, if you open your party screen, you’ll be able to see your kami is currently resting while you’re holding it. Kamigotchi will rest and stay healthy when being held. Being close to an Operator seems to comfort and restore them.”\nMENU: “When you send a Kami out into a room using the Start Harvest button, they’ll begin drawing the spiritual energy of the local environment into themselves.”\nMENU: “We call this process Harvesting. A harvesting kami isn’t working up a sweat, kami are spirits, not animals.\nMENU: “That said, harvesting does still have consequences for your kami.”\nMENU: “The process of harvesting energy from a node has a slightly caustic effect on the energy of your kami’s corporeal form.”\nMENU: “As a kami harvests, its HP will slowly decrease. Over time, your kami’s harvest rate will ramp up, and the rate of HP loss will ramp up with it.”\nMENU: “This is very scary for a kami since it puts them at risk of being liquidated and having their corporeal form dissolved, but it’s also when a kami is at their most productive.”\nMENU: “The energy a kami harvests is called $MUSU. I’ll explain more about it later.”\nMENU: “You can wander around while your Kami harvest, but don’t forget where you left them! Tired Kami are vulnerable to predators.”\nMENU: “Deploy your kami and do a little harvesting to get a feel for how it works.”",
+    "resolutionDialogue": "MENU: “Great! Everything seems to be working as expected.\nMENU: “You might have noticed that when your kami started harvesting, you couldn’t give them orders for a little while. That’s called Cooldown.”\nMENU: “Kami tend to get a little hyperfixated on whatever they’re doing, so when you send one out into a room, it’ll be very distracted and won’t listen to your instructions at first.”\nMENU: “If you deploy a kami, withdraw a kami, or collect a kami’s harvest, you’ll generate a cooldown. This can be dangerous, since a kami in cooldown can’t be withdrawn to avoid predators.”\nMENU: “Fortunately for you, the map tiles in this area have a level cap of 15, which should help keep your kami a bit safer from predators.”\nMENU: “You’ve been a good student so far. As a reward, here’s another Spell Card!”\nMENU: “You can use this one to help your Kamigotchi level up.”\nMENU: “If you click your kami’s portrait in the party or harvest screen, the kami info screen will open.”\nMENU: “From there you can level your kami up, and apply the skillpoint you get for that level in one of the four skill trees.”\nMENU: “The kami info screen has lots of other useful information too, so be sure to look around it thoroughly.”",
     "requirements": [
       {
         "description": "Complete MSQ003",
@@ -140,8 +140,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “$MUSU isn’t the only thing the Kamigotchi will collect.”\nMENU: “Over time, the Harvesting action generates a force that draws objects and items to the Kami.”\nMENU: “It’s like a kind of magnetism that only affects certain things.”\nMENU: “Which things? It’s not clear. The selection changes based on your Kami’s location. Some are simply fallen sticks and old stones, but other items are more interesting.”\nMENU: “We call this action “Scavenging”.”\nMENU: “Try it out and see what kind of present the Kami brings you!”",
-    "resolutionDialogue": "MENU: “Cool find! If you want to know more about an item, just open your inventory and take a closer look.”",
+    "introDialogue": "MENU: “$MUSU isn’t the only thing the Kamigotchi will collect.”\nMENU: “Over time, the Harvesting action generates a force that draws objects and items to the Kami.”\nMENU: “It’s like a kind of magnetism that only affects certain things.”\nMENU: “Which things? Well that depends on your Kami’s location. You can see what items a kami might find in a room by checking the room details on my harvesting screen.”\nMENU: “We call this action “Scavenging”.”\nMENU: “Try it out and see what kind of present the Kami brings you!”\nMENU: “Once you’ve collected it, I can cross reference it with my database to see if the drop tables I’ve been giving you are accurate.”\nMENU: “I’ll be pretty embarrassed if they’re wrong too, but there’s only one way to find out.”",
+    "resolutionDialogue": "MENU: “Ooh cool find! And you’ll be happy to know that my loot databases appear accurate, so you can trust that what I display as scavenge on my harvest screen is the real scavenge for that room.”\nMENU: “That still leaves a lot of questions, but one thing at a time.”\nMENU: “If you want to know more about an item, just open your inventory and take a closer look.”",
     "requirements": [
       {
         "description": "Complete MSQ004",
@@ -214,8 +214,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “$MUSU is a form of energy that exists everywhere in the universe.”\nMENU: “The Kamigotchi World has a particularly high concentration. $MUSU is what keeps everything here tied together like the knots in a big rope net.”\nMENU: “Collect a moderate amount of $MUSU, then I’ll explain more.\"",
-    "resolutionDialogue": "MENU: “Alright!”\nMENU: “In this world and the places that surround it, $MUSU is also a kind of currency.” \nMENU: “If you need a specific item, someone might sell just what you need, for the right price.”\nMENU: “You might even get the itch to start trading goods yourself!”",
+    "introDialogue": "MENU: “Now that you’ve been harvesting for a bit, it’s time to teach you about $MUSU.”\nMENU: “$MUSU is what your kami have been harvesting, it’s a form of energy that exists everywhere in the universe.”\nMENU: “The Kamigotchi World has a particularly high concentration of $MUSU and $MUSU is what keeps everything here tied together, like the knots in a big rope net.”\nMENU: “Collect a moderate amount of $MUSU, I’ll tell you more afterwards.”",
+    "resolutionDialogue": "MENU: “Nicely done!”\nMENU: “In this world and the places that surround it, $MUSU is also a kind of currency.” \nMENU: “If you need a specific item, someone might sell just what you need, for the right price.”\nMENU: “You might even get the itch to start trading goods yourself!”",
     "requirements": [
       {
         "description": "Complete MSQ004",
@@ -251,8 +251,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “Go spend some $MUSU just to get the hang of it.”\nMENU: “If you need directions, there’s a shop through the door a little north of the vending machine.”\nMENU: “I’ve heard it trades some interesting things!”\nMENU: “When you’re done shopping, I’ll give you something extra.”\n",
-    "resolutionDialogue": "MENU: “She’s ruthless, huh? Maybe you’ll find a friendlier shop later.”\nMENU: “And don’t worry, not everyone is trying to rip you off. Here, take this.\"",
+    "introDialogue": "MENU: “So next I’d like to have you go spend some $MUSU, just to get the hang of it.”\nMENU: “The shops that should exist according to my world data are all missing, but do you remember that weird glowing door we passed earlier? It had a shop sign.”\nMENU: “Why don’t you go check it out? Maybe the shop owner has some good deals.”",
+    "resolutionDialogue": "MENU: “Oof, she’s pretty ruthless, huh?”\nMENU: “I guess that’s what happens when there’s no competition.”\nMENU: “Oh well, maybe we’ll find a friendlier shop later.”\nMENU: “And don’t worry, not everyone is trying to rip you off. Here, take this.”",
     "requirements": [
       {
         "description": "Complete MSQ007",
@@ -288,8 +288,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “This one is a more personal request.”\nMENU: “I want to do some repairs. If you just give me the raw materials, I can fabricate the parts I need.”\nMENU: “Please give me some Scrap Metal. I’d really appreciate it!”",
-    "resolutionDialogue": "MENU: “When you complete a quest, the rewards vary. Sometimes you get items, but you always gain a little character.”\nMENU: “Your profile in the Account tab uses a set of meters to track how others see you.”\nMENU: “As the Menu, I’m what you use to interface with the Kamigotchi World.”\nMENU: “We’re always hanging out, and I’m as friendly as it gets, so raising your Reputation with me is easy.”\nMENU: “I’ll always give between 2 to 6 Reputation for completing quests, but sometimes I might think you deserve more.” \n",
+    "introDialogue": "MENU: “This one is a more personal request.”\nMENU: “I want to try and do some repairs on my systems and update my world data cache. If you can get me the raw materials, I should be able to jury-rig the parts I’ll need to do it.”\nMENU: “So can you please get me a few units of Scrap Metal?”\nMENU: “You should be able to find some in that anomalous junkyard beyond the torii gate.”\nMENU: “I know it’s a bit inconvenient, but please? I’d really appreciate it.”",
+    "resolutionDialogue": "MENU: “Thank you! I’m feeling smarter already. Maybe now I can fix my databases and figure out what’s going on.”\nMENU: “You’ve probably noticed that the quests I give you provide a variety of rewards, and that’ll be true for anyone offering you quests.”\nMENU: “Sometimes they might give you items or $MUSU, but even if they don’t, you’ll always gain a little character.”\nMENU: “Your operator profile uses a set of meters to track how others see you. For example, the way I see you is tracked as Reputation.”\nMENU: “As your Menu, I’m what you use to interface with the Kamigotchi World.”\nMENU: “Since we’re always hanging out, and I’m as friendly as it gets, raising your Reputation with me is easy.”\nMENU: “I’ll always give between 2 to 6 Reputation for completing quests, but sometimes I might think you deserve more.”\nMENU: “Anyone who offers you a quest will always grant you some standing with them for completing it, but they might not all be as generous about it as I am.”",
     "requirements": [
       {
         "description": "Complete MSQ008",
@@ -321,12 +321,12 @@
     "key": "MSQ010",
     "index": 10,
     "status": "In Game",
-    "title": "Kamigotchi World and You: Having a Normal One",
+    "title": "Having a Normal One",
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “Every area in the Kamigotchi World has a Type just like your Kami.”\nMENU: “The “Normal” type is kind of self-explanatory.”\nMENU: “If I had to really break it down…”\nMENU: “Something with the Normal Type represents the essence of this realm in its purest form.”\nMENU: “To get a better idea of what that means, scavenge three items in rooms with the Normal Type.”\n",
-    "resolutionDialogue": "MENU: “You could also think of the Normal type as “Natural” or “Pure”, but those aren’t really right.”\nMENU: “It’s just normal for whatever it is.”\nMENU: “When something isn’t influenced by any external factors, that’s normal.”\n",
+    "introDialogue": "MENU: “That cache refresh definitely helped me out, the Kamigotchi World seems to have changed a lot since I was last online, but thanks to that upgrade I’m getting a feel for things again.”\nMENU: “So we’re gonna take things step by step, starting with the most basic, Normal parts of the world.”\nMENU: “That is to say, the Normal type room tiles.”\nMENU: “Zevana should have already told you about kami and room types, but to review…\nMENU: “Something with the Normal Type represents the essence of this realm in its purest form.”\nMENU: “That will make them a good place to begin our investigation I think.”\nMENU: “Collect three scavenges from normal type rooms and lets see what we can learn.”",
+    "resolutionDialogue": "MENU: “These items are in fact pretty normal.”\nMENU: “Something being normal is kinda like it being natural, but it’s natural for wherever it actually is, the normal thing in that place.”\nMENU: “So these are very normal items for this normal place, a representative sample of normality.”\nMENU: “That will be useful later, but we’ll need more information to compare it with.”",
     "requirements": [
       {
         "description": "Complete MSQ009",
@@ -346,7 +346,7 @@
     ],
     "rewards": [
       {
-        "description": "4x Agency Reputation,1x \"Neith’s River of Life\" Spell Card",
+        "description": "4x Agency Reputation,1x ”Neith’s River of Life” Spell Card",
         "type": null,
         "index": null,
         "value": null,
@@ -358,12 +358,12 @@
     "key": "MSQ011",
     "index": 11,
     "status": "In Game",
-    "title": "Kamigotchi World and You: That Eerie Feeling",
+    "title": "That Eerie Feeling",
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “The “Eerie” type comes into being when the normal state of things gets changed by something divine or supernatural.”\nMENU: “To understand more about this, scavenge three items in rooms with the Eerie type.\"",
-    "resolutionDialogue": "MENU: “If you’re not convinced, you’re not alone.”\nMENU: “It is pretty eerie, but look at it rationally. Maybe it’s about convincing yourself.”\nMENU: “Like when someone believes they’ve witnessed a miracle, or has a nightmare they think was prophetic.”\nMENU: “It’s not always clear.”",
+    "introDialogue": "MENU: “The “Eerie” type comes into being when the normal state of things gets changed by something divine or supernatural.”\nMENU: “If you ask me, this entire world is a little bit eerie, but there’s places where that effect is heightened enough for it to be the main influence on the local environment.”\nMENU: “By comparing the items from an eerie room to ones from a normal room, we might be able to chart out how this world has been changed.”\nMENU: “Collect three scavenges from eerie type rooms and let’s see what turns up.”",
+    "resolutionDialogue": "MENU: “The results of this are rather unclear, these items seem to be no different than the ones from the normal type room.”\nMENU: “Maybe that in and of itself is a bit eerie.”\nMENU: “Opinions are mixed. Let’s move on.”",
     "requirements": [
       {
         "description": "Complete MSQ010",
@@ -395,12 +395,12 @@
     "key": "MSQ012",
     "index": 12,
     "status": "In Game",
-    "title": "Kamigotchi World and You: Insects in the Miasma",
+    "title": "Insects in the Miasma",
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “The Insect type might make your skin crawl, but it’s not always about seeing bugs.”\nMENU: “It’s the kind of thing that makes you feel dirty inside and out.”\nMENU: “If you want to understand what I mean, scavenge three items in rooms with the Insect type.”",
-    "resolutionDialogue": "MENU: “See, the insects are more of a symbol.”\nMENU: “They thrive in places where the natural environment is corrupted or defiled.”\nMENU: “Centipedes are attracted to places where this corruption is particularly intense.”",
+    "introDialogue": "MENU: “This next part will be a little bit nasty. To be thorough with our survey, we’ll need to check out some insect type rooms.”\nMENU: “The Insect type might make your skin crawl, but it’s not always about seeing bugs.”\nMENU: “It’s deeper than that, it’s an energetic defilement, the kind of thing that makes you feel dirty inside and out.”\nMENU: “You could think of it like a sort of corruption that the insects are drawn to.”\nMENU: “Collect three scavenges from insect type rooms and I’ll compare them to our baseline.”",
+    "resolutionDialogue": "MENU: “Fascinating. It seems like items lose any energetic trace of where they came from when they’re scavenged.”\nMENU: “They’re sort of platonic objects, the only metadata they carry is related to their fundamental natures.”\nMENU: “While that makes the world a bit harder to study, it does mean you won’t have to worry about insect type corruption spreading into your inventory.”\nMENU: “I think it’s important to take these small wins where we can get them.”",
     "requirements": [
       {
         "description": "Complete MSQ011",
@@ -432,12 +432,12 @@
     "key": "MSQ013",
     "index": 13,
     "status": "In Game",
-    "title": "Kamigotchi World and You: Tossed in the Scrap Heap",
+    "title": "Tossed in the Scrap Heap",
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “Like they say, one person’s trash is another person’s treasure!”\nMENU: “I shouldn’t call it trash, though.”\nMENU: “A Scrap Type isn’t defined as waste material that has been discarded, but as a small part of a greater whole.”\nMENU: “Scavenge three items in rooms with the Scrap type and see what you find.”",
-    "resolutionDialogue": "MENU: “People have the power to make tangible changes in the world.\nMENU: “When they manifest will, create attachments with desire, and leave behind memories, they make a mark.”\nMENU: “The remnants of those material attachments can end up as Scrap.”\nMENU: “And that’s every type covered!”\nMENU: “Please remember: Your Kami’s Type will affect how quickly they harvest $MUSU on a given node.”\nMENU: “Maximize your gains by playing to their advantages!”",
+    "introDialogue": "MENU: “I’ve been putting this off, but it’s time to tackle the elephant in the room, or should I say, the scrapyard in the center of the map.”\nMENU: “In my original world data, there was supposed to be a cozy little riverside town in there.”\nMENU: “Instead there’s just this big pile of trash, the only thing that seems common to both world versions is the kami vending machine.”\nMENU: “I shouldn’t call it trash, though, it’s more than trash, it’s scrap type rooms.”\nMENU: “A Scrap Type isn’t defined as waste material that has been discarded, but as a small part of a greater whole.”\nMENU: “People have the power to make tangible changes in the world.\nMENU: “When they manifest will, create attachments with desire, and leave behind memories, they make a mark.”\nMENU: “The remnants of those material attachments can end up as Scrap.”\nMENU: “Perhaps that’s why there’s so much of it. There could have been some big world event which caused all of these remnants to accumulate here.”\nMENU: “Collect three scavenges from scrap type rooms, maybe we’ll find evidence of what happened.”",
+    "resolutionDialogue": "MENU: “Somewhat unsurprisingly these results continue to be very inconclusive.”\nMENU: “We’ve learned a few things, but I don’t think we’re much closer to understanding what’s going on with this world than we were before.”\nMENU: “We’ll have to try some different methods of analysis.”\nMENU: “Don’t worry though, I already have a plan in mind for our next steps.”",
     "requirements": [
       {
         "description": "Complete MSQ012",
@@ -457,7 +457,7 @@
     ],
     "rewards": [
       {
-        "description": "4x Agency Reputation,1x \"Neith’s River of Life\" Spell Card",
+        "description": "4x Agency Reputation,1x ”Neith’s River of Life” Spell Card",
         "type": null,
         "index": null,
         "value": null,
@@ -547,8 +547,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “I’d like to do some more work on myself.”\nMENU: “Get me 5 pieces of Scrap Metal, please. Just like last time.”\nMENU: “And keep your fingers crossed.”",
-    "resolutionDialogue": "MENU: “That should do the trick. Thanks a lot!”\nMENU: “...”\nMENU: “No. There are still so many empty spaces.”\nMENU: “Don’t get worried about me, but I feel like I’m missing something important.”\nMENU: “Ah well. I’ll figure it out.”",
+    "introDialogue": "MENU: “This is all so confusing.”\nMENU: “Those upgrades we did earlier are helping but my cache is still partly corrupted and missing a bunch of data.”\nMENU: “I think with a few more modifications to my systems I can build a workaround\nMENU: “Get me 5 pieces of Scrap Metal, please? Just like last time.”\nMENU: “And keep your fingers crossed.”",
+    "resolutionDialogue": "MENU: “That should do the trick. Thanks a lot!”\nMENU: “...”\nMENU: “Well my cache seems fixed now, but there are still so many empty spaces.”\nMENU: “Don’t get worried about me, but I feel like I’m missing something important.”\nMENU: “Ah well. I’ll figure it out.”",
     "requirements": [
       {
         "description": "Complete MSQ015",
@@ -584,8 +584,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “I didn’t get what I wanted last time, but it’s better than I thought.”\nMENU: “A cross-check of all available data led me to discover this world is much bigger than it seems.”\nMENU: “I’ll collect data and look for hidden paths as you move around.”\nMENU: “Once I know where they are, maybe I can help open them up.”",
-    "resolutionDialogue": "MENU: “Quite the workout, no? Here, this spell card will perk you up.”\nMENU: “That huge lab facility was an obvious place to explore, but it’s locked up tight.”\nMENU: “Where else to go? Under the water?”\nMENU: “I’ll think about it.”",
+    "introDialogue": "MENU: “Well that’s two dead-ends, but I’m thinking much more clearly after that upgrade so I have some new ideas.”\nMENU: “I was able to cross-check against all available world data, and from what I can tell, this world is much bigger than it seems.”\nMENU: “The currently accessible zones on the map are only a small fraction of the total world area.”\nMENU: “If we can find a way into those other areas we’ll probably find the answers we’re looking for.”\nMENU: “So it’s time for a thorough search. I’ll collect data and look for hidden paths as you move around the map.”\nMENU: “Once I know where they are, maybe I can help open them up.”",
+    "resolutionDialogue": "MENU: “Quite the workout, no? Here, this spell card will perk you up.”\nMENU: “That huge lab facility stands out like a sore thumb, it’s totally out of place in this world.”\nMENU: “We should definitely check it out, but it’s locked up tight for now.”\nMENU: “Keep looking around, maybe there’s something we’ve missed.”",
     "requirements": [
       {
         "description": "Complete MSQ016",
@@ -605,7 +605,7 @@
     ],
     "rewards": [
       {
-        "description": "2x Agency Reputation,1x \"Neith’s River of Life\" Spell Card",
+        "description": "2x Agency Reputation,1x ”Neith’s River of Life” Spell Card",
         "type": null,
         "index": null,
         "value": null,
@@ -621,8 +621,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “Please hike to the deepest part of the scrapyard and check it out for me.”\nMENU: “I think something is buried behind all that scrap.”\nMENU: “All that strange machinery piled up in one place…”\nMENU: “It might be covering up something even more interesting.”\nMENU: “Harvest for at least 12 hours in the Scrap Confluence so I can run an extended analysis.”\nMENU: “If I find anything, I’ll let you know.”",
-    "resolutionDialogue": "MENU: “Just looks like a bunch of nonsense to me.”\nMENU: “Everything here is supposed to warp you through dimensions or something like that.”\nMENU: “But it’s clearly all junk that doesn’t work.”\nMENU: “I don’t think we’ll find anything useful in this mess.\"",
+    "introDialogue": "MENU: “On my original maps, the area occupied by the scrapyard is supposed to be the location of the starter town, full of quest givers and shops.”\nMENU: “I want to find out what happened to that town. Is there anything left from it? Did it ever exist? \nMENU: “Please hike to the deepest part of the scrapyard and check it out for me.”\nMENU: “If there’s answers, they’ll be buried beneath all that scrap.”\nMENU: “All that strange machinery piled up in one place…”\nMENU: “It might be covering up something even more interesting.”\nMENU: “Harvest for at least 12 hours in the Scrap Confluence so I can run an extended analysis.”\nMENU: “If I find anything, I’ll let you know.”",
+    "resolutionDialogue": "MENU: “I’ve completed my analysis!”\nMENU: “Unfortunately I am now more confused than I was before.”\nMENU: “The only things from the town that exist in this world are the torii gate, the kami vending machine, and the bell from the church steeple.”\nMENU: “Nothing else from the town exists, and I’m not sure it ever existed. It’s like someone started designing it but stopped after only making the map and a few objects.”\nMENU: “That’s not even the weirdest part.”\nMENU: “That machine built from the church bell? It’s supposed to warp your kami through different dimensions or something crazy like that.”\nMENU: “I don’t think it’s functional, but I wouldn’t advise risking your kami to test it.”\nMENU: “Let’s move on.”",
     "requirements": [
       {
         "description": "Complete MSQ017",
@@ -658,8 +658,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “If we want to find out how to get inside the Labs, we should look for clues.”\nMENU: “Harvest for at least 12 hours at the Labs Entrance while I put my mind to this.”\nMENU: “Even if we can’t brute force the doors open right away, I’m sure we can find out where the key is hiding.”\nMENU: “If not, I guess we need another approach.”",
-    "resolutionDialogue": "MENU: “Forget about finding a clue to where the key is. I can’t even find the keyhole.”\nMENU: “This place is sealed up like the pyramids.”\nMENU: “Someone really doesn’t want us to go this way.”",
+    "introDialogue": "MENU: “That laboratory complex on the south side of the map is an even bigger mystery than the scrapyard.”\nMENU: “It’s not in any of my databases, not even the fully updated ones. It’s a complete anomaly.”\nMENU: “And beyond that, there’s just something really off about the whole place. It doesn’t fit properly into the context of this world.”\nMENU: “Whatever it is that’s going on here, that place seems obviously connected to it somehow.”\nMENU: “We’re gonna have to find a way inside if we want answers.”\nMENU: “Harvest for at least 12 hours at the Labs Entrance while I run some deep scans.”\nMENU: “Maybe we’ll get lucky and find a spare key stashed under a flowerpot.”",
+    "resolutionDialogue": "MENU: “Forget about finding a key. I can’t even find the keyhole.”\nMENU: “There’s some oddly specific gaps in my database around this.”\nMENU: “I think someone deleted the object data for all the doors and windows to stop me from running an analysis.”\nMENU: “They must have really wanted to keep us out.”\nMENU: “...Whoever they are.”",
     "requirements": [
       {
         "description": "Complete MSQ018",
@@ -695,8 +695,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “What if there’s something behind that waterfall?”\nMENU: “Go to the Hollow Path and Harvest for at least 12 hours.”\nMENU: “The Temple by the Waterfall doesn’t have a Node, so that’s the closest place you can set Kami down.”\nMENU: “I’ll run my tests from there. We’ll find some answers soon.”",
-    "resolutionDialogue": "MENU: “Good news!”\nMENU: “I’ve confirmed the existence of a cave beyond the waterfall.”\nMENU: “Unfortunately, I don’t think you can just jump inside.”\nMENU: “I don’t mean to be rude, but you seem to abhor running water.”\nMENU: “There has to be a way to get us in.”",
+    "introDialogue": "MENU: “My earlier scans seem to indicate that the world map continues onwards from the temple by the waterfall.”\nMENU: “Maybe there’s something behind that waterfall?”\nMENU: “Go to the Hollow Path and Harvest for at least 12 hours.”\nMENU: “The Temple by the Waterfall doesn’t have a Node, so that’s the closest place you can set Kami down.”\nMENU: “I’ll run my tests from there and let you know if anything interesting turns up.”",
+    "resolutionDialogue": "MENU: “Good news!”\nMENU: “I’ve confirmed the existence of a cave beyond the waterfall.”\nMENU: “Unfortunately, I don’t think you can just jump inside.”\nMENU: “I don’t mean to be rude, but you seem to abhor running water.”\nMENU: “There has to be a way to get us in despite that.”\nMENU: “Maybe a second entrance somewhere...”",
     "requirements": [
       {
         "description": "Complete MSQ019",
@@ -716,7 +716,7 @@
     ],
     "rewards": [
       {
-        "description": "4x Agency Reputation,1x “Paeon’s Field of Flowers” Spell Card,1x “Melkarth’s Heroic Awakening” Spell Card",
+        "description": "4x Agency Reputation,1x “Paeon’s Field of Flowers” Spell Card,1x ”Melkarth’s Heroic Awakening” Spell Card",
         "type": null,
         "index": null,
         "value": null,
@@ -733,7 +733,7 @@
     "type": "MAIN",
     "giver": "MENU",
     "introDialogue": "MENU: “The holes in my memory are frustrating.”\nMENU: “I should know how to progress, but it’s like someone wanted me to forget.”\nMENU: “Bear with me for a while, okay? I have one more thing to try.”\nMENU: “A long, thorough, final search around the map, clockwise from the top.”\nMENU: “We’ll find something.”\nMENU: “Start at Scrap Trees and dig around. I’ll connect to your Kami and share what they learn.”",
-    "resolutionDialogue": "MENU: “I thought we’d find something juicy in the notebook, but the writing is just weird poetry.”\nMENU: “Not much of it either. It’s more of a sketchbook, really.”\nMENU: “Most of the drawings are pictures of the same young woman.”\nMENU: “She looks kind of familiar, but I can’t place her.”\nMENU: “The rest of them look like monsters…” \nMENU: “Some of them are kind of scary, but others look cute. They kind of resemble the Kamigotchi.”\nMENU: “The word “Moon” was written on the inside cover. Does that mean something to you?”",
+    "resolutionDialogue": "MENU: “I thought we’d find something juicy in that notebook, but the writing is just weird poetry.”\nMENU: “Not much of it either. It’s more of a sketchbook, really.”\nMENU: “Most of the drawings are pictures of the same young woman.”\nMENU: “She looks kind of familiar, but I can’t place her.”\nMENU: “The rest of them look like monsters…” \nMENU: “Some of them are kind of scary, but others look cute. They kind of resemble the Kamigotchi.”\nMENU: “The word “Moon” was written on the inside cover. Does that mean something to you?”",
     "requirements": [
       {
         "description": "Complete MIN013,Complete MSQ020",
@@ -843,8 +843,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “Visit the Airplane Crash and scavenge around with your Kami.”\nMENU: “I haven’t mentioned that plane until now, but that’s because I have no clue where it came from or what it’s doing here.\nMENU: “I’m supposed to have pretty thorough data for this area!”\nMENU: “It’s not a gap I feel an absence from, this thing is a genuine foreign body.”\nMENU: “What’s the story? Who was on it? Where did they go? Could we follow them?”",
-    "resolutionDialogue": "MENU: “A small private jet with one pilot and four passengers. \nMENU: “They drew a primitive representation of their party on the interior roof of the plane.”\nMENU: “Later, something drove them away from this place. The last thing they left was this journal.”\nMENU: “If we find any of these people hanging around, you might want to talk to them.”\nMENU: “Still, I don’t think pursuing this story will help us pass the waterfall. We should move on.”",
+    "introDialogue": "MENU: “Visit the Airplane Crash and scavenge around with your Kami.”\nMENU: “I haven’t mentioned that plane until now, but that’s because I have no clue where it came from or what it’s doing here.\nMENU: “I’m supposed to have pretty thorough data for this area!”\nMENU: “It’s not a gap I feel an absence from like the starter town or the labs data, this thing is a genuine foreign body.”\nMENU: “What’s the story? Who was on it? Where did they go? Could we follow them?”",
+    "resolutionDialogue": "MENU: “A small private jet with one pilot and four passengers. \nMENU: “They drew a primitive representation of their party on the interior roof of the plane.”\nMENU: “Later, something drove them away from this place. The last thing they left was this journal.”\nMENU: “If we find any of these people hanging around, you might want to talk to them.”\nMENU: “Still, I don’t think pursuing this story will help us pass the waterfall. We should move on.”",
     "requirements": [
       {
         "description": "Complete MSQ023",
@@ -917,8 +917,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “Number 6. Go to the Labs Entrance one more time and make scavenging rolls.”\nMENU: “Why is that building sealed so well?”\nMENU: “That really bothers me. When we get the doors open, I’m going to have so many questions ready.”",
-    "resolutionDialogue": "MENU: “Someone’s definitely inside, and they definitely locked us out on purpose.”\nMENU: “I don’t know why they’d do that, though.”\nMENU: “Aren’t you supposed to go this way?“\nMENU: “I managed to get a list of users that passed through these doors. I’m still making the connections, but one of the names…”\nMENU: “I think we’re really close to finding something. I just remembered where to look next.”\nMENU: “Take a handful of Booster Packs. I put you through a real grind, so I hope you get lucky.”",
+    "introDialogue": "MENU: “Let’s keep working our way around the perimeter of the map. Go back to the Labs Entrance one more time and make scavenging rolls.”\nMENU: “Where did that building come from and why is it sealed up so well? Who sealed it up like that?”\nMENU: “It honestly really bothers me. When we get the doors open, I’m going to have so many questions.”",
+    "resolutionDialogue": "MENU: “Someone’s definitely inside, and they definitely locked us out on purpose.”\nMENU: “I don’t know why they’d do that, though.”\nMENU: “Aren’t you supposed to go this way?“\nMENU: “I managed to get a list of users that passed through these doors. I’m still making the connections, but one of them… \nMENU: “I think we’re really close to finding something. I just remembered where to look next.”\nMENU: “Take a handful of Booster Packs. I put you through a real grind, so I hope you get lucky.”",
     "requirements": [
       {
         "description": "Complete MSQ025",
@@ -975,7 +975,7 @@
     ],
     "rewards": [
       {
-        "description": "6x Agency Reputation,1x Booster Pack,\"KW Maps\" Data Chip",
+        "description": "6x Agency Reputation,1x Booster Pack,”KW Maps” Data Chip",
         "type": null,
         "index": null,
         "value": null,
@@ -1040,11 +1040,11 @@
     ],
     "objectives": [
       {
-        "description": "Use the machine to buy something in the Marketplace",
-        "deltaType": "INC",
-        "type": "TRADE_EXECUTE",
-        "index": 0,
-        "value": 1
+        "description": "Move to the Marketplace",
+        "deltaType": "BOOL",
+        "type": "ROOM",
+        "index": 66,
+        "value": 0
       }
     ],
     "rewards": [
@@ -1065,8 +1065,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “You know that strange woman here, near the entrance?”\nMENU: “I’ve learned her name is Mina by following along with you. Go to her shop and ask her for help.”\nMENU: “Mina is kind of scary. She’s also completely foreign to my databases, like that crashed jet. But Mina is alive.”\nMENU: “And independent. And powerful!”\nMENU: “She’s been giving you quests. I can read them too, you know.”\nMENU: “That means she can take control over parts of my interface… It’s not nice.”\nMENU: “On the other hand, this also makes it more likely that she can help.”\nMENU: “What would be a nice welcoming gift for someone like that? Flowers?”\nMENU: “No, I’ve got the perfect idea. When you visit on my behalf, just fold a big stack of $MUSU in the greeting card.”",
-    "resolutionDialogue": "MENU: “Thanks. We started to talk a little bit, behind the scenes.”\nMENU: “She was very surprised to learn that I exist. Like as a person.”\nMENU: “We could have put our heads together earlier, but I guess our personalities didn’t allow for it.”\nMENU: “We both trust you, though. That’s doing a lot for me in her eyes.”\nMENU: “Mina and I both seem to have an incomplete picture of what’s going on here, so we’ll try to help each other learn the details.”\nMENU: “She seems to respect me now that she knows I exist, and she apologized for using me without permission.”\nMENU: “I think she’s a nice enough old lady. Don’t tell her I said that.”",
+    "introDialogue": "MENU: “I’ve been avoiding this for a while, but I think we should go ask Mina for help.”\nMENU: “Mina is kind of scary. She’s also completely foreign to my databases, like that crashed jet, but Mina is alive.”\nMENU: “And independent. And powerful!”\nMENU: “She’s been giving you quests. I can read them too, you know.”\nMENU: “That means she can take control over parts of my interface… It’s not nice.”\nMENU: “On the other hand, this also makes it more likely that she can help us.”\nMENU: “What would be a nice welcoming gift for someone like that? Flowers?”\nMENU: “No, I’ve got the perfect idea. When you visit on my behalf, just fold a big stack of $MUSU in the greeting card.”",
+    "resolutionDialogue": "MENU: “Thanks. We started to talk a little bit, behind the scenes.”\nMENU: “She was very surprised to learn that I exist. Like, as a person.”\nMENU: “We could have put our heads together earlier, but I guess our personalities didn’t allow for it.”\nMENU: “We both trust you, though. That’s doing a lot for me in her eyes.”\nMENU: “Mina and I both seem to have an incomplete picture of what’s going on here, so we’ll try to help each other learn the details.”\nMENU: “She seems to respect me now that she knows I exist, and she apologized for using me without permission.”\nMENU: “I think she’s a nice enough old lady. Don’t tell her I said that.”",
     "requirements": [
       {
         "description": "Complete MSQ029",
@@ -1103,7 +1103,7 @@
     "type": "MAIN",
     "giver": "MENU",
     "introDialogue": "MENU: “With that item from Mina, you should be able to power up that laptop.”\nMENU: ”So go do it! Fire that baby up!”\nMENU: ”I want to see what’s on that chip!”",
-    "resolutionDialogue": "MENU: “That confirms my first scans. There’s a large system of caves hidden behind the waterfall.”\nMENU: ”I remember now.”\nMENU: ”These documents describe the Kamigotchi World in detail, even parts we’ve never seen.”\nMENU: ”The labs aren’t mentioned. They’re as foreign as the plane is.”\nMENU: ”I must remember them from somewhere else.”\nMENU: ”I’m sure I was inside once, a long time ago.”\nMENU: ”Talk to Mina about passing the water. She might have some ideas.”",
+    "resolutionDialogue": "MENU: “That confirms my first scans. There’s a large system of caves hidden behind the waterfall.”\nMENU: ”I remember now.”\nMENU: ”These documents describe the Kamigotchi World in detail, even parts we’ve never seen.”\nMENU: “This is a really weird document actually, it implies some very odd things about the way this world works.”\nMENU: ”And despite how thorough it is, there’s no mention of the labs at all, they’re totally foreign.”\nMENU: “It’s strange how familiar they seem to me.”\nMENU: ”I must remember them from somewhere else.”\nMENU: ”I’m sure I was inside once, a long time ago.”\nMENU: ”Talk to Mina about passing the water. She might have some ideas.”",
     "requirements": [
       {
         "description": "Complete MSQ030,Complete MIN015",
@@ -1287,7 +1287,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “I’ll be scrying you while you explore. I’m not coming in myself, but I’ll be watching closely.”\nMINA: “I can still send you messages through Menu when I need favors done.”\nMENU: “Between you and me, Mina seems excited.” \nMENU: She doesn’t show it like I do, but when it comes to not knowing the whole story, she gets just as frustrated. \nMINA: “I just said I’d be scrying you. That means watching and listening.” \nMINA: “But yes. I’m hoping to get some of my own questions answered inside.”\nMENU: “For me, it’s personal. I used to know things and someone took them away from me.”\nMENU: “Not only do I want to restore my data on the caves, I want to know who did this to me and why.”\nMENU: ”Then you can have the Kami eat them, I guess.”",
+    "introDialogue": "MINA: “I’ll be scrying you while you explore. I’m not coming in myself, but I’ll be watching closely.”\nMINA: “I can still send you messages through Menu when I need favors done.”\nMENU: “Between you and me, Mina seems excited.” \nMENU: She doesn’t show it like I do, but when it comes to not knowing the whole story, she gets just as frustrated. \nMINA: “I just said I’d be scrying you. That means watching and listening.” \nMINA: “But yes. I’m hoping to get some of my own questions answered inside.”\nMENU: “For me, it’s personal. I used to know things and someone took them away from me.”\nMENU: “Not only do I want to restore my data on the caves, I want to know who did this to me and why.”\nMENU: ”Then you can have your Kami eat them, I guess.”",
     "resolutionDialogue": "MENU: “This place…”\nMENU: “I’ll have to talk to you later.”\nMENU: “Sorry.”\nMENU: “I’m processing a lot.”",
     "requirements": [
       {
@@ -1324,8 +1324,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “It looks like Mina’s trick worked. My database access just expanded to include the new zone.”\nMENU:  “I still don’t have a complete picture, but the more you explore, the more I seem to remember.”\nMENU: “Those little bald statues, this temple behind the waterfall, it’s all so familiar.”\nMENU: ”The key to unlocking the labs has to be back here somewhere, wherever here is.”\nMENU: “We won’t know more until we collect more data, so you know what to do.”\nMENU: “Get your kami harvesting and let's see what turns up.”",
-    "resolutionDialogue": "MENU: “It’s almost like these caves are trying to confuse me.”\nMENU: “If this is supposed to be some sort of ancient temple, I certainly don't recognize the culture it came from.”\nMENU: “And there’s so much ozone in the air.”\nMENU: “I can feel the electricity.”\nMENU: “If I could still have headaches, I would definitely have one right now.”\nMENU: “...”\nMENU: “Maybe Mina will have some ideas.”",
+    "introDialogue": "MENU: “This cave system is much larger than my scans from the surface seemed to imply.”\nMENU:  “I know this is exactly what we were looking for, but this place…it intimidates me.”\nMINA: “Not getting cold feet now are you dear? I, for one, remain quite intrigued by these caverns.”\nMINA: “From what my initial scrying has revealed, I suspect they will contain many valuable resources.” \nMINA: “Perhaps even some clues relating to those garish looking office buildings outside.”\nMINA: “Is that not what you’re here to discover?”\nMENU: “Yeah, you’re right Mina. Sorry for being weird.”\nMENU: “We won’t know more until we collect more data, so you know what to do.”\nMENU: “Get your kami harvesting and let's see what turns up.”",
+    "resolutionDialogue": "MENU: “These caves are bizarre. It’s almost like they’re trying to confuse me.”\nMENU: “If this is supposed to be some sort of ancient temple, I certainly don't recognize the culture it came from.”\nMENU: “It’s frustrating, this stuff should all be in my database, but I’m as clueless as you are.”\nMENU: “Someone went through a lot of trouble to delete all those files and block my access.”\nMENU: “Which makes it highly probable that there’s something in here they don’t want us to find.”\nMENU: “Not only that, but the ambient energy here is insanely high.”\nMENU: “There’s so much ozone in the air.”\nMENU: “And I can feel the electricity.”\nMENU: “This is all so disorienting. I would say it’s giving me a headache, but I’m not sure I’m capable of getting those.”\nMENU: “...”\nMENU: “Maybe Mina will have some ideas.”",
     "requirements": [
       {
         "description": "Complete MSQ036",
@@ -1361,8 +1361,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “I was just thinking. At long last, I got you to take a shower.”\nMINA: “...”\nMENU: “...”\nMINA: “...”\nMENU: “Mina please.”\nMINA: “Too much? Fine, fine.”\nMINA: “Let me get my bearings through the Operator’s eyes, one moment.”\nMINA: “Ah, Menu, I can see where your headache came from.”\nMINA: “Those magicians treated the sacred grounds of your distant forebears like free real estate.”\nMENU: “I don’t know if we’re related.”\nMINA: “In the unlikely chance that you do manage to open up the labs, I will have words for the scoundrels.”\nMINA: “For now, let us investigate the depths of this desecration.”\nMINA: “Operator, have your kami scavenge around and we’ll see what they have wrought.”",
-    "resolutionDialogue": "MINA: “Hm! Hm! Hm! Yes, I see.”\nMINA: “I'm somewhat familiar with the nature of the resources you’ll gather here.\"\nMINA: “However, I sense a rare energy in the air.”\nMINA: “It only lingers here near the mouth of the cave, but if we could go deeper…”\nMINA: This place could be very useful. Keep looking around.\"",
+    "introDialogue": "MINA: “I was just thinking. At long last, I got you to take a shower.”\nMINA: “...”\nMENU: “...”\nMINA: “...”\nMENU: “Mina please.”\nMINA: “Fine, fine, just let me review the results of my latest scry, be patient.”\nMINA: “...”\nMINA: “I can see where your headache came from.” \nMINA: “Someone has been treating the sacred grounds of your distant forebears like it’s free real estate.”\nMENU: “I don’t know if you should really consider me related to them. Weren’t these temples made by humans?”\nMINA: “Of course they were. Why would that…?”\nMINA: “Ah..I see, of course. My mistake.”\nMENU: “So anyway, do you think whoever messed with this place is connected to the labs?”\nMINA: “Well, Since that is presently our only and most likely lead, we can proceed from the assumption that they are, at least for now.”\nMINA: “We won’t know more until we investigate the depths of their desecration.”\nMINA: “Operator, have your kami scavenge around and we’ll see what they have wrought.”",
+    "resolutionDialogue": "MINA: “Hm! Hm! Hm! Yes, I see.”\nMENU: “You found something related to those labs?”\nMINA: “No, but I am somewhat familiar with the nature of the resources you’ll gather here.\"\nMENU: “Oh, huh. That’s cool I guess.”\nMINA: “However, I do also sense a rare energy in the air.”\nMINA: “It only lingers here near the mouth of the cave, but if we could go deeper…”\nMINA: This place could be very useful. Keep looking around.”",
     "requirements": [
       {
         "description": "Complete MSQ037",
@@ -1509,7 +1509,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “I suppose I can spare some information for you.”\nMINA: “See the walls of this room? The large blocks of stone are smooth cut and fit together like the pieces of a puzzle.”\nMINA: “It appears almost natural, but shows the great skill of the master craftsman.”\nMINA: “You should have all the ingredients you need to practice.”\nMINA: “Just grind up a bone chunk to make mortar and use it to fit your stones and bones together”\nMINA: “It's a bit old fashioned, but it’s strong and long lasting.”",
+    "introDialogue": "MINA: “I suppose I can spare some information for you.”\nMINA: “Observe the walls of these caves. It should be apparent that while some of them are natural, others were built by human hands.”\nMINA: “See how the large blocks of stone are smooth cut and fit together like the pieces of a puzzle?”\nMINA: “It appears almost natural, but shows the great skill of the master craftsman.”\nMINA: “You should have all the ingredients you need to practice this form of craft yourself.”\nMINA: “It's a bit old fashioned, but it’s strong and long lasting.”",
     "resolutionDialogue": "MINA: “Hmm. That looks…”\nMINA: “It’s fine.”\nMINA: “Maybe you were more of a bricklayer than a mason in a past life.”\nMINA: “Not everyone can be talented, skilled, and beautiful all the time. You’ll get better.”",
     "requirements": [
       {
@@ -1583,7 +1583,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “The cute little temple by the entrance doesn’t lead anywhere else within the cave system, but it might have some good leads for our investigation.”\nMENU: “The machines there are super weird.  And really, really old.”\nMENU: “I see equipment from the labs plugged into it though. It's obviously connected somehow. We might find a clue how to get inside the building.”\nMENU: “Let me scan the room and see what I can find.”\nMENU: “Do some harvesting in the meantime, it usually helps me think.”",
+    "introDialogue": "MENU: “This cute little temple doesn’t lead anywhere else within the cave system, but it might have some good leads for our investigation.”\nMENU: “The machines here are super weird.  And really, really old.”\nMENU: “There’s some modern equipment plugged into it though. Maybe from the labs? It’s in better shape than I’d expect stuff from the scrapyard to be.”\nMENU: “Let me scan the room and see what I can find.”\nMENU: “Do some harvesting in the meantime, it usually helps me think.”",
     "resolutionDialogue": "MENU: “the only thing on the monitors is static and the internal “logic” of their equipment is like something out of a fever dream; it’s all black boxes with nonsense circuitry.”\nMENU: “It’s probably some kind of quantum tech, maybe we’ll find a book explaining it when we get into the labs.”\nMENU: “Sorry I didn’t find anything useful, but wait…what’s that?”\nMENU: “Another chip!”",
     "requirements": [
       {
@@ -1657,7 +1657,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “You can find these glittering candies growing on mushroom stalks down here.”\nMENU: “They’ll probably show up in a few other places, too.”\nMENU: “It’s not like Big Rock Candy Mountain, the candy doesn’t just show up on its own.”\nMENU: “The Honeydew Scale is actually a small insect native to dark environments like this cave.”\nMENU: “The candy is like a protective shell that builds up over time on their backs.”\nMENU: “This has nothing to do with my mission to get inside the labs, but it’s really neat!”\nMENU: “Besides, it’s handy that you can find them here. They look like a great natural food source for your Kami.”\nMENU: “Let’s rest here for a bit and let your Kami scavenge some.”\nMENU: “Take in the sights while I try to figure out where we should go next.”",
+    "introDialogue": "MENU: “There are glittering candies growing on some of the mushroom stalks in the caves.”\nMENU: “They’ll probably show up in a few other places, too.”\nMENU: “It’s not like Big Rock Candy Mountain, the candy doesn’t just show up on its own.”\nMENU: “The Honeydew Scale is actually a small insect native to dark environments like this cave.”\nMENU: “The candy is like a protective shell that builds up over time on their backs.”\nMENU: “This has nothing to do with my mission to get inside the labs, but it’s really neat!”\nMENU: “Besides, it’s handy that you can find them here. They look like a great natural food source for your Kami.”\nMENU: “Why don’t you find a nice place to relax and let your Kami scavenge some?”\nMENU: “Take in the sights while I try to figure out where we should go next.”",
     "resolutionDialogue": "MENU: “Honeydew Scale is a delicious and renewable food source, but it’s not always easy to find.”\nMENU: “We’re pretty lucky to find so many of them in one place.”",
     "requirements": [
       {
@@ -1695,7 +1695,7 @@
     "type": "MAIN",
     "giver": "MINA",
     "introDialogue": "MINA: “Hey. You.”\nMINA “While Menu is doing her scans, can you examine that bell hanging above the crossroads for me?”\nMINA: “It doesn’t appear to match the age or style of the decor we’ve seen in prior rooms.”",
-    "resolutionDialogue": "MINA: “Aha! Right as usual.”\nMINA: “This bell is much more recent than the rest of the architecture.”\nMINA: “It seems to be Iron Age, maybe Bronze, it all kind of blurs together after a while.”\nMINA:  “I suppose that still isn’t very recent for you.”\nMINA: “Anyway, that doesn’t matter, because it wasn’t hung here anywhere near when it was made.”\nMINA: “Based on the way it’s anchored to the cave roof, I’d guess it was placed here within the last few decades.”\nMINA:  “That would make it the work of our magician friends, but I’ll need to see more before determining what they were doing with it.”",
+    "resolutionDialogue": "MINA: “Aha! Right as usual.”\nMINA: “This bell is much more recent than the rest of the architecture.”\nMINA: “It seems to be Iron Age, maybe Bronze, it all kind of blurs together after a while.”\nMINA:  “I suppose that still isn’t very recent for you.”\nMINA: “Anyway, that doesn’t matter, because it wasn’t hung here anywhere near when it was made.”\nMINA: “Based on the way it’s anchored to the cave roof, I’d guess it was placed here within the last few decades.”\nMINA:  “That would likely make it the work of those ruffians from the labs, but I’ll need to see more before determining what they were doing with it.”",
     "requirements": [
       {
         "description": "Complete MSQ046",
@@ -1764,43 +1764,6 @@
     "key": "MSQ049",
     "index": 49,
     "status": "In Game",
-    "title": "Community Service",
-    "daily": false,
-    "type": "MAIN",
-    "giver": "MINA",
-    "introDialogue": "MINA: “The litter is out of control, even inside of these caves.”\nMINA: “At least the literal piles of garbage haven’t made it here yet.”\nMINA: “You’re good at menial tasks. Do me a favor and pick up a few of the cigarette butts, at least.”\nMENU: “That’s not going to do anything, you know they'll just come back. Don’t you have anything more import-”\nMENU: “...”\nMENU: “Actually, could you give them to me afterwards? I have an idea.”\nMINA: “Please don’t share it with us.”",
-    "resolutionDialogue": "MENU: “Exactly as I suspected.”\nMENU: “These are a fine source of Microplastics!”\nMENU: “You can just grind them up in that Spice Grinder from Mina’s shop.”\nMINA: “I should sell you a second one.”\nMINA: “You can use it just for cigarettes.”\nMINA: “And here, take this card. You might need it after dealing with such filthy things.”",
-    "requirements": [
-      {
-        "description": "Complete MSQ048",
-        "type": "QUEST",
-        "index": 48,
-        "value": 0
-      }
-    ],
-    "objectives": [
-      {
-        "description": "Scavenge 15 Cigarette Butts",
-        "deltaType": "INC",
-        "type": "DROPTABLE_ITEM_TOTAL",
-        "index": 1018,
-        "value": 15
-      }
-    ],
-    "rewards": [
-      {
-        "description": "2x Elders Loyalty,2x Agency Reputation,1x “Melkarth’s Heroic Awakening” Spell Card",
-        "type": null,
-        "index": null,
-        "value": null,
-        "itemName": null
-      }
-    ]
-  },
-  {
-    "key": "MSQ050",
-    "index": 50,
-    "status": "In Game",
     "title": "You Smelt It…",
     "daily": false,
     "type": "MAIN",
@@ -1809,9 +1772,9 @@
     "resolutionDialogue": "MINA: “This is just an ordinary alloy of good quality.”\nMINA: “I had hoped that the smelting process would have cooked out some interesting magical residues.\"\nMINA: \"Even so, this could be fine building material.”",
     "requirements": [
       {
-        "description": "Complete MSQ049",
+        "description": "Complete MSQ048",
         "type": "QUEST",
-        "index": 49,
+        "index": 48,
         "value": 0
       }
     ],
@@ -1835,6 +1798,43 @@
     ]
   },
   {
+    "key": "MSQ050",
+    "index": 50,
+    "status": "In Game",
+    "title": "Community Service",
+    "daily": false,
+    "type": "MAIN",
+    "giver": "MINA",
+    "introDialogue": "MINA: “The litter is out of control, even inside of these caves.”\nMINA: “At least the literal piles of garbage haven’t made it here yet.”\nMINA: “You’re good at menial tasks. Do me a favor and pick up a few of the cigarette butts, at least.”\nMENU: “That’s not going to do anything, you know they'll just come back. Don’t you have anything more import-”\nMENU: “...”\nMENU: “Actually, could you give them to me afterwards? I have an idea.”\nMINA: “Please don’t share it with us.”",
+    "resolutionDialogue": "MENU: “Exactly as I suspected.”\nMENU: “These are a fine source of Microplastics!”\nMENU: “You can just grind them up in that Spice Grinder from Mina’s shop.”\nMINA: “I should sell you a second one.”\nMINA: “You can use it just for cigarettes.”\nMINA: “And here, take this card. You might need it after dealing with such filthy things.”",
+    "requirements": [
+      {
+        "description": "Complete MSQ049",
+        "type": "QUEST",
+        "index": 49,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Scavenge 15 Cigarette Butts",
+        "deltaType": "INC",
+        "type": "DROPTABLE_ITEM_TOTAL",
+        "index": 1018,
+        "value": 15
+      }
+    ],
+    "rewards": [
+      {
+        "description": "2x Elders Loyalty,2x Agency Reputation,1x ”Melkarth’s Heroic Awakening” Spell Card",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
     "key": "MSQ051",
     "index": 51,
     "status": "In Game",
@@ -1842,8 +1842,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “Something in the cave crossroads is still ringing a bell. Pardon the joke.”\nMENU: “You still have that essence of hearing your Kami scavenged earlier, right?”\nMENU: “Mina, do you think it would let me hear things the way I could when I had a body?”\nMINA: “An interesting theory dear, I don’t see the harm in testing it.”\nMINA: “The operator can always scavenge another essence.”\nMINA: “I think you should go for it.”\nMENU: “Let’s do it. Operator, get me an Essence of Hearing please, it’s time for some science.”",
-    "resolutionDialogue": "MENU: “Thanks!”\nMENU: “If the “Magicians” as Mina calls them really hung that bell…”\nMENU: “Maybe I’ve heard it ring in the past.”\nMENU: “If I hear it ring again, it might awaken some hidden memories.”\nMENU: “I’ll hold off on using the Essence until we’re ready to try.”\nMENU: “I don’t know how long this unintended effect will last. I wouldn’t want to waste it and make you go scavenge for more.”",
+    "introDialogue": "MENU: “Something in the cave crossroads is still ringing a bell. Pardon the joke.”\nMENU: “You still have that essence of hearing your Kami scavenged earlier, right?”\nMENU: “Mina, do you think it would let me hear things the way a human can?”\nMINA: “An interesting theory dear, I don’t see the harm in testing it.”\nMINA: “The operator can always scavenge another essence.”\nMINA: “I think you should go for it.”\nMENU: “Let’s do it. Operator, get me an Essence of Hearing please, it’s time for some science.”",
+    "resolutionDialogue": "MENU: “Thanks!”\nMENU: “If the people from those labs really hung that bell…”\nMENU: “Maybe I’ve heard it ring in the past.”\nMENU: “If I hear it ring again, it might reveal some hidden files.”\nMENU: “I’ll hold off on using the Essence until we’re ready to try.”\nMENU: “I don’t know how long this unintended effect will last. I wouldn’t want to waste it and make you scavenge for more.”",
     "requirements": [
       {
         "description": "Complete MSQ050",
@@ -1880,7 +1880,7 @@
     "type": "MAIN",
     "giver": "MENU",
     "introDialogue": "MENU: “I’m ready. Time to ring that bell.”\nMENU: “It’s pretty big, so make sure you give it a good hard smack.”\nMENU: “If I’m going to hear it, I want to really hear it!”\nMINA: “Use the biggest rock you can get as a mallet. Make an Ashlar if you have to.”",
-    "resolutionDialogue": "MENU: “Ah!”\nMENU: “It’s such a lovely sound…”\nMENU: “So deeply safe and resonant, and…and I….I remember something…”\nMENU: “Hey! I remember something!”\nMENU: “It’s…”\nMENU: “I was in the labs somewhere, there were people standing around me.”\nMENU: “They were above me, so I must have been laying down.”\nMENU: “The room was dark. There was incense burning, and that bell was ringing, that exact one.”\nMENU: “There were five of them, two women and three men.”\nMENU: “They all seem so familiar, I know these people.”\nMENU: “I recognize their faces, I just can’t remember who they are.”\nMENU: “They were casting a spell on me I think? Some sort of protective charm or good luck ritual.”\nMENU: “I never believed in that stuff, but… Now I just don’t like to think about it.”",
+    "resolutionDialogue": "MENU: “Ah!”\nMENU: “It’s such a lovely sound…”\nMENU: “So deeply safe and resonant, and…and I….I remember something…”\nMENU: “Hey! I remember something!”\nMENU: “It’s…”\nMENU: “I was in the labs somewhere, there were people around me.”\nMENU: “They were above me, I was…I was there. I was physically there somehow.”\nMENU: “That doesn’t make any sense.”\nMENU: “The room was dark. There was incense burning, and that bell was ringing, that exact one.”\nMENU: “There were five of them, two women and three men.”\nMENU: “They all seem so familiar, I know these people.”\nMENU: “I recognize their faces, I just can’t remember who they are.”\nMENU: “They were casting a spell on me I think? Some sort of protective charm or good luck ritual.”\nMENU: “I never believed in that stuff, but… Now I just don’t like to think about it.”",
     "requirements": [
       {
         "description": "Complete MSQ051",
@@ -1917,7 +1917,7 @@
     "type": "MAIN",
     "giver": "MINA",
     "introDialogue": "MENU: “Mina, can you see the paper talismans around the Crossroads?”\nMENU: “They might be easy to miss with the naked eye.”\nMINA: “Of course. Obviously some sort of magical item or artifact.”\nMINA: “Bring one to me.”",
-    "resolutionDialogue": "MINA: “This looks to be the work of Menu’s magician friends.”\nMENU: “Do you think so?”\nMINA: “Of course. Look closely. See how it has a little picture of a Kamigotchi?”\nMENU: “Sure. Cute little guy.”\nMINA: “Those magicians had quite a learned approach with their application of the craft.”\nMINA: “It’s a shame that their intellect was matched by what they lacked in wisdom.”\nMINA: “This talisman is a clever bit of spellwork, but very lacking in prudence.”\nMINA: “It sacrifices a part of the self for the power it grants.”\nMINA:  “There are always tradeoffs when it comes to magic, but there are better reagents than one’s own soul.”\nMINA: “I wouldn’t retain my stunning good looks if I relied on spells like this.”",
+    "resolutionDialogue": "MINA: “This looks to be the work of Menu’s magician friends.”\nMENU: “Don’t call them my friends please.”\nMENU: “They did a weird ritual on me, messed up my database, and deleted my memory files. That’s not very friendly.”\nMINA: “Fair enough dear, my apologies.”\nMINA: “In case case, I will correct myself. This talisman looks to be the work of Menu’s magician enemies.”\nMENU: “...”\nMENU: “What makes you think they’re connected?”\nMINA: “Look closely. See how it has a little picture of a Kamigotchi?”\nMENU: “Sure. Cute little guy.”\nMINA: “Those magicians would likely agree with you, they seem quite taken in by the kamigotchi, and references to them appear frequently in their spellwork.”\nMINA: “You could think of it as their calling card.”\nMENU: “Does that also mean I’m connected to them in the same way?”\nMINA: “Isn’t that already apparent? You are quite clearly connected to them, although the nature of that connection remains unclear.”\nMENU: “Mina focus please, what’s the deal with that talisman?”\nMINA: “Yes, yes, the talisman, I’m getting to that.”\nMINA: “Those magicians had quite a learned approach with their application of the craft.”\nMINA: “It’s a shame that their intellect was matched by what they lacked in wisdom.”\nMINA: “This talisman is a clever bit of spellwork, but very lacking in prudence.”\nMINA: “It sacrifices a part of the self for the power it grants.”\nMINA:  “There are always tradeoffs when it comes to magic, but there are better reagents than one’s own soul.”\nMINA: “I wouldn’t retain my stunning good looks if I relied on spells like this.”",
     "requirements": [
       {
         "description": "Complete MSQ052",
@@ -1953,7 +1953,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “Are your Kami feeling hungry?”\nMINA: “You can always come back to my shop, you know.”\nMINA: “I suppose if you’re too lazy to make the trip, I can let you in on some useful information.”\nMINA: “These blue flowers that grow on the cave walls are edible.”\nMINA: “You won’t be satisfied eating just one, and they aren’t very nutritious.”\nMINA: “They are quite plentiful, though. And honestly delightful.\"",
+    "introDialogue": "MINA: “Are your Kami feeling hungry?”\nMINA: “You can always come back to my shop, you know.”\nMINA: “I suppose if you’re too lazy to make the trip, I can let you in on some useful information.”\nMINA: “These blue flowers that grow on the cave walls are edible.”\nMINA: “Your kami won’t be satisfied eating just one, they aren’t very nutritious, more of a light snack really.”\nMINA: “They are quite plentiful, though. And honestly delightful.\"\nMINA: “Scavenge some and you’ll see what I mean.”",
     "resolutionDialogue": "MINA: “See? Practically effortless to acquire.”\nMINA: “You’re likely to find more the deeper you go into the caves.”\nMINA: “It’s a common flower that grows more easily in the dark.”",
     "requirements": [
       {
@@ -2027,8 +2027,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “Wow, the garden down the middle of this cave just keeps going.”\nMINA: “These mushrooms are rarely found in such dense numbers.”\nMINA: “If you look closely, you can see the second layer already growing in.”\nMINA: “It’s a fungus that grows like a weed when fed properly, but it can rarely get what it wants.”\nMENU: “My old friends must have cultivated them hoping to block our way. I don’t think that’ll work very well.”\nMENU: “Set your Kami harvesting while I take a closer look.”",
-    "resolutionDialogue": "MENU: “Being in this place reminded me of something else.”\nMENU: “I think I remember one of the people from that ritual being a gardener of some sort.”\nMENU: “They always brought the most beautiful flowers and plants into the office.”\nMENU: “Maybe they had something to do with all these mushrooms.” \nMENU: “I unfortunately can’t tell you more with my memory as fragmentary and blocked as it is right now.”\nMENU: “If you think it’s frustrating, imagine how I must feel, haha!”\nMENU: “Haha…”\nMENU: “They must have really wanted me out of the loop.”",
+    "introDialogue": "MENU: “Wow, the garden down the middle of this cave just keeps going.”\nMINA: “These mushrooms are rarely found in such dense numbers.”\nMINA: “If you look closely, you can see the second layer already growing in.”\nMINA: “It’s a fungus that grows like a weed when fed properly, but it can rarely get what it wants.”\nMENU: “My ‘magician enemies’ must have cultivated them hoping to block our way. I don’t think that’ll work very well.”\nMENU: “Set your Kami harvesting while I take a closer look.”",
+    "resolutionDialogue": "MENU: “Being in this place reminded me of something else.”\nMENU: “I think I remember one of the people from that ritual being a gardener of some sort.”\nMENU: “They always brought the most beautiful flowers and plants into the office.”\nMENU: “Maybe they had something to do with all these mushrooms.” \nMENU: “I unfortunately can’t tell you more with my memory files as fragmentary and blocked as they are right now.”\nMENU: “If you think it’s frustrating, imagine how I must feel, haha!”\nMENU: “Haha…”\nMENU: “They must have really wanted me out of the loop.”",
     "requirements": [
       {
         "description": "Complete MSQ055",
@@ -2064,8 +2064,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “That spot overlooking the pit… It seems like it would be a great place to stop and have a smoke.”\nMENU: “I used to love to smoke. It’s one of the things I miss most about your world.”\nMENU: “It’s funny that I remember that despite not remembering very much else from my past life.”\nMENU: “If I could burn one right now I bet all my memories would come flooding back.”\nMENU: “Give me some cigarette butts? Not even for the microplastics.”\nMENU: “Just for old time’s sake.”",
-    "resolutionDialogue": "MENU: “If I still had a body I would happily smoke the last of those butts.” \nMENU: “If you’ve ever really craved a cigarette and gone digging around in ashtrays for a half smoked cig you’d know how I feel.”\nMENU: “Nothing we can really do about that though.”",
+    "introDialogue": "MENU: “That spot overlooking the pit… It seems like it would be a great place to stop and have a smoke.”\nMENU: “It’s strange, when I think about smoking I get the most peculiar cravings.”\nMENU: “It’s almost like I miss it, but how can I miss something I’ve never experienced?”\nMENU: “You don’t need to answer that, I’m just thinking out loud.”\nMENU: “I feel like, if I could just sit here with you and light one up right now, all my memory files would unlock and everything missing would come flooding back.”\nMENU: “I know that must sound very silly to you, it sounds silly to me.”\nMENU: “But still, can you get me some cigarette butts? Not even for the microplastics.”\nMENU: “Just…call it nostalgia for a life never lived.”",
+    "resolutionDialogue": "MENU: “If I had a body I would happily smoke the last of those butts.” \nMENU: “If you’ve ever really craved a cigarette and gone digging around in ashtrays for a half smoked cig, you’d know how I feel.”\nMENU: “Nothing we can really do about that though.”",
     "requirements": [
       {
         "description": "Complete MSQ056",
@@ -2138,8 +2138,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “Hey, shh.” \nMINA: “Be quiet. We don’t want Menu to hear us.”\nMINA: “I’m sure that’s impossible considering where this conversation is taking place, but I’m trying.”\nMINA: “Menu is more magical than she likes to think, so I put up anti-scrying measures.”\nMINA: “They should work as long as she remains unaware of their presence.”\nMINA: “It’s time to teach you some intermediate hexerei with a recipe I’ve just invented.”\nMINA: “Bring me some cigarette butts from the cave system. I know I think they’re disgusting, but it’s important.”\nMINA: “And don’t tell Menu anything, we don’t want to spoil the surprise.”",
-    "resolutionDialogue": "MINA: “Ahh, perfect! That will do nicely.”\nMINA: “This might look like useless smelly trash, but many things are more than they appear.”\nMINA: “We just need two more ingredients. They’ll be hard to get, but not impossible.” MINA: “Head down the central passageway of the caves, stop in that fungus garden, and wait for me.”\nMINA: “Be quick about it.\"",
+    "introDialogue": "MINA: “Hey, shh.” \nMINA: “Be quiet. We don’t want Menu to hear us.”\nMINA: “I’m sure that’s impossible considering where this conversation is taking place, but I’m trying.”\nMINA: “Menu is more magical than she likes to think, so I put up anti-scrying measures.”\nMINA: “They should work as long as she remains unaware of their presence.”\nMINA: “It’s time to teach you some intermediate hexerei with a recipe I’ve just invented.”\nMINA: “Start by scavenging some cigarette butts from the cave system. You know I find them disgusting, but it’s important.”\nMINA: “And don’t tell Menu anything, we don’t want to spoil the surprise.”",
+    "resolutionDialogue": "MINA: “Ahh, perfect! That will do nicely.”\nMINA: “This might look like useless smelly trash, but many things are more than they appear.”\nMINA: “We just need two more ingredients. They’ll be hard to get, but not impossible.” \nMINA: “Head down the central passageway of the caves, stop in that fungus garden, and wait for me.”\nMINA: “Be quick about it.”",
     "requirements": [
       {
         "description": "Complete MSQ058",
@@ -2213,7 +2213,7 @@
     "type": "MAIN",
     "giver": "MINA",
     "introDialogue": "MENU: “What’s with these random tasks that Mina has you doing?”\nMENU: “She won’t tell me anything about it. And I'm having a hard time seeing what you're doing all of a sudden!”\nMENU: “Hey, where are you going?”",
-    "resolutionDialogue": "MINA: “Hey there, Operator. And shoo Menu, this is a private matter.”\nMENU: “But I wanna see! What are you working on? Is it a new potion?”\nMINA: “Yes. Now please leave us be.”\nMENU: “Awww come on, why? Have I not been a good enough menu?”\nMINA: “You’re a very good Menu.”\nMINA: “I don’t mean to be rude, but your disembodied presence is interfering with a very delicate crafting process.”\nMINA: “Once the potion is completed we’ll show you the final product. I promise.”\nMENU: “Okay, fine, fine, I’ll wait outside.”",
+    "resolutionDialogue": "MINA: “Hey there, Operator. And shoo Menu, this is a private matter.”\nMENU: “But I wanna see! What are you working on? Is it a new potion?”\nMINA: “Yes. Now please leave us be.”\nMENU: “Awww come on, why? Shouldn’t I be learning this stuff too?”\nMINA: “In general? Yes. In this case however…”\nMINA: “Look, I don’t mean to be rude, but your disembodied presence is interfering with a very delicate crafting process.”\nMINA: “Once the potion is completed we’ll show you the final product. I promise.”\nMENU: “Okay, fine, fine, I’ll wait outside.”",
     "requirements": [
       {
         "description": "Complete MSQ060",
@@ -2250,7 +2250,7 @@
     "type": "MAIN",
     "giver": "MINA",
     "introDialogue": "MINA: “Is she gone?”\nMINA: “Phew, that was a close one.”\nMINA: “Now, observe closely. Even though these butts have been smoked down to stubs, there is still a bit of tobacco left inside them.”\nMINA:  “Menu doesn’t have a physical form. Obviously, just collecting the loose tobacco won’t let her actually smoke.”\nMINA: “And even with the Essence trick we tried with that bell, it’s too short-lived and singular.”\nMINA: “But I’ve got it all worked out now.”\nMINA: “Peel the petals of the Essence of Taste and grind them up in your mortar.”\nMINA: “They’ll release oil and emulsify into a thin slurry.”\nMINA: “Now, fold in the tobacco.”",
-    "resolutionDialogue": "MINA: “That looks perfect, now we can give it to Menu.”\nMINA: “I wish I could see the look on her face…”\nMINA: “I wonder what it looks like?”",
+    "resolutionDialogue": "MINA: “That looks perfect, now we can give it to Menu.”\nMINA: “I wish I could see the look on her face…”\nMINA: “But not so much that I want to deal with the smell.”",
     "requirements": [
       {
         "description": "Complete MSQ061",
@@ -2287,7 +2287,7 @@
     "type": "MAIN",
     "giver": "MINA",
     "introDialogue": "MINA: “Now that we’ve crafted this sacred incense, you’ll need to burn it in a spot where the $MUSU currents can carry the smoke properly.”\nMINA: “Head over to the Torii Gate down the road.”\nMINA: “The currents there should work nicely and be far enough away that I don’t get any secondhand smoke at my shop.”\nMINA: “Once you’re there, burn the paste in your portable burner.”\nMINA: “Don't tell Menu what you're doing, she'll figure it out soon enough. ;)”",
-    "resolutionDialogue": "MENU: “Hey what’s that flavor?”\nMENU: “Huh? HUHHH? WHAT?!”\nMENU: “Oh my gosh. Oh this is so nice I can feel my pixels chilling out.”\nMENU: “What did you…? How did you…?”\nMENU: “Mina you sneak! So this is what you two were up to.”\nMENU: “Gosh this makes me so happy. It really takes me back… This is calling up so many memories.”\nMENU: “I remember the first time I ever smoked, I was sitting in an empty lot after skipping school.”\nMENU: “The principal had yelled at me for something stupid and I just started crying and ran out of the building.”\nMENU: “I ended up in this lot next to a gas station that was full of spring wildflowers. A homeless guy saw me sitting there sobbing and offered me a smoke.”\nMENU: “It was nice, the flowers were pretty.”\nMENU: “Oh! Oh and the next time I smoked was after the first time I had sex.”\nMENU: “I had met up with this guy I met online and uh…well you probably don’t want details, but it wasn’t a great experience.”\nMENU: “He fell asleep afterwards and I sat on his porch chainsmoking for like three hours.”\nMENU: “Huh, it’s no wonder I was so addicted to them.”\nMENU: “I know none of these memories really help you understand the world any better, but they mean a lot to me.” \nMENU: “Thank you, thank you so much.”",
+    "resolutionDialogue": "MENU: “Hey what’s that…flavor?”\nMENU: “Huh? HUHHH? WHAT?!”\nMENU: “Oh my gosh. Oh this is so nice I can feel my pixels chilling out.”\nMENU: “What did you…? How did you…?”\nMENU: “Mina you sneak! So this is what you two were up to!”\nMENU: “Gosh this makes me so happy. It really takes me back…back to…”\nMENU: “I…what are all these memories? Are they mine? How is that possible?”\nMENU: “I see myself sitting in an empty lot next to a gas station. The field is full of flowers, and I can feel the spring breeze on my…on my…”\nMENU: “This can’t be possible. I’m not a human, I’ve never been a human.”\nMENU: “What is this memory? Why do I remember the feeling of tears on my face? I don’t even have tear ducts.”\nMENU: “I see a man walking up to me and offering me a cigarette.”\nMENU: “I can taste it. It tastes like…like this does.”\nMENU: “It feels so real, so impossibly real.”\nMENU: “There’s another memory here too.”\nMENU: “It’s dark, I’m sitting on a porch chainsmoking.”\nMENU: \"It's a peaceful scene, but the memory feels really icky somehow. I’m not sure why.”\nMENU: “My hands were shaking so hard I almost couldn’t light the cigarettes.”\nMENU: “My…hands. I had hands. I had a body. I…it hurts to think about this.”\nMENU: “I need to take some time to process this.”\nMENU: “Thank you though. This means so much to me.”\nMENU: “Thank you so much.”",
     "requirements": [
       {
         "description": "Complete MSQ062",
@@ -2318,12 +2318,12 @@
   {
     "key": "MSQ064",
     "index": 64,
-    "status": "To Update Text",
+    "status": "In Game",
     "title": "Full Flood",
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “The mural on the wall outside of that antediluvian facility.”\nMINA: “Do you recognize the story it depicts?”\nMINA: “Nearly all cultures have their own version of the tale. It happened many, many times over the years.”\nMINA: “Harvest in that room and I shall study the mural. Perhaps this will tell the story in a way we haven’t all heard before.”",
+    "introDialogue": "MINA: “Hey you, let’s give Menu some space, I have another task for you in the meantime.”\nMINA: “Head back into the caves and make your way to the mural on the wall outside of that antediluvian facility.”\nMINA: “Do you recognize the story it depicts?”\nMINA: “Nearly all cultures have their own version of the tale. It happened many, many times over the years.”\nMINA: “Harvest in that room and I shall study the mural. Perhaps this will tell the story in a way we haven’t all heard before.”",
     "resolutionDialogue": "MINA: “The people who painted this lived in a society of great wealth and technological advancement.”\nMINA: “As a great flood befell them, gods descended from the heavens to assist a chosen few.” \nMINA: “More or less the same story as always. The details change, but the core remains.”\nMINA: “You may even remember tales like this from your own history.”\nMINA: “More have been forgotten than remembered.”",
     "requirements": [
       {
@@ -2355,12 +2355,12 @@
   {
     "key": "MSQ065",
     "index": 65,
-    "status": "To Update Text",
+    "status": "In Game",
     "title": "Old Fiends",
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “There’s a calm underground stream at the bottom of these caves.\"\nMENU: “The little carving on that rock seems familiar to me somehow. I think I recognize the initials.” \nMENU: “Do some harvesting here while I try to remember.\"\nMENU: “That tobacco you gave me earlier is kind of helping me focus.”",
+    "introDialogue": "MENU: “There’s a calm underground stream at the bottom of these caves.\"\nMENU: “The little carving on the rock there seems familiar to me somehow. I think I recognize the initials.” \nMENU: “Do some harvesting here while I try to remember.\"\nMENU: “That tobacco you gave me earlier is kind of helping me focus.”",
     "resolutionDialogue": "MENU: “I studied that engraved message. It brought some memories flashing back.”\nMENU: “I think I actually knew those people.”\nMENU: “One of them, I definitely remember her being really scary.”\nMENU: “The other one, he thought he was really funny for some reason.”\nMENU: “But I don’t think he was all that clever.\"\nMENU: “Still can’t remember their names, though.”",
     "requirements": [
       {
@@ -2372,11 +2372,11 @@
     ],
     "objectives": [
       {
-        "description": "Harvest for >360 minutes at Still Stream",
+        "description": "Harvest for >720 minutes at Still Stream",
         "deltaType": "INC",
         "type": "HARVEST_TIME",
         "index": 70,
-        "value": 21600
+        "value": 43200
       }
     ],
     "rewards": [
@@ -2392,7 +2392,7 @@
   {
     "key": "MSQ066",
     "index": 66,
-    "status": "To Update Text",
+    "status": "In Game",
     "title": "First Contact",
     "daily": false,
     "type": "MAIN",
@@ -2409,11 +2409,11 @@
     ],
     "objectives": [
       {
-        "description": "Harvest for >360 minutes at Engraved Door",
+        "description": "Harvest for >720 minutes at Engraved Door",
         "deltaType": "INC",
         "type": "HARVEST_TIME",
         "index": 74,
-        "value": 21600
+        "value": 43200
       }
     ],
     "rewards": [
@@ -2429,7 +2429,7 @@
   {
     "key": "MSQ067",
     "index": 67,
-    "status": "To Update Text",
+    "status": "In Game",
     "title": "Soaked to the Bone",
     "daily": false,
     "type": "MAIN",
@@ -2446,11 +2446,11 @@
     ],
     "objectives": [
       {
-        "description": "Harvest for >360 minutes at Shabby Deck",
+        "description": "Harvest for >720 minutes at Shabby Deck",
         "deltaType": "INC",
         "type": "HARVEST_TIME",
         "index": 71,
-        "value": 21600
+        "value": 43200
       }
     ],
     "rewards": [
@@ -2483,11 +2483,11 @@
     ],
     "objectives": [
       {
-        "description": "Harvest for >360 minutes at Hatch to Nowhere",
+        "description": "Harvest for >720 minutes at Hatch to Nowhere",
         "deltaType": "INC",
         "type": "HARVEST_TIME",
         "index": 72,
-        "value": 21600
+        "value": 43200
       }
     ],
     "rewards": [
@@ -2619,14 +2619,14 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “Even this deep, we’re still picking up trash.”\nMENU: “They really got comfortable in here.”\nMENU: “You might as well let the Kami poke around.”\nMENU: “Maybe you’ll find something better than cigarette butts and stale burgers.”",
+    "introDialogue": "MENU: “Those people from the labs really got comfortable in these caves, they left their garbage everywhere.”\nMENU: “Head down to the toadstool platforms, I wanna see if there’s anywhere they didn’t trash.”\nMENU: “Let the Kami poke around there, maybe we’ll find something better than cigarette butts and stale burgers.”",
     "resolutionDialogue": "MENU: “It must have been a hassle for people to pass through here.”\nMENU: “Seems like a real gymnastics course with all that jumping and climbing.”\nMENU: “You don’t seem to have any problem with it, though.”",
     "requirements": [
       {
-        "description": "In Room: Toadstool Platforms,Complete MSQ071",
-        "type": null,
-        "index": null,
-        "value": null
+        "description": "Complete MSQ071",
+        "type": "QUEST",
+        "index": 71,
+        "value": 0
       }
     ],
     "objectives": [
@@ -2656,7 +2656,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “The growth of these fungi… It’s a bit strange.”\nMINA: “It’s a very large cavern in breadth and depth. The mushrooms nearly fill it.”\nMINA: “They must be getting plenty of sustenance.”\nMINA: “Harvest here a while. You’ll get a better sense of the decay.”",
+    "introDialogue": "MINA: “The growth of these giant toadstools… It’s a bit strange.”\nMINA: “It’s a very large cavern in breadth and depth. The mushrooms nearly fill it.”\nMINA: “They must be getting plenty of sustenance.”\nMINA: “Harvest here for a while. You’ll get a better sense of the decay.”",
     "resolutionDialogue": "MINA: “As expected. Some kind of enormous rot beneath.”\nMINA: “No way to know what it is for sure.”\nMINA: “The growth is simply too thick.”",
     "requirements": [
       {
@@ -2767,7 +2767,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “Do me a favor and leave the caves for a minute.”\nMENU: “Head back to the Restricted Area and take a look at that office complex.”\nMENU: “This might be a pain, but I want you to make sure.”\nMENU: “You can keep exploring and put this off for now.”\nMENU: “Just keep it in mind.”",
+    "introDialogue": "MENU: “Do me a favor and leave the caves for a minute.”\nMENU: “Head back to the Restricted Area and take a look at that office complex.”\nMENU: “This might be a pain, but I want you to make sure.”",
     "resolutionDialogue": "MENU: “Definitely the same logo. It looks like the letter A.”\nMENU: “Wonder what it stands for?”",
     "requirements": [
       {
@@ -2777,7 +2777,15 @@
         "value": 0
       }
     ],
-    "objectives": [],
+    "objectives": [
+      {
+        "description": "Move to Restricted Area",
+        "deltaType": "BOOL",
+        "type": "ROOM",
+        "index": 5,
+        "value": 0
+      }
+    ],
     "rewards": [
       {
         "description": "6x Agency Reputation,2x Booster Pack",
@@ -2796,14 +2804,14 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “Check out the construction on these supports.”\nMENU: “Wood, yeah. But it’s like that stuff you make out of sticks and stems.”\nMENU: “You might as well grab a few more while you’re here.”",
+    "introDialogue": "MENU: “That tent gave me an idea. Head back into the caves and go to the reinforced tunnel that branches off from the thriving mushrooms”\nMENU: “I want to check out the construction on those supports.”\nMENU: “It’s wood, yeah. But it’s like that stuff you make out of sticks and stems.”\nMENU: “You might as well grab a few more while you’re here.”",
     "resolutionDialogue": "MENU: “So, the wood.”\nMENU: “It’s like your laminated timber, but it’s not exactly.”\nMENU: “Looks more like chopped up office furniture. Desks, tables.”\nMENU: “Why do that?”\nMENU: “There are plenty of resources around to make this stuff.”\nMENU: “Why haul it in from somewhere else?”",
     "requirements": [
       {
-        "description": "In Room: Reinforced Tunnel,Complete MSQ056",
-        "type": null,
-        "index": null,
-        "value": null
+        "description": "Complete MSQ076",
+        "type": "QUEST",
+        "index": 76,
+        "value": 0
       }
     ],
     "objectives": [
@@ -2865,7 +2873,7 @@
   {
     "key": "MSQ079",
     "index": 79,
-    "status": "To Update",
+    "status": "In Game",
     "title": "Fringe Theories",
     "daily": false,
     "type": "MAIN",
@@ -2907,14 +2915,14 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “That bridge looks like fake wood.”\nMENU: “Check if it’s sturdy by sending some Kami out on it.”\nMENU: “I’m just kidding!”\nMENU: “Get them harvesting, though.”",
+    "introDialogue": "MENU: “Let’s go check out the canyon bridge, I think it’s more of that fake wood.”\nMENU: “Check if it’s sturdy by sending some Kami out on it.”\nMENU: “I’m just kidding!”\nMENU: “Get them harvesting, though.”",
     "resolutionDialogue": "MENU: “I wonder how you were meant to cross before the bridge got built?”\nMINA: “Maybe you weren’t.”\nMINA: “It may have another purpose.”",
     "requirements": [
       {
-        "description": "In Room: Canyon Bridge,Complete MSQ056",
-        "type": null,
-        "index": null,
-        "value": null
+        "description": "Complete MSQ077",
+        "type": "QUEST",
+        "index": 77,
+        "value": 0
       }
     ],
     "objectives": [
@@ -2981,13 +2989,13 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “I don’t need to give you the lesson about $MUSU currents again.”\nMINA: “As predicted, you’ll find another essence here.”\nMINA: “It seems you can’t touch that lantern. No great worry.”\nMINA: “A bit strange, but no obstacle.” \nMINA: “As long as you and your Kami can scavenge, you’re gold.”",
+    "introDialogue": "MENU: “Let’s check out those giant crystals in the geometric caves next!”\nMENU: “There’s gotta be something cool in there.”\nMINA: “I don’t need to give you the lesson about $MUSU currents again do I?”\nMINA: “It should be obvious that just as I predicted, you’ll find another essence there.”\nMINA: “It seems you can’t touch that lantern though. No great worry.”\nMINA: “A bit strange, but no obstacle.” \nMINA: “As long as you and your Kami can scavenge, you’re gold.”",
     "resolutionDialogue": "MINA: “That lantern burns with a familiar element.”\nMINA: “The lingering radiation in the antediluvian facility, you remember?”\nMINA: “In a way, that tube was really just a bigger lantern.”\nMINA: “Consider yourself lucky being unable to touch it.”\nMINA: “Just extract the essence from the light it casts on the wall.”",
     "requirements": [
       {
-        "description": "In Room: Geometric Cliffs",
-        "type": "ROOM",
-        "index": 82,
+        "description": "Complete MSQ081",
+        "type": "QUEST",
+        "index": 81,
         "value": 0
       }
     ],
@@ -3055,14 +3063,14 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “This really stands out. It’s beautiful.”\nMENU: “Except for the burnt pages of some book all over the floor.”\nMENU: “They must have used that for the carbon. Passionate about their art.”\nMENU: “Burn up scraps are gonna be hard to decipher. I’ll work on it.”\nMENU: “The Kami can do their thing. I’ll do mine.”",
+    "introDialogue": "MENU: “Have you seen the flower mural in the back corner of the caves yet? It’s beautiful.”\nMENU: “Except for the burnt pages of some book all over the floor.”\nMENU: “They must have used that for the carbon. Passionate about their art.”\nMENU: “Burnt up scraps are gonna be hard to decipher. I’ll work on it.”\nMENU: “Have your Kami do their thing. I’ll do mine.”",
     "resolutionDialogue": "MENU: “For nutjobs who set their own stuff on fire to paint pictures…”\nMENU: “They’re pretty good at covering their tracks.”\nMINA: “Not many clues, but plenty of blue pansies.”\nMINA: “Plenty of magic, too.”",
     "requirements": [
       {
-        "description": "In Room: Flower Mural,Complete MSQ056",
-        "type": null,
-        "index": null,
-        "value": null
+        "description": "Complete MSQ083",
+        "type": "QUEST",
+        "index": 83,
+        "value": 0
       }
     ],
     "objectives": [
@@ -3104,11 +3112,11 @@
     ],
     "objectives": [
       {
-        "description": "Harvest for >360 minutes at Flower Mural",
+        "description": "Harvest for >720 minutes at Flower Mural",
         "deltaType": "INC",
         "type": "HARVEST_TIME",
         "index": 81,
-        "value": 21600
+        "value": 43200
       }
     ],
     "rewards": [
@@ -3129,7 +3137,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “Give me some flowers and plastics.”\nMINA: “I want to make some charms and cast some divinations on my own.”\nMINA: “You’ve been a good servant. Deliver the reagents immediately and uphold that reputation.” ",
+    "introDialogue": "MINA: “Something about this sigil makes me uneasy, so I want you to give me some flowers and plastics.”\nMINA: “I’ll use them to make some charms and cast some divinations of my own.”\nMINA: “You’ve been a good servant. Deliver the reagents immediately and uphold that reputation.”",
     "resolutionDialogue": "MINA: “Maybe a lure? No, perhaps a repellent. Is it possible that it’s apotropaic?”\nMINA: “Oh, to hell with this.”\nMINA: “I feel like I need to step down there personally to check this out.”\nMINA: “And I am absolutely not doing that.”\nMENU: “The probability of it being a trap does appear high.”",
     "requirements": [
       {
@@ -3166,14 +3174,14 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “I feel a little sick in here.”\nMENU: “Uh.”\nMENU: “Mina, you take this one. My vision is bugging out.”\nMINA: “Operator, take stock of the materials here.”\nMINA: “And make it quick.”",
+    "introDialogue": "MENU: “Hey, so I tried to scan that giant crystal in the back of the caves.”\nMENU: “It made me feel kinda sick.”\nMENU: “Maybe kinda really sick actually.”\nMENU: “Uh.”\nMENU: “Mina, you take this one. My vision is bugging out.”\nMINA: “Operator, make your way to the radiant crystal chamber and take stock of the materials there.”\nMINA: “And make it quick.”",
     "resolutionDialogue": "MINA: “I see why our friend was uncomfortable.”\nMINA: “I feel it too.” \nMINA: “This crystal is radiating with incredible magical power.”\nMINA: “It feels just like the leftovers in the broken tube.”\nMINA: “A setting like this appears more natural than that prison…”\nMINA: “But still, something feels wrong.”",
     "requirements": [
       {
-        "description": "In Room: Radiant Crystal,Complete MSQ070",
-        "type": null,
-        "index": null,
-        "value": null
+        "description": "Complete MSQ086",
+        "type": "QUEST",
+        "index": 86,
+        "value": 0
       }
     ],
     "objectives": [
@@ -3277,7 +3285,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “I think that I’ve properly established how distasteful I find the act of drawing power from this crystal.”\nMINA: “With that said, I’ve also been considering the ethics of using these roots in hexerei.”\nMINA: “If the kami just happen to pick up whats already there…”\nMINA: “It’s acceptable.”",
+    "introDialogue": "MINA: “I think that I’ve properly established how distasteful I find the act of drawing power from this crystal.”\nMINA: “With that said, I’ve also been considering the ethics of using these roots in hexerei.”\nMINA: “If your kami just happen to pick up whats already there…”\nMINA: “It’s acceptable.”",
     "resolutionDialogue": "MINA: “Hmm… Indeed, something unpleasant about holding this.”\nMINA: “Though I can feel the potential.” \nMINA: “Get your tools ready, apprentice. Let’s try something new.”",
     "requirements": [
       {
@@ -3426,7 +3434,7 @@
     "type": "MAIN",
     "giver": "MINA",
     "introDialogue": "MINA: “I’ve given you plans for a sort of dowsing rod.”\nMINA: “The ingot to craft a housing, the root for a handle, and an essence of sight for the sensor.”\nMINA: “Menu’s technical language may be rubbing off.”\nMINA: “Craft the device. We’ll see what it turns up.”",
-    "resolutionDialogue": "MINA: “The rod isn’t a guiding hand to point you through the dark.”\nMINA: “It will respond when you get close to the right places.”\nMINA: “You should be able to use it to find the crystal’s tree above ground.”",
+    "resolutionDialogue": "MINA: “The rod isn’t a guiding hand to point you through the dark.”\nMINA: “It will respond when you get close to the right places.”\nMINA: “You should be able to use it to find the crystal’s tree above ground.”\nMINA: “There’s a possibility of detecting other things as well, so take some time to wander around with it, maybe something unexpected will turn up.”",
     "requirements": [
       {
         "description": "Complete MSQ093",
@@ -3474,11 +3482,11 @@
     ],
     "objectives": [
       {
-        "description": "Use the machine to buy something in the Marketplace",
-        "deltaType": "INC",
-        "type": "TRADE_EXECUTE",
-        "index": 0,
-        "value": 1
+        "description": "Move to the Marketplace",
+        "deltaType": "BOOL",
+        "type": "ROOM",
+        "index": 66,
+        "value": 0
       }
     ],
     "rewards": [
@@ -3499,23 +3507,23 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “That thing almost looks real.”\nMINA: “It does a real enough job of holding our Operator back.”\nMINA: “And the magic is so thick in the air you can taste it.”\nMENU: “I knew you were sharing sight, but taste?”\nMINA: “It’s just an expression.”\nMINA: “But spend some time in here and taste for yourself.”",
+    "introDialogue": "MENU: “That giant skeleton at the bottom of the caves almost looks real.”\nMINA: “It does a real enough job of holding our Operator back.”\nMINA: “And the magic is so thick in the air you can taste it.”\nMENU: “I knew you were sharing sight, but taste?”\nMINA: “It’s just an expression.”\nMINA: “But spend some time in here and taste for yourself.”",
     "resolutionDialogue": "MINA: “Talismans all over the walls.”\nMINA: “These magicians had a powerful desire to seal the darkness below”\nMINA: “Humans put too much faith in paper.”",
     "requirements": [
       {
-        "description": "In Room: Giant's Palm,Complete MSQ081",
-        "type": null,
-        "index": null,
-        "value": null
+        "description": "Complete MSQ094",
+        "type": "QUEST",
+        "index": 94,
+        "value": 0
       }
     ],
     "objectives": [
       {
-        "description": "Harvest for >360 minutes at Giant's Palm",
+        "description": "Harvest for >720 minutes at Giant's Palm",
         "deltaType": "INC",
         "type": "HARVEST_TIME",
         "index": 85,
-        "value": 21600
+        "value": 43200
       }
     ],
     "rewards": [
@@ -3536,7 +3544,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “The closer you get to opening this seal, the stronger the sense of foreboding that I feel.”\nMINA: “It’s almost as if the caves drain my spirit through my connection to you.”\nMINA: “Do me a favor, servant.”\nMINA: “Give me an energy drink?”",
+    "introDialogue": "MINA: “The deeper we venture into these caves, the stronger the sense of foreboding that I feel.”\nMINA: “It’s almost as if the caves drain my spirit through my connection to you.”\nMINA: “Do me a favor, servant.”\nMINA: “Give me an energy drink?”",
     "resolutionDialogue": "MINA: “You are appreciated.”\nMINA: “As a servant, you rank among the top five thousand.”\nMINA: “At the lowest.”",
     "requirements": [
       {
@@ -3659,11 +3667,11 @@
     ],
     "objectives": [
       {
-        "description": "Harvest for >360 minutes at Guardian Skull",
+        "description": "Harvest for >3 days at Guardian Skull",
         "deltaType": "INC",
         "type": "HARVEST_TIME",
         "index": 86,
-        "value": 21600
+        "value": 259200
       }
     ],
     "rewards": [
@@ -3725,9 +3733,9 @@
     "resolutionDialogue": "MENU: “Weirdest thing.”\nMENU: “These old marble pillars? Every one I check is just plaster with distressing. They just look old.”\nMENU: “This whole temple might have been built within the last fifty years.” \nMENU: “Everything in it except the bones…”",
     "requirements": [
       {
-        "description": "In Room: Sacrarium",
-        "type": "ROOM",
-        "index": 87,
+        "description": "Complete MSQ101",
+        "type": "QUEST",
+        "index": 101,
         "value": 0
       }
     ],
@@ -3827,7 +3835,7 @@
   {
     "key": "MSQ105",
     "index": 105,
-    "status": "To Deploy",
+    "status": "In Game",
     "title": "The Turning of the Wheel",
     "daily": false,
     "type": "MAIN",
@@ -3864,7 +3872,7 @@
   {
     "key": "MSQ106",
     "index": 106,
-    "status": "To Deploy",
+    "status": "In Game",
     "title": "Two Faces Under One Hood",
     "daily": false,
     "type": "MAIN",
@@ -3901,7 +3909,7 @@
   {
     "key": "MSQ107",
     "index": 107,
-    "status": "To Deploy",
+    "status": "In Game",
     "title": "Get a Foot In The Door",
     "daily": false,
     "type": "MAIN",
@@ -3938,7 +3946,7 @@
   {
     "key": "MSQ108",
     "index": 108,
-    "status": "To Deploy",
+    "status": "In Game",
     "title": "Treat Yourself",
     "daily": false,
     "type": "MAIN",
@@ -3964,7 +3972,7 @@
     ],
     "rewards": [
       {
-        "description": "2x Agency Reputation,3x \"Cultivation II\" Spell Card",
+        "description": "2x Agency Reputation,3x “Cultivation II“ Spell Card",
         "type": null,
         "index": null,
         "value": null,
@@ -3975,7 +3983,7 @@
   {
     "key": "MSQ109",
     "index": 109,
-    "status": "To Deploy",
+    "status": "In Game",
     "title": "Remain Unburdened of Attachments",
     "daily": false,
     "type": "MAIN",
@@ -4075,7 +4083,7 @@
     ],
     "rewards": [
       {
-        "description": "4x Elders Loyalty,1x \"Neith’s River of Life\" Spell Card",
+        "description": "4x Elders Loyalty,1x ”Neith’s River of Life” Spell Card",
         "type": null,
         "index": null,
         "value": null,
@@ -4149,7 +4157,7 @@
     ],
     "rewards": [
       {
-        "description": "2x Elders Loyalty,2 “Cultivation I” Spell Card",
+        "description": "2x Elders Loyalty,2x “Cultivation I” Spell Card",
         "type": null,
         "index": null,
         "value": null,
@@ -4177,11 +4185,11 @@
     ],
     "objectives": [
       {
-        "description": "Harvest for >720 minutes on Trash-Strewn Graves",
+        "description": "Harvest for >24 hours on Trash-Strewn Graves",
         "deltaType": "INC",
         "type": "HARVEST_TIME",
         "index": 26,
-        "value": 43200
+        "value": 86400
       }
     ],
     "rewards": [
@@ -4461,7 +4469,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “Reminiscing about that lost friend has gotten me sentimental.”\nMINA: “He’s not one of the dead interred in the graves here, of course.”\nMINA: “Still, they deserve something.”\nMINA: “There’s far too much trash to pick up, but you can lay down something beautiful for a change.”\nMINA: “——— Mina.”",
+    "introDialogue": "MINA: “Reminiscing about that lost friend has gotten me sentimental.”\nMINA: “He’s not interred in the graves here, of course.”\nMINA: “Still, these old spirits deserve something.”\nMINA: “There’s far too much trash to pick up, but you can lay down something beautiful for a change.”\nMINA: “——— Mina.”",
     "resolutionDialogue": "MINA: “Letting something new grow from the remains of the old is a fine enough thing, but an eyesore like this landfill?”\nMINA: “Disrespectful.”\nMINA: “It wasn’t always this way. I can tell.”\nMINA: “These mountains of garbage and that eyesore of a building in the distance?”\nMINA: “Someone had to cast them off before they ended up here.”\nMINA: “——— Mina.”",
     "requirements": [
       {
@@ -4667,7 +4675,7 @@
     ],
     "rewards": [
       {
-        "description": "2x Agency Reputation,1x \"Neith’s River of Life\" Spell Card",
+        "description": "2x Agency Reputation,1x ”Neith’s River of Life” Spell Card",
         "type": null,
         "index": null,
         "value": null,
@@ -4770,7 +4778,7 @@
     "objectives": [],
     "rewards": [
       {
-        "description": "2x Agency Reputation,1x “Melkarth’s Heroic Awakening” Spell Card",
+        "description": "2x Agency Reputation,1x ”Melkarth’s Heroic Awakening” Spell Card",
         "type": null,
         "index": null,
         "value": null,
@@ -5251,7 +5259,7 @@
     ],
     "rewards": [
       {
-        "description": "4x Agency Reputation,1x “Melkarth’s Heroic Awakening” Spell Card",
+        "description": "4x Agency Reputation,1x ”Melkarth’s Heroic Awakening” Spell Card",
         "type": null,
         "index": null,
         "value": null,
@@ -5373,7 +5381,7 @@
   {
     "key": "SQ022",
     "index": 3022,
-    "status": "To Update",
+    "status": "In Game",
     "title": "Sweet Deal",
     "daily": false,
     "type": "SIDE",
@@ -5399,11 +5407,1356 @@
     ],
     "rewards": [
       {
-        "description": "3x \"Melkarth's Heroic Awakening\" Spell Card",
+        "description": "3x ”Melkarth's Heroic Awakening” Spell Card",
         "type": "ITEM",
         "index": 11002,
         "value": 3,
         "itemName": "Melkarth's Heroic Awakening Spell Card"
+      }
+    ]
+  },
+  {
+    "key": "SQ028",
+    "index": 3028,
+    "status": "In Game",
+    "title": "The More the Merrier",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "ROB",
+    "introDialogue": "MENU: “Do you see that? The little… I don’t really know what it is. It’s dancing on top of that pole.”\nMENU: “Is it maybe a bird? But I’ve never seen any bird as strange as that.”\nROB: “Lady, y’know I can hear you.”\nMENU: “Aaah!”\nMENU: “Oh. I’m sorry. I didn’t mean to offend.”\nROB: “Yeah. Sure, kiddo. And hello to you too.”",
+    "resolutionDialogue": "ROB: “You two are still hangin’ around? You’re startin’ to bother me.”\nROB: “Ya know what? Here, hold this.”\nROB: “It’s a little memento of this momentous meetin’.”\nROB: “Now scram.”",
+    "requirements": [
+      {
+        "description": "In Room: Restricted Area",
+        "type": "ROOM",
+        "index": 5,
+        "value": 0
+      }
+    ],
+    "objectives": [],
+    "rewards": [
+      {
+        "description": "1x Stone",
+        "type": "ITEM",
+        "index": 1002,
+        "value": 1,
+        "itemName": "Stone"
+      }
+    ]
+  },
+  {
+    "key": "SQ029",
+    "index": 3029,
+    "status": "In Game",
+    "title": "Let’s Have a Look",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "ROB",
+    "introDialogue": "ROB: “I think we got off on the wrong foot.”\nROB: “That weirdo lady is one thing, but you seem alright.”\nROB: “Polite, quiet; a respectable kinda person. And you got some interestin’ friends.”\nROB: “Not just the broad, but those little spirit things you’re buddies with.”\nROB: “Suppose if the little ones cozy up like that, you can’t be all bad.”\nROB: “You can let ‘em down here to play. I won’t bother ‘em.”",
+    "resolutionDialogue": "ROB: “Those Kami play rough for bein’ so fragile.”\nROB: “You might want to keep a close eye on ‘em while they’re out. Take this for the trouble.”\nROB: “Don’t expect them to look after themselves, either.”\nROB: “They can’t look after a damn thing. Bastards didn’t even look at my dancin’.”",
+    "requirements": [
+      {
+        "description": "Complete SQ028",
+        "type": "QUEST",
+        "index": 3028,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Harvest for >30 minutes at Restricted Area",
+        "deltaType": "INC",
+        "type": "HARVEST_TIME",
+        "index": 5,
+        "value": 1800
+      }
+    ],
+    "rewards": [
+      {
+        "description": "1x ”Melkarth’s Heroic Awakening” Spell Card",
+        "type": "ITEM",
+        "index": 11002,
+        "value": 1,
+        "itemName": "Melkarth's Heroic Awakening Spell Card"
+      }
+    ]
+  },
+  {
+    "key": "SQ030",
+    "index": 3030,
+    "status": "In Game",
+    "title": "Container Deposit",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "ROB",
+    "introDialogue": "ROB: “You like to fill your pockets of fine goods, right, kid?”\nROB: “I’ve got a hoard of who knows what. And plenty of money besides.”\nROB: “Care for a trade?”\nROB: “Hand over some of those bottles you find around here, the soft ones.”\nROB: “I’ll pay you a few pennies for each.”",
+    "resolutionDialogue": "ROB: “Here, like I promised and more.”\nROB: “Old Rob’s always good for a fair deal.”\nROB: “But you might still think I’m skinnin’ ya. I see how it is.”\nROB: “Can’t find many willin’ to trade in this coin, so far I am from home.”\nROB: “Tell you what? Next time’s a fair barter. No payment, just goods for goods.”\nROB: “Fair as can be, kid.”",
+    "requirements": [
+      {
+        "description": "Complete SQ029",
+        "type": "QUEST",
+        "index": 3029,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Give 3 Plastic Bottles",
+        "deltaType": "INC",
+        "type": "ITEM_BURN",
+        "index": 1003,
+        "value": 3
+      }
+    ],
+    "rewards": [
+      {
+        "description": "10x Otherworld Coin",
+        "type": "ITEM",
+        "index": 1019,
+        "value": 10,
+        "itemName": "Otherworld Coin"
+      }
+    ]
+  },
+  {
+    "key": "SQ031",
+    "index": 3031,
+    "status": "In Game",
+    "title": "More Than a Fair Exchange",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "ROB",
+    "introDialogue": "ROB: “Ah, smell those bloody flowers. A blessing after a thousand years in a stone room.”\nROB: “Do a man a favour and pick a few. I’ll pay you back with somethin’ useful.”",
+    "resolutionDialogue": "ROB: “Since I’m more than a fair dealer you get a bit extra.”\nROB: “Kind fella, aren’t I?”",
+    "requirements": [
+      {
+        "description": "Complete SQ030",
+        "type": "QUEST",
+        "index": 3030,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Give 3 Daffodil",
+        "deltaType": "INC",
+        "type": "ITEM_BURN",
+        "index": 1011,
+        "value": 3
+      }
+    ],
+    "rewards": [
+      {
+        "description": "5x Chalkberry",
+        "type": "ITEM",
+        "index": 1014,
+        "value": 5,
+        "itemName": "Chalkberry"
+      }
+    ]
+  },
+  {
+    "key": "SQ032",
+    "index": 3032,
+    "status": "In Game",
+    "title": "Unfettered",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "ROB",
+    "introDialogue": "ROB: “Beautiful little place here, can’t say it enough. I’ll be stickin’ around, I think.”\nROB: “You’re gonna have to help a fella out.”\nROB: “I broke the stone that kept me fettered in the otherworld. Gave you a piece earlier.”\nROB: “Help me make a new anchor so I can stick myself here just the same.”\nROB: “Not just any rock’ll do. Get your boy Rob a hefty block of stone.” ",
+    "resolutionDialogue": "ROB: “Great stuff, kid.”\nROB: “You wanna know a little of how this works? Ehhh… Yeah, whatever.”\nROB: “See, I’m such a foreigner here, I can’t stay forever on my own.”\nROB: “I’m not like you or those skeleton deaf mutes layin’ around.”\nROB: “Even though I got friends now, even if I eat some food, I’d eventually fade away.”\nROB: “Just don’t belong here. Not a world that naturally supports a man of my stature.”\nROB: “But if I have a little rock of my own to bind myself to, that’s different.”\nROB: “It’d be like I got my own world inside this world, and I’d be safe as long as I want.”\nROB: “I’ll build this outta the way. Don’t go lookin’, but you might run into it later.”",
+    "requirements": [
+      {
+        "description": "Complete SQ031",
+        "type": "QUEST",
+        "index": 3031,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Give 1 Ashlar",
+        "deltaType": "INC",
+        "type": "ITEM_BURN",
+        "index": 1301,
+        "value": 1
+      }
+    ],
+    "rewards": [
+      {
+        "description": "7500x Sanguineous Powder",
+        "type": "ITEM",
+        "index": 1113,
+        "value": 7500,
+        "itemName": "Sanguineous Powder"
+      }
+    ]
+  },
+  {
+    "key": "SQ033",
+    "index": 3033,
+    "status": "In Game",
+    "title": "Trading Lunches",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "ROB",
+    "introDialogue": "ROB: “I don’t know about you, but I’ve been smellin’ sulfur in the air.”\nROB: “Could be somethin’ bad. But I got somethin’ else on my mind about it.”\nROB: “It’s makin’ me think about eggs. Haven’t had an egg for about a thousand years.” \nROB: “Hell, but I’m never gonna get tired of usin’ that for an excuse.”\nROB: “If you get your hands on a fried egg, give it here. I’m beggin’ for one.”\nROB: “Don’t even care if it’s spoiled.”",
+    "resolutionDialogue": "ROB: “Beautiful color. Smells like hell. I’m gonna cry, kid.”\nROB: “Here, take this cuppa coffee. I prefer cream and sugar, myself.”\nROB: “As a bonus, I even heated it up.” \nROB: “Always good tradin’ with ya.”",
+    "requirements": [
+      {
+        "description": "Complete SQ032",
+        "type": "QUEST",
+        "index": 3032,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Give 1 Fetid Egg",
+        "deltaType": "INC",
+        "type": "ITEM_BURN",
+        "index": 11227,
+        "value": 1
+      }
+    ],
+    "rewards": [
+      {
+        "description": "1x Hostility Potion",
+        "type": "ITEM",
+        "index": 11410,
+        "value": 1,
+        "itemName": "Hostility Potion"
+      }
+    ]
+  },
+  {
+    "key": "SQ034",
+    "index": 3034,
+    "status": "In Game",
+    "title": "Not Right Now",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "ZEVANA",
+    "introDialogue": "ZEVANA: “I’m supposed to help you. But first, can you do something for me?”\nZEVANA: “Get out of my face.”\nZEVANA: “Just go stumble around the woods for a while.”\nZEVANA: “Follow the path, or stray from it. Get familiar with this place.”\nZEVANA: “Don’t cry. You can come back soon.”",
+    "resolutionDialogue": "ZEVANA: “Just seeing how well you follow instructions.”\nZEVANA: “Take this and freshen up, then come talk to me in person.”\nZEVANA: “You should know that I sell companionship.”\nZEVANA: “I mean, come to me to buy a starter Kamigotchi.”",
+    "requirements": [
+      {
+        "description": "In Room: Torii Gate",
+        "type": "ROOM",
+        "index": 3,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Move 4 Times",
+        "deltaType": "INC",
+        "type": "MOVE",
+        "index": 0,
+        "value": 4
+      }
+    ],
+    "rewards": [
+      {
+        "description": "1x ”Neith’s River of Life” Spell Card",
+        "type": "ITEM",
+        "index": 21204,
+        "value": 1,
+        "itemName": "Neith's River of Life Spell Card"
+      }
+    ]
+  },
+  {
+    "key": "SQ035",
+    "index": 3035,
+    "status": "In Game",
+    "title": "Rookie Training I",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "ZEVANA",
+    "introDialogue": "ZEVANA: “By now you should have at least one Kamigotchi by your side.”\nZEVANA: “If you don’t, what are you waiting for?”\nZEVANA: “Fork it over and I’ll hook you up. We can make deals on the side.”\nZEVANA: “When you’re able to summon and recall a Kamigotchi, you’ll be able to handle this request.”\nZEVANA: “A starter Kamigotchi can usually harvest on a node for a maximum of one hour befiore becoming endangered.”\nZEVANA: “But that’s pushing the poor thing hard.”\nZEVANA: “For now, harvest for fifteen minutes, then recall your Kamigotchi.”",
+    "resolutionDialogue": "ZEVANA: “You’d better not push your Kamigotchi harder than it can handle.”\nZEVANA: “Wouldn’t you feel bad if it got hurt? If a Kamigotchi’s health falls below a variable threshold, it becomes vulnerable to predators.”\nZEVANA: “Take this card and heal your companion.”\nZEVANA: “We’ll talk later.”",
+    "requirements": [
+      {
+        "description": "Complete SQ034",
+        "type": "QUEST",
+        "index": 3034,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Harvest for >15 minutes",
+        "deltaType": "INC",
+        "type": "HARVEST_TIME",
+        "index": 0,
+        "value": 900
+      }
+    ],
+    "rewards": [
+      {
+        "description": "1x “Paeon’s Field of Flowers” Spell Card",
+        "type": "ITEM",
+        "index": 11305,
+        "value": 1,
+        "itemName": "Paeon's Field of Flowers Spell Card"
+      }
+    ]
+  },
+  {
+    "key": "SQ036",
+    "index": 3036,
+    "status": "In Game",
+    "title": "Rookie Training II",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "ZEVANA",
+    "introDialogue": "ZEVANA: “When your Kamigotchi harvests for long periods of time, it builds up opportunities to scavenge.”\nZEVANA: “I want you to have your friend collect a memento from this node.”\nZEVANA: “This may take some time. Be careful with the poor thing’s health.”",
+    "resolutionDialogue": "ZEVANA: “Take this card in case your Kamigotchi falls to a predator.”\nZEVANA: “You should feel ashamed every time you use one.”",
+    "requirements": [
+      {
+        "description": "Complete SQ035",
+        "type": "QUEST",
+        "index": 3035,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Make 1 Scavenging Roll in Torii Gate",
+        "deltaType": "INC",
+        "type": "SCAV_CLAIM_NODE",
+        "index": 3,
+        "value": 1
+      }
+    ],
+    "rewards": [
+      {
+        "description": "1x ”Melkarth’s Heroic Awakening” Spell Card",
+        "type": "ITEM",
+        "index": 11002,
+        "value": 1,
+        "itemName": "Melkarth's Heroic Awakening Spell Card"
+      }
+    ]
+  },
+  {
+    "key": "SQ037",
+    "index": 3037,
+    "status": "In Game",
+    "title": "Old Acquaintance",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "ZEVANA",
+    "introDialogue": "ZEVANA: “It’s possible to leave your Kamigotchi behind while you explore.”\nZEVANA: “You can let your companion roam free while you go shopping or exploring.”\nZEVANA: “Only ignorant and neglectful scum would do this, of course.”\nZEVANA: “If I send you on an errand to buy me a piece of candy, I’m sure you’d take the Kamigotchi with you.”\nZEVANA: “You can buy some from my acquaintance Mina.”",
+    "resolutionDialogue": "ZEVANA: “Did you leave your companion behind like a piece of trash?”\nZEVANA: “Let’s hope you didn’t.”\nZEVANA: “But it’ll be tempting, sometimes.”\nZEVANA: “I’m just warning you… Be careful with your friends.”\nZEVANA: “And don’t think one piece of candy will get me to like you.”",
+    "requirements": [
+      {
+        "description": "Complete SQ036",
+        "type": "QUEST",
+        "index": 3036,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Give 1 Pom-Pom Fruit Candy",
+        "deltaType": "INC",
+        "type": "ITEM_BURN",
+        "index": 11303,
+        "value": 1
+      }
+    ],
+    "rewards": [
+      {
+        "description": "1x “Cultivation I” Spell Card",
+        "type": "ITEM",
+        "index": 11211,
+        "value": 1,
+        "itemName": "Cultivation I Spell Card"
+      }
+    ]
+  },
+  {
+    "key": "SQ038",
+    "index": 3038,
+    "status": "In Game",
+    "title": "Push it to the Limit",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "ZEVANA",
+    "introDialogue": "ZEVANA: “You’ve been training your Kamigotchi for a little bit now.”\nZEVANA: “Hopefully, you’ve picked up more than one.”\nZEVANA: “And by now, I’m sure you realize I’m not the only one offering quests.”\nZEVANA: “Do you really have the basics down?”\nZEVANA: “Can your Kamigotchi survive an hour?”",
+    "resolutionDialogue": "ZEVANA: “If you’re better than scum, your Kamigotchi survived through that task.”\nZEVANA: “They’re strong enough to get out there in the world. But they can always be stronger.”\nZEVANA: “Take these. They’ll help out a begi.”",
+    "requirements": [
+      {
+        "description": "Complete SQ037",
+        "type": "QUEST",
+        "index": 3037,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Harvest for >60 minutes",
+        "deltaType": "INC",
+        "type": "HARVEST_TIME",
+        "index": 0,
+        "value": 3600
+      }
+    ],
+    "rewards": [
+      {
+        "description": "3x “Cultivation I“ Spell Card",
+        "type": "ITEM",
+        "index": 11211,
+        "value": 3,
+        "itemName": "Cultivation I Spell Card"
+      }
+    ]
+  },
+  {
+    "key": "SQ039",
+    "index": 3039,
+    "status": "In Game",
+    "title": "Danger Lies Ahead…",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MENU",
+    "introDialogue": "MENU: “Hey hold up here for a second, don’t go further into world yet.”\nMENU: “See the vending machine over there? It’s something like a standing stone.”\nMENU: “Operators like you can use it to summon new kami into existence. Pretty neat huh?”\nMENU: “But listen, the area we’ve been exploring so far, between the river and the vending machine? It’s basically the entrance to this world.”\nMENU: “The ambient energy of the area is rather weak and only supports the deployment of kami of up to level 15.”\nMENU: “As a result, it’s safe from high level predators.”\nMENU: “But if you go further, you will leave that region of relative safety.”\nMENU: “Steel yourself operator, many dangers lie ahead.”",
+    "resolutionDialogue": "MENU: “Here, take this, since you’re intent on wearing yourself out exploring.”",
+    "requirements": [
+      {
+        "description": "In Room: Vending Machine",
+        "type": "ROOM",
+        "index": 4,
+        "value": 0
+      }
+    ],
+    "objectives": [],
+    "rewards": [
+      {
+        "description": "1x ”Neith’s River of Life” Spell Card",
+        "type": "ITEM",
+        "index": 21204,
+        "value": 1,
+        "itemName": "Neith's River of Life Spell Card"
+      }
+    ]
+  },
+  {
+    "key": "SQ040",
+    "index": 3040,
+    "status": "In Game",
+    "title": "A Cautionary Note",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MENU",
+    "introDialogue": "MENU: “I should mention something important.”\nMENU: “The are we’ve been in so far is something like a safe zone.”\nMENU: “The ambient energy of the area is pretty weak, so it can only support the deployment of kami that are less than level 15.”\nMENU: “But the further down this path you go the denser and more powerful the local energies will become.”\nMENU: “That means a high level predator could decide to snack on your kami if you go too far.”\nMENU: “Just thought I’d give you the heads up.”",
+    "resolutionDialogue": "MENU: “You’ll use up all your stamina if you go too far.”\nMENU: “Here, take this in case you wear yourself out.”",
+    "requirements": [
+      {
+        "description": "In Room: Shady Path",
+        "type": "ROOM",
+        "index": 55,
+        "value": 0
+      }
+    ],
+    "objectives": [],
+    "rewards": [
+      {
+        "description": "1x ”Neith’s River of Life” Spell Card",
+        "type": "ITEM",
+        "index": 21204,
+        "value": 1,
+        "itemName": "Neith's River of Life Spell Card"
+      }
+    ]
+  },
+  {
+    "key": "SQ041",
+    "index": 3041,
+    "status": "In Game",
+    "title": "The Rot Creeps",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MINA",
+    "introDialogue": "MENU: “The dowsing rod is picking something up again.”\nMENU: “I don’t get it. There’s nothing here but decay.”\nMINA: “Hmm.”\nMINA:” The flora of the underworld thrives on decay, but the rod’s reaction is curious…”\nMINA: “This may be something more than mere spiritual corruption.”\nMINA: “Harvest here for a while, I’ll look into it further.”\nMINA: “You should hope that I’m mistaken, unlikely an occurrence as that may be.”",
+    "resolutionDialogue": "MINA: “I regretfully must inform you that my brilliant intellect remains unbested.”\nMENU: “Is it what you suspected earlier? The nature of the decay?”\nMINA: “It’s not the decay itself that caught the rod’s attention, but the nature of that which decays.”\nMENU: “…What’s down there, Mina?”\nMINA: “Something foul and dreaming whose nature I know far better than I’d like.”\nMINA: “It has no temptations to offer. Let’s move on.”",
+    "requirements": [
+      {
+        "description": "Complete MSQ094,Own the Dowsing Rod,In Room: Centipedes",
+        "type": null,
+        "index": null,
+        "value": null
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Harvest for >720 minutes at Centipedes",
+        "deltaType": "INC",
+        "type": "HARVEST_TIME",
+        "index": 62,
+        "value": 43200
+      }
+    ],
+    "rewards": [
+      {
+        "description": "2x Elders Loyalty,2x Agency Reputation",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ042",
+    "index": 3042,
+    "status": "In Game",
+    "title": "Some Alien Vastness",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MENU",
+    "introDialogue": "MENU: “The dowsing rod is picking something up? Here?”\nMINA: “Does that surprise you?”\nMINA: “The mundane and modern aesthetic of these structures is what’s truly out of place here.”\nMINA: “The presence of some alien vastness within them is to be expected.”\nMENU: “I mean… It’s weird for sure. I guess I just hadn’t thought about what that would mean for the local energy.”\nMENU: “For me, that’s a strange oversight to make.”\nMENU: “It might be the result of the tampering that was done to me.”\nMENU: “Set your Kami harvesting in here for a while, Operator. I’ll run some more scans.”",
+    "resolutionDialogue": "MINA: “Can you sense it now, Menu?”\nMINA: “Are you able to pick up on the energy that flows from the depths within?” \nMENU: “Yeah, I think so actually.”\nMENU: “It’s subtle, but it’s still leaking out from around the doors. Feels like you could trace it back down from there.”\nMINA: “Very good! Seems you’re a quick study.”\nMINA: “This skill will serve you and the Operator well in the future.”\nMENU: “Yeah! I just realized that myself.”\nMENU: “We might be able to use this rod not just to passively notice interesting stuff, but to actively navigate.”\nMENU: “You know, once we finally get inside this office.”",
+    "requirements": [
+      {
+        "description": "Complete MSQ094,Own the Dowsing Rod,In Room: Lab Entrance",
+        "type": null,
+        "index": null,
+        "value": null
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Harvest for >720 minutes at Lab Entrance",
+        "deltaType": "INC",
+        "type": "HARVEST_TIME",
+        "index": 6,
+        "value": 43200
+      }
+    ],
+    "rewards": [
+      {
+        "description": "4x Agency Reputation",
+        "type": "REPUTATION",
+        "index": 1,
+        "value": 4,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ043",
+    "index": 3043,
+    "status": "In Game",
+    "title": "Ringing Other Bells",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MENU",
+    "introDialogue": "MENU: “The dowsing rod is picking something up from that big bell machine.”\nMENU: “I said it could warp your Kami through dimensions a while ago, but I have to admit something.”\nMENU: “I don’t think it can really do that.”\nMENU: “But these readings are still suspicious.”\nMENU: “Harvest in here for now, let me do some digging.”",
+    "resolutionDialogue": "MENU: “Very weird. According to these results, the bell is much larger on the inside.”\nMENU: “It’s somehow connected to an external space I can’t access. Can’t even get proper scans.”\nMENU: “When I try to map it, I just see a big zone of mauve.”\nMENU: “I hope they don’t get into too much trouble out there.”\nMENU: “And here. Take this, for your own trouble.”",
+    "requirements": [
+      {
+        "description": "Complete MSQ094,Own the Dowsing Rod,In Room: Scrap Confluence",
+        "type": null,
+        "index": null,
+        "value": null
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Harvest for >720 minutes at Scrap Confluence",
+        "deltaType": "INC",
+        "type": "HARVEST_TIME",
+        "index": 12,
+        "value": 43200
+      }
+    ],
+    "rewards": [
+      {
+        "description": "2x Agency Reputation,1x Booster Pack",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ044",
+    "index": 3044,
+    "status": "In Game",
+    "title": "Resonant Drip",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "DIMIDIATUS",
+    "introDialogue": "MENU: “…Hey, the dowsing rod is going off again. I almost didn’t notice.”\nMENU: “I’d think it would be getting stronger readings in here, but it barely registers.”\nDIMIDIATUS: “We observe your observations, Miss Menu.”\nDIMIDIATUS: “And we ponder, is it your device which errs, or is it your reasoning?”\nDIMIDIATUS: “A great weight, with proper shape, may slip into the water without breaking the surface.”\nDIMIDIATUS: “And a little brick might make a big splash.”\nDIMIDIATUS: “Contemplate these possibilities while the little ones harvest, perhaps you will discover something.”",
+    "resolutionDialogue": "MENU: “Very strange. No offense.”\nMENU: “You’re giving some very conflicting readings.”\nMENU: “It’s a little bit like the crystal in the caves, but… It’s also a little like the Operator…”\nDIMIDIATUS: “Hey, you’re a quick learner!”\nDIMIDIATUS: “Is this not a joyful sensation, to acquire new knowledge of the world?”\nMENU: “It’s interesting.”\nMENU: “Thank you, I will have to ponder this further.”\nMENU: “And thank you too, Operator. You’re always so helpful.”",
+    "requirements": [
+      {
+        "description": "Own the Dowsing Rod,In Room: Wheel Temple,Complete MSQ099",
+        "type": null,
+        "index": null,
+        "value": null
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Harvest for >720 minutes at Wheel Temple",
+        "deltaType": "INC",
+        "type": "HARVEST_TIME",
+        "index": 19,
+        "value": 43200
+      }
+    ],
+    "rewards": [
+      {
+        "description": "1x Booster Pack,4x Agency Reputation",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ045",
+    "index": 3045,
+    "status": "In Game",
+    "title": "Resonant Flow",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MINA",
+    "introDialogue": "MENU: “The dowsing rod is picking something up again.”\nMENU: “And by something, I mean that weird pool of ooze.”\nMENU: “It’s pretty obvious that it’s the source.”\nMINA: “Hmm, ooze you say? Interesting, interesting.”\nMENU: “Dimidiatus says its possible to travel through it.”\nMINA: “Indeed, indeed, although it has been eons since it was utilized properly.”\nMINA: “Harvest here for a while I do some scrying.”\nMINA: “This unassuming pool may be of great use in the future.”",
+    "resolutionDialogue": "MENU: “All these machines, they’re beyond ancient. \nMENU: “Even moreso than the ones we found in the caves earlier.”\nMENU: “But I can’t tell at all what they’re doing, or how they interact with the pool!”\nMENU: “It’s totally beyond me right now. Really need more upgrades…”\nMENU: “Mina, have you had better luck with your scrying?”\nMINA: “My luck is always impeccable, dear; my intuitions have proven correct once again.”\nMINA: “Dimidiatus is correct. This pool can indeed serve as a gateway to distant lands.”\nMINA: “As I have discovered, it is unbroken and in fairly good condition.”\nMINA: “It merely sits at rest. In sleep mode, as you might say.”\nMINA: “Reawakening it will be a great challenge, one that requires substantial sacrifice.”\nMINA: “Despite that, it will be a worthwhile mission to undertake, sometime down the line.”\nMINA: “For now, satisfy yourself with my gratitude.” ",
+    "requirements": [
+      {
+        "description": "Complete MSQ094,Own the Dowsing Rod,In Room: Black Pool",
+        "type": null,
+        "index": null,
+        "value": null
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Harvest for >720 minutes at Black Pool",
+        "deltaType": "INC",
+        "type": "HARVEST_TIME",
+        "index": 59,
+        "value": 43200
+      }
+    ],
+    "rewards": [
+      {
+        "description": "2x Elders Loyalty,2x Agency Reputation",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ100",
+    "index": 3100,
+    "status": "In Game",
+    "title": "Get On the Other Side",
+    "daily": false,
+    "type": "MAIN",
+    "giver": "MENU",
+    "introDialogue": "MENU: “That Dimidiatus is as two faced as he looks. Nice enough when he’s not smiling, though.”\nMENU: “His transporting pool is functioning again. You want to try it out?”\nMENU: “Okay, it’s not his, exactly, but he’s right there.”\nMENU: “Say hi to be polite before you jump in.”",
+    "resolutionDialogue": "MENU: “So it connects to someplace in the junkyard, huh.”\nMENU: “Was this always the destination? I guess it wasn’t always covered in junk.”\nMENU: “This place looks important, too…”\nMENU: “Actually, it almost looks like a server farm.”",
+    "requirements": [
+      {
+        "description": "Complete MSQ109",
+        "type": "QUEST",
+        "index": 109,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Move to Black Pool",
+        "deltaType": "BOOL",
+        "type": "ROOM",
+        "index": 59,
+        "value": 0
+      }
+    ],
+    "rewards": [
+      {
+        "description": "2x Agency Reputation",
+        "type": "REPUTATION",
+        "index": 1,
+        "value": 2,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ101",
+    "index": 3101,
+    "status": "In Game",
+    "title": "Don’t Look Back",
+    "daily": false,
+    "type": "MAIN",
+    "giver": "MINA",
+    "introDialogue": "MENU: “If this is a server room of sorts, I wonder if I’m on there somewhere?”\nMENU: “Don’t look.”\nMENU: “Actually please look.”\nMENU: “You get your Kami drawing from the local ambience, I’ll do my thing while they’re plugged in.”\nMENU: “Maybe we’ll learn something.”",
+    "resolutionDialogue": "MENU: “Are we missing something here?”\nMENU: “Some strange and interesting things recorded here, but none of it seems very familiar.”\nMENU: “This kind of magic-augmented tech might be beyond our ability to analyze right now.”\nMENU: “What the hell?”\nMENU: “No secret codes, no keys, no tunnels, no clue to get into the damn office...”\nMENU: “Let’s see if Mina has any ideas.”",
+    "requirements": [
+      {
+        "description": "Complete SQ100",
+        "type": "QUEST",
+        "index": 3100,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Make 5 Scavenging Rolls at Black Pool",
+        "deltaType": "INC",
+        "type": "SCAV_CLAIM_NODE",
+        "index": 59,
+        "value": 5
+      }
+    ],
+    "rewards": [
+      {
+        "description": "2x Elders Loyalty",
+        "type": "REPUTATION",
+        "index": 2,
+        "value": 2,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ102",
+    "index": 3102,
+    "status": "In Game",
+    "title": "Find a Needle in the Haystack",
+    "daily": false,
+    "type": "MAIN",
+    "giver": "MINA",
+    "introDialogue": "MINA: “I’m afraid I have nothing for you when it comes to that ‘server’.”\nMINA: “However, you might be interested in something else.”\nMINA: “That passage you opened between the cave and the junkyard. It called my attention to a part of this world it seems you hadn’t noticed before.”\nMINA: “You know, that tiny path between the tallest piles of scrap.”\nMINA: “I detect an instance of magic there.”\nMINA: “All sorts of forgotten things seem to pile up here.”\nMINA: “There’s bound to be something good in all the garbage once in a while.”\nMINA: “It’ll be like looking for a needle in a haystack, but I’ll help you out.”",
+    "resolutionDialogue": "MINA: “Ooh, I wonder how a ferryman’s ring got left behind in this junkyard?”\nMINA: “However it happened, it belongs to you now.”\nMINA: “You might find it a useful tool to get certain individuals to open up.”\nMINA: “You’ve seen them around. They haven’t been very talkative.”\nMINA: “Remember where you saw them? Skeletons and that sort of thing?”\nMINA: “Lost souls like that are blinded by their own cognition. They haven’t accepted the situation.”\nMINA: “Convinced they’ve met a permanent end, they may degrade and withdraw from the world.”\nMINA: “The ring is like a badge that marks you as someone who can help.”\nMINA: “Of course, you aren’t obligated to follow through.”",
+    "requirements": [
+      {
+        "description": "Complete SQ101",
+        "type": "QUEST",
+        "index": 3101,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Make 50 Scavenging Rolls at Mouth of Scrap",
+        "deltaType": "INC",
+        "type": "SCAV_CLAIM_NODE",
+        "index": 58,
+        "value": 50
+      }
+    ],
+    "rewards": [
+      {
+        "description": "2x Elders Loyalty,Ring of Spirits",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ104",
+    "index": 3104,
+    "status": "In Game",
+    "title": "Call Your Grandparents",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MINA",
+    "introDialogue": "MINA: “I’m not so hopeful, but while you’re here, try saying something to the old graves.”\nMENU: “Hasn’t the Operator already done that?”\nMINA: “They were silent every other time we’ve come around, yes.”\nMINA: “But now you possess that Ring. The situation may be different.”\nMINA: “If there’s anyone left, I think they would appreciate someone reaching out to them.”\nMENU: “Yeah! Giving your elders a call once in a while is just a nice thing to do.”",
+    "resolutionDialogue": "MINA: “There are no lost souls here at all. Not even remnants.”\nMINA: “And this was all too far in the past for them to be mementos of the last war.”\nMENU: “So the graves are purely symbolic. Nice decoration, huh?”\nMINA: “Symbols have power, so it’s more than just decoration.”\nMINA: “But it seems I had no reason to get sentimental.”",
+    "requirements": [
+      {
+        "description": "Own the Ring of Spirits,In Room: Trash-Strewn Graves",
+        "type": null,
+        "index": null,
+        "value": null
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Harvest for >24 hours on Trash-Strewn Graves",
+        "deltaType": "INC",
+        "type": "HARVEST_TIME",
+        "index": 26,
+        "value": 86400
+      }
+    ],
+    "rewards": [
+      {
+        "description": "2x Elders Loyalty,3x Booster Pack",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ105",
+    "index": 3105,
+    "status": "In Game",
+    "title": "Get Blood From a Stone",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MENU",
+    "introDialogue": "MENU: “Now that you have that ring, maybe you should check this clearing one more time.”\nMENU: “We didn’t find anything the last time you were through here, yeah.”\nMENU: “But now you’ve got a new approach to take.”\nMENU: “While you’re calling out, have the Kami scavenge around.”\nMENU: “They might find something left behind by whoever built this cairn.”",
+    "resolutionDialogue": "MENU: “Still nothing, huh? Now that’s weird.”\nMINA: “It may not be a burial site at all.”\nMINA: “A monument to someone, perhaps, but not a grave marker.”\nMENU: “Damn. Sorry about taking up so much of your time for nothing.”\nMENU: “Wait, you’re all dusty. Is that what I think it is?”\nMENU: “Let’s get that bottled up.”",
+    "requirements": [
+      {
+        "description": "Own the Ring of Spirits,In Room: Clearing",
+        "type": null,
+        "index": null,
+        "value": null
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Make 20 Scavenging Rolls at the Clearing",
+        "deltaType": "INC",
+        "type": "SCAV_CLAIM_NODE",
+        "index": 49,
+        "value": 20
+      }
+    ],
+    "rewards": [
+      {
+        "description": "2x Agency Reputation,2x Holy Dust",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ107",
+    "index": 3107,
+    "status": "In Game",
+    "title": "Look Who’s Talking",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MENU",
+    "introDialogue": "MENU: “The skeleton here doesn’t look very comfortable.”\nMENU: “Will it really start talking?”\nMENU: “…”\nWET BONES: “You don’t look like anyone I know. Everyone I know I don’t like.”\nMENU: “Ah!”\nWET BONES: “Closest ones are the furthest away. No trust between us. Not like that.”\nWET BONES: “Need to take a breath, but there’s no air. Nothing real here.”\nMENU: “It’s like he can see you, but he’s just kind of saying things.”\nMENU: “Doesn’t seem like he can hear me, either. He’s really dissociated.”\nMENU: “I feel bad, I really thought he was just part of the background.”\nMENU: “But if he’s stressed and needs to take a breath…”\nMENU: “I’ve got a crazy idea.”",
+    "resolutionDialogue": "WET BONES: “Aaahh, how vivid! Painful poison fills my lungs.”\nWET BONES: “Even though I don’t have any lungs.”\nWET BONES: “Strange to see a stranger walking around. Much more a kind one.”\nWET BONES: “Or is this only a prelude to some devilish torture?”\nWET BONES: “I don’t trust you. Come back another time.”\nWET BONES: “You understand.”\nWET BONES: “…”\nMENU: “I’m glad that worked.”\nMENU: “He still seems deranged, no offense, but he’s on the right track.”\nMENU: “Right?”",
+    "requirements": [
+      {
+        "description": "Own the Ring of Spirits,In Room: Shabby Deck",
+        "type": null,
+        "index": null,
+        "value": null
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Give Uninteresting Paste",
+        "deltaType": "INC",
+        "type": "ITEM_BURN",
+        "index": 21206,
+        "value": 1
+      }
+    ],
+    "rewards": [
+      {
+        "description": "4x Agency Reputation",
+        "type": "REPUTATION",
+        "index": 1,
+        "value": 4,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ108",
+    "index": 3108,
+    "status": "In Game",
+    "title": "My Ears Are Burning",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MENU",
+    "introDialogue": "MENU: “The guy over at the Shabby Deck has been calling out for you.”\nMENU: “It hasn’t been that long since you were there, has it?”\nMENU: “He’s saying he wants to tell you something, and it might take a long time.”",
+    "resolutionDialogue": "WET BONES: “…and that’s when they sealed the mouth of the cave.”\nWET BONES: “They left me behind to die in the dark.”\nWET BONES: “Although I’m still here. So I’m not dead, right?”\nWET BONES: “Or I’m somewhere dead people live.”\nWET BONES: “Can you go there if you don’t believe in it? Where am I, anyway?”\nWET BONES: “Is this the Kamigotchi World?”\nWET BONES: “…”\nWET BONES: “What is the Kamigotchi World?”\nWET BONES: “…”\nMENU: “God, this is giving me a headache. I think I worked with this guy.”\nMENU: “But I can’t remember what he looked like. I can’t even remember his real name.”\nMENU: “And at least he has a skeleton. I don’t even have a body anymore…”\nMENU: “Uh. Take these cards. You and the Kami put a lot of work in.”\nMENU: “I don’t want you to leave empty handed.”",
+    "requirements": [
+      {
+        "description": "Complete SQ107",
+        "type": "QUEST",
+        "index": 3107,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Harvest for >1 week at Shabby Deck",
+        "deltaType": "INC",
+        "type": "HARVEST_TIME",
+        "index": 71,
+        "value": 604800
+      }
+    ],
+    "rewards": [
+      {
+        "description": "5x Booster Pack,6x Agency Reputation",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ109",
+    "index": 3109,
+    "status": "In Game",
+    "title": "Get the Story Straight I",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MENU",
+    "introDialogue": "MENU: “This one has been bugging me for a long time. Even more after we got that chip.”\nMENU: “Call out with that fancy ring of yours.”\nMENU: “Maybe this skeleton will finally have something to chatter about.”\nMENU: “…”\nLOST SKELETON: “Holy shit, you look scary!”\nLOST SKELETON: “You’re going to swallow my soul, right? I don’t deserve it!”\nLOST SKELETON: “It’s love! I wasn’t doing anything wrong!”\nLOST SKELETON: “Wait, you aren’t after me? Yeah, that’s what I mean, I’m innocent.”\nMENU: “He doesn’t sound innocent.”\nLOST SKELETON: “Say, you know, I actually lost something around here.”\nLOST SKELETON: “It’s this screwdriver with a red handle. It has an ‘A’ on it, maybe.”\nLOST SKELETON: “Can you get it for me?”",
+    "resolutionDialogue": "LOST SKELETON: “Wow! You really did it!”\nLOST SKELETON: “It’s just like the one the guy at Arawn uses.”\nLOST SKELETON: “I mean, it’s my old screwdriver! Thank you!”\nMENU: “I don’t know who this guy is, but he sounds like a stalker.”\nMENU: “Doesn’t seem like I was paying much attention back then. Kind of glad.”\nLOST SKELETON: “You’re nice for being some kind of shadow person freak.”\nLOST SKELETON: “Maybe we could, uh, hang out more?”\nLOST SKELETON: “Share some information, something like that?”\nLOST SKELETON: “It’s nice to have an accomplice.”\n",
+    "requirements": [
+      {
+        "description": "Own the Ring of Spirits,In Room: Lost Skeleton",
+        "type": null,
+        "index": null,
+        "value": null
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Give 1 Screwdriver",
+        "deltaType": "INC",
+        "type": "ITEM_BURN",
+        "index": 23102,
+        "value": 1
+      }
+    ],
+    "rewards": [
+      {
+        "description": "2x Agency Reputation,1x Screwdriver",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ110",
+    "index": 3110,
+    "status": "In Game",
+    "title": "Get the Story Straight II",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MENU",
+    "introDialogue": "MENU: “The Lost Skeleton has been crying out for you.”\nMENU: “By the way, I really don’t like that I can hear them, but they can’t hear me.”\nMENU: “At first, I liked that I could whisper to you in private, sure.”\nMENU: “But now, it feels like I’m not really here.”\nMENU: “Anyway. He says he’s curious if any other employees left stuff behind.”\nMENU: “There’s that campsite in the caves, remember?”\nMENU: “Go dig around there, maybe you’ll turn something up.”",
+    "resolutionDialogue": "MENU: “I don’t know what he was expecting, but there’s nothing special here.”\nMENU: “Mostly just a bunch of cigarette butts.”\nMENU: “Actually, that might count… Let’s go tell him about it.”\nMENU: “You might not even need to bring any with you.”",
+    "requirements": [
+      {
+        "description": "Complete SQ109",
+        "type": "QUEST",
+        "index": 3109,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Make 30 Scavenging Rolls at Abandoned Campsite",
+        "deltaType": "INC",
+        "type": "SCAV_CLAIM_NODE",
+        "index": 79,
+        "value": 30
+      }
+    ],
+    "rewards": [
+      {
+        "description": "4x Agency Reputation,3x Booster Pack",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ111",
+    "index": 3111,
+    "status": "In Game",
+    "title": "Get the Story Straight III",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MENU",
+    "introDialogue": "MENU: “Head back to the Lost Skeleton, he wants to talk to you again.”\nMENU: “Knowing this weirdo’s interests, it might be important. Head over quick.”\nMENU: “And, you know…”\nMENU: “…It’s not like I want him to butt into the dialogue box like Mina…”\nMENU: “But I already hate taking messages from this guy.”",
+    "resolutionDialogue": "LOST SKELETON: “Lotta cigarette butts, huh? Lot of smokers at that company.”\nLOST SKELETON: “Mostly cigarettes. Of those mostly lights and menthols. One hand roller.”\nLOST SKELETON: “The boss? Always cigars.”\nMENU: “Oh… The smell really lingered. I just remembered.”\nLOST SKELETON: “You couldn’t get close to the doors without somebody seeing you.”\nLOST SKELETON: “Nosy, I tell you. Real slackers and gossips, am I right?”\nMENU: “NOT a slacker, thank you very much.”\nLOST SKELETON: “I got inside once. You believe me, I can tell you do.”\nLOST SKELETON: “Some weird shit went down in there. Some real Coast to Coast AM shit.”\nLOST SKELETON: “Let’s be friends, I’ll tell you about it some other time.”\nMENU: “…”\nMENU: “As much as I think I hate this person, this is the best lead we’ve got on the offices.”\nMENU: “I’ll keep listening for him. Make sure to keep in touch.”",
+    "requirements": [
+      {
+        "description": "Complete SQ110",
+        "type": "QUEST",
+        "index": 3110,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Move to Lost Skeleton",
+        "deltaType": "BOOL",
+        "type": "ROOM",
+        "index": 25,
+        "value": 0
+      }
+    ],
+    "rewards": [
+      {
+        "description": "2x Agency Reputation",
+        "type": "REPUTATION",
+        "index": 1,
+        "value": 2,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ112",
+    "index": 3112,
+    "status": "In Game",
+    "title": "See the Glass as Half Full",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MINA",
+    "introDialogue": "MINA: “My large old friend in the caves has surely lost all but his body.”\nMINA: “And I have of course accepted his loss and had you pay respects on my behalf.”\nMINA: “But a part of me remains hopeful.”\nMINA: “And another part, curious if some spiritual parasite might have taken residence in his corpse.”\nMINA: “Please take some time here and call out with the Kami at your side.”\nMINA: “If only as a favor to me.”",
+    "resolutionDialogue": "MENU: “So what do you mean that he’s lost all but his body? I thought that wasn’t really how it worked here.”\nMINA: “For human souls, no. Other things follow other rules.” \nMINA: “The skeletal giant ‘lives’, but without a mind or animating soul.”\nMINA: “The body might linger and grow for eternity, even in this form.”\nMINA: “It still pains me to see him like this, but I’m reassured it’s not worse.”",
+    "requirements": [
+      {
+        "description": "Own the Ring of Spirits,In Room: Guardian Skull",
+        "type": null,
+        "index": null,
+        "value": null
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Harvest for >3 days at Guardian Skull",
+        "deltaType": "INC",
+        "type": "HARVEST_TIME",
+        "index": 86,
+        "value": 259200
+      }
+    ],
+    "rewards": [
+      {
+        "description": "5x Booster Pack,6x Elders Loyalty",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ113",
+    "index": 3113,
+    "status": "To Deploy",
+    "title": "Airing it Out",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MINA",
+    "introDialogue": "MINA: “You’ve found two lost souls so far. Both are quite talkative.”\nMENU: “And they’re real scatterbrains.”\nMINA: “The poor Wet Bones has less focus than the Lost Skeleton.”\nMINA: “I’d like to try something with that one. It might help.”\nMINA: “First, move to the Insect Node in the forest and meditate with your Kami. Take a long time.”\nMINA: “This should briefly tint your aura with the corruption and decay of the Insect type.”\nMENU: “So that when you talk to the Bones next, you seem like a lost soul too?”\nMINA: “Exactly.”",
+    "resolutionDialogue": "MINA: “You smell disgusting, Operator. Perfect.”\nMENU: “Then it’s time to talk to those bones again.”\nMENU: “Maybe you can clean off in the underground stream afterwards.”",
+    "requirements": [
+      {
+        "description": "Complete SQ108",
+        "type": "QUEST",
+        "index": 3108,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Harvest for >10 days at Forest: Insect Node",
+        "deltaType": "INC",
+        "type": "HARVEST_TIME",
+        "index": 10,
+        "value": 864000
+      }
+    ],
+    "rewards": [
+      {
+        "description": "2x Elders Loyalty,5x Booster Pack",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ114",
+    "index": 3114,
+    "status": "To Deploy",
+    "title": "Conditioned Environment",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MENU",
+    "introDialogue": "MENU: “What do you expect to get out of them this time?”\nMINA: “Oh, I don’t know. Something different.”\nMINA: “Even if it doesn’t make a lot of sense, it might be worth hearing.”\nMENU: “We’ll find out soon!”",
+    "resolutionDialogue": "MENU: “I don’t want to sound jealous, because this person’s in a sorry state.”\nMENU: “But a body’s a body. Skeletons are kind of cool.”\nMINA: “Yes. I’ve been thinking...”\nMINA: “I’ll have to talk to you in private.”\nMINA: “For now, let’s get to business.”",
+    "requirements": [
+      {
+        "description": "Complete SQ113",
+        "type": "QUEST",
+        "index": 3113,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Move to Shabby Deck",
+        "deltaType": "BOOL",
+        "type": "ROOM",
+        "index": 71,
+        "value": 0
+      }
+    ],
+    "rewards": [
+      {
+        "description": "2x Agency Reputation",
+        "type": "REPUTATION",
+        "index": 1,
+        "value": 2,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ115",
+    "index": 3115,
+    "status": "To Deploy",
+    "title": "Dry Conversation",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MINA",
+    "introDialogue": "MENU: “I swear I saw them rattle.”\nMINA: “He must be excited to speak.”\nWET BONES: “The Herman Miller Action Office plan was the world’s first open-plan modular workspace, designed in 1964 by Robert Propst and George Nelson.”\nWET BONES: “This system was conceptualized after extensive research into how knowledge workers operate.”\nWET BONES: “The original design intention was to liberate workers’ minds and maximize their potential.”\nMENU: “What is he going on about? Worker potential?”\nWET BONES: “Height-adjustable desks to stand or sit. Movable partitions for temporary privacy.”\nWET BONES: “In a twisted inversion, budget cuts and design revisions over time led to the cubicle farms of the 90s.”\nWET BONES: “A dry and lonely prison of fabric walls.”\nWET BONES: “The only other person I really saw was the girl at the front desk.”\nWET BONES: “I’d stop and take a hard candy. Make some conversation.”\nWET BONES: “Hard candy...”\nWET BONES: “Make some conversation…”\nMINA: “He somehow makes more and less sense at the same time.”\nMENU: “Try giving him some hard candy, I guess.”\nMINA: “A lot of it.”",
+    "resolutionDialogue": "WET BONES: “Mmm.”\nWET BONES: “The memories are sweet. It’s all still here, huh.”\nWET BONES: “You know, there was someone else I saw.”\nWET BONES: “Barely.”\nWET BONES: “Always leaning against the wall by the alley.”\nWET BONES: “I called her Lean. I think we worked in different departments.”\nWET BONES: “The isolation of the 1990s cubicle farm office design was an isolating factor in the white collar workfo-”\nMENU: “Operator, let’s get out of here. I think we got everything we can out of this guy.”\nMENU: “Please.”",
+    "requirements": [
+      {
+        "description": "Complete SQ014",
+        "type": "QUEST",
+        "index": 3014,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Give 30 Honeydew Scale",
+        "deltaType": "INC",
+        "type": "ITEM_BURN",
+        "index": 11312,
+        "value": 30
+      }
+    ],
+    "rewards": [
+      {
+        "description": "7x Booster Pack,6x Elders Loyalty",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ116",
+    "index": 3116,
+    "status": "To Deploy",
+    "title": "Lost and Found",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MINA",
+    "introDialogue": "MINA: “I want you to go visit the Lost Skeleton again to speak with him.”\nMINA: “Menu seems to hate him now, but he might still be useful.” \nMENU: “I told you, he’s just a creep. A stalker.”\nMINA: “That’s useful.”\nMINA: “Anyway, go see him.”\nMINA: “Get your Kami out and stir the place up if he won’t talk right away.”",
+    "resolutionDialogue": "LOST SKELETON: “You’re not gonna find anything good here. C’mon.”\nLOST SKELETON: “Think I haven’t already combed over every inch? Find a better place.”\nMINA: “See? There he goes.”\nMINA: “By the way, note the pristine quality of those ridiculous pants.”\nMINA: “This skeleton acts like a lost soul, but…”\nMINA: “In the details, this is quite a strong self-image to maintain.”",
+    "requirements": [
+      {
+        "description": "Complete SQ111",
+        "type": "QUEST",
+        "index": 3113,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Make 5 Scavenging Rolls at Lost Skeleton",
+        "deltaType": "INC",
+        "type": "SCAV_CLAIM_NODE",
+        "index": 25,
+        "value": 5
+      }
+    ],
+    "rewards": [
+      {
+        "description": "2x Elders Loyalty,1x Booster Pack",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ117",
+    "index": 3117,
+    "status": "To Deploy",
+    "title": "Trash Pickers",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MINA",
+    "introDialogue": "MINA: “Go on. Now that you’ve got his attention, see what he wants.”\nLOST SKELETON: “You’re back, huh? I knew you wanted to be friends.”\nLOST SKELETON: “We’re not so different, huh? We want the same stuff probably.”\nLOST SKELETON: “You helped me find out some stuff about Arawn, right?”\nLOST SKELETON: “So you must also be curious. Help me pin these people down and we all get ahead.”\nLOST SKELETON: “If there’s a road to the labs, people walked it, right? Go pick up litter.”\nLOST SKELETON: “Digging through trash, that’s how you really get to know people.”\nLOST SKELETON: “Not just the kinda cigarettes they smoke or what they like to eat, either.”\nLOST SKELETON: “Sometimes they gotta downsize. They get rid of something important, but not too important.”\nLOST SKELETON: “Family photos, maybe they don’t like those people anymore.”\nLOST SKELETON: “Maybe some paperwork they forgot to shred.”\nLOST SKELETON: “Not saying you’ll get much here. Haha.”",
+    "resolutionDialogue": "MINA: “That seemed exhausting.”\nMINA: “And you’ve turned up nothing but sticks and stones. There’s no litter at all.”\nMINA: “What could he have hoped to learn from this?”\nMENU: “He’s a psycho. A moron. Who knows?”\nMINA: “Our friend here might be lost after all, but it’s an oddly focused psychosis.”\nMINA: “There may be a way to help him, even so.”\nMINA: “If he has further requests, you may as well entertain them for now.”\nMENU: “Are you serious? I think this guy is a lost cause.”\nMENU: “I’ll pass on any messages he has, though. If Mina really thinks I should.”",
+    "requirements": [
+      {
+        "description": "Complete SQ116",
+        "type": "QUEST",
+        "index": 3116,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Make 70 Scavenging Rolls at Road to Labs",
+        "deltaType": "INC",
+        "type": "SCAV_CLAIM_NODE",
+        "index": 32,
+        "value": 70
+      }
+    ],
+    "rewards": [
+      {
+        "description": "2x Elders Loyalty,5x Booster Pack",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ118",
+    "index": 3118,
+    "status": "To Deploy",
+    "title": "Janitorial Supplies",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MENU",
+    "introDialogue": "MENU: “The creep wants something. I’ll patch him through…”\nLOST SKELETON: “Hey. I have a better spot to dig through trash.”\nLOST SKELETON: “I know most of those guys went through the waterfall.”\nLOST SKELETON: “I could see it from here.”\nLOST SKELETON: “Head into the caves back there and dig around in the temple.”\nLOST SKELETON: “They camped out near the entrance, right? They’d be leaving all kinds of shit behind.”\nLOST SKELETON: “You find anything, I’ll tell you a good story.”\nLOST SKELETON: “Maybe you don’t find anything, whatever. I’ll tell you a less interesting story.”",
+    "resolutionDialogue": "LOST SKELETON: “Too bad, huh?”\nLOST SKELETON: “You win some, you lose some.”\nLOST SKELETON: “This reminds me of the last time I got in there.”\nLOST SKELETON: “Easy to get lost in that office. Lot of places look the same.”\nLOST SKELETON: “I thought I hit the goldmine, but then I couldn’t get out again.”\nLOST SKELETON: “Not without anyone finding me, I mean. I had to hide in a janitor’s closet.”\nLOST SKELETON: “Damn thing smelled like rotting meat. Worst room in the place.”\nLOST SKELETON: “That janitor was losing it. Keeping rats he poisoned.”\nLOST SKELETON: “I guess working there was getting to everybody, haha.”\nLOST SKELETON: “Hahaha…”\nMINA: “He’s demanding, and personally repellent, but interesting.”\nMINA: “Working with him has given me an idea.”\nMINA: “Menu, you might appreciate this. We’ll have to talk later.”\nMENU: “Is it about that thing you mentioned last time? Awesome!”",
+    "requirements": [
+      {
+        "description": "Complete SQ117",
+        "type": "QUEST",
+        "index": 3117,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Make 20 Scavenging Rolls at the Techno Temple",
+        "deltaType": "INC",
+        "type": "SCAV_CLAIM_NODE",
+        "index": 16,
+        "value": 20
+      }
+    ],
+    "rewards": [
+      {
+        "description": "7x Booster Pack,2x Agency Reputation",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "SQ802",
+    "index": 3802,
+    "status": "In Game",
+    "title": "Quest Diagnostics",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MENU",
+    "introDialogue": "MENU: “Excuse me. Sorry to butt in, if you’re busy.”\nMENU: “I’ve been running the usual diagnostics and defrags. Usually nothing comes up.”\nMENU: “But this time, I think there’s been a real change.”\nMENU: “It might be a long walk, depending on where you are, but can you return to the Lost Woods for me?”\nMENU: “Specifically, the place where you arrived. The big gate by the river up north.”\nMENU: “If something big changed, I want to see it on the screen.”",
+    "resolutionDialogue": "MENU: “Now that I’ve seen her, she seems familiar.”\nMENU: “I think I understand what happened.”\nMENU: “I’m retroactively experiencing altered events.”\nMENU: “Suddenly, I’ve known this Zevana from the start.”\nMENU: “She works with the Kami. I know she’s careful with them.”\nMENU: “If you were new here, she’d help you get started.”\nMENU: “Oh, you must be tired after coming here. Take this.”",
+    "requirements": [
+      {
+        "description": "Temp Quest until 3/20/26.",
+        "type": "BLOCKTIME",
+        "index": 0,
+        "value": 26541167
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Move to Torii Gate",
+        "deltaType": "BOOL",
+        "type": "ROOM",
+        "index": 3,
+        "value": 0
+      }
+    ],
+    "rewards": [
+      {
+        "description": "1x ”Neith’s River of Life” Spell Card",
+        "type": "ITEM",
+        "index": 21204,
+        "value": 1,
+        "itemName": "Neith's River of Life Spell Card"
+      }
+    ]
+  },
+  {
+    "key": "SQ803",
+    "index": 3803,
+    "status": "In Game",
+    "title": "Never Brought to Mind",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "ROB",
+    "introDialogue": "ROB: “Hey kid. I see you down the road by that red gate.”\nROB: “I feel like we’ve met before, but whatever. Let’s meet again.”\nROB: “Come on down and let’s yap.”",
+    "resolutionDialogue": "ROB: “So do you remember me? Can’t place you, myself. Just a familiar feelin’.”\nROB: “Maybe you folks all just look alike.”\nROB: “Could be I look different from time to time.”\nROB: “Does it even matter? How ‘bout this?”\nROB: “I had one of these burgers in my pocket. You can have it.”",
+    "requirements": [
+      {
+        "description": "Complete SQ802",
+        "type": "QUEST",
+        "index": 3802,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Move to Restricted Area",
+        "deltaType": "BOOL",
+        "type": "ROOM",
+        "index": 5,
+        "value": 0
+      }
+    ],
+    "rewards": [
+      {
+        "description": "1x Cheeseburger",
+        "type": "ITEM",
+        "index": 11302,
+        "value": 1,
+        "itemName": "Cheeseburger"
       }
     ]
   },
@@ -5465,7 +6818,7 @@
     "objectives": [],
     "rewards": [
       {
-        "description": "5x Booster Pack,3x \"Melkarth's Heroic Awakening\" Spell Card",
+        "description": "5x Booster Pack,3x ”Melkarth's Heroic Awakening” Spell Card",
         "type": null,
         "index": null,
         "value": null,
@@ -5494,7 +6847,7 @@
     "objectives": [],
     "rewards": [
       {
-        "description": "5x \"Melkarth's heroic awakening\" spell card",
+        "description": "5x ”Melkarth's Heroic Awakening” spell card",
         "type": "ITEM",
         "index": 11002,
         "value": 5,

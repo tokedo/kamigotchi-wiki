@@ -2,7 +2,7 @@
   {
     "index": 1,
     "name": "Brew XP Potion",
-    "status": "To Update",
+    "status": "In Game",
     "type": "CONSUMABLE",
     "output": {
       "index": 11401,
@@ -32,7 +32,7 @@
   {
     "index": 2,
     "name": "Brew Greater XP Potion",
-    "status": "To Update",
+    "status": "In Game",
     "type": "CONSUMABLE",
     "output": {
       "index": 11402,
@@ -62,7 +62,7 @@
   {
     "index": 3,
     "name": "Brew Respec Potion",
-    "status": "To Update",
+    "status": "In Game",
     "type": "CONSUMABLE",
     "output": {
       "index": 11403,
@@ -92,7 +92,7 @@
   {
     "index": 4,
     "name": "Brew Grace Potion",
-    "status": "To Update",
+    "status": "In Game",
     "type": "CONSUMABLE",
     "output": {
       "index": 11404,
@@ -127,7 +127,7 @@
   {
     "index": 5,
     "name": "Brew Bless Potion",
-    "status": "To Update",
+    "status": "In Game",
     "type": "CONSUMABLE",
     "output": {
       "index": 11405,
@@ -364,7 +364,7 @@
   {
     "index": 14,
     "name": "Mix Holy Syrup",
-    "status": "To Update",
+    "status": "In Game",
     "type": "REAGENT",
     "output": {
       "index": 1201,
@@ -389,7 +389,7 @@
   {
     "index": 15,
     "name": "Process Resin",
-    "status": "To Update",
+    "status": "In Game",
     "type": "REAGENT",
     "output": {
       "index": 1202,
@@ -464,7 +464,7 @@
   {
     "index": 18,
     "name": "Brew Hostility Potion",
-    "status": "To Update",
+    "status": "In Game",
     "type": "CONSUMABLE",
     "output": {
       "index": 11410,
@@ -499,7 +499,7 @@
   {
     "index": 19,
     "name": "Brew Energy Drink",
-    "status": "To Update",
+    "status": "In Game",
     "type": "CONSUMABLE",
     "output": {
       "index": 11409,
@@ -634,7 +634,7 @@
   {
     "index": 23,
     "name": "Craft Spirit Glue",
-    "status": "To Update",
+    "status": "In Game",
     "type": "CONSUMABLE",
     "output": {
       "index": 19001,
@@ -669,7 +669,7 @@
   {
     "index": 24,
     "name": "Craft Animistic Poison",
-    "status": "To Update",
+    "status": "In Game",
     "type": "CONSUMABLE",
     "output": {
       "index": 19101,
@@ -704,7 +704,7 @@
   {
     "index": 25,
     "name": "Craft Cthonic Blight",
-    "status": "To Update",
+    "status": "In Game",
     "type": "CONSUMABLE",
     "output": {
       "index": 19201,
@@ -771,7 +771,7 @@
   {
     "index": 28,
     "name": "Craft Toadstool Liquor",
-    "status": "To Update",
+    "status": "In Game",
     "type": "CONSUMABLE",
     "output": {
       "index": 11501,
@@ -806,7 +806,7 @@
   {
     "index": 29,
     "name": "Craft Fortified XP Potion",
-    "status": "To Update",
+    "status": "In Game",
     "type": "CONSUMABLE",
     "output": {
       "index": 11411,
@@ -1093,7 +1093,7 @@
   {
     "index": 39,
     "name": "Extract Irradiated Root",
-    "status": "To Deploy",
+    "status": "In Game",
     "type": "REAGENT",
     "output": {
       "index": 1121,
@@ -1118,7 +1118,7 @@
   {
     "index": 40,
     "name": "Craft Pale Potion",
-    "status": "To Deploy",
+    "status": "In Game",
     "type": "CONSUMABLE",
     "output": {
       "index": 11004,
@@ -1153,7 +1153,7 @@
   {
     "index": 41,
     "name": "Assemble Dowsing Rod",
-    "status": "To Deploy",
+    "status": "In Game",
     "type": "SPECIAL",
     "output": {
       "index": 100010,
