@@ -70,6 +70,13 @@ interface RawDroptable {
   Notes?: string;
 }
 
+// Wiki-side rarity overrides, keyed by item index, for items whose catalog
+// rarity does not match the rarity tier shown in the live game. Applied after
+// reading the GDD so the correction survives every re-parse.
+const RARITY_OVERRIDES: Record<number, string> = {
+  100: "Epic", // Onyx Shard — premium currency, displayed as Epic in-game
+};
+
 function parseItems() {
   const items = readCSV<RawItem>(join(GDD, "items/items.csv"));
   const effects = readCSV<RawItemEffect>(join(GDD, "items/effects.csv"));
@@ -103,7 +110,7 @@ function parseItems() {
       index,
       name: item.Name,
       type: item.Type,
-      rarity: item.Rarity,
+      rarity: RARITY_OVERRIDES[index] ?? item.Rarity,
       forTarget: item.For || null,
       flags: item.Flags ? item.Flags.split(",").map((s) => s.trim()) : [],
       // Skip effect keys with no matching row in effects.csv. On-chain, allo
