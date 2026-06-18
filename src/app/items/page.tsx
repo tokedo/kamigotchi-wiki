@@ -15,13 +15,30 @@ type Recipe = (typeof recipesData)[number];
 /*  Rarity → border color (game-style tile borders)                    */
 /* ------------------------------------------------------------------ */
 
-const RARITY_BORDER: Record<string, string> = {
-  Common: "#6b6b6b",
-  Uncommon: "#6b6b6b",
-  Rare: "#8b4513",
-  Epic: "#d946a8",
-  Legendary: "#d4c088",
+/* Rarity → in-game visual identity. `border` matches the game's frame color;
+   `text` is a slightly deeper shade of the same hue tuned for readable titles
+   on the card's light background. Common stays neutral/black, as in the game. */
+const RARITY_COLORS: Record<
+  string,
+  { border: string; text: string; glow?: string }
+> = {
+  Common: { border: "#555555", text: "#1a1a1a" },
+  Uncommon: { border: "#5cb53a", text: "#3f8f24" },
+  Rare: { border: "#3b82f6", text: "#2563eb" },
+  Epic: {
+    border: "#c92ad6",
+    text: "#a81fb8",
+    glow: "0 0 6px rgba(201, 42, 214, 0.4)",
+  },
+  Legendary: {
+    border: "#f5a623",
+    text: "#c2700a",
+    glow: "0 0 8px rgba(245, 166, 35, 0.5)",
+  },
 };
+
+const rarityColors = (rarity: string) =>
+  RARITY_COLORS[rarity] ?? RARITY_COLORS.Common;
 
 const RARITY_BG: Record<string, string> = {
   Common: "#ffffff",
@@ -29,11 +46,6 @@ const RARITY_BG: Record<string, string> = {
   Rare: "#ffffff",
   Epic: "#ffffff",
   Legendary: "#fff8ee",
-};
-
-const RARITY_GLOW: Record<string, string> = {
-  Epic: "0 0 6px rgba(217, 70, 168, 0.4)",
-  Legendary: "0 0 8px rgba(212, 192, 136, 0.5)",
 };
 
 const ALL_TYPES = [
@@ -70,9 +82,10 @@ function InventoryTile({
   onSelect: () => void;
 }) {
   const [imgErr, setImgErr] = useState(false);
-  const border = RARITY_BORDER[item.rarity] ?? "#6b6b6b";
-  const bg = RARITY_BG[item.rarity] ?? "#a8a8a8";
-  const glow = RARITY_GLOW[item.rarity];
+  const colors = rarityColors(item.rarity);
+  const border = colors.border;
+  const bg = RARITY_BG[item.rarity] ?? "#ffffff";
+  const glow = colors.glow;
   const isLegendary = item.rarity === "Legendary";
 
   return (
@@ -131,14 +144,17 @@ function ItemDetail({
 }) {
   const [imgErr, setImgErr] = useState(false);
   const recipes = recipeMap[item.index] || [];
-  const border = RARITY_BORDER[item.rarity] ?? "rgba(150,150,150,0.4)";
+  const colors = rarityColors(item.rarity);
 
   return (
     <div
       className="rounded-xl overflow-hidden shadow-2xl"
       style={{
-        border: "3px solid #555",
+        border: `3px solid ${colors.border}`,
         backgroundColor: "#f5f5f0",
+        boxShadow: colors.glow
+          ? `${colors.glow}, 0 25px 50px -12px rgba(0,0,0,0.25)`
+          : undefined,
       }}
     >
       {/* Header: icon + name + type */}
@@ -170,7 +186,10 @@ function ItemDetail({
         {/* Name + type */}
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-1">
-            <h3 className="text-base font-bold text-gray-900 leading-tight">
+            <h3
+              className="text-base font-bold leading-tight"
+              style={{ color: colors.text }}
+            >
               {item.name}
               <span className="ml-1.5 text-[11px] font-mono font-normal text-gray-600 align-middle">
                 #{item.index}
@@ -192,7 +211,10 @@ function ItemDetail({
             )}
           </div>
           {item.rarity && (
-            <span className="text-[11px] text-gray-400">
+            <span
+              className="text-[11px] font-semibold uppercase tracking-wide"
+              style={{ color: colors.text }}
+            >
               {item.rarity}
             </span>
           )}
