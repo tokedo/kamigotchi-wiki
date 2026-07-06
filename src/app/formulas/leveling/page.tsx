@@ -175,13 +175,13 @@ function potions(xp: number, size: number): string {
 
 const MILESTONES: [number, string][] = [
   [10, "Early game — a day or two of ordinary harvesting"],
-  [16, "15 SP: Tier 3 in one tree — your exclusive build pick"],
-  [26, "25 SP: Tier 4 unlocked"],
-  [32, "31 SP: the classic “finished build” level"],
-  [37, "36 SP: extended build (deep second tree)"],
-  [41, "40 SP: Tier 5 unlocked"],
-  [48, "47 SP: deep endgame — a handful of Kamis are here"],
-  [56, "55 SP: Tier 6 ultimate skill (mono-tree)"],
+  [16, "16 SP: 15 into one tree + 1 for the Tier 3 exclusive pick"],
+  [26, "26 SP: 25 in-tree + 1 to buy your first Tier 4 skill"],
+  [32, "32 SP: the classic “finished build” — a Tier 3 pick in each of two trees"],
+  [37, "37 SP: extended build (deep second tree, e.g. 16 + 21)"],
+  [41, "41 SP: 40 in-tree + 1 to buy your first Tier 5 skill"],
+  [48, "48 SP: deep endgame — a handful of Kamis are here"],
+  [56, "56 SP: 55 in one tree + 1 to buy the Tier 6 ultimate"],
 ];
 
 function XPTable() {
@@ -218,12 +218,13 @@ export default function LevelingFormulasPage() {
         <>
           <h2>Growing Your Kami</h2>
           <p>
-            Every Kami enters the world at <strong>level 1</strong>. As it
-            harvests Musu and survives the dangers of Yominet, it accumulates
+            Every Kami enters the world at <strong>level 1</strong> with
+            1 <strong>skill point</strong> already in hand. As it harvests
+            Musu and survives the dangers of Yominet, it accumulates
             experience points. Once your Kami has stored enough XP, you can
-            spend it to <strong>level up</strong> — each level grants
-            one <strong>skill point</strong> that you invest in permanent
-            bonuses through the skill trees.
+            spend it to <strong>level up</strong> — each level grants one more
+            skill point to invest in permanent bonuses through the skill
+            trees, so a Kami&apos;s total skill points always equal its level.
           </p>
           <p>
             This is the core progression loop: harvest and survive to earn XP,
@@ -290,36 +291,38 @@ export default function LevelingFormulasPage() {
             hard. The first level-up needs just 40 XP; going from level 31 to
             32 costs about 50,000. But don&apos;t think of leveling as a slow
             grind through every level — think of it in terms
-            of <strong>skill points</strong>. At level N you have banked
-            N−1 skill points, and skill tiers inside one tree unlock at 15, 25,
-            40, and 55 points invested. That maps to a handful of level
-            milestones that players actually build toward:
+            of <strong>skill points</strong>. A Kami starts at level 1 with
+            1 skill point and gains 1 per level, so at level N it has N points
+            total. Skill tiers inside one tree unlock at 15, 25, 40, and 55
+            points invested — plus 1 more point to actually buy the newly
+            unlocked skill. That maps to a handful of level milestones that
+            players actually build toward:
           </p>
           <StatTable
             headers={["Level", "Skill Points", "Why players stop here", "Total XP from L1"]}
             rows={[
               [
                 "16",
-                "15",
-                "Enough for Tier 3 in one tree — where you make your exclusive, build-defining skill pick",
+                "16",
+                "15 points into one tree unlock Tier 3, and the 16th buys your exclusive, build-defining skill pick",
                 "~4,700",
               ],
               [
                 "32",
-                "31",
-                "The classic “finished build” — a full two-tree core (e.g. 15 points to a Tier 3 pick in each of two trees)",
+                "32",
+                "The classic “finished build” — a full two-tree core (16 points to a Tier 3 pick in each of two trees)",
                 "~195,000",
               ],
               [
                 "37",
-                "36",
-                "Extended builds that go deeper into a second tree",
+                "37",
+                "Extended builds that go deeper into a second tree (e.g. 16 + 21)",
                 "~616,000",
               ],
               [
                 "56",
-                "55",
-                "All 55 points in a single tree — unlocks that tree's Tier 6 ultimate skill",
+                "56",
+                "55 points in a single tree unlock Tier 6, and the 56th buys the ultimate skill",
                 "~49,000,000",
               ],
             ]}
@@ -585,14 +588,16 @@ for precision, but the result is the same.`}
           <p>
             Each skill tree contains 18 skills — 3 per tier across 6 tiers.
             To unlock higher tiers, you need to have invested enough total
-            points within that specific tree. Since one level grants one skill
-            point, each gate also implies the earliest possible level to reach
-            it (going all-in on one tree):
+            points within that specific tree. Since a Kami has skill points
+            equal to its level (1 at level 1, +1 per level), each gate implies
+            the earliest level at which you can actually buy a skill of that
+            tier (going all-in on one tree — the gate&apos;s points, plus one
+            to spend):
           </p>
           <StatTable
-            headers={["Tier", "Tree Points Needed", "Earliest Level", "Notes"]}
+            headers={["Tier", "Tree Points Needed", "Earliest Level to Buy", "Notes"]}
             rows={[
-              ["Tier 1", "0", "2", "Available immediately"],
+              ["Tier 1", "0", "1", "Available immediately"],
               ["Tier 2", "5", "6", ""],
               ["Tier 3", "15", "16", "Mutual exclusion — pick one of three"],
               ["Tier 4", "25", "26", ""],
