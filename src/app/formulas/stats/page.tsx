@@ -47,7 +47,7 @@ export default function StatsFormulasPage() {
               ],
               [
                 "Slots",
-                "A trait-derived stat (e.g. Octahedron body +2, Cube body +1). Currently mostly cosmetic: regardless of Slots, every Kami can wear exactly one equipment item — see Equipment below.",
+                "A trait-derived stat (e.g. Octahedron body +2, Cube body +1). Regardless of Slots, every Kami can wear exactly one equipment item — see Equipment below.",
               ],
             ]}
           />
