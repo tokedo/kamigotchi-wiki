@@ -12,7 +12,7 @@ export default function Home() {
           Deep mechanics, exact formulas, and interactive databases —
           complementing the{" "}
           <a
-            href="https://docs.kamigotchi.io"
+            href="https://docs.asphodel.io/kamigotchi"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-foreground"

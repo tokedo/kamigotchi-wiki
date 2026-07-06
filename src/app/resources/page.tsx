@@ -20,7 +20,7 @@ const official: Resource[] = [
   },
   {
     name: "Official Docs",
-    url: "https://docs.kamigotchi.io",
+    url: "https://docs.asphodel.io/kamigotchi",
     description:
       "Official Kami documentation, great for new players.",
   },

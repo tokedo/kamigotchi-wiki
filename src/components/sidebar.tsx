@@ -140,7 +140,7 @@ export function Sidebar() {
             <p className="text-xs text-muted-foreground">
               Community-built resource.{" "}
               <a
-                href="https://docs.kamigotchi.io"
+                href="https://docs.asphodel.io/kamigotchi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-foreground"
