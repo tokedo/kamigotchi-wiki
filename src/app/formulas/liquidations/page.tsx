@@ -58,25 +58,33 @@ export default function LiquidationsFormulasPage() {
             the ratio of your <strong>Violence</strong> to their{" "}
             <strong>Harmony</strong>. More Violence relative to their Harmony
             means a higher threshold, which means they become killable earlier in
-            their harvest. But the relationship follows an S-curve — there are
-            diminishing returns at the extremes. You cannot simply stack Violence
-            to 100% threshold.
+            their harvest. But the relationship follows an S-curve with a hard
+            ceiling: before affinity modifiers, the threshold tops out
+            at <strong>40% of the victim&apos;s max HP</strong>, and equal
+            Violence-vs-Harmony lands at 20%. You cannot stack Violence into a
+            guaranteed kill — a healthy, rested Kami is never liquidatable.
           </p>
           <p>
-            Affinity matchups also matter. Your Kami&apos;s{" "}
-            <strong>hand affinity</strong> is compared against the victim&apos;s{" "}
-            <strong>body affinity</strong>. A strong matchup (same type) gives
-            you a significant boost. A weak matchup (mismatched non-Normal types)
-            makes the kill harder.
+            Affinity matchups also matter — and combat uses a{" "}
+            <strong>rock-paper-scissors triangle</strong>, unlike harvesting&apos;s
+            &ldquo;match the node&rdquo; rule. Your <strong>hand affinity</strong>{" "}
+            attacks the victim&apos;s <strong>body affinity</strong>:
+            EERIE beats SCRAP, SCRAP beats INSECT, INSECT beats EERIE.
           </p>
           <StatTable
-            headers={["Matchup", "Effect"]}
+            headers={["Your hand vs their body", "Threshold Multiplier"]}
             rows={[
-              ["Strong (same type)", "Kill threshold increases — easier kill"],
-              ["Weak (mismatched)", "Kill threshold decreases — harder kill"],
-              ["Neutral (Normal involved)", "No change"],
+              ["Advantage (e.g. EERIE hands vs SCRAP body)", "1.5x — much easier kill"],
+              ["Disadvantage (e.g. SCRAP hands vs EERIE body)", "0.5x — very hard kill"],
+              ["NORMAL hands vs NORMAL body", "1.2x — small edge"],
+              ["Anything else (neutral)", "1.0x"],
             ]}
           />
+          <p>
+            The 3x swing between advantage and disadvantage is bigger than any
+            realistic stat difference — a predator&apos;s hand type effectively
+            decides which bodies it hunts.
+          </p>
 
           <h3>What Happens When You Kill</h3>
           <p>
@@ -115,15 +123,33 @@ export default function LiquidationsFormulasPage() {
             target&apos;s stats and affinity before committing.
           </InfoBox>
 
+          <h3>What Predation Actually Pays</h3>
+          <p>
+            To calibrate expectations with live on-chain numbers: the whole
+            game sees on the order of <strong>200 liquidations per day</strong>,
+            and the average haul is roughly <strong>850 Musu</strong> per kill
+            (the biggest single hauls approach 4,000 — the physics of the
+            bounty cap make five-digit steals impossible). Liquidation income
+            is therefore spikier and smaller than steady harvesting — the real
+            predator economy is kills <em>plus</em> Obols: every kill pays 1
+            Obol, 5 Obols craft a Wonder Egg, and Wonder Eggs are the only
+            source of certain exclusive items. Predation is also
+            the enforcement mechanism that keeps everyone else honest about
+            HP management.
+          </p>
+
           <h3>Death and Revival</h3>
           <p>
             When a Kami dies — whether from a kill or from harvest strain draining
             HP to zero — it enters the DEAD state. Dead Kamis are completely
             locked out: no harvesting, no leveling, no equipping, no quests, no
-            marketplace access. To bring a Kami back you need{" "}
-            <strong>33 Onyx Shards</strong>, and it revives with only{" "}
-            <strong>33 HP</strong> regardless of max health. After revival it
-            enters RESTING state and begins passively healing through metabolism.
+            marketplace access. There are two ways back: pay{" "}
+            <strong>33 Onyx Shards</strong> (revives with 33 HP), or feed a{" "}
+            <strong>Red Ribbon Gummy</strong> item (revives with 10 HP). Since
+            gummies are tradable and Onyx has real-money value, most players
+            keep gummies stocked and treat the Onyx route as the fallback.
+            Either way the Kami returns to RESTING nearly empty and heals
+            passively from there.
           </p>
 
           <h3>Skills That Shape Combat</h3>
@@ -142,6 +168,14 @@ export default function LiquidationsFormulasPage() {
             for a random item reward. The Kami&apos;s NFT is burned to a dead
             address — unlike normal death, there is no revival. It is gone
             forever.
+          </p>
+          <p>
+            Why would anyone do this? Because the sacrifice droptables are the
+            source of <strong>pet equipment</strong> — the wearable items
+            (Critters, Ledgers, Wraths, Contempt masks, and the rest) that give
+            Kamis their equipment bonuses. In practice, players buy cheap
+            low-stat Kamis off the market specifically as sacrifice fodder to
+            gear up their real roster.
           </p>
           <p>
             The process uses a commit-reveal pattern: you commit the sacrifice
@@ -265,18 +299,21 @@ export default function LiquidationsFormulasPage() {
             {`efficacy = baseEfficacy + affinityShift + (atkBonus − defBonus)`}
           </FormulaBlock>
           <StatTable
-            headers={["Affinity Matchup", "Body Shift", "Hand Shift"]}
+            headers={["Your hand vs their body", "Efficacy Shift", "Resulting Multiplier"]}
             rows={[
-              ["Strong (same type vs body)", "+650", "+350"],
-              ["Weak (mismatched non-Normal)", "-250", "-100"],
-              ["Neutral (Normal involved)", "0", "0"],
+              ["Advantage (EERIE→SCRAP, SCRAP→INSECT, INSECT→EERIE)", "+500", "1.5x"],
+              ["Disadvantage (the reverse direction)", "−500", "0.5x"],
+              ["NORMAL vs NORMAL", "+200", "1.2x"],
+              ["Any other combination", "0", "1.0x"],
             ]}
           />
           <p>
-            A strong affinity matchup can boost your effective threshold by up to
-            +1,000 (body + hand shifts combined). A weak matchup penalizes by up
-            to -350. Skills from the Predator tree add to your ATK_THRESHOLD_RATIO,
-            while Guardian skills add to the victim&apos;s DEF_THRESHOLD_RATIO.
+            Note this is a <strong>single check</strong> — attacker&apos;s hand
+            vs victim&apos;s body on the combat triangle — unlike harvesting,
+            which checks body and hand separately against the node. Skills from
+            the Predator tree add to your ATK_THRESHOLD_RATIO on top of this,
+            while Guardian skills add to the victim&apos;s DEF_THRESHOLD_RATIO,
+            and the difference shifts the multiplier further.
           </p>
 
           {/* ─── Threshold Shifts ─── */}
@@ -325,9 +362,9 @@ export default function LiquidationsFormulasPage() {
 
           <h3>Worked Example: Kill Threshold</h3>
           <p>
-            Suppose an attacker with 30 Violence targets a victim with 20
-            Harmony and 200 max HP. Both have the same affinity type (strong
-            matchup), and neither has skill bonuses:
+            Suppose an attacker with 30 Violence and EERIE hands targets a
+            SCRAP-bodied victim with 20 Harmony and 200 max HP (type
+            advantage), with no skill bonuses on either side:
           </p>
           <FormulaBlock
             label="Example Calculation"
@@ -337,22 +374,24 @@ export default function LiquidationsFormulasPage() {
               "20": "victim's Harmony stat in this example",
               "200": "victim's maximum HP in this example",
               "NormCdf": "Gaussian CDF (S-curve)",
-              "650 / 350": "body shift and hand shift for a strong (same-type) affinity matchup",
+              "1.5": "efficacy multiplier for a hand-vs-body type advantage",
             }}
           >
             {`Step 1 — Animosity:
   ln(30 / 20) = ln(1.5) ≈ 0.405
   NormCdf(0.405) ≈ 0.657  (65.7% of the S-curve)
-  animosity = 0.657 × ratio / precision
+  animosity = 0.657 × 40% ceiling ≈ 26.3% of the victim's max HP
 
-Step 2 — Efficacy (strong matchup, no bonuses):
-  efficacy = base + 650 + 350 = base + 1000
+Step 2 — Efficacy (type advantage, no bonuses):
+  efficacy = 1.0 + 0.5 = 1.5
 
 Step 3 — Threshold:
-  threshold = (animosity × efficacy) × 200 / precision
+  threshold = 26.3% × 1.5 × 200 HP ≈ 79 HP
 
-The victim becomes killable once harvest strain has drained
-their HP below this threshold value.`}
+The victim becomes killable once harvest strain drags it below
+~79 of its 200 HP. With a type DISADVANTAGE instead, the same
+numbers give only ~26 HP — the victim is nearly starving before
+it's ever in danger. That 3x swing is the triangle at work.`}
           </FormulaBlock>
           <p>
             Now compare: if the attacker had only 12 Violence against the same
@@ -369,41 +408,52 @@ their HP below this threshold value.`}
           >
             {`ln(12 / 20) = ln(0.6) ≈ -0.511
 NormCdf(-0.511) ≈ 0.305  (30.5% of the S-curve)
+animosity ≈ 0.305 × 40% ≈ 12.2% of max HP
 
-A much lower animosity — the victim would need to be far deeper
-into harvest strain before they become vulnerable.`}
+With a neutral affinity matchup (efficacy 1.0), the same 200-HP
+victim is only killable below ~24 HP — the attacker would have to
+catch it moments from starving anyway.`}
           </FormulaBlock>
 
           {/* ─── Diminishing Violence ─── */}
 
-          <h3>Diminishing Violence</h3>
+          <h3>What Violence Buys You (Real Ranges)</h3>
           <p>
-            Because animosity uses the Gaussian CDF, Violence has sharply
-            diminishing returns at high values. Consider these scenarios against
-            a victim with 20 Harmony:
+            Because animosity uses the Gaussian CDF, every point of Violence
+            matters most when you and the target are evenly matched. Here is
+            the real playing field: total Violence in the game runs from
+            single digits to roughly 40, and a well-built defensive Kami sits
+            around 22 effective Harmony. Against that defender:
           </p>
           <StatTable
-            headers={["Your Violence", "ln(V/H)", "NormCdf Result", "Relative Gain"]}
+            headers={[
+              "Your Violence",
+              "Profile",
+              "Threshold (% of victim's max HP, neutral affinity)",
+            ]}
             rows={[
-              ["10", "-0.69", "~24.5%", "—"],
-              ["20", "0.00", "~50.0%", "+25.5 points"],
-              ["40", "+0.69", "~75.5%", "+25.5 points"],
-              ["80", "+1.39", "~91.7%", "+16.2 points"],
-              ["160", "+2.08", "~98.1%", "+6.4 points"],
+              ["10", "Non-combat harvester", "~8.6%"],
+              ["15", "Average Kami", "~14%"],
+              ["22", "Even match", "20%"],
+              ["30", "Built predator", "~25%"],
+              ["40", "Best-in-game Violence", "~29%"],
             ]}
           />
           <p>
-            Going from 20 to 40 Violence (doubling) gains 25.5 percentage
-            points of CDF output. But going from 80 to 160 (also doubling)
-            gains only 6.4 points. Past a certain point, investing in Violence
-            gives diminishing returns.
+            The spread from &ldquo;average Kami&rdquo; to &ldquo;best in
+            game&rdquo; is 14% → 29% — roughly doubling the danger zone. But
+            notice the affinity lesson from the worked example above: a
+            hand-vs-body type advantage multiplies the threshold by 1.5x (and
+            a disadvantage halves it — a 3x swing), which outweighs any
+            realistic Violence difference. Type advantage beats stat stacking.
           </p>
 
           <InfoBox variant="tip">
-            The sweet spot for Violence investment is roughly 1x to 3x the
-            target&apos;s Harmony. Below that, you struggle to hit the threshold.
-            Above that, additional Violence is wasted. Smart predators scout
-            their targets and invest accordingly.
+            Practical guidance straight from these curves: 20+ base Violence
+            is the bar for a serious predator, every point up to ~1.5x the
+            target&apos;s Harmony pays well, and picking targets whose body
+            type your hands counter is worth more than any single stat point.
+            Scout the victim, not just your own sheet.
           </InfoBox>
 
           {/* ───────────────────── LOOT ───────────────────── */}
@@ -418,26 +468,23 @@ into harvest strain before they become vulnerable.`}
             label="Salvage"
             vars={{
               "salvageRatio": "percentage of the bounty the victim keeps (capped at 100%)",
-              "baseRatio": "minimum salvage ratio before any modifiers",
-              "baseOffset": "constant added to Power before scaling",
-              "victimPower": "the killed Kami's total Power stat",
-              "scaleFactor": "multiplier that converts Power into salvage percentage points",
+              "victimPower": "the killed Kami's total Power stat — 1 point = 1% kept",
               "DEF_SALVAGE_RATIO": "bonus salvage from Guardian skills and defensive equipment",
               "salvage": "final Musu amount the victim retains",
               "bounty": "victim's total uncollected harvest Musu at the time of death",
-              "precision": "internal scaling constant (1,000) used for fixed-point math",
             }}
           >
-            {`salvageRatio = baseRatio + (baseOffset + victimPower) × scaleFactor + DEF_SALVAGE_RATIO
-salvage = bounty × salvageRatio / precision
+            {`salvageRatio = victimPower × 1%  +  DEF_SALVAGE_RATIO bonuses
 
-Capped at 100% of bounty.`}
+salvage = bounty × salvageRatio      (capped at 100% of bounty)`}
           </FormulaBlock>
           <p>
-            Two things increase your salvage: higher <strong>Power</strong> on
-            the victim (your stat investment pays off even in death), and{" "}
-            <strong>DEF_SALVAGE_RATIO</strong> bonuses from Guardian skills and
-            defensive equipment.
+            With production config values, the formula collapses to something
+            memorable: <strong>each point of the victim&apos;s Power saves 1%
+            of the bounty</strong>, plus any DEF_SALVAGE_RATIO bonuses from
+            Guardian skills. A typical Kami (Power ~15) keeps about 15% of
+            what it was carrying; a high-Power harvester (Power 30) keeps 30%.
+            Your Power investment pays off even in death.
           </p>
 
           <h4>Salvage Example</h4>
@@ -445,21 +492,18 @@ Capped at 100% of bounty.`}
             label="Example"
             variant="example"
             vars={{
-              "50": "victim's Power stat in this example",
-              "10,000": "victim's uncollected harvest bounty in Musu",
-              "baseRatio": "minimum salvage ratio before modifiers",
-              "baseOffset": "constant added to Power before scaling",
-              "scaleFactor": "multiplier converting Power to salvage percentage",
+              "16": "victim's Power stat — a typical harvester",
+              "1,500": "victim's uncollected bounty in Musu (a fat but realistic target)",
             }}
           >
-            {`A Kami with 50 Power is killed while sitting on 10,000 Musu bounty.
-With default config and no skill bonuses:
+            {`A Power-16 Kami is killed sitting on a 1,500 Musu bounty.
+No salvage skill bonuses:
 
-  salvageRatio = baseRatio + (baseOffset + 50) × scaleFactor
-  salvage = 10,000 × salvageRatio / precision
+  salvageRatio = 16 × 1% = 16%
+  salvage = 1,500 × 16% = 240 Musu
 
-The victim's account receives this Musu, plus the Kami
-earns equivalent XP — a small consolation for dying.`}
+The victim's account receives 240 Musu, and the dead Kami earns
+240 XP — a small consolation for dying.`}
           </FormulaBlock>
 
           <h2>Spoils — What the Killer Gets</h2>
@@ -471,28 +515,26 @@ earns equivalent XP — a small consolation for dying.`}
             label="Spoils"
             vars={{
               "spoilsRatio": "percentage of the remaining bounty the killer steals (capped at 100%)",
-              "baseRatio": "minimum spoils ratio before any modifiers",
-              "baseOffset": "constant added to Power before scaling",
-              "attackerPower": "the killer's total Power stat",
-              "scaleFactor": "multiplier that converts Power into spoils percentage points",
+              "45": "base spoils percentage before Power",
+              "attackerPower": "the killer's total Power stat — 1 point = +1% stolen",
               "ATK_SPOILS_RATIO": "bonus spoils from Predator skills and offensive equipment",
               "spoils": "final Musu amount added to the killer's harvest bounty",
               "bounty": "victim's total uncollected harvest Musu at the time of death",
               "salvage": "Musu already claimed by the victim (subtracted before spoils)",
-              "precision": "internal scaling constant (1,000) used for fixed-point math",
             }}
           >
-            {`spoilsRatio = baseRatio + (baseOffset + attackerPower) × scaleFactor + ATK_SPOILS_RATIO
-spoils = (bounty − salvage) × spoilsRatio / precision
+            {`spoilsRatio = (45 + attackerPower) × 1%  +  ATK_SPOILS_RATIO bonuses
 
-Capped at 100% of remaining bounty.`}
+spoils = (bounty − salvage) × spoilsRatio      (capped at 100% of remainder)`}
           </FormulaBlock>
           <p>
-            Higher <strong>Power</strong> on the attacker means bigger spoils.
-            Predator skills boost the <strong>ATK_SPOILS_RATIO</strong> further.
-            Note that spoils go into your <em>harvest bounty</em>, not directly
-            into your inventory — you still need to collect your harvest to
-            actually receive the Musu.
+            Again the production numbers make it concrete: the killer steals a
+            base <strong>45% plus 1% per point of their own Power</strong> from
+            what&apos;s left after salvage. A typical predator (Power ~15)
+            takes ~60% of the remainder; Predator-tree ATK_SPOILS_RATIO skills
+            push it higher. Note that spoils land in your <em>harvest
+            bounty</em>, not directly in your inventory — you still need to
+            collect (and pay the strain) to bank the stolen Musu.
           </p>
 
           <InfoBox>
@@ -507,22 +549,21 @@ Capped at 100% of remaining bounty.`}
             label="Example"
             variant="example"
             vars={{
-              "10,000": "victim's total uncollected harvest bounty in Musu",
-              "80": "attacker's Power stat in this example",
-              "salvage": "Musu already claimed by the victim",
-              "atkSkillBonus": "ATK_SPOILS_RATIO from Predator skills",
-              "remaining": "bounty left after the victim's salvage is deducted",
+              "1,500": "victim's total uncollected bounty (from the salvage example)",
+              "240": "Musu already salvaged by the victim",
+              "20": "attacker's Power stat — a decently built predator",
             }}
           >
-            {`Continuing the example above: 10,000 Musu bounty, victim salvages
-some portion. The attacker has 80 Power and Predator skills:
+            {`Continuing the example: 1,500 Musu bounty, victim salvaged 240.
+The attacker has Power 20 and no spoils skills:
 
-  remaining = 10,000 − salvage
-  spoilsRatio = baseRatio + (baseOffset + 80) × scaleFactor + atkSkillBonus
-  spoils = remaining × spoilsRatio / precision
+  remaining = 1,500 − 240 = 1,260
+  spoilsRatio = (45 + 20) × 1% = 65%
+  spoils = 1,260 × 65% = 819 Musu
 
-The spoils are added to the attacker's harvest bounty.
-Plus, the attacker always receives 1 Obol per kill.`}
+819 Musu joins the attacker's own harvest bounty, the remaining
+441 is destroyed, and the attacker banks 1 Obol. (For scale: the
+average real kill nets ~850 Musu — this example is typical.)`}
           </FormulaBlock>
 
           {/* ───────────────────── RECOIL ───────────────────── */}
@@ -600,32 +641,27 @@ Plus, the attacker always receives 1 Obol per kill.`}
             {`recoilEfficacy = max(0, baseEfficacy + affinityShift)`}
           </FormulaBlock>
           <StatTable
-            headers={["Matchup", "Shift", "Meaning"]}
+            headers={["Defender's hand vs attacker's body", "Shift", "Meaning"]}
             rows={[
               [
                 "Advantaged (e.g., defender EERIE hand vs attacker SCRAP body)",
                 "+1000",
-                "Attacker takes more recoil",
+                "Recoil nudge doubles (1.0 → 2.0) — attacker bleeds much more",
               ],
               [
-                "Disadvantaged (opposite triangle edge)",
-                "+1000",
-                "Symmetric — same increase",
+                "Disadvantaged (the reverse triangle edge)",
+                "−1000",
+                "Recoil nudge floors at 0 — the safest possible target",
               ],
               [
-                "Neutral (different types, no edge)",
+                "Neutral (no triangle edge, or same type)",
                 "0",
-                "No change",
-              ],
-              [
-                "Same non-NORMAL type",
-                "0",
-                "No change",
+                "Baseline nudge (1.0)",
               ],
               [
                 "NORMAL vs NORMAL",
                 "+400",
-                "Special case — slight increase",
+                "Special case — mild increase (1.4)",
               ],
             ]}
           />
@@ -829,10 +865,13 @@ very small when your Harmony exceeds the victim's Violence.`}
 
           <h2>Kill Cooldown</h2>
           <p>
-            After a successful kill, your Kami enters a cooldown period before it
-            can kill again. The base cooldown can be modified by the{" "}
-            <strong>STND_COOLDOWN_SHIFT</strong> bonus from Predator skills —
-            faster cooldowns mean more kills per harvest session.
+            After a successful kill, your Kami enters the standard{" "}
+            <strong>180-second cooldown</strong> before it can act again — the
+            same cooldown that follows starting or collecting a harvest, which
+            also means a freshly arrived predator cannot strike instantly.
+            Cooldown Shift skills from the Predator tree and items like Energy
+            Drink shorten it — for a camping predator guarding one node, faster
+            cooldowns translate directly into more kills per session.
           </p>
 
           {/* ───────────────────── COMBAT BONUSES ───────────────────── */}

@@ -153,17 +153,57 @@ function SkillTreeDisplay() {
   );
 }
 
+const GREATER_XP = 15_000; // Greater XP Potion (item 11402)
+const FORTIFIED_XP = 50_000; // Fortified XP Potion (item 11411)
+
+function xpCost(level: number): number {
+  return Math.floor(40 * Math.pow(1.259, level - 1));
+}
+
+// Total XP to go from level 1 to `level`
+function xpToReach(level: number): number {
+  let total = 0;
+  for (let l = 1; l < level; l++) total += xpCost(l);
+  return total;
+}
+
+function potions(xp: number, size: number): string {
+  const n = xp / size;
+  if (n < 1) return "<1";
+  return Math.ceil(n).toLocaleString();
+}
+
+const MILESTONES: [number, string][] = [
+  [10, "Early game — a day or two of ordinary harvesting"],
+  [16, "15 SP: Tier 3 in one tree — your exclusive build pick"],
+  [26, "25 SP: Tier 4 unlocked"],
+  [32, "31 SP: the classic “finished build” level"],
+  [37, "36 SP: extended build (deep second tree)"],
+  [41, "40 SP: Tier 5 unlocked"],
+  [48, "47 SP: deep endgame — a handful of Kamis are here"],
+  [56, "55 SP: Tier 6 ultimate skill (mono-tree)"],
+];
+
 function XPTable() {
-  const rows: [number, string, string][] = [];
-  let cumulative = 0;
-  for (let level = 1; level <= 20; level++) {
-    const cost = Math.floor(40 * Math.pow(1.259, level - 1));
-    cumulative += cost;
-    rows.push([level, cost.toLocaleString(), cumulative.toLocaleString()]);
-  }
+  const rows = MILESTONES.map(([level, why]) => {
+    const cum = xpToReach(level);
+    return [
+      String(level),
+      why,
+      cum.toLocaleString(),
+      potions(cum, GREATER_XP),
+      potions(cum, FORTIFIED_XP),
+    ];
+  });
   return (
     <StatTable
-      headers={["Level", "XP to Next Level", "Cumulative XP"]}
+      headers={[
+        "Level",
+        "Why it's a target",
+        "Total XP from L1",
+        "= Greater XP Potions (15K)",
+        "= Fortified XP Potions (50K)",
+      ]}
       rows={rows}
     />
   );
@@ -224,10 +264,15 @@ export default function LevelingFormulasPage() {
           />
 
           <InfoBox variant="tip">
-            Harvesting is by far the most consistent way to earn XP. Higher
-            Power means more Musu per hour, which means more XP per hour.
-            Investing early in harvest-boosting skills compounds your leveling
-            speed over time.
+            Set your expectations with real numbers: a typical active Kami
+            harvests on the order of <strong>1,000 Musu per day</strong> (strong
+            harvester builds manage 3,000–5,000), so harvesting alone carries
+            you comfortably through the first ~20 levels. Beyond that, the
+            curve outruns your farm rate — a level 32 build costs ~195K XP,
+            which is months of passive harvest income. That&apos;s why serious
+            leveling is done by feeding <strong>XP items</strong> (see the XP
+            items table in the details section), funded by the Musu your Kamis
+            harvest.
           </InfoBox>
 
           <h4>Account XP (separate — does not level up your Kami)</h4>
@@ -238,31 +283,65 @@ export default function LevelingFormulasPage() {
             into the leveling system and cannot be used to level up your Kami.
           </p>
 
-          <h3>The Escalating Cost</h3>
+          <h3>The Levels That Matter</h3>
           <p>
-            Experience requirements follow polynomial growth — each level costs
-            roughly 26% more than the one before. The first level-up needs
-            just 40 XP, but by level 10 you are looking at 317 XP per level.
-            To put the curve in perspective: reaching level 10 costs about
-            1,400 total XP, but reaching level 20 requires over 15,000.
+            Experience requirements grow <strong>exponentially</strong> — each
+            level costs about 26% more than the one before, and that compounds
+            hard. The first level-up needs just 40 XP; going from level 31 to
+            32 costs about 50,000. But don&apos;t think of leveling as a slow
+            grind through every level — think of it in terms
+            of <strong>skill points</strong>. At level N you have banked
+            N−1 skill points, and skill tiers inside one tree unlock at 15, 25,
+            40, and 55 points invested. That maps to a handful of level
+            milestones that players actually build toward:
           </p>
           <StatTable
-            headers={["Level", "XP for This Level", "Total XP Spent"]}
+            headers={["Level", "Skill Points", "Why players stop here", "Total XP from L1"]}
             rows={[
-              ["1", "40", "40"],
-              ["2", "50", "90"],
-              ["3", "63", "153"],
-              ["5", "100", "333"],
-              ["10", "317", "1,387"],
-              ["15", "1,004", "4,723"],
-              ["20", "3,175", "15,278"],
+              [
+                "16",
+                "15",
+                "Enough for Tier 3 in one tree — where you make your exclusive, build-defining skill pick",
+                "~4,700",
+              ],
+              [
+                "32",
+                "31",
+                "The classic “finished build” — a full two-tree core (e.g. 15 points to a Tier 3 pick in each of two trees)",
+                "~195,000",
+              ],
+              [
+                "37",
+                "36",
+                "Extended builds that go deeper into a second tree",
+                "~616,000",
+              ],
+              [
+                "56",
+                "55",
+                "All 55 points in a single tree — unlocks that tree's Tier 6 ultimate skill",
+                "~49,000,000",
+              ],
             ]}
           />
           <p>
-            The growth is steep but consistent. Once you internalize the ~26%
-            jump, you can estimate how much longer each next level will take
-            based on your current harvesting rate.
+            Read that last column again: a level 32 build costs about{" "}
+            <strong>195K XP total</strong>, but the level 56 ultimate costs{" "}
+            <strong>49 million</strong> — over 250 finished level-32 builds'
+            worth of XP for one Kami. This is why in practice the population
+            clusters between level 24 and 39, and only a few dozen Kamis in the
+            entire game have ever crossed level 48.
           </p>
+          <InfoBox variant="tip">
+            Practical translation: XP is fed to Kamis mostly
+            as <strong>Fortified XP Potions</strong> (50,000 XP each). A
+            standard level 32 build costs about <strong>4 potions</strong>;
+            level 37 costs ~13; the level 56 ultimate costs ~980. Whether a
+            level is &ldquo;worth it&rdquo; is really the question &ldquo;is
+            the next skill point worth that many potions?&rdquo; — XP spent
+            past your build&apos;s last useful skill point buys nothing until
+            the next tier gate.
+          </InfoBox>
 
           <h3>What Leveling Gets You</h3>
           <p>
@@ -303,8 +382,10 @@ export default function LevelingFormulasPage() {
 
           <InfoBox>
             Made the wrong choice? You can reset all your skills with
-            a <strong>Respec Potion</strong>. It refunds every skill point
-            you have spent so you can redistribute them from scratch.
+            a <strong>Respec Potion</strong> (craftable: 1 Plastic Bottle +
+            500 Shredded Mint). It refunds every skill point you have spent so
+            you can redistribute them from scratch — so a mistake costs you
+            some Mint, not your Kami.
           </InfoBox>
 
           <h3>Good to Know</h3>
@@ -331,12 +412,13 @@ export default function LevelingFormulasPage() {
         <>
           <h2>XP Cost Curve</h2>
           <p>
-            Experience requirements follow polynomial growth with a base cost
-            of 40 XP and a per-level multiplier of 1.259 — meaning each level
-            costs about 26% more than the previous one. Reaching level 38
-            requires roughly the same total XP as progressing from level 38
-            to level 41, mirroring the kind of OSRS-style curve where later
-            levels demand enormous time investment relative to early ones.
+            Experience requirements grow exponentially, with a base cost of
+            40 XP and a per-level multiplier of 1.259 — each level costs about
+            26% more than the previous one. Compounding makes this brutal at
+            the top: reaching level 38 requires roughly the same total XP as
+            progressing from level 38 to just level 41 — an OSRS-style curve
+            where each stretch of a few levels costs as much as your entire
+            journey so far.
           </p>
           <FormulaBlock
             label="XP required to advance from a given level"
@@ -359,13 +441,20 @@ for precision, but the result is the same.`}
           </FormulaBlock>
 
           <p>
-            There is no hard level cap. The curve itself is the cap — at
-            high levels, the XP required per level grows so large that
-            progress slows to a crawl. Level 30 alone costs over 18,000 XP,
-            and reaching it requires more than 254,000 cumulative XP.
+            There is no hard level cap. The curve itself is the cap — at high
+            levels, the XP required per level grows so large that progress
+            slows to a crawl. The single level-up from 31 to 32 costs about
+            50,000 XP (more than the entire journey to level 26), and the
+            level-up from 55 to 56 costs about 12.7 million.
           </p>
 
-          <h3>Full XP Table (Levels 1-20)</h3>
+          <h3>XP Milestones and Potion Equivalents</h3>
+          <p>
+            The table below converts the curve into the units players actually
+            think in: total XP from a fresh level 1 Kami, and how many
+            Greater XP Potions (15,000 XP) or Fortified XP Potions (50,000 XP)
+            that represents.
+          </p>
           <XPTable />
 
           <h2>Kami XP Sources</h2>
@@ -393,6 +482,54 @@ for precision, but the result is the same.`}
               ],
             ]}
           />
+
+          <h2>XP Items: How Leveling Is Actually Done</h2>
+          <p>
+            Past the early levels, virtually all leveling XP comes from items
+            fed to the Kami. These are the ones that matter, from smallest to
+            largest:
+          </p>
+          <StatTable
+            headers={["Item", "XP", "Where it comes from"]}
+            rows={[
+              [
+                "XP Candy (Small / Medium / Large / Huge)",
+                "25 / 100 / 200 / 1,000",
+                "Quest rewards and giftboxes — early-game snacks, not tradable",
+              ],
+              [
+                "XP Potion",
+                "1,000",
+                "Crafted: 1 Plastic Bottle + 250 Pine Pollen (20 stamina)",
+              ],
+              [
+                "Greater XP Potion",
+                "15,000",
+                "Crafted: 1 Glass Jar + 2,500 Pine Pollen (50 stamina)",
+              ],
+              [
+                "Fortified XP Potion",
+                "50,000",
+                "Crafted: 1 Greater XP Potion + 300 Powdered Red Amber + 1 Essence of Thought (75 stamina, account level 20+)",
+              ],
+              [
+                "Cultivation Spell Cards I–IV",
+                "100 / 1,000 / 10,000 / 50,000",
+                "Drops and rewards — also heal 20–100 HP; Cultivation IV is a Fortified-potion equivalent",
+              ],
+              [
+                "Heart Crystals (Half / Full / Great)",
+                "1,000 / 15,000 / 50,000",
+                "Great Heart Crystal drops from Wonder Eggs (crafted from Obols earned by liquidating)",
+              ],
+            ]}
+          />
+          <InfoBox variant="tip">
+            Notice the crafting chain: Pine Pollen → Greater XP Potion →
+            Fortified XP Potion. This single chain is why Pine Pollen nodes
+            are permanently farmed and why Pine Pollen holds its value on the
+            player market — every serious build in the game is fed through it.
+          </InfoBox>
 
           <h2>Account XP (Separate Pool)</h2>
           <p>
@@ -446,21 +583,21 @@ for precision, but the result is the same.`}
 
           <h2>Skill Trees</h2>
           <p>
-            Each skill tree contains 18 skills organized across tiers. To
-            unlock higher tiers, you need to have invested enough total
-            points within that specific tree. The gate requirements are:
+            Each skill tree contains 18 skills — 3 per tier across 6 tiers.
+            To unlock higher tiers, you need to have invested enough total
+            points within that specific tree. Since one level grants one skill
+            point, each gate also implies the earliest possible level to reach
+            it (going all-in on one tree):
           </p>
           <StatTable
-            headers={["Tier", "Tree Points Needed", "Notes"]}
+            headers={["Tier", "Tree Points Needed", "Earliest Level", "Notes"]}
             rows={[
-              ["Tier 1", "0", "Available immediately"],
-              ["Tier 2", "5", ""],
-              ["Tier 3", "15", "Mutual exclusion — pick one of three"],
-              ["Tier 4", "25", ""],
-              ["Tier 5", "40", ""],
-              ["Tier 6", "55", "Mutual exclusion — pick one of three"],
-              ["Tier 7", "75", ""],
-              ["Tier 8", "95", ""],
+              ["Tier 1", "0", "2", "Available immediately"],
+              ["Tier 2", "5", "6", ""],
+              ["Tier 3", "15", "16", "Mutual exclusion — pick one of three"],
+              ["Tier 4", "25", "26", ""],
+              ["Tier 5", "40", "41", ""],
+              ["Tier 6", "55", "56", "Mutual exclusion — the “ultimate” skills"],
             ]}
           />
           <p>
@@ -470,6 +607,12 @@ for precision, but the result is the same.`}
             across various Predator skills, you have 15 Predator tree points
             and can unlock Predator Tier 3.
           </p>
+          <InfoBox variant="info">
+            Some player tools display lower gate values for tiers 4–6 (20/30/40)
+            — those come from a stale column in the game&apos;s data files. The
+            on-chain check uses the values above (25/40/55): tier 4 genuinely
+            requires 25 points in the tree, and the tier 6 ultimate requires 55.
+          </InfoBox>
 
           <h3>Mutual Exclusion at Tiers 3 and 6</h3>
           <p>
@@ -514,14 +657,14 @@ for precision, but the result is the same.`}
               ["Violence Shift", "Directly increases your Kami's Violence stat (attack power)", "Flat stat points"],
               ["Harmony Shift", "Directly increases your Kami's Harmony stat (defense)", "Flat stat points"],
               ["Harvest Fertility Boost", "Percentage boost to harvest node fertility", "Percentage per level"],
-              ["Harvest Intensity Boost", "Flat increase to harvest Musu output per hour", "MUSU/hr per level"],
+              ["Harvest Intensity Boost", "Strengthens the time-ramping part of your harvest rate — the longer a single harvest runs, the more this pays. The core skill for tanky “park and forget” builds", "MUSU/hr per level"],
               ["Harvest Bounty Boost", "Percentage boost to total harvest bounty", "Percentage per level"],
               ["Attack Threshold Shift", "Lowers the threshold needed to successfully attack", "Percentage per level"],
               ["Attack Threshold Ratio", "Multiplier on your attack threshold calculation", "Percentage per level"],
               ["Attack Spoils Ratio", "Increases the percentage of loot you take from kills", "Percentage per level"],
               ["Defense Threshold Shift", "Raises the threshold attackers need to overcome", "Percentage per level"],
               ["Defense Threshold Ratio", "Multiplier on your defense threshold calculation", "Percentage per level"],
-              ["Defense Salvage Ratio", "Increases the XP salvage you receive when killed", "Percentage per level"],
+              ["Defense Salvage Ratio", "Increases the share of your harvest bounty your account keeps (as Musu) when your Kami is liquidated — the Kami also gains that much XP", "Percentage per level"],
               ["Resting Recovery Boost", "Speeds up HP recovery while resting", "Percentage per level"],
               ["Strain Boost", "Reduces strain accumulation (negative values = less strain)", "Percentage per level"],
               ["Cooldown Shift", "Reduces action cooldowns (negative values = faster)", "Seconds per level"],

@@ -33,7 +33,7 @@ const sections = [
     href: "/formulas/leveling",
     icon: TrendingUp,
     description:
-      "XP requirements per level, XP sources, level caps, and skill progression curves.",
+      "XP requirements per level, milestone levels and potion costs, XP sources, and skill tree progression.",
   },
   {
     title: "Economy",

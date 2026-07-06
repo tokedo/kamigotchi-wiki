@@ -47,10 +47,34 @@ export default function StatsFormulasPage() {
               ],
               [
                 "Slots",
-                "How many pieces of equipment your Kami can wear at once. Base is 0 — slots come from traits (e.g. Octahedron body +2, Cube body +1, Lenny 1 face +1).",
+                "A trait-derived stat (e.g. Octahedron body +2, Cube body +1). Currently mostly cosmetic: regardless of Slots, every Kami can wear exactly one equipment item — see Equipment below.",
               ],
             ]}
           />
+
+          <h2>What Real Kamis Look Like</h2>
+          <p>
+            Before diving into formulas, calibrate your intuition on actual
+            numbers. Base stats are set by traits at mint and sit in a fairly
+            narrow band — a stat of 20+ is already exceptional:
+          </p>
+          <StatTable
+            headers={["Stat", "Typical (average)", "Range across all Kamis", "What counts as high"]}
+            rows={[
+              ["Health", "~90", "50 – 230", "120+ (most Kamis sit between 60 and 110)"],
+              ["Power", "~15", "3 – 29", "20+"],
+              ["Violence", "~14", "3 – 33", "20+ (the classic predator bar)"],
+              ["Harmony", "~14", "3 – 29", "20+ (elite defensive Kamis)"],
+            ]}
+          />
+          <p>
+            After a finished build (level ~32 with skills and a pet equipped),
+            effective totals typically land around 200 Health and low-20s
+            Harmony; the very tankiest Kamis in the game reach roughly 400+
+            effective Health and high-30s Harmony. If a guide or calculator
+            assumes stats like &ldquo;Harmony 100,&rdquo; it is not describing
+            this game.
+          </p>
 
           <h2>How Stats Are Built Up</h2>
           <p>
@@ -102,36 +126,49 @@ export default function StatsFormulasPage() {
             specific event happens, like finishing a harvest or dying.
           </p>
 
-          <h2>Equipment Slots</h2>
+          <h2>Equipment: One Pet Per Kami</h2>
           <p>
-            A Kami's equipment slots are determined entirely by its traits — the
-            base is 0. Some traits grant extra slots (e.g. Octahedron body +2,
-            Cube body +1, Lenny 1 face +1). Each piece of equipment takes up one
-            slot, so choose your gear wisely — equipment bonuses are some of the
-            strongest in the game.
+            All current Kami equipment goes into a single <strong>pet
+            slot</strong> — every Kami can wear exactly one pet at a time,
+            obtained by sacrificing Kamis at the Temple of the Wheel. Pets
+            grant flat stat shifts (e.g. Critters +30/40/50 Health, Ledgers
+            +3/4/5 Harmony, Wraths +3/4/5 Violence) or harvest/defense
+            percentage bonuses. Because you only get one slot, pet choice is a
+            real decision: a +50 Health pet is a different build than a +5
+            Harmony pet. (The &ldquo;Slots&rdquo; stat some traits grant does
+            not currently add extra equipment capacity.)
           </p>
 
           <h2>Strategic Considerations</h2>
 
           <h3>Harmony vs Health</h3>
           <p>
-            Both keep you alive, but in different ways. Health is a raw buffer —
-            more HP means more hits before death. Harmony, on the other hand,
-            makes you harder to liquidate in the first place, reduces strain
-            damage, and speeds up healing. A high-Harmony Kami can sustain
-            through prolonged danger; a high-Health Kami survives sudden bursts.
-            Most experienced players lean toward Harmony for PvP survivability
-            and Health for PvE endurance, but the best builds balance both.
+            Both keep you alive, but they multiply rather than compete. Think
+            of harvesting as slowly burning your Kami&apos;s HP for
+            Musu: <strong>Harmony</strong> lowers the price (less HP lost per
+            Musu harvested, faster HP regeneration while resting, and a higher
+            bar for predators trying to liquidate you),
+            while <strong>Health</strong> is the size of the fuel tank (how
+            much total Musu one harvest cycle can produce before your Kami
+            needs to rest or be fed). A high-Harmony, high-Health Kami can sit
+            on a node for many hours unattended — which is exactly what the
+            popular tanky &ldquo;intensity&rdquo; builds do. If either stat is
+            low, your Kami spends a low percentage of its life harvesting and
+            a high percentage resting or dead.
           </p>
 
           <h3>Violence vs Power</h3>
           <p>
-            Violence is your kill stat — it determines whether you can liquidate
-            other Kamis and gives a harvesting bonus through Intensity. Power
-            drives your base harvest rate and your spoils from combat. Aggressive
-            players stack Violence for the liquidation edge; farming-focused
-            players invest in Power for consistent Musu income. Hybrid builds
-            exist, but pure specialization tends to be more efficient.
+            Both are &ldquo;income&rdquo; stats, through different
+            engines. <strong>Power</strong> drives the steady, constant part
+            of your harvest rate (Fertility) — it pays from the first minute
+            and is the core stat for fast active
+            harvesters. <strong>Violence</strong> is the kill stat for
+            predators, but it also seeds the <em>Intensity</em> part of the
+            harvest rate, which ramps up the longer a single harvest runs —
+            so it pays on Kamis durable enough to stay parked for hours.
+            Predator hopefuls want 20+ base Violence; dedicated harvesters
+            want high Power with enough Harmony to keep strain affordable.
           </p>
         </>
       }
@@ -169,48 +206,59 @@ If the result is negative, it is set to 0.`}
             means double (2.0x), and -500 means half (0.5x).
           </p>
 
-          <h3>Worked Example: Building Up Health</h3>
+          <h3>Worked Example: A Real Tank Build</h3>
           <p>
-            Suppose your Kami has a base Health of 50 (from traits), you've used
-            a consumable that permanently added +10 to your Health shift, and you
-            have equipment granting a +50% Health boost (boost value of 500).
+            Here is how an actual defensive (&ldquo;Guardian&rdquo;) build
+            assembles its Health. A Kami is born with 90 base Health — a solid
+            roll. Its owner maxes two +10-Health-per-level skills (Toughness in
+            the Guardian tree and Cardio in Enlightened: +50 each) and equips
+            an Elder Critter pet (+50 Health):
           </p>
           <FormulaBlock
             variant="example"
             vars={{
-              "50": "base Health from traits",
-              "10": "flat shift from a consumable",
-              "500": "boost value representing +50%",
+              "90": "base Health from traits",
+              "150": "total shift: +50 + +50 from maxed skills, +50 from the pet",
+              "0": "boost — no percentage Health modifiers in this build",
             }}
           >
-            {`Effective Health = (50 + 10) x (1000 + 500) / 1000
-                 = 60 x 1500 / 1000
-                 = 90`}
+            {`Effective Health = (90 + 150) x (1000 + 0) / 1000
+                 = 240`}
           </FormulaBlock>
           <p>
-            Notice how the boost multiplies the <em>combined</em> base + shift,
-            not just the base. That +10 shift effectively became +15 after the
-            50% boost was applied. This is why stacking shifts before boosts is
-            so valuable — each flat point gets amplified.
+            240 effective HP from a 90-HP Kami — skills and equipment more than
+            double the trait roll. This is typical: the toughest Kamis in the
+            game run around 400+ effective Health, almost all of it from
+            flat shifts.
+          </p>
+          <p>
+            In current content, core stats (Health, Power, Violence, Harmony)
+            are modified almost exclusively through the <strong>shift</strong>{" "}
+            channel. The <strong>boost</strong> (percentage) channel exists in
+            the engine for stats too, but today&apos;s percentage effects live
+            in the harvest and combat systems instead — fertility, bounty,
+            threshold, and metabolism bonuses. So in practice: stats add,
+            harvest bonuses multiply.
           </p>
 
-          <h3>More Scenarios</h3>
+          <h3>How the Formula Behaves</h3>
           <StatTable
             headers={["Scenario", "Base", "Shift", "Boost", "Effective"]}
             rows={[
-              ["Fresh Kami, no modifiers", 50, 0, 0, 50],
-              ["After a +10 shift from a skill", 50, 10, 0, 60],
-              ["With a +50% boost only", 50, 0, 500, 75],
-              ["Shift + boost combined", 50, 10, 500, 90],
-              ["Under a -50% debuff", 50, 0, -500, 25],
-              ["Debuff on a shifted stat", 50, 10, -500, 30],
+              ["Fresh Kami, no modifiers", 90, 0, 0, 90],
+              ["One +10 Health skill level", 90, 10, 0, 100],
+              ["Both Health skills maxed", 90, 100, 0, 190],
+              ["Skills + Elder Critter pet", 90, 150, 0, 240],
+              ["(Illustrative) +50% boost on top", 90, 150, 500, 360],
+              ["(Illustrative) -50% debuff instead", 90, 150, -500, 120],
             ]}
           />
 
           <InfoBox variant="tip">
-            The last row illustrates an important point: even under a harsh -50%
-            debuff, that +10 shift still saves you 5 effective points compared to
-            having no shift at all (25 vs 30). Shifts are never wasted.
+            The boost rows show why the ordering matters: a percentage boost
+            multiplies the <em>combined</em> base + shift, so every flat point
+            you stack gets amplified by any boost applied later. If the result
+            ever goes negative, it clamps to 0.
           </InfoBox>
 
           <h2>Depletable Stats: Health and Slots</h2>
@@ -353,6 +401,11 @@ Effective = (base + total shift) x (1000 + total boost) / 1000`}
                 "Post-kill temporary effects",
               ],
               [
+                "Cooldown Set",
+                "Your Kami's cooldown is (re)set — harvest start, collect, stop, or a liquidation",
+                "Cooldown-modifying buffs like Energy Drink, consumed on their next action",
+              ],
+              [
                 "Unequip",
                 "You remove the equipment from that gear slot",
                 "Equipment stat bonuses (active while worn)",
@@ -366,12 +419,12 @@ Effective = (base + total shift) x (1000 + total boost) / 1000`}
           />
 
           <InfoBox variant="info">
-            The Cleaning Fluid item clears <em>all</em> temporary bonuses from
-            your Kami — Harvest Stop, Death, Kill/Killed, Liquidation, and Timed
-            effects are all wiped. However, it does{" "}
-            <strong>not</strong> remove permanent bonuses or equipment bonuses.
-            Useful for purging debuffs, but be aware it also strips your
-            temporary buffs.
+            The Cleaning Fluid item clears temporary bonuses from your Kami —
+            Harvest Stop, Cooldown Set, Death, Kill/Killed, Liquidation, and
+            Timed effects are all wiped. It does <strong>not</strong> remove
+            permanent bonuses or equipment bonuses. Useful for purging debuffs
+            (like a Curse Tablet applied by another player), but be aware it
+            also strips your own temporary buffs.
           </InfoBox>
 
           <h2>All Bonus Types at a Glance</h2>

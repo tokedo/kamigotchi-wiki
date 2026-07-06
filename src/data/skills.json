@@ -211,7 +211,7 @@
     "name": "Hungry",
     "tree": "Predator",
     "tier": 4,
-    "treeReq": 20,
+    "treeReq": 25,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -234,7 +234,7 @@
     "name": "Brutality",
     "tree": "Predator",
     "tier": 4,
-    "treeReq": 20,
+    "treeReq": 25,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -257,7 +257,7 @@
     "name": "Marksman",
     "tree": "Predator",
     "tier": 4,
-    "treeReq": 20,
+    "treeReq": 25,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -280,7 +280,7 @@
     "name": "Specialist",
     "tree": "Predator",
     "tier": 5,
-    "treeReq": 30,
+    "treeReq": 40,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -303,7 +303,7 @@
     "name": "First Aid",
     "tree": "Predator",
     "tier": 5,
-    "treeReq": 30,
+    "treeReq": 40,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -326,7 +326,7 @@
     "name": "Bounty Hunter",
     "tree": "Predator",
     "tier": 5,
-    "treeReq": 30,
+    "treeReq": 40,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -349,7 +349,7 @@
     "name": "Warlord",
     "tree": "Predator",
     "tier": 6,
-    "treeReq": 40,
+    "treeReq": 55,
     "max": 1,
     "cost": 1,
     "effect": {
@@ -372,7 +372,7 @@
     "name": "Lethality",
     "tree": "Predator",
     "tier": 6,
-    "treeReq": 40,
+    "treeReq": 55,
     "max": 1,
     "cost": 1,
     "effect": {
@@ -395,7 +395,7 @@
     "name": "Assassin",
     "tree": "Predator",
     "tier": 6,
-    "treeReq": 40,
+    "treeReq": 55,
     "max": 1,
     "cost": 1,
     "effect": {
@@ -625,7 +625,7 @@
     "name": "Momentum",
     "tree": "Enlightened",
     "tier": 4,
-    "treeReq": 20,
+    "treeReq": 25,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -648,7 +648,7 @@
     "name": "Therapy",
     "tree": "Enlightened",
     "tier": 4,
-    "treeReq": 20,
+    "treeReq": 25,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -671,7 +671,7 @@
     "name": "Endurance",
     "tree": "Enlightened",
     "tier": 4,
-    "treeReq": 20,
+    "treeReq": 25,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -694,7 +694,7 @@
     "name": "Regeneration",
     "tree": "Enlightened",
     "tier": 5,
-    "treeReq": 30,
+    "treeReq": 40,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -717,7 +717,7 @@
     "name": "Workout Routine",
     "tree": "Enlightened",
     "tier": 5,
-    "treeReq": 30,
+    "treeReq": 40,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -740,7 +740,7 @@
     "name": "Productivity",
     "tree": "Enlightened",
     "tier": 5,
-    "treeReq": 30,
+    "treeReq": 40,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -763,7 +763,7 @@
     "name": "Wu Wei",
     "tree": "Enlightened",
     "tier": 6,
-    "treeReq": 40,
+    "treeReq": 55,
     "max": 1,
     "cost": 1,
     "effect": {
@@ -786,7 +786,7 @@
     "name": "Spin Class",
     "tree": "Enlightened",
     "tier": 6,
-    "treeReq": 40,
+    "treeReq": 55,
     "max": 1,
     "cost": 1,
     "effect": {
@@ -809,7 +809,7 @@
     "name": "Immortality",
     "tree": "Enlightened",
     "tier": 6,
-    "treeReq": 40,
+    "treeReq": 55,
     "max": 1,
     "cost": 1,
     "effect": {
@@ -1039,7 +1039,7 @@
     "name": "Flawless",
     "tree": "Guardian",
     "tier": 4,
-    "treeReq": 20,
+    "treeReq": 25,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -1062,7 +1062,7 @@
     "name": "Dedication",
     "tree": "Guardian",
     "tier": 4,
-    "treeReq": 20,
+    "treeReq": 25,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -1085,7 +1085,7 @@
     "name": "Shielding",
     "tree": "Guardian",
     "tier": 4,
-    "treeReq": 20,
+    "treeReq": 25,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -1108,7 +1108,7 @@
     "name": "Powerhouse",
     "tree": "Guardian",
     "tier": 5,
-    "treeReq": 30,
+    "treeReq": 40,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -1131,7 +1131,7 @@
     "name": "Hefty",
     "tree": "Guardian",
     "tier": 5,
-    "treeReq": 30,
+    "treeReq": 40,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -1154,7 +1154,7 @@
     "name": "Fortress",
     "tree": "Guardian",
     "tier": 5,
-    "treeReq": 30,
+    "treeReq": 40,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -1177,7 +1177,7 @@
     "name": "Neurosis",
     "tree": "Guardian",
     "tier": 6,
-    "treeReq": 40,
+    "treeReq": 55,
     "max": 1,
     "cost": 1,
     "effect": {
@@ -1200,7 +1200,7 @@
     "name": "Undying",
     "tree": "Guardian",
     "tier": 6,
-    "treeReq": 40,
+    "treeReq": 55,
     "max": 1,
     "cost": 1,
     "effect": {
@@ -1223,7 +1223,7 @@
     "name": "Obsession",
     "tree": "Guardian",
     "tier": 6,
-    "treeReq": 40,
+    "treeReq": 55,
     "max": 1,
     "cost": 1,
     "effect": {
@@ -1453,7 +1453,7 @@
     "name": "Opportunist",
     "tree": "Harvester",
     "tier": 4,
-    "treeReq": 20,
+    "treeReq": 25,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -1476,7 +1476,7 @@
     "name": "Trading Courses",
     "tree": "Harvester",
     "tier": 4,
-    "treeReq": 20,
+    "treeReq": 25,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -1499,7 +1499,7 @@
     "name": "Index Funds",
     "tree": "Harvester",
     "tier": 4,
-    "treeReq": 20,
+    "treeReq": 25,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -1522,7 +1522,7 @@
     "name": "Time in the Market",
     "tree": "Harvester",
     "tier": 5,
-    "treeReq": 30,
+    "treeReq": 40,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -1545,7 +1545,7 @@
     "name": "Looping",
     "tree": "Harvester",
     "tier": 5,
-    "treeReq": 30,
+    "treeReq": 40,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -1568,7 +1568,7 @@
     "name": "Stimulants",
     "tree": "Harvester",
     "tier": 5,
-    "treeReq": 30,
+    "treeReq": 40,
     "max": 5,
     "cost": 1,
     "effect": {
@@ -1591,7 +1591,7 @@
     "name": "Intelligent Investor",
     "tree": "Harvester",
     "tier": 6,
-    "treeReq": 40,
+    "treeReq": 55,
     "max": 1,
     "cost": 1,
     "effect": {
@@ -1614,7 +1614,7 @@
     "name": "Paid Groupchat",
     "tree": "Harvester",
     "tier": 6,
-    "treeReq": 40,
+    "treeReq": 55,
     "max": 1,
     "cost": 1,
     "effect": {
@@ -1637,7 +1637,7 @@
     "name": "Coward",
     "tree": "Harvester",
     "tier": 6,
-    "treeReq": 40,
+    "treeReq": 55,
     "max": 1,
     "cost": 1,
     "effect": {

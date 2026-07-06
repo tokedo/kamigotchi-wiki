@@ -30,13 +30,18 @@ export default function EconomyFormulasPage() {
           </p>
           <p>
             <strong>Onyx Shards</strong> are the premium currency. They exist
-            both as an in-game item and as a blockchain token, bridgeable through
-            the Token Portal. Onyx buys premium items and Reroll Tokens (used to
-            reroll Kami traits at the auction).
+            both as an in-game item and as the $ONYX blockchain token,
+            bridgeable through the Token Portal (100 token units = 1 in-game
+            shard). Onyx buys Reroll Tokens (used to reroll Kami traits at the
+            auction), premium items, and — importantly — <strong>revives</strong>:
+            bringing a dead Kami back costs 33 shards.
           </p>
           <p>
-            <strong>Obols</strong> are a special-purpose currency tied to
-            specific quest rewards and game systems.
+            <strong>Obols</strong> are the predator&apos;s currency: you
+            earn <strong>1 Obol per liquidation</strong> (killing another
+            player&apos;s Kami), and 5 Obols craft a Wonder Egg — a lootbox
+            that is the only source of certain exclusive items. No kills, no
+            Obols.
           </p>
 
           <StatTable
@@ -49,13 +54,13 @@ export default function EconomyFormulasPage() {
               ],
               [
                 "Onyx Shards",
-                "Token Portal (deposit from blockchain)",
-                "Reroll Tokens (auction), premium items, Token Portal (withdraw)",
+                "Token Portal (deposit $ONYX from blockchain)",
+                "Kami revival (33/revive), Reroll Tokens (auction), premium items, Token Portal (withdraw)",
               ],
               [
                 "Obols",
-                "Specific quest rewards and drops",
-                "Special game systems",
+                "1 per successful liquidation",
+                "Wonder Eggs (5 Obols each) — exclusive item lootboxes",
               ],
             ]}
           />
@@ -99,7 +104,10 @@ export default function EconomyFormulasPage() {
           <h2>Player-to-Player Trading</h2>
           <p>
             You can trade items directly with other players through an{" "}
-            <strong>orderbook</strong>. Trading follows a three-step handshake:
+            <strong>orderbook</strong> — the community calls it
+            the <strong>KWOB</strong>, and it&apos;s where most of the real
+            economy happens: crafting materials, food, and XP-potion
+            ingredients all clear here. Trading follows a three-step handshake:
           </p>
           <ol>
             <li>
@@ -173,10 +181,19 @@ export default function EconomyFormulasPage() {
           <h2>Crafting</h2>
           <p>
             Crafting converts input materials into output items using predefined
-            recipes. Each recipe has a <strong>stamina cost</strong> and grants{" "}
+            recipes. Each recipe costs <strong>account stamina</strong> (your
+            operator&apos;s stat, not the Kami&apos;s) and grants{" "}
             <strong>account XP</strong>. You can craft in batches &mdash;
             everything scales linearly (inputs, outputs, stamina, and XP all
             multiply by the batch amount).
+          </p>
+          <p>
+            Stamina is the real throttle: it caps at <strong>100</strong> and
+            regenerates <strong>1 point per minute</strong>, and moving between
+            rooms costs 5 from the same pool. Expensive recipes like the
+            Fortified XP Potion cost 75 stamina — most of a full bar per craft.
+            Serious crafters restore stamina with items (e.g. Rock Candyfloss,
+            +80) instead of waiting out the clock.
           </p>
           <p>
             Some recipes require specific <strong>tools</strong> in your
@@ -683,7 +700,7 @@ Sending 10 stacks of the same item   = 15 Musu`}
             vars={{
               "recipe inputs": "materials required for a single craft of this recipe",
               "recipe outputs": "items produced by a single craft of this recipe",
-              "recipe stamina": "stamina drained from your Kami for a single craft",
+              "recipe stamina": "stamina drained from your account (the operator, not the Kami) for a single craft",
               "recipe XP": "account XP awarded for a single craft",
               "batchAmount": "how many times you are crafting the recipe in one action",
             }}
@@ -698,52 +715,59 @@ XP earned        = recipe XP      * batchAmount`}
             is no partial crafting. The XP goes to your account (not your Kami).
           </p>
 
-          <h3>Sample Recipes</h3>
+          <h3>Sample Recipes (the XP-potion chain)</h3>
+          <p>
+            These are the recipes players actually run in volume — the chain
+            that turns harvested Pine Cones into the XP potions every serious
+            build is fed with:
+          </p>
           <StatTable
-            headers={["Recipe", "Inputs", "Output", "Stamina", "XP", "Requires"]}
+            headers={["Recipe", "Inputs", "Output", "Stamina", "Requires"]}
             rows={[
               [
                 "Extract Pine Pollen",
-                "1 Pine",
+                "1 Pine Cone",
                 "500 Pine Pollen",
                 "10",
-                "25",
                 "Spice Grinder",
               ],
               [
-                "Extract Microplastics",
-                "1 Microplastics source",
-                "500 Microplastics",
-                "30",
-                "100",
-                "Spice Grinder",
-              ],
-              [
-                "Brew XP Potion",
-                "1 reagent + 250 Pine Pollen",
+                "Brew XP Potion (+1,000 XP)",
+                "1 Plastic Bottle + 250 Pine Pollen",
                 "1 XP Potion",
                 "20",
+                "Portable Burner",
+              ],
+              [
+                "Brew Greater XP Potion (+15,000 XP)",
+                "1 Glass Jar + 2,500 Pine Pollen",
+                "1 Greater XP Potion",
                 "50",
                 "Portable Burner",
+              ],
+              [
+                "Craft Fortified XP Potion (+50,000 XP)",
+                "1 Greater XP Potion + 300 Powdered Red Amber + 1 Essence of Thought",
+                "1 Fortified XP Potion",
+                "75",
+                "Portable Burner, account level 20+",
               ],
               [
                 "Brew Respec Potion",
-                "1 reagent + 500 Shredded Mint",
+                "1 Plastic Bottle + 500 Shredded Mint",
                 "1 Respec Potion",
                 "50",
-                "200",
                 "Portable Burner",
-              ],
-              [
-                "Assemble Aetheric Sextant",
-                "3 special components",
-                "1 Aetheric Sextant",
-                "100",
-                "5,000",
-                "None",
               ],
             ]}
           />
+          <p>
+            Follow the chain: one Greater XP Potion needs 2,500 Pine Pollen =
+            5 Pine Cones&apos; worth of grinding, and a Fortified adds rare
+            scavenge drops (Red Amber, Essence of Thought) on top. Multiply by
+            the ~4 Fortified potions a level-32 build costs and you can see why
+            these materials hold their value on the player market.
+          </p>
 
           <h2>Auction Pricing</h2>
           <p>

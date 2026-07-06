@@ -157,6 +157,14 @@ interface RawSkillEffect {
   Notes: string;
 }
 
+// The "Tree req" column in skills.csv (both in the GDD and in the game's
+// deployment data) is stale display data: 20/30/40 for tiers 4-6. On-chain
+// enforcement reads the KAMI_TREE_REQ config = [0, 5, 15, 25, 40, 55, ...]
+// (configs.ts:173, checked in LibSkill.sol:226-228). Player-verified: tier 4
+// unlocks at 25 tree points; the tier-6 "ultimate" needs 55 (level 56 for a
+// mono-tree build). Override per tier instead of trusting the CSV.
+const TREE_GATES: Record<number, number> = { 1: 0, 2: 5, 3: 15, 4: 25, 5: 40, 6: 55 };
+
 function parseSkills() {
   const skills = readCSV<RawSkill>(join(GDD, "skills/skills.csv"));
   const effects = readCSV<RawSkillEffect>(join(GDD, "skills/effects.csv"));
@@ -176,7 +184,7 @@ function parseSkills() {
     name: s.Name,
     tree: s.Tree,
     tier: num(s.Tier),
-    treeReq: num(s["Tree req"]),
+    treeReq: TREE_GATES[num(s.Tier)] ?? num(s["Tree req"]),
     max: num(s.Max),
     cost: num(s.Cost),
     effect: effectMap.get(s.Effect) || null,

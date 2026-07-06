@@ -81,16 +81,23 @@ export default function HarvestingFormulasPage() {
             it pays the same amount every second.
           </p>
           <p>
-            <strong>Intensity</strong> is a ramping bonus tied to your{" "}
-            <strong>Violence</strong> stat. It starts small but grows every
-            minute you stay on the node. Intensity rewards patience — but the
-            longer you camp, the more strain you accumulate and the more exposed
-            you are to liquidation.
+            <strong>Intensity</strong> is a ramping rate seeded by your{" "}
+            <strong>Violence</strong> stat: it starts small and grows every
+            minute your Kami stays on the node without interruption. Intensity
+            rewards patience — but the longer you camp, the more strain you
+            accumulate and the more exposed you are to liquidation.
           </p>
           <p>
-            For most Kamis, Fertility dominates your short-term income.
-            Intensity becomes significant in longer sessions (hours, not
-            minutes).
+            Out of the box, Fertility dominates and Intensity is a rounding
+            error. But Intensity has its own multiplier
+            (<strong>Harvest Intensity Boost</strong> from Guardian/Enlightened
+            skills and certain pets) that can scale it 5x or more. This is the
+            engine behind the popular tanky &ldquo;intensity build&rdquo;: a
+            high-Health, high-Harmony Kami with intensity skills parks on a
+            node for many hours, and its ever-growing Intensity ends up
+            out-earning Fertility entirely. Two very different archetypes,
+            same two-part formula: fast Power harvesters cash in on Fertility
+            with frequent collects; durable tanks let Intensity snowball.
           </p>
 
           <h3>Affinity Matching</h3>
@@ -153,20 +160,23 @@ export default function HarvestingFormulasPage() {
           </p>
 
           <InfoBox variant="warning">
-            A starting Kami with Power 10 and Harmony 10 can hold at most about{" "}
-            <strong>230 Musu</strong> of pending bounty — all 50 HP would be
-            spent collecting it. Higher Harmony, equipment, and strain-reduction
-            food all raise this ceiling, letting each session bank more Musu
-            before you have to stop and rest.
+            Scale of the ceiling: the weakest possible Kami (50 HP, Harmony 10)
+            can hold about <strong>230 Musu</strong> of pending bounty; a
+            typical one (90 HP, Harmony 15) about <strong>485</strong>; a
+            built tank (200+ HP, Harmony 22+) several thousand. Higher Harmony,
+            more Health, and strain-reduction food all raise the ceiling —
+            which is the whole game of building a Kami that can bank a big
+            session.
           </InfoBox>
 
           <h3>Recovery While Resting</h3>
           <p>
             When your Kami is resting (not harvesting), it passively regenerates
-            HP based on its <strong>Harmony</strong>. A Harmony-10 Kami
-            recovers about 18 HP per hour — so going from 0 to 50 HP takes
-            roughly 2.8 hours. Higher Harmony speeds this up significantly.
-            Your Kami does not heal while harvesting.
+            HP based on its <strong>Harmony</strong> — around 20 HP per hour at
+            average Harmony, so a typical 90-HP Kami needs 4–5 hours for a full
+            recharge from empty (a 200-HP tank, most of a day). Your Kami does
+            not heal while harvesting. This dead time is why healing food and
+            rest-speed bonuses matter as much as raw harvest rate.
           </p>
 
           <h3>Cooldowns and Scavenging</h3>
@@ -304,39 +314,54 @@ export default function HarvestingFormulasPage() {
               "Violence": "your Kami's Violence stat",
               "5": "Violence scaling factor",
               "Minutes on Node": "whole minutes since intensity last reset — grows over time",
-              "48": "rate divisor (derived from internal 480/10 equilibrium constant)",
+              "10": "base intensity multiplier",
+              "Intensity Boost": "sum of Harvest Intensity Boost from skills and pets (0 with none; +40 is a typical level-32 Guardian investment)",
+              "480": "rate divisor",
             }}
           >
-            {`Intensity (Musu/hr) = (Violence × 5 + Minutes on Node) / 48`}
+            {`Intensity (Musu/hr) = (Violence × 5 + Minutes on Node) × (10 + Intensity Boost) / 480`}
           </FormulaBlock>
           <p>
-            Intensity is small at first but adds up. After several hours, the
-            accumulated minutes make Intensity a meaningful addition to your
-            income. The intensity timer resets on certain actions like equipment
-            changes.
+            Two things grow this number: <strong>time on node</strong> (the
+            ramp) and <strong>Intensity Boost</strong> (the multiplier).
+            Without any boost, the multiplier is 10/480 and Intensity stays
+            marginal. Guardian-tree skills (Patience +5/level, Loyalty +15,
+            Dedication +5/level, the Obsession ultimate +25) and Automata-line
+            pets (+15 to +25) raise it dramatically. The intensity timer resets
+            when the harvest is interrupted — including equipment changes — so
+            the ramp only pays if the Kami genuinely stays put.
           </p>
 
           <h3>How Intensity Ramps Over Time</h3>
           <p>
-            For a Kami with Violence 10 and no boost items:
+            Two real archetypes, side by side. Left: an unboosted Kami with
+            Violence 10. Right: a level-32 tank build with Violence 14 and +40
+            Intensity Boost from Guardian skills (multiplier 50/480 instead of
+            10/480):
           </p>
           <StatTable
-            headers={["Time on Node", "Intensity (Musu/hr)"]}
+            headers={[
+              "Time on Node",
+              "No boost, Violence 10 (Musu/hr)",
+              "Tank build, Violence 14, +40 boost (Musu/hr)",
+            ]}
             rows={[
-              ["Just started (0 min)", "~1.0"],
-              ["1 hour (60 min)", "~2.3"],
-              ["4 hours (240 min)", "~6.0"],
-              ["8 hours (480 min)", "~11.0"],
-              ["16 hours (960 min)", "~21.0"],
+              ["Just started (0 min)", "~1.0", "~7.3"],
+              ["1 hour (60 min)", "~2.3", "~13.5"],
+              ["4 hours (240 min)", "~6.0", "~32.3"],
+              ["8 hours (480 min)", "~11.0", "~57.3"],
+              ["16 hours (960 min)", "~21.0", "~107.3"],
             ]}
           />
           <p>
-            Compare this to Fertility: a Power-10 Kami on a neutral node earns
-            15 Musu/hr from Fertility alone. At the 1-hour mark, Intensity adds
-            only ~2.3 Musu/hr on top — about 15% more. After 8 hours it reaches
-            ~11 Musu/hr, nearly doubling total output. Intensity rewards
-            patience, but Fertility is the dominant income source for most
-            sessions.
+            Compare this to Fertility: a Power-15 Kami on a neutral node earns
+            ~22.5 Musu/hr from Fertility, flat, forever. The unboosted column
+            never catches that. The tank build passes it around the 2-hour mark
+            and is earning several times more by hour 16 — <em>if</em> it can
+            survive that long on the node without collecting. That survival
+            requirement is why intensity builds stack Health and Harmony first,
+            and why they&apos;re built on Guardian skills rather than raw
+            Power.
           </p>
 
           <h2>Affinity and Efficacy</h2>
@@ -542,26 +567,32 @@ Fertility = 26 × 0.65 × 1.5 = 25.35 Musu per hour`}
 
           <h3>Diminishing Harmony</h3>
           <p>
-            Because Harmony appears in the denominator alongside a base value of
-            20, its impact follows a diminishing returns curve. Going from 10 to
-            20 Harmony drops your strain per 100 Musu from 22 to 17 HP — a big
-            improvement. But going from 50 to 60 Harmony only drops it from 10
-            to 9 HP. The first points of Harmony are the most valuable.
+            Because Harmony appears in the denominator alongside a base value
+            of 20, its impact follows a diminishing returns curve — and the
+            realistic range is narrow. Base Harmony across all Kamis runs from
+            single digits to 29 (average ~14), and even a fully built defensive
+            Kami tops out in the mid-30s effective. Within that real range:
           </p>
           <StatTable
             headers={[
               "Harmony",
+              "What it represents",
               "Strain per 100 Musu",
-              "Improvement from +10",
             ]}
             rows={[
-              ["10", "22 HP", "—"],
-              ["20", "17 HP", "-5 HP (23% less strain)"],
-              ["30", "13 HP", "-4 HP (24% less)"],
-              ["50", "10 HP", "-3 HP (23% less, over +20)"],
-              ["80", "7 HP", "-3 HP (30% less, over +30)"],
+              ["10", "Weak base roll", "22 HP"],
+              ["14", "Average base roll", "20 HP"],
+              ["22", "Good roll, or average + Harmony skills", "16 HP"],
+              ["29", "Best base roll in the game", "14 HP"],
+              ["36", "Elite roll + skills + Ledger pet (near the practical max)", "12 HP"],
             ]}
           />
+          <p>
+            From worst to best-in-game, strain per Musu nearly halves — which
+            means the same HP pool harvests almost twice the Musu per cycle.
+            That is why high-Harmony Kamis command a premium: unlike skills,
+            the base roll can never be changed.
+          </p>
 
           <h3 id="starve-cutoff">Starve Cutoff (Bounty Cap by HP)</h3>
           <p>
@@ -649,16 +680,25 @@ HP recovered = floor(Seconds Resting x HP per second)`}
           <StatTable
             headers={[
               "Harmony",
-              "HP per Second",
               "HP per Hour",
-              "Time to Full (50 HP)",
+              "0 to full: fresh Kami (90 HP)",
+              "0 to full: built tank (200 HP)",
             ]}
             rows={[
-              ["10", "0.005", "18 HP", "~2.8 hours"],
-              ["20", "0.0067", "24 HP", "~2.1 hours"],
-              ["30", "0.0083", "30 HP", "~1.7 hours"],
+              ["10", "18", "~5.0 hours", "~11.1 hours"],
+              ["14 (average)", "~20", "~4.4 hours", "~9.8 hours"],
+              ["22 (built defensive)", "~25", "~3.6 hours", "~7.9 hours"],
+              ["30", "30", "~3.0 hours", "~6.7 hours"],
             ]}
           />
+          <p>
+            This is the real bottleneck of the harvest-rest cycle: resting a
+            drained Kami takes <em>hours</em>, and the bigger your HP pool the
+            longer a full recharge takes. Rest-speed bonuses (Resting Recovery
+            Boost skills, Gumdrop-line pets) and healing food exist precisely
+            to shorten this dead time — many players feed candy instead of
+            waiting out the clock.
+          </p>
           <p>
             Healing is computed lazily — your Kami&apos;s HP only updates when
             it performs an action. The game calculates recovery based on elapsed
@@ -704,6 +744,14 @@ Tax Rate: up to 20% per taxer.
 Multiple taxes apply to the original amount, not sequentially.
 Your net = Collected Musu - sum of all taxes.`}
           </FormulaBlock>
+          <p>
+            In practice, the most common taxer you&apos;ll meet is an{" "}
+            <strong>automation service</strong>: community bots (which are
+            allowed and widely used) typically take their fee as a harvest tax
+            set when they start your Kami&apos;s harvest. When comparing your
+            in-game earnings against raw formula math, remember the formulas
+            here are gross — your net arrives after tax.
+          </p>
 
           <h2>Scavenging</h2>
           <p>
@@ -733,19 +781,22 @@ Leftover points carry over to the next cycle.`}
           <StatTable
             headers={["Tier Cost", "Node Type", "Examples"]}
             rows={[
-              ["100", "Starter nodes", "Misty Riverside, Tunnel of Trees"],
-              ["200", "Mid-tier nodes", "Forest paths, cave rooms"],
-              ["300", "Advanced nodes", "Deeper Forest Path, Airplane Crash"],
               [
-                "500",
-                "Premium nodes",
-                "Scrap Confluence, Techno Temple",
+                "100",
+                "Starter nodes (often capped to Kami level ≤15)",
+                "Misty Riverside, Tunnel of Trees, Misty Forest Path",
               ],
+              ["300", "Advanced nodes", "Blooming Tree"],
+              ["500", "Premium nodes", "Scrap Confluence, Guardian Skull"],
             ]}
           />
           <p>
             Higher tier costs mean more harvesting per reward, but premium
-            nodes tend to have rarer and more valuable loot in their droptables.
+            nodes tend to have rarer and more valuable loot. This is a real
+            economic decision: players park Kamis on specific nodes purely for
+            the scavenge — for example, farming a node whose droptable carries
+            a high-demand crafting material can out-earn the Musu itself when
+            you sell the drops on the player market.
           </p>
 
           <h2>Harvest Boosts from Items</h2>
@@ -808,12 +859,14 @@ Leftover points carry over to the next cycle.`}
 
           <h3>Power vs Violence for Harvesting</h3>
           <p>
-            Power directly drives Fertility, which is your primary income source.
-            Violence drives Intensity, which is small for short sessions and
-            only becomes meaningful after hours of continuous harvesting. For
-            most players, <strong>Power is the better investment</strong> for
-            harvest income. Violence has other uses (combat, liquidation) but is
-            a secondary harvest stat.
+            Which stat earns more depends entirely on the build. Power drives
+            Fertility — instant, steady, best when you collect often and match
+            affinities. Violence seeds Intensity, which is negligible without
+            investment but becomes the <em>primary</em> income engine once you
+            stack Harvest Intensity Boost skills on a Kami durable enough to
+            park for many hours. Rule of thumb: active play and fast cycles →
+            Power; unattended long parks on a tanky Kami → Intensity. Trying
+            to do both halfway does neither well.
           </p>
 
           <h3>Harmony: Double Duty</h3>
@@ -831,9 +884,10 @@ Leftover points carry over to the next cycle.`}
             the pieces connect.
           </p>
           <InfoBox variant="tip">
-            <strong>Setup:</strong> A Kami with Power 15, Violence 10, Harmony
-            10, body=EERIE, hand=EERIE, harvesting an EERIE node. No item
-            bonuses. Starting at 50 HP.
+            <strong>Setup:</strong> A realistically average Kami — Power 15,
+            Violence 14, Harmony 15, 90 max HP — with body=EERIE and
+            hand=EERIE, harvesting an EERIE node. No skills or item bonuses.
+            Starting at full 90 HP.
           </InfoBox>
 
           <h3>1. Efficacy</h3>
@@ -867,57 +921,62 @@ Leftover points carry over to the next cycle.`}
           <FormulaBlock
             variant="example"
             vars={{
-              "50": "Kami's current HP",
-              "10": "Kami's Harmony stat",
+              "90": "Kami's current HP",
+              "15": "Kami's Harmony stat",
               "20": "base buffer added to Harmony",
               "6.5": "base strain rate constant",
             }}
           >
-            {`Max Musu = floor(50 x (10 + 20) / 6.5) = floor(230.8) = 230 Musu`}
+            {`Max Musu = floor(90 x (15 + 20) / 6.5) = floor(484.6) = 484 Musu`}
           </FormulaBlock>
 
           <h3>4. How Long Until the Cap?</h3>
           <p>
-            At 45 Musu per hour from Fertility (ignoring Intensity, which adds
-            only a small amount at this scale), pending bounty reaches the 230
-            Musu cap in about:
+            At 45 Musu per hour from Fertility, pending bounty would reach the
+            484 Musu cap in about 10.7 hours — Intensity (starting at ~1.5
+            Musu/hr and ramping) shaves that to roughly 9.5:
           </p>
           <FormulaBlock
             variant="example"
             vars={{
-              "230": "bounty cap from step 3",
+              "484": "bounty cap from step 3",
               "45": "Fertility rate in Musu per hour (from step 2)",
             }}
           >
-            {`230 / 45 = ~5.1 hours`}
+            {`484 / 45 = ~10.7 hours (a bit under 10 with Intensity ramping)`}
           </FormulaBlock>
 
           <h3>5. Strain Check</h3>
           <p>
-            After the cap, collecting all 230 Musu costs:
+            After the cap, collecting all 484 Musu costs:
           </p>
           <FormulaBlock
             variant="example"
             vars={{
-              "230": "total Musu collected",
+              "484": "total Musu collected",
               "6.5": "base strain rate constant",
-              "30": "Harmony (10) + base buffer (20)",
+              "35": "Harmony (15) + base buffer (20)",
             }}
           >
-            {`Strain = ceil(230 x 6.5 / 30) = ceil(49.8) = 50 HP
+            {`Strain = ceil(484 x 6.5 / 35) = ceil(89.9) = 90 HP
 
-Collecting the full cap spends all 50 HP. The cap guarantees strain can
+Collecting the full cap spends all 90 HP. The cap guarantees strain can
 never exceed your HP — the bounty stops growing here rather than letting
 the Kami starve.`}
           </FormulaBlock>
 
           <h3>6. Practical Strategy</h3>
           <p>
-            In practice, you would <strong>not</strong> harvest to death. You
-            would collect around 150-200 Musu, stop, rest for a couple hours to
-            heal, then start again. A harvest-rest-harvest cycle is the
-            sustainable way to farm. Using strain-reduction food or investing in
-            Harmony extends each cycle significantly.
+            In practice, you would <strong>not</strong> harvest to death — a
+            dead Kami needs a revive, and a Kami hovering at low HP with a fat
+            uncollected bounty is exactly what predators scan for. You would
+            collect somewhere in the 250–400 Musu range, rest a few hours (or
+            feed healing food to skip the wait), and go again. On-chain data
+            bears this out: the median collect across all players is roughly
+            280 Musu, and a typical active Kami banks around 1,000 Musu per
+            day — while well-built, well-managed harvesters clear 3,000–5,000.
+            The gap between those numbers is exactly the stats, skills,
+            affinity matching, and cycle discipline described on this page.
           </p>
 
           <h2>Liquidation (PvP Raiding)</h2>
