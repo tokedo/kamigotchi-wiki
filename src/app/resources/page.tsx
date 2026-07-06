@@ -54,6 +54,16 @@ const community: Resource[] = [
   },
 ];
 
+const aiResearch: Resource[] = [
+  {
+    name: "KamiBench",
+    url: "https://github.com/tokedo/KamiBench",
+    description:
+      "Benchmark for long-horizon AI agents playing Kamigotchi on-chain.",
+    author: { name: "Tokedo", url: "https://x.com/0xTokedo" },
+  },
+];
+
 function ResourceCard({ resource }: { resource: Resource }) {
   return (
     <div className="rounded-lg border-2 border-border bg-card p-5">
@@ -121,10 +131,19 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section>
+      <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">Community</h2>
         <div className="grid gap-3 sm:grid-cols-2">
           {community.map((r) => (
+            <ResourceCard key={r.url} resource={r} />
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-lg font-bold mb-4">AI Research</h2>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {aiResearch.map((r) => (
             <ResourceCard key={r.url} resource={r} />
           ))}
         </div>
