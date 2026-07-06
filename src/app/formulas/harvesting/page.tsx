@@ -570,7 +570,7 @@ Fertility = 26 × 0.65 × 1.5 = 25.35 Musu per hour`}
             Because Harmony appears in the denominator alongside a base value
             of 20, its impact follows a diminishing returns curve — and the
             realistic range is narrow. Base Harmony across all Kamis runs from
-            single digits to 29 (average ~14), and even a fully built defensive
+            the floor of 10 to 29 (average ~14), and even a fully built defensive
             Kami tops out in the mid-30s effective. Within that real range:
           </p>
           <StatTable

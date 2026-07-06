@@ -56,15 +56,16 @@ export default function StatsFormulasPage() {
           <p>
             Before diving into formulas, calibrate your intuition on actual
             numbers. Base stats are set by traits at mint and sit in a fairly
-            narrow band — a stat of 20+ is already exceptional:
+            narrow band — 10 is the floor for Power, Violence, and Harmony
+            (50 for Health), and a stat of 20+ is already exceptional:
           </p>
           <StatTable
             headers={["Stat", "Typical (average)", "Range across all Kamis", "What counts as high"]}
             rows={[
               ["Health", "~90", "50 – 230", "120+ (most Kamis sit between 60 and 110)"],
-              ["Power", "~15", "3 – 29", "20+"],
-              ["Violence", "~14", "3 – 33", "20+ (the classic predator bar)"],
-              ["Harmony", "~14", "3 – 29", "20+ (elite defensive Kamis)"],
+              ["Power", "~15", "10 – 29", "20+"],
+              ["Violence", "~14", "10 – 33", "20+ (the classic predator bar)"],
+              ["Harmony", "~14", "10 – 29", "20+ (elite defensive Kamis)"],
             ]}
           />
           <p>

@@ -421,8 +421,8 @@ catch it moments from starving anyway.`}
           <p>
             Because animosity uses the Gaussian CDF, every point of Violence
             matters most when you and the target are evenly matched. Here is
-            the real playing field: total Violence in the game runs from
-            single digits to roughly 40, and a well-built defensive Kami sits
+            the real playing field: total Violence in the game runs from the
+            base floor of 10 to roughly 40, and a well-built defensive Kami sits
             around 22 effective Harmony. Against that defender:
           </p>
           <StatTable
