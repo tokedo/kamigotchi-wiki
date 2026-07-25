@@ -22,29 +22,47 @@ It contains:
 - `mechanics/` — system logic, formulas, rules (organized by domain)
 - `catalogs/` — game data (CSV + markdown): items, skills, quests, rooms,
   NPCs, traits, factions, assets
-- `meta/coverage.md` — index of all 48 mechanic files
+- `meta/coverage.md` — index of every mechanic file
 - `meta/next-step.md` — catalog inventory with file counts
 
 ### Key catalogs
-| Data | Path | Records |
-|------|------|---------|
-| Items | `catalogs/items/items.csv` | 177 items |
-| Skills | `catalogs/skills/skills.csv` | 71 skills |
-| Quests | `catalogs/quests/quests.csv` | 155 quests |
-| Rooms | `catalogs/rooms/rooms.csv` | 70 rooms |
-| Nodes | `catalogs/rooms/nodes.csv` | 64 nodes |
-| Traits | `catalogs/traits/` | 135 traits (5 CSVs) |
-| NPCs | `catalogs/npcs/` | 2 NPCs + 19 shop listings |
-| Recipes | `catalogs/crafting/recipes.csv` | 41 recipes |
-| Factions | `catalogs/factions/factions.csv` | 3 factions |
-| Quest dialogues | `catalogs/quests/dialogues/` | 106 dialogue lines |
-| Quest chains | `catalogs/quests/quest-lines.md` | Dependency graph |
+
+Record counts are deliberately not repeated here — they go stale every time
+the GDD syncs. Read them from the GDD itself: its root `README.md` lists the
+headline counts, and each catalog's own `README.md` has the per-file table.
+The wiki reads these CSVs at build time (`scripts/parse-catalogs.ts` → `src/data/*.json`),
+so page-level counts should be derived from the parsed JSON rather than typed
+into prose.
+
+| Data | Path |
+|------|------|
+| Items | `catalogs/items/items.csv` |
+| Skills | `catalogs/skills/skills.csv` |
+| Quests | `catalogs/quests/quests.csv` |
+| Rooms | `catalogs/rooms/rooms.csv` |
+| Nodes | `catalogs/rooms/nodes.csv` |
+| Traits | `catalogs/traits/` (5 CSVs) |
+| NPCs | `catalogs/npcs/` (registry + shop listings) |
+| Recipes | `catalogs/crafting/recipes.csv` |
+| Factions | `catalogs/factions/factions.csv` |
+| Quest dialogues | `catalogs/quests/dialogues/` |
+| Quest chains | `catalogs/quests/quest-lines.md` (dependency graph) |
 
 ## Rules
 
 - NEVER reference or read the original Kamigotchi source code
-- The GDD is verified against source at commit d9b50091 — trust it
+- The GDD is verified against game source, and its root `README.md` names the
+  exact commit it was extracted from ("Extracted from source code at commit
+  ..."). That line is the authority on how current the GDD is — trust the GDD,
+  and never hardcode a commit hash here or in wiki content
 - If something in the GDD is unclear, flag it with a TODO rather than guessing
+- If the GDD marks something UNCERTAIN, or defines a value it doubts is
+  actually enforced, document the behavior that really occurs or omit it —
+  never publish a number the GDD itself does not trust
+- Player-facing content is a **present-tense snapshot**, never a changelog: no
+  "new", "now", "updated", "added", "removed", "recently", "previously", "no
+  longer", "as of", no patch numbers and no dates. Describe how the game works,
+  full stop
 - Write for players, not engineers — no Solidity, no entity IDs, no WAD math
 - Keep technical precision: don't simplify formulas to the point of being wrong
 - Use game terminology (Kami, Musu, Obol, Harmony) not code terms (uint256,
@@ -88,6 +106,6 @@ Sidebar sections:
 - Combat (killing, liquidation, sacrifice)
 - World (rooms, nodes, scavenging, day/night)
 - Progression (skills, quests, factions, goals)
-- Marketplace (Kami market, auctions, token portal, VIP)
+- Marketplace (Kami market, auctions, item pools, token portal, VIP)
 - Databases (items, quests, rooms — interactive)
 - Tools (skill calculator — future)
