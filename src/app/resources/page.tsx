@@ -57,7 +57,7 @@ const community: Resource[] = [
 const aiResearch: Resource[] = [
   {
     name: "KamiBench",
-    url: "https://www.kamibench.xyz/",
+    url: "https://www.kamibench.ai/",
     description:
       "Benchmark for long-horizon AI agents playing Kamigotchi on-chain.",
     author: { name: "Tokedo", url: "https://x.com/0xTokedo" },
