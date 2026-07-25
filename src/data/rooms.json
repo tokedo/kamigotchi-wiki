@@ -1166,7 +1166,7 @@
     "node": {
       "name": "Shady Path",
       "affinity": "Normal",
-      "levelLimit": 0,
+      "levelLimit": 15,
       "yieldIndex": 1,
       "yieldName": "MUSU",
       "scavCost": 200,

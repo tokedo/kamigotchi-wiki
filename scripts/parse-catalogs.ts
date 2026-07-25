@@ -332,7 +332,12 @@ interface RawScavDT {
 }
 
 function parseRooms(itemMap: Map<number, string>) {
-  const rooms = readCSV<RawRoom>(join(GDD, "rooms/rooms.csv"));
+  // Room index 0 ("deadzone") is a debug placeholder that players cannot
+  // enter — its own description says so. Drop it so counts, search, and the
+  // map grid only ever show reachable rooms.
+  const rooms = readCSV<RawRoom>(join(GDD, "rooms/rooms.csv")).filter(
+    (r) => num(r.Index) !== 0
+  );
   const nodes = readCSV<RawNode>(join(GDD, "rooms/nodes.csv"));
   const scavDTs = readCSV<RawScavDT>(join(GDD, "rooms/scavenge-droptables.csv"));
 

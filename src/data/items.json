@@ -817,7 +817,7 @@
     ],
     "requirements": null,
     "status": "In Game",
-    "description": "The card depicts the figure of an ancient god silhouetted by a wreath of energy. Melkarth grants a blessing of rebirth to fallen warriors. Activating this Spell Card will revive a Kamigotchi that has been incapacitated."
+    "description": "The card depicts the figure of an ancient god silhouetted by a wreath of energy that obscures the details of his face and attire. Melkarth grants a blessing of rebirth to fallen warriors. Activating this Spell Card will revive a Kamigotchi that has been incapacitated."
   },
   {
     "index": 11003,
@@ -1902,7 +1902,7 @@
         "descriptor": "STND_COOLDOWN_SHIFT",
         "index": 0,
         "value": -30,
-        "terminator": "UPON_HARVEST_ACTION",
+        "terminator": "UPON_COOLDOWN_SET",
         "droptable": null
       }
     ],
@@ -2161,7 +2161,7 @@
     ],
     "requirements": null,
     "status": "In Game",
-    "description": "Highly corrosive. Can be used to clear barriers of plant or fungal matter. It can also be used on a Kamigotchi to lower its defenses."
+    "description": "Highly corrosive. Can be used to clear barriers of plant or fungal matter. It can also be used on a Kamigotchi to lower its defenses. The Blight is particularly dangerous to Normal-type Kami."
   },
   {
     "index": 19301,
@@ -2177,7 +2177,7 @@
         "descriptor": "ATK_THRESHOLD_SHIFT",
         "index": 0,
         "value": -300,
-        "terminator": "UPON_KILL_OR_KILLED",
+        "terminator": "UPON_DEATH",
         "droptable": null
       }
     ],
@@ -2204,7 +2204,7 @@
       }
     ],
     "requirements": null,
-    "status": "In Game",
+    "status": "Shelved",
     "description": "The lowest tier of giftbox. You can get XP candies, cheeseburgers, and even a few rare item drops from this!"
   },
   {
@@ -2450,7 +2450,7 @@
     "flags": [],
     "effects": [],
     "requirements": null,
-    "status": "To Deploy",
+    "status": "In Game",
     "description": "A ring made of polished bone, twisted into the image of a skull. Allows the bearer to speak with lost souls."
   },
   {

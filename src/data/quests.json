@@ -6467,7 +6467,7 @@
   {
     "key": "SQ113",
     "index": 3113,
-    "status": "To Deploy",
+    "status": "In Game",
     "title": "Airing it Out",
     "daily": false,
     "type": "SIDE",
@@ -6504,7 +6504,7 @@
   {
     "key": "SQ114",
     "index": 3114,
-    "status": "To Deploy",
+    "status": "In Game",
     "title": "Conditioned Environment",
     "daily": false,
     "type": "SIDE",
@@ -6541,7 +6541,7 @@
   {
     "key": "SQ115",
     "index": 3115,
-    "status": "To Deploy",
+    "status": "In Game",
     "title": "Dry Conversation",
     "daily": false,
     "type": "SIDE",
@@ -6578,7 +6578,7 @@
   {
     "key": "SQ116",
     "index": 3116,
-    "status": "To Deploy",
+    "status": "In Game",
     "title": "Lost and Found",
     "daily": false,
     "type": "SIDE",
@@ -6615,7 +6615,7 @@
   {
     "key": "SQ117",
     "index": 3117,
-    "status": "To Deploy",
+    "status": "In Game",
     "title": "Trash Pickers",
     "daily": false,
     "type": "SIDE",
@@ -6652,7 +6652,7 @@
   {
     "key": "SQ118",
     "index": 3118,
-    "status": "To Deploy",
+    "status": "In Game",
     "title": "Janitorial Supplies",
     "daily": false,
     "type": "SIDE",
@@ -6988,6 +6988,64 @@
     "rewards": [
       {
         "description": "1x Screwdriver,1x Grinder,1x Burner",
+        "type": null,
+        "index": null,
+        "value": null,
+        "itemName": null
+      }
+    ]
+  },
+  {
+    "key": "MIN100",
+    "index": 2100,
+    "status": "In Game",
+    "title": "A Short Pilgrimage",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MINA",
+    "introDialogue": "MINA: \"This shabby world is lacking beauty.”\nMINA: “I've brought something to improve that.\"\nMINA: \"There is now a fountain at the crossroads leading out of the junkyard.\"\nMINA: \"A monument to all that flows.\"\nMINA: \"Wander if you like, but be sure to find your way there.\"\nMINA: \"I have something to show you.”",
+    "resolutionDialogue": "MINA: \"This fountain holds a share of my own power. It will never run dry.\"\nMINA: \"Here, you may choose to make an offering.\"\nMINA: “Currency, of course, but the waters accept many things.\"\nMINA: \"And here, the waters flow back many things in return.”",
+    "requirements": [
+      {
+        "description": "Complete MIN007",
+        "type": "QUEST",
+        "index": 2007,
+        "value": 0
+      }
+    ],
+    "objectives": [
+      {
+        "description": "Move to the Scrapyard Exit",
+        "deltaType": "BOOL",
+        "type": "ROOM",
+        "index": 31,
+        "value": 0
+      }
+    ],
+    "rewards": []
+  },
+  {
+    "key": "MIN101",
+    "index": 2101,
+    "status": "In Game",
+    "title": "The Fountain of All That Flows",
+    "daily": false,
+    "type": "SIDE",
+    "giver": "MINA",
+    "introDialogue": "MINA: \"The fountain's pool is really a multitude, overlapping.\"\nMINA: \"Each pool holds two items.\"\nMINA: \"Anyone can throw in some of one, and the waters return some of the other.\"\nMINA: \"You can also make an offering of both.\"\nMINA: \"This is not solely to prove your devotion.\"\nMINA: \"Becoming a provider will grant you a claim to part of the whole pool.\"\nMINA: “Touch the fountain here or through your Menu to get started.”",
+    "resolutionDialogue": "MINA: “Have you made an offering to the fountain yet?”\nMINA: “Here's something simple to get you started.”\nMINA: “Wood and stone are humble, but they provide support.”",
+    "requirements": [
+      {
+        "description": "Complete MIN100",
+        "type": "QUEST",
+        "index": 2100,
+        "value": 0
+      }
+    ],
+    "objectives": [],
+    "rewards": [
+      {
+        "description": "10x Stone,10x Wooden Stick",
         "type": null,
         "index": null,
         "value": null,
