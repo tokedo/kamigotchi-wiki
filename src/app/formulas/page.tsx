@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Calculator, Wheat, Skull, TrendingUp, Coins } from "lucide-react";
+import { Calculator, Wheat, Skull, TrendingUp, Coins, Droplets } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Game Formulas",
@@ -41,6 +41,13 @@ const sections = [
     icon: Coins,
     description:
       "NPC shop pricing (GDA), trading fees, crafting costs, and Obol sinks/faucets.",
+  },
+  {
+    title: "Item Pools",
+    href: "/formulas/item-pools",
+    icon: Droplets,
+    description:
+      "The fountain at the crossroads: swap rates, price impact, swap fees, and what a provider's share is worth.",
   },
 ];
 

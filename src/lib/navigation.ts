@@ -39,6 +39,7 @@ export const navigation: NavEntry[] = [
       { title: "Liquidations", href: "/formulas/liquidations" },
       { title: "Leveling & XP", href: "/formulas/leveling" },
       { title: "Economy", href: "/formulas/economy" },
+      { title: "Item Pools", href: "/formulas/item-pools" },
     ],
   },
   {
