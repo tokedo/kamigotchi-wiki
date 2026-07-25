@@ -113,7 +113,7 @@ export default function LiquidationsFormulasPage() {
           />
 
           <InfoBox variant="warning">
-            Killing is not free. Recoil damage now scales on a{" "}
+            Killing is not free. Recoil damage scales on a{" "}
             <strong>smooth curve</strong> — the stronger the victim relative to
             you, the more punishment you take. Affinity matchups matter too:
             the defender&apos;s hand affinity vs your body affinity can increase
@@ -196,6 +196,31 @@ export default function LiquidationsFormulasPage() {
             When milestones overlap (e.g., sacrifice #100 hits both the 100th
             and 20th marks), you get the better droptable.
           </p>
+          <p>
+            The odds are worth internalising before you buy fodder in bulk. An
+            ordinary sacrifice pays out a <strong>Common</strong> piece about{" "}
+            <strong>78%</strong> of the time, an Uncommon about{" "}
+            <strong>20%</strong>, and a Rare only{" "}
+            <strong>2.4%</strong> &mdash; roughly one in 41. The pity milestones
+            exist because that Rare rate alone would be brutal: they are what
+            makes grinding sacrifices a plan rather than a prayer.
+          </p>
+          <StatTable
+            headers={["Sacrifice", "Common", "Uncommon", "Rare"]}
+            rows={[
+              ["Ordinary", "78%", "19.5%", "2.4%"],
+              ["Every 20th (uncommon pity)", "—", "88.9%", "11.1%"],
+              ["Every 100th (rare pity)", "—", "—", "100%"],
+            ]}
+          />
+          <InfoBox variant="tip">
+            Read down the columns and the grind plan writes itself: across 100
+            sacrifices you bank four guaranteed Uncommon-or-better rolls (at 20,
+            40, 60 and 80) plus one guaranteed Rare at 100, on top of whatever
+            the ordinary rolls happen to give. If a specific Rare piece is your
+            goal, the 100th sacrifice is the one that pays &mdash; check your
+            counter before you spend.
+          </InfoBox>
         </>
       }
       details={
@@ -394,7 +419,7 @@ numbers give only ~26 HP — the victim is nearly starving before
 it's ever in danger. That 3x swing is the triangle at work.`}
           </FormulaBlock>
           <p>
-            Now compare: if the attacker had only 12 Violence against the same
+            Compare: if the attacker had only 12 Violence against the same
             20 Harmony victim:
           </p>
           <FormulaBlock
@@ -578,11 +603,11 @@ average real kill nets ~850 Musu — this example is typical.)`}
 
           <h3>Karma — The Victim Hits Back</h3>
           <p>
-            Karma is now a <strong>Gaussian CDF-based multiplier</strong> that
+            Karma is a <strong>Gaussian CDF-based multiplier</strong> that
             scales recoil damage. It reverses the stat check: the{" "}
-            <em>victim&apos;s</em> Violence vs <em>your</em> Harmony. Unlike
-            the old linear formula, this produces a smooth S-curve — recoil
-            scales gradually rather than having a hard cutoff.
+            <em>victim&apos;s</em> Violence vs <em>your</em> Harmony. Being an
+            S-curve rather than a straight line, it scales recoil gradually
+            instead of snapping at a hard cutoff.
           </p>
           <FormulaBlock
             label="Karma"
@@ -616,16 +641,16 @@ average real kill nets ~850 Musu — this example is typical.)`}
             ]}
           />
           <InfoBox variant="info">
-            The switch from linear to Gaussian means karma now scales{" "}
-            <strong>smoothly</strong>. Under the old formula, there was a hard
-            cutoff where karma dropped to zero. Now it tapers off gradually —
-            even weak victims deal a small amount of karma, and very strong
-            victims are punishing but not infinite.
+            Because the curve is Gaussian, karma scales{" "}
+            <strong>smoothly</strong> with no cutoff anywhere: it tapers off
+            gradually instead of falling to zero. Even weak victims deal a small
+            amount of karma, and very strong victims are punishing without being
+            unbounded.
           </InfoBox>
 
           <h3>Recoil Efficacy — Affinity Affects Recoil</h3>
           <p>
-            Recoil efficacy is a new affinity-based modifier that adjusts recoil
+            Recoil efficacy is an affinity-based modifier that adjusts recoil
             damage. It checks the <strong>defender&apos;s hand affinity</strong>{" "}
             vs the <strong>attacker&apos;s body affinity</strong> — the{" "}
             <em>opposite direction</em> from the kill threshold efficacy check.
@@ -666,17 +691,17 @@ average real kill nets ~850 Musu — this example is typical.)`}
             ]}
           />
           <InfoBox variant="tip">
-            This is a new layer of defense. A defender with the right hand
-            affinity can make an attacker pay more recoil, even if the attacker
-            has great stats. When scouting targets, check their hand affinity
-            against your body — not just their Violence.
+            This is a whole layer of defense that has nothing to do with stats. A
+            defender with the right hand affinity makes an attacker pay more
+            recoil no matter how well built the attacker is. When scouting
+            targets, check their hand affinity against your body — not just
+            their Violence.
           </InfoBox>
 
           <h3>Total Recoil</h3>
           <p>
-            Your total HP loss now uses karma and recoil efficacy as{" "}
-            <strong>multiplicative factors</strong> with harvest strain. This
-            replaced the old additive formula:
+            Your total HP loss combines karma and recoil efficacy as{" "}
+            <strong>multiplicative factors</strong> with harvest strain:
           </p>
           <FormulaBlock
             label="Recoil"
@@ -697,9 +722,9 @@ boost = max(0, baseBoost + ATK_RECOIL_BOOST)`}
           <p>
             Karma and recoil efficacy are <strong>additive</strong> with each
             other, then <strong>multiplicative</strong> with strain and boost.
-            This means your timing still matters — high strain amplifies all
-            recoil. But now the defender&apos;s affinity and skills also play a
-            direct role in how much you suffer.
+            This means your timing matters — high strain amplifies all recoil —
+            and the defender&apos;s affinity and skills play a direct role in how
+            much you suffer.
           </p>
 
           <h4>Recoil Example</h4>
@@ -720,7 +745,7 @@ boost = max(0, baseBoost + ATK_RECOIL_BOOST)`}
   recoilEfficacy = affinity nudge (depends on hand/body matchup)
   recoil = (karma + recoilEfficacy) × strain × boost / precision
 
-Now you kill a strong predator (Violence 35) with the same 20 Harmony:
+Next, you kill a strong predator (Violence 35) with the same 20 Harmony:
 
   karma = NormCdf( ln(35 / 20) ) × ratio / precision
        = NormCdf(0.56) ≈ high multiplier (victim hits back hard)
@@ -842,6 +867,29 @@ very small when your Harmony exceeds the victim's Violence.`}
             to lose.
           </InfoBox>
 
+          <h3>Reveal Rules</h3>
+          <p>
+            The reveal half of a sacrifice follows the same rules as every other
+            commit-reveal in the game:
+          </p>
+          <StatTable
+            headers={["Rule", "Detail"]}
+            rows={[
+              [
+                "256-block window",
+                "The block hash the outcome depends on is only readable for 256 blocks after the commit. Reveal promptly; a missed window needs a community manager to rescue the commitment.",
+              ],
+              [
+                "No duplicates in one reveal",
+                "Revealing several sacrifices at once is fine, but the same commitment must not appear twice in the same call — a duplicate rejects the entire call rather than being ignored.",
+              ],
+              [
+                "Anyone can reveal",
+                "The reward always goes to the account that committed, so it does not matter who submits the reveal transaction.",
+              ],
+            ]}
+          />
+
           <h3>Pity Milestones</h3>
           <p>
             Each account has a running sacrifice counter. At certain milestones,
@@ -860,6 +908,76 @@ very small when your Harmony exceeds the victim's Violence.`}
             20th), the rare droptable takes precedence — you always get the
             better outcome.
           </p>
+
+          <h3>Reward Pool and Exact Odds</h3>
+          <p>
+            All three droptables draw from the same set of{" "}
+            <strong>36 pet-slot equipment items</strong>: 12 themed sets of 3
+            tiers each &mdash; a Common, an Uncommon and a Rare per set (Mask /
+            Veil / Visage of Avarice, and so on through the other eleven
+            themes). Every item of a given tier carries the same weight, so each
+            table is uniform <em>within</em> a tier and the only thing that
+            varies is which tiers are in the pot.
+          </p>
+          <p>
+            Droptable weights are exponential, not linear: a stored weight{" "}
+            <code>w</code> counts as <code>2^(w−1)</code> when the roll is made.
+            The three sacrifice tables store 9 / 7 / 4 for Common / Uncommon /
+            Rare, which works out as effective weights of 256 / 64 / 8 per item.
+          </p>
+          <FormulaBlock
+            label="Effective Weight"
+            vars={{
+              "w": "the stored tier weight (9 Common, 7 Uncommon, 4 Rare)",
+              "effective weight": "the value actually used in the weighted draw",
+            }}
+          >
+            {`effective weight = 2^(w − 1)
+
+  Common   w=9  →  256 per item  (12 items)
+  Uncommon w=7  →   64 per item  (12 items)
+  Rare     w=4  →    8 per item  (12 items)`}
+          </FormulaBlock>
+          <StatTable
+            headers={[
+              "Table",
+              "Tiers in the pot",
+              "Common",
+              "Uncommon",
+              "Rare",
+            ]}
+            rows={[
+              [
+                "Normal",
+                "All three",
+                "78.05% (6.50% per item)",
+                "19.51% (1.63% per item)",
+                "2.44% (0.203% per item)",
+              ],
+              [
+                "Uncommon Pity",
+                "Uncommon + Rare",
+                "—",
+                "88.89% (7.41% per item)",
+                "11.11% (0.926% per item)",
+              ],
+              [
+                "Rare Pity",
+                "Rare only",
+                "—",
+                "—",
+                "100% (8.33% per item)",
+              ],
+            ]}
+          />
+          <InfoBox variant="tip">
+            Every sacrifice grants exactly <strong>one</strong> roll, so those
+            percentages are the whole story per Kami burned. The per-item column
+            is the one that matters if you are chasing a specific piece: a named
+            Rare on the normal table lands at roughly 1 in 500, while the rare
+            pity table puts the same named piece at 1 in 12. Hunting a specific
+            Visage is a pity-counter exercise, not a luck exercise.
+          </InfoBox>
 
           {/* ───────────────────── COOLDOWN ───────────────────── */}
 
