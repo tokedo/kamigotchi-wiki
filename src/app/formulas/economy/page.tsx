@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   MechanicPage,
   FormulaBlock,
@@ -82,23 +83,44 @@ export default function EconomyFormulasPage() {
             without any manual intervention.
           </p>
           <p>
+            The slide has a bottom, though. However long a listing sits
+            untouched, its price never falls below{" "}
+            <strong>12.5% of the item&apos;s target price</strong> &mdash; a
+            hard floor at one eighth of target. A dormant shop is a cheap shop,
+            not a free one.
+          </p>
+          <p>
             A few items &mdash; like the Spice Grinder (2,500 Musu) and
             Portable Burner (4,000 Musu) &mdash; have simple{" "}
             <strong>fixed prices</strong> that never change.
           </p>
           <p>
-            You must be in the <strong>same room</strong> as the NPC to buy or
-            sell. Some listings also have requirements (like owning a certain
-            item or reaching a certain level) before you can purchase.
+            You must be in the <strong>same room</strong> as the NPC to trade
+            with them. Some listings also have requirements (like owning a
+            certain item or reaching a certain level) before you can purchase.
+          </p>
+          <p>
+            The traffic runs one way: no shop listing carries a sell price, so{" "}
+            <strong>NPCs do not buy items from you</strong>. Everything you want
+            to turn back into Musu goes through the player orderbook or the
+            fountain&apos;s item pools instead.
           </p>
 
           <InfoBox variant="tip">
             If a consumable&apos;s price is spiking, be patient. Dynamic prices
-            decay roughly 50% per day when nobody is buying. Waiting even a few
-            hours can save you significant Musu. The Vending Machine in the Cave
-            has lower throughput expectations than Mina, so its prices spike more
-            easily with fewer purchases &mdash; Mina is usually the cheaper
-            option.
+            decay roughly 50% per period when nobody is buying, down to the
+            12.5% floor. Waiting even a few hours can save you significant Musu.
+            The Vending Machine in the Cave has lower throughput expectations
+            than Mina, so its prices spike more easily with fewer purchases
+            &mdash; Mina is usually the cheaper option.
+          </InfoBox>
+          <InfoBox variant="warning">
+            There is also a ceiling on how much you can buy in one go. A single
+            purchase cannot exceed <strong>100 periods&apos; worth</strong> of a
+            listing&apos;s expected sales rate &mdash; for an item the shop
+            expects to sell 20 of per day, that caps one transaction at 2,000
+            units. Larger orders are refused outright, so split genuinely big
+            hauls across several purchases.
           </InfoBox>
 
           <h2>Player-to-Player Trading</h2>
@@ -295,6 +317,14 @@ export default function EconomyFormulasPage() {
             pending withdrawal to get your items back, but the tax is not
             refunded.
           </InfoBox>
+          <p>
+            The portal is the only door tokens come through. Once Onyx is
+            inside, it behaves as an ordinary item: you can spend it, trade it,
+            or supply it to an{" "}
+            <Link href="/formulas/item-pools">item pool</Link> at the fountain.
+            Because pools never create items, Onyx sitting in a pool reserve
+            stays backed one-for-one by tokens the portal is holding.
+          </p>
 
           <h2>Kami Marketplace</h2>
           <p>
@@ -424,7 +454,7 @@ export default function EconomyFormulasPage() {
               [
                 "Rate",
                 "The expected number of purchases per period to maintain the target price",
-                "4 - 1,500 per day (varies per item)",
+                "2 - 250 per period (varies per item)",
               ],
             ]}
           />
@@ -462,6 +492,84 @@ spotPrice = targetPrice * decay ^ (timeSinceStart - totalSold / rate)`}
             the price rises because decay raised to a negative power inverts
             into a multiplier.
           </p>
+
+          <h3>The Price Floor</h3>
+          <p>
+            That exponent is <strong>clamped</strong>. A listing is only ever
+            allowed to count as <strong>3 periods</strong> behind its sales
+            schedule, no matter how long it actually sat untouched. The
+            exponent therefore bottoms out at 3, which puts a hard floor under
+            the spot price:
+          </p>
+          <FormulaBlock
+            label="Minimum Spot Price"
+            vars={{
+              "minSpotPrice": "the cheapest a listing can ever get, per unit",
+              "targetPrice": "the equilibrium price when sales match the expected rate",
+              "decay": "fraction the price drops per period with no purchases",
+              "maxDeficitPeriods": "how many periods a listing may run behind schedule (3)",
+            }}
+          >
+            {`minSpotPrice = targetPrice × decay ^ maxDeficitPeriods
+
+Every shop listing runs decay = 0.50, so:
+  minSpotPrice = targetPrice × 0.50³ = targetPrice / 8
+
+  = 12.5% of target price`}
+          </FormulaBlock>
+          <StatTable
+            headers={["Item", "Target Price", "Floor Price (12.5%)"]}
+            rows={[
+              ["Maple-Flavor Ghost Gum", "60 Musu", "8 Musu"],
+              ["Red Ribbon Gummy", "100 Musu", "13 Musu"],
+              ["Pom-Pom Fruit Candy", "100 Musu", "13 Musu"],
+              ["Gakki Cookie Sticks", "160 Musu", "20 Musu"],
+              ["Ice Cream", "150 Musu", "19 Musu"],
+              ["Better Ice Cream", "250 Musu", "32 Musu"],
+              ["Best Ice Cream", "450 Musu", "57 Musu"],
+            ]}
+          />
+          <p>
+            The clamp is not only a display rule &mdash; buying against a
+            dormant listing also <strong>settles</strong> its backlog. The
+            listing&apos;s schedule is pulled forward so that at most 3
+            periods&apos; worth of sales is owed, which means the price starts
+            responding to your purchases immediately instead of letting an
+            unbounded backlog clear at the floor. Selling back does not settle
+            anything; the next purchase does it.
+          </p>
+          <InfoBox variant="tip">
+            The practical shape of this: a shop nobody has touched for a week is
+            sitting at exactly 12.5% of target, and the first{" "}
+            <strong>3 periods&apos; worth</strong> of stock is what clears near
+            that price. Past that, prices climb back toward target quickly. If
+            you find a neglected listing, the cheap window is real but it is
+            finite &mdash; and a competing buyer who gets there first consumes
+            it.
+          </InfoBox>
+
+          <h3>Maximum Purchase Size</h3>
+          <p>
+            A single purchase is also bounded: the amount cannot exceed{" "}
+            <strong>100 periods</strong> of the listing&apos;s rate. Ask for
+            more and the transaction is rejected with{" "}
+            <code>batch too large</code> rather than being partially filled.
+          </p>
+          <FormulaBlock
+            label="Batch Limit"
+            variant="example"
+            vars={{
+              "maxAmount": "the largest quantity a single purchase may request",
+              "rate": "expected purchases per period for that listing",
+            }}
+          >
+            {`maxAmount = rate × 100
+
+Examples:
+  Gakki Cookie Sticks at Mina (rate 250/day) → 25,000 per purchase
+  Best Ice Cream at Mina    (rate 8/day)     → 800 per purchase
+  Best Ice Cream in the Cave (rate 2/2 days) → 200 per purchase`}
+          </FormulaBlock>
 
           <h3>Buying Multiple at Once</h3>
           <p>
@@ -538,22 +646,26 @@ Examples:
           </FormulaBlock>
 
           <h3>All NPC Shop Listings</h3>
+          <p>
+            Mina stocks nine purchasable listings, the Vending Machine seven.
+            Every one of them is priced in Musu.
+          </p>
           <StatTable
             headers={["NPC", "Item", "Currency", "Target Price", "Pricing"]}
             rows={[
-              ["Mina", "Red Ribbon Gummy", "Musu", "100", "GDA: 300/day, 50% decay"],
-              ["Mina", "Ghost Gum", "Musu", "60", "GDA: 1,500/day, 50% decay"],
-              ["Mina", "Pom-Pom Fruit Candy", "Musu", "100", "GDA: 750/day, 50% decay"],
+              ["Mina", "Red Ribbon Gummy", "Musu", "100", "GDA: 150/day, 50% decay"],
+              ["Mina", "Maple-Flavor Ghost Gum", "Musu", "60", "GDA: 150/day, 50% decay"],
+              ["Mina", "Pom-Pom Fruit Candy", "Musu", "100", "GDA: 150/day, 50% decay"],
               ["Mina", "Gakki Cookie Sticks", "Musu", "160", "GDA: 250/day, 50% decay"],
-              ["Mina", "Ice Cream", "Musu", "150", "GDA: 60/day, 50% decay"],
-              ["Mina", "Better Ice Cream", "Musu", "250", "GDA: 40/day, 50% decay"],
-              ["Mina", "Best Ice Cream", "Musu", "450", "GDA: 20/day, 50% decay"],
+              ["Mina", "Ice Cream", "Musu", "150", "GDA: 25/day, 50% decay"],
+              ["Mina", "Better Ice Cream", "Musu", "250", "GDA: 20/day, 50% decay"],
+              ["Mina", "Best Ice Cream", "Musu", "450", "GDA: 8/day, 50% decay"],
               ["Mina", "Spice Grinder", "Musu", "2,500", "Fixed"],
               ["Mina", "Portable Burner", "Musu", "4,000", "Fixed"],
-              ["Vending Machine", "Red Ribbon Gummy", "Musu", "100", "GDA: 20/day, 50% decay"],
-              ["Vending Machine", "Ghost Gum", "Musu", "60", "GDA: 150/period, 50% (2-day period)"],
-              ["Vending Machine", "Pom-Pom Fruit Candy", "Musu", "100", "GDA: 75/period, 50% (2-day period)"],
-              ["Vending Machine", "Gakki Cookie Sticks", "Musu", "160", "GDA: 25/period, 50% (2-day period)"],
+              ["Vending Machine", "Red Ribbon Gummy", "Musu", "100", "GDA: 10/day, 50% decay"],
+              ["Vending Machine", "Maple-Flavor Ghost Gum", "Musu", "60", "GDA: 40/period, 50% (2-day period)"],
+              ["Vending Machine", "Pom-Pom Fruit Candy", "Musu", "100", "GDA: 30/period, 50% (2-day period)"],
+              ["Vending Machine", "Gakki Cookie Sticks", "Musu", "160", "GDA: 50/period, 50% (2-day period)"],
               ["Vending Machine", "Ice Cream", "Musu", "150", "GDA: 6/period, 50% (2-day period)"],
               ["Vending Machine", "Better Ice Cream", "Musu", "250", "GDA: 4/period, 50% (2-day period)"],
               ["Vending Machine", "Best Ice Cream", "Musu", "450", "GDA: 2/period, 50% (2-day period)"],
@@ -562,12 +674,20 @@ Examples:
 
           <InfoBox>
             Notice how the Vending Machine has much lower rate expectations
-            than Mina. Ghost Gum at Mina can absorb 1,500 purchases per day at
-            the target price, but the Vending Machine only expects 150 per
-            2-day period (75/day). Even a handful of extra purchases at the
-            Vending Machine will spike the price, while Mina&apos;s shop barely
-            notices. If both shops sell the same item, Mina is almost always the
-            cheaper option.
+            than Mina. Ghost Gum at Mina absorbs 150 purchases per day at the
+            target price, while the Vending Machine expects only 40 per 2-day
+            period (20/day). A handful of extra purchases in the Cave spikes the
+            price; the same handful barely registers at Mina&apos;s shop. If
+            both shops sell the same item, Mina is almost always the cheaper
+            option &mdash; the Cave machine is a convenience premium for Kamis
+            already underground.
+          </InfoBox>
+          <InfoBox variant="tip">
+            The ice creams are the sharpest listings on the board. Best Ice
+            Cream expects 8 sales a day at Mina and 2 per 2-day period in the
+            Cave, so its price swings hardest in both directions: a quiet day
+            can put it near its 57 Musu floor, and a small buying burst can send
+            it far above the 450 target. Check before you stock up.
           </InfoBox>
 
           <h2>Player Trading</h2>
@@ -775,6 +895,15 @@ XP earned        = recipe XP      * batchAmount`}
             total supply. Once all units are sold, the auction is exhausted
             permanently.
           </p>
+          <InfoBox variant="warning">
+            <strong>Auctions have no price floor.</strong> The 12.5% floor and
+            the 3-period deficit clamp that bound NPC shop listings do not apply
+            here &mdash; auction decay is unbounded, so a dormant auction keeps
+            decaying toward zero with no per-unit minimum. This is the single
+            biggest difference between shop pricing and auction pricing, and it
+            is what makes waiting out a quiet auction so much more rewarding
+            than waiting out a quiet shop listing.
+          </InfoBox>
           <FormulaBlock
             label="Auction Spot Price"
             vars={{
@@ -863,6 +992,44 @@ Batch cost uses the same geometric series as NPC shops.`}
             doubles it. With only 50 total supply, each purchase has a large
             impact on the next buyer&apos;s price.
           </InfoBox>
+
+          <h3>Spending a Gacha Ticket</h3>
+          <p>
+            Buying the ticket is the easy half. Turning tickets into Kamis is a
+            two-step process, because the Kami you receive is drawn at random
+            and the randomness comes from a future block:
+          </p>
+          <StatTable
+            headers={["Step", "What happens"]}
+            rows={[
+              [
+                "Commit",
+                "You spend your tickets (up to 5 per transaction) and the game records a commitment. No Kami is assigned yet.",
+              ],
+              [
+                "Reveal",
+                "In a later transaction, the commitment is resolved against a block hash and your Kamis are drawn from the gacha pool.",
+              ],
+            ]}
+          />
+          <p>
+            The same two-step pattern governs rerolls, scavenge claims,
+            lootboxes, and sacrifices &mdash; and the same two rules apply to
+            all of them:
+          </p>
+          <StatTable
+            headers={["Rule", "Detail"]}
+            rows={[
+              [
+                "Reveal within 256 blocks",
+                "The block hash a commitment depends on is only readable for 256 blocks. Miss that window and the normal reveal fails; a community manager has to rescue the commitment. Reveal promptly.",
+              ],
+              [
+                "Never submit the same commitment twice in one reveal",
+                "A reveal call containing a duplicate is rejected in full — not silently de-duplicated. Every commitment in a single reveal must be distinct, or nothing in that call resolves.",
+              ],
+            ]}
+          />
 
           <h2>Token Portal</h2>
 
@@ -1020,8 +1187,8 @@ The fee applies to all transaction types:
 
           <h2>Newbie Vendor Pricing</h2>
           <p>
-            The Newbie Vendor sets its price based on what Kamis have been
-            selling for recently. It takes the higher of the TWAP price or a
+            The Newbie Vendor sets its price from what Kamis have sold for over
+            the last 24 hours. It takes the higher of the TWAP price or a
             minimum floor, ensuring new players neither overpay (price tracks
             market) nor underpay (floor prevents exploitation).
           </p>
@@ -1084,7 +1251,7 @@ TWAP Calculation:
               ],
               [
                 "NPC Shops",
-                "Fixed-price sell listings",
+                "--- (no listing carries a sell price, so NPCs do not buy)",
                 "Buying items (dynamic + fixed prices)",
               ],
               [
