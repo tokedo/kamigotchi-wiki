@@ -192,6 +192,13 @@ export default function HarvestingFormulasPage() {
             node&apos;s loot table. Harder nodes require more points per tier
             but drop rarer rewards.
           </p>
+          <p>
+            Claiming is a two-step affair: the claim locks in your rolls, then a
+            second <strong>reveal</strong> transaction actually hands you the
+            items. If you let the bar run up for a long time, expect to reveal
+            more than once &mdash; see{" "}
+            <strong>Claiming a Full Bar</strong> in the details tab.
+          </p>
 
           <h3>Tips for Maximizing Your Harvest</h3>
           <ul>
@@ -470,7 +477,7 @@ export default function HarvestingFormulasPage() {
 Fertility = 26 × 2.0 × 1.5 = 78 Musu per hour (from Fertility alone)`}
           </FormulaBlock>
           <p>
-            Now compare the same Kami on a SCRAP node (full mismatch):
+            Compare the same Kami on a SCRAP node (full mismatch):
           </p>
           <FormulaBlock
             variant="example"
@@ -798,6 +805,57 @@ Leftover points carry over to the next cycle.`}
             a high-demand crafting material can out-earn the Musu itself when
             you sell the drops on the player market.
           </p>
+
+          <h3>Claiming a Full Bar</h3>
+          <p>
+            A claim does not hand you items directly. It converts your points
+            into a fixed number of <strong>rolls</strong> and records them; a
+            second <strong>reveal</strong> transaction resolves those rolls
+            against a block hash and delivers the loot. Leftover points below one
+            full tier stay on the bar.
+          </p>
+          <FormulaBlock
+            label="Claim Rolls"
+            vars={{
+              "rolls": "how many draws from the node's droptable this claim is worth",
+              "points": "scavenge points currently on the node's bar",
+              "tierCost": "points per tier for that node (100 to 500)",
+              "leftover": "points that remain on the bar after the claim",
+            }}
+          >
+            {`rolls    = floor(points / tierCost)
+leftover = points mod tierCost`}
+          </FormulaBlock>
+          <p>
+            Reveals are <strong>capped at 5,000 rolls per transaction</strong>.
+            A claim bigger than that is not lost and is not truncated — it simply
+            takes several reveal transactions, each chewing through up to 5,000
+            rolls until the claim is drained.
+          </p>
+          <StatTable
+            headers={["Claim size", "Reveal transactions needed"]}
+            rows={[
+              ["Up to 5,000 rolls", "1"],
+              ["5,001 - 10,000 rolls", "2"],
+              ["12,000 rolls", "3"],
+            ]}
+          />
+          <InfoBox variant="tip">
+            Splitting a claim across several reveals costs you nothing in loot.
+            Each roll is keyed to its own fixed position inside the claim, so the
+            entire set of results is locked in at claim time &mdash; the drops
+            you get are identical no matter how the reveals are chunked, and
+            there is no way to re-roll a bad batch by splitting differently.
+          </InfoBox>
+          <InfoBox variant="warning">
+            Two reveal rules bite in practice. The block hash a claim depends on
+            is only readable for <strong>256 blocks</strong>, so a very large
+            claim that you start revealing too late can strand its tail and need
+            a community manager to rescue it &mdash; reveal promptly and finish
+            what you start. And never pass the same claim twice in a single
+            reveal call: a duplicate rejects the whole call rather than being
+            skipped.
+          </InfoBox>
 
           <h2>Harvest Boosts from Items</h2>
           <p>
