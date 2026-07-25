@@ -493,10 +493,13 @@ function DetailPanel({
               <span className="text-gray-400">Scav </span>
               <span className="text-gray-700 font-medium">{room.node.scavCost} pts</span>
             </span>
+            {/* Level Limit is a MAXIMUM Kami level for harvesting at this
+                node, not a minimum — starter nodes are reserved for low-level
+                Kamis. Render it as a cap. */}
             {room.node.levelLimit > 0 && (
-              <span>
-                <span className="text-gray-400">Lvl </span>
-                <span className="text-gray-700 font-medium">{room.node.levelLimit}+</span>
+              <span title="Maximum Kami level that can harvest here">
+                <span className="text-gray-400">Max Lvl </span>
+                <span className="text-gray-700 font-medium">{room.node.levelLimit}</span>
               </span>
             )}
           </div>

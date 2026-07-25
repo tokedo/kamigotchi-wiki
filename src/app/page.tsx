@@ -75,7 +75,7 @@ export default function Home() {
             <h2 className="text-lg font-semibold">Quest Database</h2>
           </div>
           <p className="text-sm text-muted-foreground">
-            All 187 quests as an interactive dependency graph. Click any quest
+            All 189 quests as an interactive dependency graph. Click any quest
             for objectives, rewards, and prerequisites.
           </p>
         </Link>
