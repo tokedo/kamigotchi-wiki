@@ -41,10 +41,10 @@ export default function StrategyDefensePage() {
         </li>
       </ul>
       <p>
-        Build the margin out of <strong>stats and skills</strong>. Those are the
-        terms to carry into the arithmetic; treat anything else your Kami is
-        wearing as flavor rather than as a number you are relying on to
-        survive.
+        Build the margin out of <strong>stats, skills, and worn
+        equipment</strong> — a pet covers whatever the stat sheet lacks for the
+        role&apos;s margin, and its bonus belongs in the same arithmetic as
+        everything else.
       </p>
 
       <MathLives>

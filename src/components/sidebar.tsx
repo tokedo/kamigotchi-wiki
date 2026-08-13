@@ -148,6 +148,17 @@ export function Sidebar() {
                 Official Docs
               </a>
             </p>
+            <p className="mt-1 text-xs text-muted-foreground">
+              by{" "}
+              <a
+                href="https://x.com/0xTokedo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-foreground"
+              >
+                Tokedo
+              </a>
+            </p>
           </div>
         </ScrollArea>
       </aside>

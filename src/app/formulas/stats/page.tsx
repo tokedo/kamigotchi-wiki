@@ -84,21 +84,23 @@ export default function StatsFormulasPage() {
             like &ldquo;Harmony 100,&rdquo; it is not describing this game.
           </p>
           <p>
-            Skills then do the rest. Work it through for a defensive build:
-            take an average Health roll of about 90 and max two of the
-            +10-per-level Health skills (+100 across ten skill points), and you
-            have 190 effective Health. Harmony climbs more slowly because its
-            skills are worth one to five points each rather than ten: the same
-            average roll of 14 plus the Guardian tree&apos;s Defensiveness (+5)
-            and Anxiety (+3) lands at 22.
+            Skills and equipment then do the rest. Work it through for a
+            defensive build: take an average Health roll of about 90, max two
+            of the +10-per-level Health skills (+100 across ten skill points),
+            and equip an Elder Critter pet (+50), and you have 240 effective
+            Health. Harmony climbs more slowly because its skills are worth one
+            to five points each rather than ten: the same average roll of 14
+            plus the Guardian tree&apos;s Defensiveness (+5) and Anxiety (+3)
+            lands at 22, and an Ancient Ledger pet takes it to 27.
           </p>
           <p>
             At the theoretical ceiling — a best-case trait roll with every
-            relevant skill — effective Health reaches{" "}
-            <strong>460</strong> (the 360 base roll plus +100 from the two
-            maxed Health skills) and Harmony reaches <strong>56</strong> (38
-            base, +13 from the Guardian Harmony line, +5 from Index Funds).
-            Those are build ceilings, not what you should expect to meet.
+            relevant skill and the best pet — effective Health reaches{" "}
+            <strong>510</strong> (the 360 base roll, +100 from the two maxed
+            Health skills, +50 from an Elder Critter) and Harmony reaches{" "}
+            <strong>61</strong> (38 base, +13 from the Guardian Harmony line,
+            +5 from Index Funds, +5 from an Ancient Ledger). Those are build
+            ceilings, not what you should expect to meet.
           </p>
 
           <h2>How Stats Are Built Up</h2>
@@ -128,8 +130,9 @@ export default function StatsFormulasPage() {
             potions and tonics can permanently raise your shifts or instantly
             restore depleted stats like Health. <strong>Skills</strong> from the
             four skill trees grant bonuses as long as you have them learned —
-            they are the channel that does the heavy lifting on a built Kami.
-            Finally,{" "}
+            they are the channel that does the heavy lifting on a built Kami.{" "}
+            <strong>Equipment</strong> provides bonuses while it is worn, and
+            unequipping it removes the bonus immediately. Finally,{" "}
             <strong>temporary effects</strong> from food, combat, or timed
             consumables give short-lived buffs that expire when certain game
             events happen (like finishing a harvest or dying).
@@ -138,7 +141,7 @@ export default function StatsFormulasPage() {
           <h2>The Bonus System in a Nutshell</h2>
           <p>
             Behind the scenes, every modifier on your Kami — whether from a
-            skill, a food buff, or a combat effect — is
+            skill, a piece of equipment, a food buff, or a combat effect — is
             tracked as a <strong>bonus</strong>. Each bonus has a type (like
             "Health Shift" or "Power Boost") and a value. When the game
             calculates your effective stats, it sums up all bonuses of each type
@@ -146,8 +149,8 @@ export default function StatsFormulasPage() {
           </p>
           <p>
             Some bonuses are <strong>permanent</strong> — they stick around as
-            long as their source exists, a learned skill being the clearest
-            case. Others are <strong>temporary</strong> — they disappear when a
+            long as their source exists (an equipped pet, a learned skill).
+            Others are <strong>temporary</strong> — they disappear when a
             specific event happens, like finishing a harvest or dying.
           </p>
 
@@ -160,11 +163,12 @@ export default function StatsFormulasPage() {
             is the only source of them (see{" "}
             <a href="/formulas/liquidations">Liquidations &rarr; Sacrifice</a>{" "}
             for the tables and odds). They arrive in themed sets of three
-            tiers, so collecting them is a game in itself. Plan your Kami&apos;s
-            numbers from its trait roll and its skill picks — those are the two
-            channels you can count on when you work out a build. (The
-            &ldquo;Slots&rdquo; stat some traits grant does not add extra
-            equipment capacity.)
+            tiers with the bonus scaling by tier — Critters grant +30/40/50
+            Health, Ledgers +3/4/5 Harmony, Wraths +3/4/5 Violence, and other
+            lines carry harvest or defense bonuses. Because you only get one
+            slot, pet choice is a real decision: a +50 Health pet is a
+            different build than a +5 Harmony pet. (The &ldquo;Slots&rdquo;
+            stat some traits grant does not add extra equipment capacity.)
           </p>
 
           <h2>Strategic Considerations</h2>
@@ -215,7 +219,7 @@ export default function StatsFormulasPage() {
             vars={{
               "Effective": "your Kami's final usable stat value after all modifiers",
               "base": "permanent value from traits, set at birth and never changes",
-              "shift": "sum of all flat modifiers (consumables, skills, temporary effects)",
+              "shift": "sum of all flat modifiers (consumables, skills, equipment)",
               "boost": "sum of all percentage modifiers in per-mille (500 = +50%, 1000 = +100%)",
             }}
           >
@@ -227,8 +231,8 @@ If the result is negative, it is set to 0.`}
           <p>
             Here, <strong>base</strong> is the permanent value your Kami was born
             with, determined entirely by traits. <strong>Shift</strong> is the
-            sum of all flat modifiers from consumables, skills, and temporary
-            effects. <strong>Boost</strong> is the sum of
+            sum of all flat modifiers from consumables, skills, equipment
+            bonuses, and temporary effects. <strong>Boost</strong> is the sum of
             all percentage modifiers, expressed in per-mille (thousandths): a
             boost of 0 means no change (1.0x), 500 means +50% (1.5x), 1000
             means double (2.0x), and -500 means half (0.5x).
@@ -239,25 +243,26 @@ If the result is negative, it is set to 0.`}
             Here is how an actual defensive (&ldquo;Guardian&rdquo;) build
             assembles its Health. A Kami is born with 90 base Health — a solid
             roll. Its owner maxes two +10-Health-per-level skills (Toughness in
-            the Guardian tree and Cardio in Enlightened: +50 each):
+            the Guardian tree and Cardio in Enlightened: +50 each) and equips
+            an Elder Critter pet (+50 Health):
           </p>
           <FormulaBlock
             variant="example"
             vars={{
               "90": "base Health from traits",
-              "100": "total shift: +50 + +50 from the two maxed Health skills",
+              "150": "total shift: +50 + +50 from the two maxed skills, +50 from the pet",
               "0": "boost — no percentage Health modifiers in this build",
             }}
           >
-            {`Effective Health = (90 + 100) x (1000 + 0) / 1000
-                 = 190`}
+            {`Effective Health = (90 + 150) x (1000 + 0) / 1000
+                 = 240`}
           </FormulaBlock>
           <p>
-            190 effective HP from a 90-HP Kami — the skill lines alone more
-            than double the trait roll, and every point of it arrives through
-            the shift channel. Run the same arithmetic on the best trait roll
-            the catalogue allows (360 base Health) and the same two skills put
-            the ceiling at 460.
+            240 effective HP from a 90-HP Kami — skills and the pet together
+            more than double the trait roll, and every point of it arrives
+            through the shift channel. Run the same arithmetic on the best
+            trait roll the catalogue allows (360 base Health) and the same
+            skills-plus-pet stack puts the ceiling at 510.
           </p>
           <p>
             In current content, core stats (Health, Power, Violence, Harmony)
@@ -276,8 +281,9 @@ If the result is negative, it is set to 0.`}
               ["Fresh Kami, no modifiers", 90, 0, 0, 90],
               ["One +10 Health skill level", 90, 10, 0, 100],
               ["Both Health skills maxed", 90, 100, 0, 190],
-              ["(Illustrative) +50% boost on top", 90, 100, 500, 285],
-              ["(Illustrative) -50% debuff instead", 90, 100, -500, 95],
+              ["Skills + Elder Critter pet", 90, 150, 0, 240],
+              ["(Illustrative) +50% boost on top", 90, 150, 500, 360],
+              ["(Illustrative) -50% debuff instead", 90, 150, -500, 120],
             ]}
           />
 
@@ -350,9 +356,9 @@ If the result is negative, it is set to 0.`}
             label="Full Calculation With Bonuses"
             vars={{
               "innate shift": "the Kami's built-in flat modifier (usually 0 unless altered by consumables)",
-              "Shift bonuses": "flat modifiers from skills, consumables, and temporary effects",
+              "Shift bonuses": "flat modifiers from skills, equipment, consumables, and temporary effects",
               "innate boost": "the Kami's built-in percentage modifier (usually 0)",
-              "Boost bonuses": "percentage modifiers from skills, consumables, and temporary effects",
+              "Boost bonuses": "percentage modifiers from skills, equipment, consumables, and temporary effects",
               "base": "permanent value from traits, set at birth",
               "Effective": "final usable stat value after all modifiers",
             }}
@@ -366,9 +372,9 @@ Effective = (base + total shift) x (1000 + total boost) / 1000`}
           <h3>Bonus Stacking</h3>
           <p>
             Multiple bonuses of the same type from different sources all add
-            together. If you have one skill giving +5 Health Shift and another
+            together. If you have a skill giving +5 Health Shift and a pet
             giving +3 Health Shift, your total Health Shift bonus is
-            +8. Permanent bonuses such as skills can stack by
+            +8. Permanent bonuses (from skills, equipment) can stack by
             increasing in level — applying the same bonus again from the same
             source makes it stronger rather than creating a duplicate. The final
             value of a bonus is its per-level value multiplied by its level.
@@ -378,10 +384,11 @@ Effective = (base + total shift) x (1000 + total boost) / 1000`}
 
           <h3>Permanent Bonuses</h3>
           <p>
-            These last as long as their source exists. A bonus from a skill stays
-            until you respec that skill. They stack via level — applying the same permanent bonus
-            again increments the level rather than creating a separate instance,
-            making it progressively stronger.
+            These last as long as their source exists. A bonus from a skill
+            stays until you respec that skill. A bonus from equipment stays
+            until you unequip it. They stack via level — applying the same
+            permanent bonus again increments the level rather than creating a
+            separate instance, making it progressively stronger.
           </p>
 
           <h3>Temporary Bonuses</h3>
@@ -448,7 +455,8 @@ Effective = (base + total shift) x (1000 + total boost) / 1000`}
             The Cleaning Fluid item clears temporary bonuses from your Kami —
             Harvest Stop, Cooldown Set, Death, Kill/Killed, Liquidation, and
             Timed effects are all wiped. It does <strong>not</strong> remove
-            permanent bonuses such as your skills. Useful for purging debuffs
+            permanent bonuses such as your skills or equipment bonuses. Useful
+            for purging debuffs
             (like a Curse Tablet applied by another player), but be aware it
             also strips your own temporary buffs.
           </InfoBox>
@@ -546,7 +554,7 @@ Effective = (base + total shift) x (1000 + total boost) / 1000`}
               ],
               [
                 "Equipment",
-                "Wearable pet items that occupy the single pet slot. Obtained from the sacrifice droptables; each Kami wears one at a time.",
+                "Wearable pet items that occupy the single pet slot, granting their bonus while worn. Obtained from the sacrifice droptables; each Kami wears one at a time.",
               ],
               [
                 "Skills",

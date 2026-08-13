@@ -182,7 +182,7 @@ export default function LiquidationsFormulasPage() {
             The <strong>Predator</strong> skill tree boosts your kill power,
             spoils ratio, and cooldown speed. The <strong>Guardian</strong> tree
             improves your defense threshold, salvage rate, and survivability.
-            Various bonuses from skills and consumables can shift any encounter
+            Various bonuses from skills, equipment, and consumables can shift any encounter
             — check the Skill Trees page for specifics.
           </p>
 
@@ -198,7 +198,7 @@ export default function LiquidationsFormulasPage() {
             Why would anyone do this? Because the sacrifice droptables are the
             source of <strong>pet equipment</strong> — the wearable items
             (Critters, Ledgers, Wraths, Contempt masks, and the rest) that fill
-            a Kami&apos;s single pet slot. In practice, players buy cheap
+            a Kami&apos;s single pet slot and grant its equipment bonuses. In practice, players buy cheap
             low-stat Kamis off the market specifically as sacrifice fodder to
             gear up their real roster.
           </p>
@@ -262,8 +262,8 @@ export default function LiquidationsFormulasPage() {
             vars={{
               "killThreshold": "HP value below which the victim can be killed",
               "animosity": "base threshold factor derived from Violence-to-Harmony ratio (S-curve, 0% to ~40%)",
-              "efficacy": "affinity matchup multiplier plus skill and consumable combat bonuses",
-              "thresholdShift": "flat bonus or penalty from ATK/DEF_THRESHOLD_SHIFT skills and consumables",
+              "efficacy": "affinity matchup multiplier plus skill/equipment/consumable combat bonuses",
+              "thresholdShift": "flat bonus or penalty from ATK/DEF_THRESHOLD_SHIFT skills, equipment, and consumables",
               "maxHP": "victim's maximum Health Points",
               "precision": "internal scaling constant (1,000) used for fixed-point math",
             }}
@@ -332,7 +332,7 @@ export default function LiquidationsFormulasPage() {
           <p>
             Threshold efficacy adjusts the kill threshold based on the affinity
             matchup between your hand and the victim&apos;s body, plus any
-            combat bonuses from skills and consumables. (This is distinct from{" "}
+            combat bonuses from skills, equipment, and consumables. (This is distinct from{" "}
             <em>Recoil Efficacy</em>, which uses the opposite affinity
             direction — see below.)
           </p>
@@ -405,15 +405,15 @@ export default function LiquidationsFormulasPage() {
 
           <h3>Threshold Shift vs Ratio Shift</h3>
           <p>
-            Skills and consumables can modify the kill threshold in two distinct
+            Skills, equipment, and consumables can modify the kill threshold in two distinct
             ways, and understanding the difference matters for builds:
           </p>
           <FormulaBlock
             label="Threshold Shift"
             vars={{
               "thresholdShift": "net flat modifier added to the kill threshold after the animosity-efficacy product",
-              "ATK_THRESHOLD_SHIFT": "attacker's flat threshold bonus from Predator skills and consumables",
-              "DEF_THRESHOLD_SHIFT": "victim's flat threshold reduction from Guardian skills and consumables",
+              "ATK_THRESHOLD_SHIFT": "attacker's flat threshold bonus from Predator skills, equipment, and consumables",
+              "DEF_THRESHOLD_SHIFT": "victim's flat threshold reduction from Guardian skills, equipment, and consumables",
               "shiftPrecision": "scaling constant that converts shift values into the threshold's numeric range",
             }}
           >
@@ -565,7 +565,7 @@ catch it moments from starving anyway.`}
             vars={{
               "salvageRatio": "percentage of the bounty the victim keeps (capped at 100%)",
               "victimPower": "the killed Kami's total Power stat — 1 point = 1% kept",
-              "DEF_SALVAGE_RATIO": "bonus salvage from Guardian skills and defensive consumables",
+              "DEF_SALVAGE_RATIO": "bonus salvage from Guardian skills and defensive equipment",
               "salvage": "final Musu amount the victim retains",
               "bounty": "victim's total uncollected harvest Musu at the time of death",
             }}
@@ -613,7 +613,7 @@ The victim's account receives 240 Musu, and the dead Kami earns
               "spoilsRatio": "percentage of the remaining bounty the killer steals (capped at 100%)",
               "45": "base spoils percentage before Power",
               "attackerPower": "the killer's total Power stat — 1 point = +1% stolen",
-              "ATK_SPOILS_RATIO": "bonus spoils from Predator skills and offensive consumables",
+              "ATK_SPOILS_RATIO": "bonus spoils from Predator skills and offensive equipment",
               "spoils": "final Musu amount added to the killer's harvest bounty",
               "bounty": "victim's total uncollected harvest Musu at the time of death",
               "salvage": "Musu already claimed by the victim (subtracted before spoils)",
@@ -1140,7 +1140,7 @@ very small when your Harmony exceeds the victim's Violence.`}
 
           <h2>Combat Bonus Reference</h2>
           <p>
-            These bonuses from skills and consumables directly affect liquidation
+            These bonuses from skills, equipment, and consumables directly affect liquidation
             calculations. Predator bonuses favor the attacker; Guardian bonuses
             protect the defender.
           </p>
