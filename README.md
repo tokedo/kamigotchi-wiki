@@ -2,7 +2,15 @@
 
 **[kamiwiki.xyz](https://kamiwiki.xyz)**
 
-Community game guide for [Kamigotchi](https://kamigotchi.com) — a pure on-chain MMORPG on Yominet. Covers all game mechanics, items, quests, world map, skills, and more.
+Community game guide for [Kamigotchi](https://kamigotchi.com) — a pure on-chain MMORPG on Yominet.
+
+Three sections plus the catalogs:
+
+- **Start Here** — onboarding for a joining player's first days.
+- **Mechanics** — the rules and the exact formulas behind stats, harvesting, combat, leveling and the economy.
+- **Playing Well** — how the game is actually played: farming doctrine, defence, predation, and choosing ground.
+
+Plus the item database, quest graph, world map, and a list of community resources.
 
 ## Getting Started
 

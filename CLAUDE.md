@@ -14,7 +14,8 @@ and references — and build the UI to present them.
 
 ## Source of Truth
 
-The technical GDD repo is your **only source of game facts**:
+The technical GDD repo is your **only source of RULES facts** — anything about
+how the game itself works:
 
     /Users/anatolyzaytsev/kamigotchi-gdd/
 
@@ -48,6 +49,21 @@ into prose.
 | Quest dialogues | `catalogs/quests/dialogues/` |
 | Quest chains | `catalogs/quests/quest-lines.md` (dependency graph) |
 
+### Strategy pages have a second source
+
+The **Playing Well** section (`/strategy/*`) describes what players do with the
+rules, not the rules themselves. Its claims come from a **maintained strategy
+corpus supplied with each writing brief** — it does not live in this repo, and
+it is not in the GDD. When writing or refreshing those pages:
+
+- Rules facts still come from the GDD, and every formula referenced is
+  cross-linked to the mechanics page that owns it.
+- Strategy claims come from the supplied corpus and nowhere else. Do not
+  invent doctrine, do not extrapolate numbers, and do not describe where the
+  corpus came from.
+- If a corpus claim cannot be placed, leave it out and say so in the report
+  rather than forcing it onto a page.
+
 ## Rules
 
 - NEVER reference or read the original Kamigotchi source code
@@ -59,14 +75,34 @@ into prose.
 - If the GDD marks something UNCERTAIN, or defines a value it doubts is
   actually enforced, document the behavior that really occurs or omit it —
   never publish a number the GDD itself does not trust
-- Player-facing content is a **present-tense snapshot**, never a changelog: no
-  "new", "now", "updated", "added", "removed", "recently", "previously", "no
-  longer", "as of", no patch numbers and no dates. Describe how the game works,
-  full stop
+- **Mechanics pages** (`/formulas/*`, Start Here, the databases, the map) are a
+  **present-tense snapshot**, never a changelog: no "new", "now", "updated",
+  "added", "removed", "recently", "previously", "no longer", "as of", no patch
+  numbers and no dates. Describe how the game works, full stop
+- **Strategy pages** (`/strategy/*`) are the one exception, because the world
+  they describe decays. Each carries exactly **one** visible "as of" stamp line
+  directly under its title, rendered by the shared component in
+  `src/components/strategy-page.tsx`. One stamp per page, no other dates in the
+  body, and the section is refreshed **as a whole** rather than page by page —
+  when the stamp moves, every page in the section moves with it
 - Write for players, not engineers — no Solidity, no entity IDs, no WAD math
 - Keep technical precision: don't simplify formulas to the point of being wrong
 - Use game terminology (Kami, Musu, Obol, Harmony) not code terms (uint256,
   entity, component)
+
+### Standing content rules (apply everywhere on the site)
+
+- **No player names, ever.** Not in prose, not in examples, not as credit.
+  Author credits on the Resources page are the sole exception, and they name
+  the tool's maker, never a player in the world
+- **No operator counts and no output-share statistics.** Do not publish how
+  many players run a thing, or what share of anything they account for
+- **Never the word "guild."** There is no guild system; do not imply one
+- **Automation is mentioned neutrally**, as a category of community service
+  priced as a harvest tax, with the link <https://kamibots.xyz>. No
+  endorsement, no comparison of services, no operational guidance
+- **No provenance language.** The wiki states known doctrine in plain words.
+  Never "data shows", "analysis", "measured", "our numbers", or "we"
 
 ## Content Structure
 
@@ -99,13 +135,19 @@ Every mechanic page has **two detail levels**:
 
 ## Navigation Structure
 
-Sidebar sections:
-- Getting Started (new player guide)
-- Core Mechanics (stats, health, leveling, death)
-- Economy (harvesting, items, crafting, trading)
-- Combat (killing, liquidation, sacrifice)
-- World (rooms, nodes, scavenging, day/night)
-- Progression (skills, quests, factions, goals)
-- Marketplace (Kami market, auctions, item pools, token portal, VIP)
-- Databases (items, quests, rooms — interactive)
-- Tools (skill calculator — future)
+The site is three content sections plus the databases and resources. The
+sidebar is generated from `src/lib/navigation.ts`; the home page cards mirror
+the same order.
+
+| Nav entry | Routes | What it is |
+|---|---|---|
+| **Start Here** | `/start` | Single onboarding page — a joining player's first days. Timeless, no stamp. |
+| **Mechanics** | `/formulas`, `/formulas/*` | The rules and the math: stats, harvesting, liquidations, leveling, economy, item pools. Two detail levels per page (Overview / Details). Timeless. |
+| **Playing Well** | `/strategy`, `/strategy/*` | Doctrine: the overview, farming, defence, predation, choosing ground. Stamped, corpus-sourced. |
+| Item Database | `/items` | Searchable item catalog. |
+| Quest Database | `/quests` | Quest dependency graph. |
+| World Map | `/map` | Interactive room and node map. |
+| Resources | `/resources` | Official and community tools. |
+
+The `/formulas/*` URLs are **public links and must not change**. "Mechanics" is
+a label over the same routes; renaming the section does not rename the paths.

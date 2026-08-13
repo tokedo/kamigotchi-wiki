@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Calculator, Wheat, Skull, TrendingUp, Coins, Droplets } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Game Formulas",
+  title: "Mechanics",
 };
 
 const sections = [
@@ -12,7 +12,7 @@ const sections = [
     href: "/formulas/stats",
     icon: Calculator,
     description:
-      "Base stats, equipment bonuses, skill modifiers, and how they combine into effective values.",
+      "Base stats, skill modifiers, the bonus system, and how they combine into effective values.",
   },
   {
     title: "Harvesting",
@@ -55,10 +55,12 @@ export default function FormulasIndex() {
   return (
     <article>
       <header className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight">Game Formulas</h1>
+        <h1 className="text-3xl font-bold tracking-tight">Mechanics</h1>
         <p className="mt-2 text-muted-foreground max-w-2xl">
           Every formula in Kamigotchi with exact constants and worked examples.
           The math behind stats, harvesting, combat, leveling, and the economy.
+          These pages describe the rules themselves — for what players do with
+          them, see <Link href="/strategy" className="underline hover:text-foreground">Playing Well</Link>.
         </p>
       </header>
 

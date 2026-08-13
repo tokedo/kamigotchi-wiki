@@ -105,8 +105,8 @@ export default function HarvestingFormulasPage() {
           <p>
             Out of the box, Fertility dominates and Intensity is a rounding
             error. But Intensity has its own multiplier
-            (<strong>Harvest Intensity Boost</strong> from Guardian/Enlightened
-            skills and certain pets) that can scale it 5x or more. This is the
+            (<strong>Harvest Intensity Boost</strong> from Guardian and
+            Enlightened skills) that can scale it 5x or more. This is the
             engine behind the popular tanky &ldquo;intensity build&rdquo;: a
             high-Health, high-Harmony Kami with intensity skills parks on a
             node for many hours, and its ever-growing Intensity ends up
@@ -263,7 +263,7 @@ export default function HarvestingFormulasPage() {
             vars={{
               "Fertility": "steady Musu/hr from Power and affinity (see below)",
               "Intensity": "ramping Musu/hr from Violence and time on node (see below)",
-              "Bounty Boost": "base 1.0x, increased by food (+25%) or equipment (+12% to +20%)",
+              "Bounty Boost": "base 1.0x, increased by food (+25%)",
             }}
           >
             {`Total Musu per Hour = (Fertility + Intensity) × Bounty Boost`}
@@ -340,7 +340,7 @@ export default function HarvestingFormulasPage() {
               "5": "Violence scaling factor",
               "Minutes on Node": "whole minutes since intensity last reset — grows over time",
               "10": "base intensity multiplier",
-              "Intensity Boost": "sum of Harvest Intensity Boost from skills and pets (0 with none; +40 is a typical level-32 Guardian investment)",
+              "Intensity Boost": "sum of Harvest Intensity Boost from skills (0 with none; +40 is a typical level-32 Guardian investment)",
               "480": "rate divisor",
             }}
           >
@@ -351,8 +351,8 @@ export default function HarvestingFormulasPage() {
             ramp) and <strong>Intensity Boost</strong> (the multiplier).
             Without any boost, the multiplier is 10/480 and Intensity stays
             marginal. Guardian-tree skills (Patience +5/level, Loyalty +15,
-            Dedication +5/level, the Obsession ultimate +25) and Automata-line
-            pets (+15 to +25) raise it dramatically.
+            Dedication +5/level, the Obsession ultimate +25) raise it
+            dramatically.
           </p>
 
           <h3>What Resets the Ramp</h3>
@@ -643,7 +643,7 @@ Fertility = 26 × 0.65 × 1.5 = 25.35 Musu per hour`}
             band that matters is narrow. Base Harmony starts at 10 with no
             trait contribution at all and reaches 38 on the single best trait
             roll the catalogue allows; the average roll lands near 14. Skills
-            and a pet add on top of whatever you rolled.
+            add on top of whatever you rolled.
           </p>
           <StatTable
             headers={[
@@ -656,7 +656,7 @@ Fertility = 26 × 0.65 × 1.5 = 25.35 Musu per hour`}
               ["14", "Average trait roll", "20 HP"],
               ["22", "Average roll plus the Guardian Harmony skills", "16 HP"],
               ["38", "Best possible trait roll", "12 HP"],
-              ["61", "Best roll + every Harmony skill + an Ancient Ledger", "9 HP"],
+              ["56", "Best roll + every Harmony skill", "9 HP"],
             ]}
           />
           <p>
@@ -704,9 +704,9 @@ Max Musu = floor(Current HP x (Harmony + 20) / (6.5 x Strain Modifier))`}
             Because the cap follows your <em>current</em> HP, it shrinks as you
             take strain. A starting Kami (50 HP, Harmony 10) can hold at most
             ~230 Musu of pending bounty; once it reaches that ceiling the harvest
-            stops accruing until you collect and heal. Raising Harmony, wearing
-            harvest equipment, and using strain-reduction food all lift the cap
-            so each session banks more before it tops out.
+            stops accruing until you collect and heal. Raising Harmony and
+            using strain-reduction food both lift the cap so each session banks
+            more before it tops out.
           </InfoBox>
 
           <h2>Recovery While Resting</h2>
@@ -768,7 +768,7 @@ HP recovered = floor(Seconds Resting x HP per second)`}
             This is the real bottleneck of the harvest-rest cycle: resting a
             drained Kami takes <em>hours</em>, and the bigger your HP pool the
             longer a full recharge takes. Rest-speed bonuses (Resting Recovery
-            Boost skills, Gumdrop-line pets) and healing food exist precisely
+            Boost skills) and healing food exist precisely
             to shorten this dead time — feeding candy is the alternative to
             waiting out the clock.
           </p>
@@ -941,16 +941,10 @@ leftover = points mod tierCost`}
                 "Until next harvest action",
               ],
               [
-                "Bounty Boost",
-                "Equipment",
-                "+12% to +20% harvest output",
-                "While equipped",
-              ],
-              [
                 "Intensity Boost",
-                "Food or Equipment",
+                "Food",
                 "Increases Intensity growth rate",
-                "Varies by source",
+                "Until next harvest action",
               ],
               [
                 "Strain Reduction",

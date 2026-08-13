@@ -1,9 +1,11 @@
 import {
   Calculator,
+  Compass,
   Globe,
   Link2,
   Package,
   ScrollText,
+  Swords,
   type LucideIcon,
 } from "lucide-react";
 
@@ -30,16 +32,35 @@ export type NavEntry = NavSection | NavLink;
 
 export const navigation: NavEntry[] = [
   {
+    kind: "link",
+    title: "Start Here",
+    icon: Compass,
+    href: "/start",
+  },
+  {
     kind: "section",
-    title: "Game Formulas",
+    title: "Mechanics",
     icon: Calculator,
     items: [
+      { title: "All Mechanics", href: "/formulas" },
       { title: "Stats & Bonuses", href: "/formulas/stats" },
       { title: "Harvesting", href: "/formulas/harvesting" },
       { title: "Liquidations", href: "/formulas/liquidations" },
       { title: "Leveling & XP", href: "/formulas/leveling" },
       { title: "Economy", href: "/formulas/economy" },
       { title: "Item Pools", href: "/formulas/item-pools" },
+    ],
+  },
+  {
+    kind: "section",
+    title: "Playing Well",
+    icon: Swords,
+    items: [
+      { title: "How It Is Really Played", href: "/strategy" },
+      { title: "Farming Well", href: "/strategy/farming" },
+      { title: "Staying Alive", href: "/strategy/defense" },
+      { title: "The Predator's Economy", href: "/strategy/predation" },
+      { title: "Choosing Ground", href: "/strategy/ground" },
     ],
   },
   {
