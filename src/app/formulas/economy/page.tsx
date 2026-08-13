@@ -126,10 +126,9 @@ export default function EconomyFormulasPage() {
           <h2>Player-to-Player Trading</h2>
           <p>
             You can trade items directly with other players through an{" "}
-            <strong>orderbook</strong> — the community calls it
-            the <strong>KWOB</strong>, and it&apos;s where most of the real
-            economy happens: crafting materials, food, and XP-potion
-            ingredients all clear here. Trading follows a three-step handshake:
+            <strong>orderbook</strong> — this is where crafting materials,
+            food, and XP-potion ingredients change hands, since NPCs will not
+            buy anything back from you. Trading follows a three-step handshake:
           </p>
           <ol>
             <li>
@@ -273,8 +272,8 @@ export default function EconomyFormulasPage() {
                 "Reroll Tokens",
                 "Reroll Token (reroll Kami traits)",
                 "Onyx Shards",
-                "50 total",
-                "100,000 Onyx",
+                "100,000 total",
+                "50 Onyx",
               ],
             ]}
           />
@@ -282,9 +281,10 @@ export default function EconomyFormulasPage() {
           <InfoBox>
             The Gacha auction has gentle price swings (25% decay per day, target
             of 32 sales per day) so the price stays relatively stable. The
-            Reroll auction is far more volatile &mdash; only 50 total supply,
-            sharper 50% decay, and a target of just 16 per day. If you want a
-            Reroll Token, timing your purchase matters much more.
+            Reroll auction is far more volatile &mdash; a sharper 50% decay
+            against a target of only 16 sales per day, so a quiet day halves
+            the price and a busy one doubles it. If you want a Reroll Token,
+            timing your purchase matters much more.
           </InfoBox>
 
           <h2>Token Portal</h2>
@@ -837,9 +837,9 @@ XP earned        = recipe XP      * batchAmount`}
 
           <h3>Sample Recipes (the XP-potion chain)</h3>
           <p>
-            These are the recipes players actually run in volume — the chain
-            that turns harvested Pine Cones into the XP potions every serious
-            build is fed with:
+            These are the recipes behind the XP economy — the chain that turns
+            harvested Pine Cones into the XP potions every serious build is fed
+            with:
           </p>
           <StatTable
             headers={["Recipe", "Inputs", "Output", "Stamina", "Requires"]}
@@ -952,8 +952,8 @@ Batch cost uses the same geometric series as NPC shops.`}
                 "Reroll Tokens",
                 "Reroll Token",
                 "Onyx Shards",
-                "50",
                 "100,000",
+                "50",
                 "1 day",
                 "0.50 (50% drop/day)",
                 "16/day",
@@ -989,8 +989,9 @@ Batch cost uses the same geometric series as NPC shops.`}
           <InfoBox>
             The Reroll auction is far more volatile because of its 0.50 decay.
             One day of no purchases halves the price; a burst of purchases
-            doubles it. With only 50 total supply, each purchase has a large
-            impact on the next buyer&apos;s price.
+            doubles it. Its target rate of 16 per day is low enough that a
+            modest run of buyers moves the price sharply for whoever comes
+            next.
           </InfoBox>
 
           <h3>Spending a Gacha Ticket</h3>
@@ -1108,33 +1109,32 @@ Registered tokens:
 
           <h2>Harvest Tax</h2>
           <p>
-            When you start a harvest, a <strong>taxer</strong> can be
-            specified &mdash; typically a guild leader, faction, or referrer.
-            The taxer receives a percentage of every harvest collection. Taxes
-            are calculated from the original bounty, not from what remains after
-            other taxes (they do not compound).
+            When you start a harvest you may name <strong>one taxer</strong>{" "}
+            &mdash; another account you designate, such as a service you use or
+            someone who referred you &mdash; and the rate they take. That one
+            taxer is bound to the harvest at the moment it starts and receives
+            their share of every collection from it. There is no way to attach a
+            second, and the pairing is cleared and set again each time you start
+            a new harvest.
           </p>
           <FormulaBlock
             variant="example"
             label="Harvest Tax"
             vars={{
               "taxAmount": "Musu sent to the taxer from this harvest",
-              "harvestedBounty": "the raw Musu your Kami collected before any taxes",
+              "harvestedBounty": "the raw Musu your Kami collected before tax",
               "taxRate": "the taxer's rate in basis points (100 = 1%, max 2,000 = 20%)",
-              "remainder": "Musu you actually receive after all taxers take their share",
-              "bounty": "same as harvestedBounty (the original untaxed amount)",
-              "tax1, tax2, ...": "deductions for each taxer, each calculated from the original bounty",
+              "remainder": "Musu you actually receive",
             }}
           >
             {`taxAmount = harvestedBounty * taxRate / 10,000
+remainder = harvestedBounty - taxAmount
 
 taxRate is in basis points (100 = 1%, 2000 = 20%)
-Maximum rate: 2,000 basis points (20%) per taxer
+Maximum rate: 2,000 basis points (20%) — set at harvest start,
+and rejected outright above that
 
-Multiple taxers are applied sequentially from the original amount:
-  remainder = bounty - tax1 - tax2 - ...
-
-Example: 1,000 Musu harvested, one taxer at 10% (1,000 bps)
+Example: 1,000 Musu harvested, taxer at 10% (1,000 bps)
   tax = 1000 * 1000 / 10000 = 100 Musu to the taxer
   you receive: 900 Musu`}
           </FormulaBlock>

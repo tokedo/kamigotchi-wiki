@@ -31,7 +31,7 @@ export default function StatsFormulasPage() {
             rows={[
               [
                 "Health",
-                "Your hit points. When Health reaches zero, your Kami dies. Higher Health means surviving more hits and more time to react.",
+                "Your hit points, and the fuel a harvest burns. Hitting zero does not kill your Kami — it strands it, unable to collect or stop, and open to liquidation. Higher Health means longer harvests and more time to react.",
               ],
               [
                 "Power",
@@ -52,29 +52,54 @@ export default function StatsFormulasPage() {
             ]}
           />
 
-          <h2>What Real Kamis Look Like</h2>
+          <h2>The Numbers You Are Actually Working With</h2>
           <p>
-            Before diving into formulas, calibrate your intuition on actual
-            numbers. Base stats are set by traits at mint and sit in a fairly
-            narrow band — 10 is the floor for Power, Violence, and Harmony
-            (50 for Health), and a stat of 20+ is already exceptional:
+            Before diving into formulas, calibrate your intuition. A Kami&apos;s
+            base stats are fixed at mint: it starts from a hardcoded floor and
+            each of its five traits adds whatever that trait carries. Nothing
+            afterwards changes the base — skills and gear stack on top of it.
+            The floor and the ceiling below are what the trait catalogue allows;
+            the middle column is what an average roll comes to.
           </p>
           <StatTable
-            headers={["Stat", "Typical (average)", "Range across all Kamis", "What counts as high"]}
+            headers={[
+              "Stat",
+              "Floor (no trait contributes any)",
+              "Average roll",
+              "Best possible roll",
+            ]}
             rows={[
-              ["Health", "~90", "50 – 230", "120+ (most Kamis sit between 60 and 110)"],
-              ["Power", "~15", "10 – 29", "20+"],
-              ["Violence", "~14", "10 – 33", "20+ (the classic predator bar)"],
-              ["Harmony", "~14", "10 – 29", "20+ (elite defensive Kamis)"],
+              ["Health", "50", "~89", "360"],
+              ["Power", "10", "~15", "44"],
+              ["Violence", "10", "~14", "42"],
+              ["Harmony", "10", "~14", "38"],
             ]}
           />
           <p>
-            After a finished build (level ~32 with skills and a pet equipped),
-            effective totals typically land around 200 Health and low-20s
-            Harmony; the very tankiest Kamis in the game reach roughly 400+
-            effective Health and high-30s Harmony. If a guide or calculator
-            assumes stats like &ldquo;Harmony 100,&rdquo; it is not describing
-            this game.
+            Two things follow. First, the top of the range is far away from the
+            middle — a stat of 20+ on an ordinary roll is already good, and the
+            record-holding traits (a Wings hand alone carries 90 Health) are
+            what separate a great Kami from a good one. Second, the ceilings are
+            still <em>small numbers</em>. If a guide or calculator assumes stats
+            like &ldquo;Harmony 100,&rdquo; it is not describing this game.
+          </p>
+          <p>
+            Skills and a pet then do the rest. Work it through for a defensive
+            build: take an average Health roll of about 90, max two of the
+            +10-per-level Health skills (+100 across ten skill points), equip an
+            Elder Critter (+50), and you have 240 effective Health. Harmony
+            climbs more slowly because its skills are worth one to five points
+            each rather than ten: the same average roll of 14 plus the
+            Guardian tree&apos;s Defensiveness (+5) and Anxiety (+3) lands at 22.
+          </p>
+          <p>
+            At the theoretical ceiling — a best-case trait roll with every
+            relevant skill and the matching pet — effective Health clears{" "}
+            <strong>400</strong> (the 360 base roll and a +50 Critter get there
+            before a single skill point is spent) and Harmony reaches{" "}
+            <strong>61</strong> (38 base, +13 from the Guardian Harmony line,
+            +5 from Index Funds, +5 from an Ancient Ledger). Those are build
+            ceilings, not what you should expect to meet.
           </p>
 
           <h2>How Stats Are Built Up</h2>
@@ -228,9 +253,10 @@ If the result is negative, it is set to 0.`}
           </FormulaBlock>
           <p>
             240 effective HP from a 90-HP Kami — skills and equipment more than
-            double the trait roll. This is typical: the toughest Kamis in the
-            game run around 400+ effective Health, almost all of it from
-            flat shifts.
+            double the trait roll, and every point of it arrives through the
+            shift channel. Run the same arithmetic on the best trait roll the
+            catalogue allows (360 base Health) and the ceiling clears 400
+            before any skill point is spent at all.
           </p>
           <p>
             In current content, core stats (Health, Power, Violence, Harmony)
@@ -456,11 +482,11 @@ Effective = (base + total shift) x (1000 + total boost) / 1000`}
             rows={[
               [
                 "Attack Threshold Ratio",
-                "Scales your kill threshold when attacking — higher values make it easier to liquidate targets",
+                "Scales your kill threshold when attacking — but only on advantaged and NORMAL-vs-NORMAL affinity matchups. On neutral and disadvantaged ones it does nothing.",
               ],
               [
                 "Defense Threshold Ratio",
-                "Scales your kill threshold when defending — higher values make you harder to liquidate",
+                "Scales the attacker's kill threshold down when defending — under the same matchup condition, so it only protects you against attackers who already have the type advantage.",
               ],
               [
                 "Attack Threshold Shift",

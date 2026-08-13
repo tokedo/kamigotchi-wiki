@@ -180,7 +180,7 @@ const MILESTONES: [number, string][] = [
   [32, "32 SP: the classic “finished build” — a Tier 3 pick in each of two trees"],
   [37, "37 SP: extended build (deep second tree, e.g. 16 + 21)"],
   [41, "41 SP: 40 in-tree + 1 to buy your first Tier 5 skill"],
-  [48, "48 SP: deep endgame — a handful of Kamis are here"],
+  [48, "48 SP: deep endgame — past every gate but the Tier 6 ultimate"],
   [56, "56 SP: 55 in one tree + 1 to buy the Tier 6 ultimate"],
 ];
 
@@ -265,13 +265,14 @@ export default function LevelingFormulasPage() {
           />
 
           <InfoBox variant="tip">
-            Set your expectations with real numbers: a typical active Kami
-            harvests on the order of <strong>1,000 Musu per day</strong> (strong
-            harvester builds manage 3,000–5,000), so harvesting alone carries
-            you comfortably through the first ~20 levels. Beyond that, the
-            curve outruns your farm rate — a level 32 build costs ~195K XP,
-            which is months of passive harvest income. That&apos;s why serious
-            leveling is done by feeding <strong>XP items</strong> (see the XP
+            Set your expectations against the curve, not against your farm rate.
+            Reaching level 16 costs about <strong>4,700 XP</strong> in total —
+            a handful of good harvest cycles, since every Musu you collect is
+            also a point of XP. Reaching level 32 costs about{" "}
+            <strong>195,000</strong>, roughly forty times as much for twice the
+            level. Harvesting carries you through the early stretch on its own;
+            past that the curve outruns any harvest rate, which is why serious
+            levelling is done by feeding <strong>XP items</strong> (see the XP
             items table in the details section), funded by the Musu your Kamis
             harvest.
           </InfoBox>
@@ -289,14 +290,14 @@ export default function LevelingFormulasPage() {
             Experience requirements grow <strong>exponentially</strong> — each
             level costs about 26% more than the one before, and that compounds
             hard. The first level-up needs just 40 XP; going from level 31 to
-            32 costs about 50,000. But don&apos;t think of leveling as a slow
+            32 costs about 40,000. But don&apos;t think of leveling as a slow
             grind through every level — think of it in terms
             of <strong>skill points</strong>. A Kami starts at level 1 with
             1 skill point and gains 1 per level, so at level N it has N points
-            total. Skill tiers inside one tree unlock at 15, 25, 40, and 55
-            points invested — plus 1 more point to actually buy the newly
-            unlocked skill. That maps to a handful of level milestones that
-            players actually build toward:
+            total. Skill tiers inside one tree unlock at 5, 15, 25, 40, and 55
+            points invested in that tree — plus 1 more point to actually buy the
+            newly unlocked skill. That maps to a handful of level milestones
+            worth building toward:
           </p>
           <StatTable
             headers={["Level", "Skill Points", "Why players stop here", "Total XP from L1"]}
@@ -330,10 +331,13 @@ export default function LevelingFormulasPage() {
           <p>
             Read that last column again: a level 32 build costs about{" "}
             <strong>195K XP total</strong>, but the level 56 ultimate costs{" "}
-            <strong>49 million</strong> — over 250 finished level-32 builds'
-            worth of XP for one Kami. This is why in practice the population
-            clusters between level 24 and 39, and only a few dozen Kamis in the
-            entire game have ever crossed level 48.
+            <strong>49 million</strong> — over 250 finished level-32 builds&apos;
+            worth of XP for one Kami. That gap is why the interesting question
+            is never &ldquo;how high can I go&rdquo; but &ldquo;which gate am I
+            buying next&rdquo;: the levels between two gates cost real XP and
+            deliver nothing but the skill point, so the cheap builds cluster
+            just past a gate and the expensive ones are the ones reaching for
+            the next.
           </p>
           <InfoBox variant="tip">
             Practical translation: XP is fed to Kamis mostly
@@ -447,8 +451,9 @@ for precision, but the result is the same.`}
             There is no hard level cap. The curve itself is the cap — at high
             levels, the XP required per level grows so large that progress
             slows to a crawl. The single level-up from 31 to 32 costs about
-            50,000 XP (more than the entire journey to level 26), and the
-            level-up from 55 to 56 costs about 12.7 million.
+            40,000 XP — nearly as much as the entire journey from level 1 to
+            level 26 (about 48,700) — and the level-up from 55 to 56 costs
+            about 10.1 million.
           </p>
 
           <h3>XP Milestones and Potion Equivalents</h3>
@@ -613,10 +618,12 @@ for precision, but the result is the same.`}
             and can unlock Predator Tier 3.
           </p>
           <InfoBox variant="info">
-            Some player tools display lower gate values for tiers 4–6 (20/30/40)
-            — those come from a stale column in the game&apos;s data files. The
-            on-chain check uses the values above (25/40/55): tier 4 genuinely
-            requires 25 points in the tree, and the tier 6 ultimate requires 55.
+            You will see lower gate values for tiers 4–6 quoted in some player
+            tools — 20, 30 and 40. Those numbers are not what the game checks.
+            The gates it enforces are the ones in the table above: tier 4
+            genuinely requires 25 points in the tree, tier 5 requires 40, and
+            the tier 6 ultimate requires 55. Plan a mono-tree build around 56
+            skill points, not 41.
           </InfoBox>
 
           <h3>Mutual Exclusion at Tiers 3 and 6</h3>

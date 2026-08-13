@@ -61,8 +61,12 @@ export default function LiquidationsFormulasPage() {
             their harvest. But the relationship follows an S-curve with a hard
             ceiling: before affinity modifiers, the threshold tops out
             at <strong>40% of the victim&apos;s max HP</strong>, and equal
-            Violence-vs-Harmony lands at 20%. You cannot stack Violence into a
-            guaranteed kill — a healthy, rested Kami is never liquidatable.
+            Violence-vs-Harmony lands at 20%. Violence alone can never buy you
+            a guaranteed kill: against an attacker carrying no threshold-shift
+            bonuses, a healthy rested Kami is out of reach. Flat threshold
+            shifts from skills and gear are the one thing that moves that
+            ceiling in either direction — see{" "}
+            <strong>Threshold Shift vs Ratio Shift</strong> in the details.
           </p>
           <p>
             Affinity matchups also matter — and combat uses a{" "}
@@ -102,7 +106,7 @@ export default function LiquidationsFormulasPage() {
                 "Any unsalvaged, unspoiled Musu is destroyed",
               ],
               [
-                "Takes recoil damage (karma × strain, modified by affinity)",
+                "Takes recoil damage — karma multiplied by the strain cost of the loot just taken, modified by affinity",
                 "Kami dies — state becomes DEAD, HP drops to 0",
               ],
               [
@@ -113,43 +117,59 @@ export default function LiquidationsFormulasPage() {
           />
 
           <InfoBox variant="warning">
-            Killing is not free. Recoil damage scales on a{" "}
-            <strong>smooth curve</strong> — the stronger the victim relative to
-            you, the more punishment you take. Affinity matchups matter too:
-            the defender&apos;s hand affinity vs your body affinity can increase
-            or decrease how much recoil you suffer. Kill a high-Violence target
-            with a bad affinity matchup and you might lose so much HP that
-            someone else can immediately liquidate you. Always check your
-            target&apos;s stats and affinity before committing.
+            Killing is not free, and the bill scales with the payday. Recoil is
+            built on the strain <em>you</em> would pay to harvest the loot you
+            just stole, so the fatter the steal, the harder the hit. On top of
+            that it scales on a <strong>smooth curve</strong> with the
+            victim&apos;s Violence against your Harmony — the stronger the
+            victim relative to you, the more punishment you take. Affinity
+            matters too: the defender&apos;s hand affinity vs your body affinity
+            can raise or lower recoil. Take a rich, high-Violence target on a
+            bad matchup and you may lose so much HP that someone else can
+            immediately liquidate you. Check the target&apos;s stats, affinity,
+            and how long it has been sitting before committing.
           </InfoBox>
 
           <h3>What Predation Actually Pays</h3>
           <p>
-            To calibrate expectations with live on-chain numbers: the whole
-            game sees on the order of <strong>200 liquidations per day</strong>,
-            and the average haul is roughly <strong>850 Musu</strong> per kill
-            (the biggest single hauls approach 4,000 — the physics of the
-            bounty cap make five-digit steals impossible). Liquidation income
-            is therefore spikier and smaller than steady harvesting — the real
-            predator economy is kills <em>plus</em> Obols: every kill pays 1
-            Obol, 5 Obols craft a Wonder Egg, and Wonder Eggs are the only
-            source of certain exclusive items. Predation is also
-            the enforcement mechanism that keeps everyone else honest about
-            HP management.
+            There is a hard ceiling on what any one kill can be worth, and it
+            is worth understanding before you build around predation. A
+            victim&apos;s uncollected bounty can never exceed what its own HP
+            could pay for in strain, so the pot you are stealing from is
+            bounded by the victim&apos;s Health and Harmony — five-digit steals
+            are not a matter of luck, they are impossible. You then take only
+            a share of what is left after the victim&apos;s salvage.
+          </p>
+          <p>
+            That makes liquidation income spiky and capped, where harvesting is
+            steady. The rest of the predator economy is the{" "}
+            <strong>Obol</strong>: every kill pays exactly 1, 5 craft a Wonder
+            Egg, and the Wonder Egg is the only source of several items —
+            the Heart Crystals, the Teardrop Jewels, the Ash Pearl. Predation
+            is also the enforcement mechanism that keeps everyone else honest
+            about HP management.
           </p>
 
           <h3>Death and Revival</h3>
           <p>
-            When a Kami dies — whether from a kill or from harvest strain draining
-            HP to zero — it enters the DEAD state. Dead Kamis are completely
-            locked out: no harvesting, no leveling, no equipping, no quests, no
-            marketplace access. There are two ways back: pay{" "}
-            <strong>33 Onyx Shards</strong> (revives with 33 HP), or feed a{" "}
-            <strong>Red Ribbon Gummy</strong> item (revives with 10 HP). Since
-            gummies are tradable and Onyx has real-money value, most players
-            keep gummies stocked and treat the Onyx route as the fallback.
-            Either way the Kami returns to RESTING nearly empty and heals
-            passively from there.
+            Only two things actually kill a Kami: being{" "}
+            <strong>liquidated</strong>, or being <strong>sacrificed</strong>.
+            Running out of HP does not. A harvesting Kami whose HP hits zero
+            stays in the harvesting state, but it cannot stop or collect
+            — it is stuck on the node, unable to bank its own bounty, and
+            liquidatable by anyone who can reach it. That stranded state is
+            usually how the death actually arrives.
+          </p>
+          <p>
+            A Kami that does die enters the DEAD state and is locked out of
+            harvesting, levelling, equipping, being sent to another account,
+            and the marketplace. There are two ways back:{" "}
+            <strong>33 Onyx Shards</strong> (revives with 33 HP), or a revive
+            item used on it — a <strong>Red Ribbon Gummy</strong> (10 HP) or a{" "}
+            <strong>Melkarth&apos;s Heroic Awakening Spell Card</strong>{" "}
+            (50 HP). Items can be used on a dead Kami, which is what makes the
+            item route work at all. Either way the Kami returns to resting well
+            short of full and heals passively from there.
           </p>
 
           <h3>Skills That Shape Combat</h3>
@@ -316,30 +336,65 @@ export default function LiquidationsFormulasPage() {
             vars={{
               "efficacy": "final multiplier applied to animosity before threshold calculation",
               "baseEfficacy": "default efficacy value before any modifiers",
-              "affinityShift": "combined body shift + hand shift from the attacker-vs-victim affinity matchup",
+              "affinityShift": "shift from the attacker-hand vs victim-body matchup on the combat triangle",
               "atkBonus": "ATK_THRESHOLD_RATIO bonus on the attacker from Predator skills and equipment",
               "defBonus": "DEF_THRESHOLD_RATIO bonus on the victim from Guardian skills and equipment",
+              "advantaged or NORMAL vs NORMAL": "the only two matchups on which the ratio bonuses apply at all",
             }}
           >
-            {`efficacy = baseEfficacy + affinityShift + (atkBonus − defBonus)`}
+            {`efficacy = baseEfficacy + affinityShift
+
+  where affinityShift, by matchup, is:
+
+    Advantaged        +500 + (atkBonus − defBonus)
+    NORMAL vs NORMAL  +200 + (atkBonus − defBonus)
+    Neutral              0   (ratio bonuses have NO effect)
+    Disadvantaged     −500   (ratio bonuses have NO effect)`}
           </FormulaBlock>
           <StatTable
-            headers={["Your hand vs their body", "Efficacy Shift", "Resulting Multiplier"]}
+            headers={[
+              "Your hand vs their body",
+              "Efficacy Shift",
+              "Resulting Multiplier",
+              "Do ratio bonuses apply?",
+            ]}
             rows={[
-              ["Advantage (EERIE→SCRAP, SCRAP→INSECT, INSECT→EERIE)", "+500", "1.5x"],
-              ["Disadvantage (the reverse direction)", "−500", "0.5x"],
-              ["NORMAL vs NORMAL", "+200", "1.2x"],
-              ["Any other combination", "0", "1.0x"],
+              [
+                "Advantage (EERIE→SCRAP, SCRAP→INSECT, INSECT→EERIE)",
+                "+500 + (atkBonus − defBonus)",
+                "1.5x, moved by the bonuses",
+                "Yes",
+              ],
+              [
+                "NORMAL vs NORMAL",
+                "+200 + (atkBonus − defBonus)",
+                "1.2x, moved by the bonuses",
+                "Yes",
+              ],
+              ["Any other combination (neutral)", "0", "1.0x", "No"],
+              ["Disadvantage (the reverse direction)", "−500", "0.5x", "No"],
             ]}
           />
           <p>
             Note this is a <strong>single check</strong> — attacker&apos;s hand
             vs victim&apos;s body on the combat triangle — unlike harvesting,
-            which checks body and hand separately against the node. Skills from
-            the Predator tree add to your ATK_THRESHOLD_RATIO on top of this,
-            while Guardian skills add to the victim&apos;s DEF_THRESHOLD_RATIO,
-            and the difference shifts the multiplier further.
+            which checks body and hand separately against the node.
           </p>
+          <InfoBox variant="warning">
+            The ratio bonuses are <strong>conditional, not universal</strong>.
+            The threshold calculation picks exactly one shift slot based on the
+            matchup, and the ATK/DEF_THRESHOLD_RATIO difference is only written
+            into the advantaged and NORMAL-vs-NORMAL slots. On a neutral or
+            disadvantaged matchup those bonuses contribute nothing at all.
+            <br /><br />
+            For builds this cuts both ways. Ratio skills do nothing for a
+            predator attacking into a disadvantage, so they are only worth
+            buying if you intend to pick fights your hand type wins. And a
+            defender&apos;s DEF_THRESHOLD_RATIO protects them only against
+            attackers who already have the type advantage — against a neutral
+            attacker it is dead weight. If you want protection that always
+            applies, that is the <em>shift</em> line, not the ratio line.
+          </InfoBox>
 
           {/* ─── Threshold Shifts ─── */}
 
@@ -364,12 +419,12 @@ export default function LiquidationsFormulasPage() {
             rows={[
               [
                 "Ratio (ATK/DEF_THRESHOLD_RATIO)",
-                "Multiplied with animosity — scales with your Violence advantage",
-                "Predators with high Violence who already outstat targets",
+                "Folded into efficacy, then multiplied with animosity — but only on advantaged and NORMAL-vs-NORMAL matchups. Ignored entirely on neutral and disadvantaged ones.",
+                "Predators who pick targets their hand type counters, and defenders worried about attackers with the type advantage",
               ],
               [
                 "Shift (ATK/DEF_THRESHOLD_SHIFT)",
-                "Added flat after the multiplication — independent of stat ratios",
+                "Added flat after the multiplication — independent of stat ratios and of the affinity matchup, so it always applies",
                 "Guaranteeing kills regardless of stat matchup, or blocking kills entirely on defense",
               ],
             ]}
@@ -445,10 +500,18 @@ catch it moments from starving anyway.`}
           <h3>What Violence Buys You (Real Ranges)</h3>
           <p>
             Because animosity uses the Gaussian CDF, every point of Violence
-            matters most when you and the target are evenly matched. Here is
-            the real playing field: total Violence in the game runs from the
-            base floor of 10 to roughly 40, and a well-built defensive Kami sits
-            around 22 effective Harmony. Against that defender:
+            matters most when you and the target are evenly matched. Here is the
+            playing field the rules define: base Violence starts at 10 with no
+            trait contribution and reaches 42 on the best trait roll available,
+            with the average roll near 14. Skills add on top — the Predator tree
+            alone offers +5 from Aggression, +3 from Warmonger and +5 from the
+            Warlord ultimate.
+          </p>
+          <p>
+            Take as the defender a Kami with an average Harmony roll (14) that
+            has bought the Guardian tree&apos;s cheap Harmony skills
+            (Defensiveness +5, Anxiety +3) — 22 effective Harmony. Against that
+            defender:
           </p>
           <StatTable
             headers={[
@@ -457,16 +520,16 @@ catch it moments from starving anyway.`}
               "Threshold (% of victim's max HP, neutral affinity)",
             ]}
             rows={[
-              ["10", "Non-combat harvester", "~8.6%"],
-              ["15", "Average Kami", "~14%"],
-              ["22", "Even match", "20%"],
+              ["10", "Floor — no Violence from any trait", "~8.6%"],
+              ["15", "Average trait roll", "~14%"],
+              ["22", "Even match with this defender", "20%"],
               ["30", "Built predator", "~25%"],
-              ["40", "Best-in-game Violence", "~29%"],
+              ["40", "Near the top of the trait range", "~29%"],
             ]}
           />
           <p>
-            The spread from &ldquo;average Kami&rdquo; to &ldquo;best in
-            game&rdquo; is 14% → 29% — roughly doubling the danger zone. But
+            The spread from an average trait roll to the top of the trait
+            range is 14% → 29% — roughly doubling the danger zone. But
             notice the affinity lesson from the worked example above: a
             hand-vs-body type advantage multiplies the threshold by 1.5x (and
             a disadvantage halves it — a 3x swing), which outweighs any
@@ -507,7 +570,7 @@ salvage = bounty × salvageRatio      (capped at 100% of bounty)`}
             With production config values, the formula collapses to something
             memorable: <strong>each point of the victim&apos;s Power saves 1%
             of the bounty</strong>, plus any DEF_SALVAGE_RATIO bonuses from
-            Guardian skills. A typical Kami (Power ~15) keeps about 15% of
+            Guardian skills. A Kami on an average Power roll (~15) keeps about 15% of
             what it was carrying; a high-Power harvester (Power 30) keeps 30%.
             Your Power investment pays off even in death.
           </p>
@@ -517,7 +580,7 @@ salvage = bounty × salvageRatio      (capped at 100% of bounty)`}
             label="Example"
             variant="example"
             vars={{
-              "16": "victim's Power stat — a typical harvester",
+              "16": "victim's Power stat — a shade above the average roll",
               "1,500": "victim's uncollected bounty in Musu (a fat but realistic target)",
             }}
           >
@@ -555,7 +618,7 @@ spoils = (bounty − salvage) × spoilsRatio      (capped at 100% of remainder)`
           <p>
             Again the production numbers make it concrete: the killer steals a
             base <strong>45% plus 1% per point of their own Power</strong> from
-            what&apos;s left after salvage. A typical predator (Power ~15)
+            what&apos;s left after salvage. A predator on an average Power roll (~15)
             takes ~60% of the remainder; Predator-tree ATK_SPOILS_RATIO skills
             push it higher. Note that spoils land in your <em>harvest
             bounty</em>, not directly in your inventory — you still need to
@@ -587,19 +650,29 @@ The attacker has Power 20 and no spoils skills:
   spoils = 1,260 × 65% = 819 Musu
 
 819 Musu joins the attacker's own harvest bounty, the remaining
-441 is destroyed, and the attacker banks 1 Obol. (For scale: the
-average real kill nets ~850 Musu — this example is typical.)`}
+441 is destroyed, and the attacker banks 1 Obol. Note that the
+attacker has not banked the 819 yet: it sits in their harvest
+bounty, and collecting it will cost them strain on top of the
+recoil they already took.`}
           </FormulaBlock>
 
           {/* ───────────────────── RECOIL ───────────────────── */}
 
           <h2>Recoil Damage to the Attacker</h2>
           <p>
-            Every kill costs the attacker HP. Recoil has two components:{" "}
-            <strong>karma</strong> (the victim fighting back) and{" "}
-            <strong>strain</strong> (your own harvest damage). Together they
+            Every kill costs the attacker HP. Recoil is built from two
+            ingredients: <strong>karma</strong> (the victim fighting back) and{" "}
+            <strong>the strain on the spoils</strong> — the HP cost the killer
+            would have paid to harvest the loot it just took. Together they
             determine how much HP you lose for committing the kill.
           </p>
+          <InfoBox variant="warning">
+            The strain in the recoil formula is <strong>not</strong> your
+            accumulated harvest damage. It is computed fresh, on your own
+            Harmony, against the <em>spoils from this kill</em>. Recoil
+            therefore scales with the size of the steal, not with how long you
+            had been sitting on the node.
+          </InfoBox>
 
           <h3>Karma — The Victim Hits Back</h3>
           <p>
@@ -701,49 +774,74 @@ average real kill nets ~850 Musu — this example is typical.)`}
           <h3>Total Recoil</h3>
           <p>
             Your total HP loss combines karma and recoil efficacy as{" "}
-            <strong>multiplicative factors</strong> with harvest strain:
+            <strong>multiplicative factors</strong> with the spoils strain:
           </p>
           <FormulaBlock
             label="Recoil"
             vars={{
               "karma": "Gaussian CDF multiplier from victim's Violence vs your Harmony (see above)",
               "recoilEfficacy": "affinity-based nudge from defender's hand vs your body (see above)",
-              "yourStrain": "attacker's accumulated harvest strain damage at the time of the kill",
+              "spoilsStrain": "the strain YOU would take harvesting the spoils this kill just handed you — the ordinary strain formula, run on your Harmony against the stolen Musu",
               "boost": "overall recoil multiplier: base + ATK_RECOIL_BOOST (floored at 0)",
               "ATK_RECOIL_BOOST": "bonus from the attacker's equipment — can reduce recoil taken",
               "recoil": "final HP lost by the attacker after the kill",
               "precision": "internal scaling constant used for fixed-point math",
             }}
           >
-            {`recoil = (karma + recoilEfficacy) × yourStrain × boost / precision
+            {`spoilsStrain = ceil(spoils x 6.5 x Strain Modifier / (your Harmony + 20))
+
+recoil = (karma + recoilEfficacy) × spoilsStrain × boost / precision
 
 boost = max(0, baseBoost + ATK_RECOIL_BOOST)`}
           </FormulaBlock>
           <p>
             Karma and recoil efficacy are <strong>additive</strong> with each
-            other, then <strong>multiplicative</strong> with strain and boost.
-            This means your timing matters — high strain amplifies all recoil —
-            and the defender&apos;s affinity and skills play a direct role in how
-            much you suffer.
+            other, then <strong>multiplicative</strong> with the spoils strain
+            and the boost. Read the consequences carefully, because they are not
+            the obvious ones:
           </p>
+          <ul>
+            <li>
+              <strong>The bigger the steal, the bigger the recoil.</strong>{" "}
+              Recoil is proportional to the spoils. A fat victim is a more
+              expensive kill, not a free one — the payday and the bill arrive
+              together.
+            </li>
+            <li>
+              <strong>Harmony pays twice.</strong> It shrinks karma{" "}
+              <em>and</em> it shrinks the spoils strain, since it sits in the
+              denominator of the strain formula. It is the single best defensive
+              investment a predator can make.
+            </li>
+            <li>
+              <strong>A Kami is at its most vulnerable right after its own
+              kill.</strong> It has just taken the recoil, it is still parked on
+              the node, and the spoils have been added to its own uncollected
+              bounty — which it will have to pay real strain on when it finally
+              collects. Low HP plus a bounty that just grew is precisely the
+              profile predators hunt. Chaining kills is exactly the moment a
+              third party gets a free one.
+            </li>
+          </ul>
 
           <h4>Recoil Example</h4>
           <FormulaBlock
             label="Example"
             variant="example"
             vars={{
-              "15": "victim's Violence stat (typical harvester)",
+              "15": "victim's Violence stat (an average trait roll)",
               "35": "victim's Violence stat (strong predator)",
               "20": "attacker's Harmony stat in this example",
               "NormCdf": "Gaussian CDF (S-curve) used for karma calculation",
             }}
           >
-            {`You kill a typical harvester (Violence 15) while you have 20 Harmony.
+            {`You kill an average-roll harvester (Violence 15) while you have 20 Harmony.
 
   karma = NormCdf( ln(15 / 20) ) × ratio / precision
        = NormCdf(-0.29) ≈ low multiplier (you outstat the victim)
   recoilEfficacy = affinity nudge (depends on hand/body matchup)
-  recoil = (karma + recoilEfficacy) × strain × boost / precision
+  spoilsStrain   = your strain cost on the Musu this kill just handed you
+  recoil = (karma + recoilEfficacy) × spoilsStrain × boost / precision
 
 Next, you kill a strong predator (Violence 35) with the same 20 Harmony:
 
@@ -793,25 +891,42 @@ very small when your Harmony exceeds the victim's Violence.`}
 
           <h2>Death and Revival</h2>
           <p>
-            A Kami dies when its HP hits 0, whether from a kill or from harvest
-            strain. Dead Kamis are completely locked out of the game until
-            revived.
+            Death has exactly two causes: <strong>liquidation</strong> and{" "}
+            <strong>sacrifice</strong>. Nothing else sets a Kami to DEAD —
+            in particular, draining to 0 HP does not.
           </p>
+          <InfoBox variant="warning">
+            A harvesting Kami at 0 HP is <em>not</em> dead. It stays in the
+            harvesting state, but every action that needs a healthy Kami now
+            fails — including stop and collect. It cannot bank the bounty it is
+            sitting on, it cannot leave the node, and it stays there,
+            liquidatable, until someone takes it. Watch your HP against the cap
+            rather than assuming a starved Kami simply stops.
+          </InfoBox>
           <StatTable
-            headers={["What Dead Kamis Cannot Do", ""]}
+            headers={["What Dead Kamis Cannot Do", "What Still Works"]}
             rows={[
-              ["Harvest at nodes", "Level up"],
-              ["Equip or use items", "Accept quests"],
-              ["Be sent to other accounts", "Enter the marketplace"],
+              ["Harvest at nodes", "Items can be used on them — this is how revive items work"],
+              ["Level up", "Quests are account-scoped and are not blocked by a Kami's state"],
+              ["Equip or unequip items", ""],
+              ["Be sent to other accounts", ""],
+              ["Enter the marketplace", ""],
             ]}
           />
 
           <h3>Revival</h3>
           <StatTable
+            headers={["Route", "Cost", "HP restored"]}
+            rows={[
+              ["Onyx revive", "33 Onyx Shards", "33 HP"],
+              ["Red Ribbon Gummy", "One item", "10 HP"],
+              ["Melkarth's Heroic Awakening Spell Card", "One item", "50 HP"],
+            ]}
+          />
+          <StatTable
             headers={["Revival Detail", "Value"]}
             rows={[
-              ["Cost", "33 Onyx Shards"],
-              ["HP after revival", "33 HP (regardless of max health)"],
+              ["HP after revival", "A flat amount, regardless of max health"],
               ["State after revival", "RESTING"],
               ["Stats affected", "None — Power, Violence, Harmony all unchanged"],
               ["Healing", "Passive metabolism healing begins immediately"],
@@ -819,9 +934,9 @@ very small when your Harmony exceeds the victim's Violence.`}
           />
           <p>
             Revival is expensive and leaves you fragile. A freshly revived Kami
-            has only 33 HP and needs time to heal back up before it can safely
-            return to harvesting. Factor revival costs into your risk assessment
-            before engaging in PvP.
+            is nowhere near full and needs time to heal back up before it can
+            safely return to harvesting. Factor revival costs into your risk
+            assessment before engaging in PvP.
           </p>
 
           {/* ───────────────────── SACRIFICE ───────────────────── */}
@@ -985,11 +1100,30 @@ very small when your Harmony exceeds the victim's Violence.`}
           <p>
             After a successful kill, your Kami enters the standard{" "}
             <strong>180-second cooldown</strong> before it can act again — the
-            same cooldown that follows starting or collecting a harvest, which
-            also means a freshly arrived predator cannot strike instantly.
-            Cooldown Shift skills from the Predator tree and items like Energy
-            Drink shorten it — for a camping predator guarding one node, faster
-            cooldowns translate directly into more kills per session.
+            same cooldown that follows starting, collecting, or stopping a
+            harvest. Cooldown is a <strong>build variable</strong>, not a fixed
+            tax: Cooldown Shift is added to the 180-second base and the result
+            is floored at zero, so a Predator investment can erase it
+            completely.
+          </p>
+          <StatTable
+            headers={["Source", "Where it sits", "Cooldown Shift"]}
+            rows={[
+              ["Sniper", "Predator Tier 2, 5 levels", "−10s per level (−50s maxed)"],
+              ["Marksman", "Predator Tier 4, 5 levels", "−10s per level (−50s maxed)"],
+              ["Assassin", "Predator Tier 6 ultimate, 1 level", "−50s"],
+              ["Energy Drink", "Consumable, lasts until the next cooldown is set", "−30s"],
+            ]}
+          />
+          <p>
+            Add those up and the surface reaches exactly zero: the three
+            Predator cooldown skills fully invested come to −150 seconds, and an
+            Energy Drink covers the last −30. A mono-Predator build deep enough
+            for the Tier 6 ultimate can therefore act with{" "}
+            <strong>no cooldown at all</strong> on the action after the drink.
+            Do not assume a predator who has just arrived at your node, or who
+            has just taken a kill, needs to wait before striking again — assume
+            the opposite until you have seen otherwise.
           </p>
 
           {/* ───────────────────── COMBAT BONUSES ───────────────────── */}
@@ -1003,14 +1137,14 @@ very small when your Harmony exceeds the victim's Violence.`}
           <StatTable
             headers={["Bonus", "Side", "Effect"]}
             rows={[
-              ["ATK_THRESHOLD_RATIO", "Attacker", "Increases efficacy — makes kill threshold higher"],
-              ["DEF_THRESHOLD_RATIO", "Defender", "Increases efficacy against you — makes you harder to kill"],
-              ["ATK_THRESHOLD_SHIFT", "Attacker", "Flat increase to kill threshold"],
-              ["DEF_THRESHOLD_SHIFT", "Defender", "Flat decrease to kill threshold — can make you unkillable"],
+              ["ATK_THRESHOLD_RATIO", "Attacker", "Raises efficacy — but only on advantaged and NORMAL-vs-NORMAL matchups; no effect otherwise"],
+              ["DEF_THRESHOLD_RATIO", "Defender", "Lowers the attacker's efficacy — but only when the attacker has the type advantage, or on NORMAL vs NORMAL; no effect otherwise"],
+              ["ATK_THRESHOLD_SHIFT", "Attacker", "Flat increase to kill threshold — applies on every matchup"],
+              ["DEF_THRESHOLD_SHIFT", "Defender", "Flat decrease to kill threshold — applies on every matchup, and can make you unkillable"],
               ["ATK_SPOILS_RATIO", "Attacker", "Increases the percentage of loot stolen"],
               ["DEF_SALVAGE_RATIO", "Defender", "Increases the percentage of loot retained on death"],
               ["ATK_RECOIL_BOOST", "Attacker", "Reduces (or increases) total recoil damage taken after killing"],
-              ["STND_COOLDOWN_SHIFT", "Attacker", "Reduces cooldown between kills"],
+              ["STND_COOLDOWN_SHIFT", "Attacker", "Reduces the cooldown between actions — floored at zero, and reachable at zero"],
             ]}
           />
 

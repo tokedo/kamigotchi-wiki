@@ -63,11 +63,13 @@ export default function HarvestingFormulasPage() {
           </ul>
 
           <InfoBox variant="tip">
-            Every time you collect or stop, you also earn{" "}
-            <strong>XP</strong> equal to the Musu collected, trigger a{" "}
-            <strong>scavenge roll</strong> for bonus item drops, and gain{" "}
-            <strong>leaderboard score</strong>. Harvesting feeds your
-            progression on multiple fronts.
+            Every time you collect or stop, your Kami also earns{" "}
+            <strong>XP</strong> equal to the Musu that actually reaches you
+            after tax, and that same amount is added to the node&apos;s{" "}
+            <strong>scavenge bar</strong>. Collecting is not itself a drop
+            roll — the bar fills, and you claim the drops in a separate action
+            once it holds a full tier. Harvesting feeds your progression on
+            more than one front.
           </InfoBox>
 
           <h3>Two Engines of Income</h3>
@@ -83,9 +85,22 @@ export default function HarvestingFormulasPage() {
           <p>
             <strong>Intensity</strong> is a ramping rate seeded by your{" "}
             <strong>Violence</strong> stat: it starts small and grows every
-            minute your Kami stays on the node without interruption. Intensity
-            rewards patience — but the longer you camp, the more strain you
-            accumulate and the more exposed you are to liquidation.
+            minute the ramp is allowed to run. The ramp starts over when you{" "}
+            <strong>start a harvest</strong> and whenever you{" "}
+            <strong>use an item on the Kami</strong> — feeding included.
+            Collecting does not reset it, so you can bank Musu mid-sit without
+            losing the ramp. Intensity rewards patience — but the longer you
+            camp, the more strain you accumulate and the more exposed you are
+            to liquidation.
+          </p>
+          <p>
+            Intensity is also <strong>retroactive</strong>, and that is the
+            whole reason long parks pay. The rate is read at the moment your
+            harvest is settled and then applied to the entire stretch since
+            the last settlement — so an untouched sit is paid at the ramp&apos;s
+            <em> highest</em> value across all those hours, not at its average.
+            Doubling the time on a node more than doubles the Intensity half of
+            the income.
           </p>
           <p>
             Out of the box, Fertility dominates and Intensity is a rounding
@@ -160,13 +175,13 @@ export default function HarvestingFormulasPage() {
           </p>
 
           <InfoBox variant="warning">
-            Scale of the ceiling: the weakest possible Kami (50 HP, Harmony 10)
-            can hold about <strong>230 Musu</strong> of pending bounty; a
-            typical one (90 HP, Harmony 15) about <strong>485</strong>; a
-            built tank (200+ HP, Harmony 22+) several thousand. Higher Harmony,
-            more Health, and strain-reduction food all raise the ceiling —
-            which is the whole game of building a Kami that can bank a big
-            session.
+            Scale of the ceiling: a Kami at the stat floor (50 HP, Harmony 10)
+            can hold about <strong>230 Musu</strong> of pending bounty; an
+            average roll (90 HP, Harmony 15) about <strong>484</strong>; a
+            built tank (240 HP, Harmony 22) about <strong>1,550</strong>.
+            Higher Harmony, more Health, and strain-reduction food all raise
+            the ceiling — which is the whole game of building a Kami that can
+            bank a big session.
           </InfoBox>
 
           <h3>Recovery While Resting</h3>
@@ -213,9 +228,12 @@ export default function HarvestingFormulasPage() {
               income before you need to rest.
             </li>
             <li>
-              <strong>Use food buffs strategically.</strong> Bounty-boosting
-              food (+25% output) only lasts until your next harvest action.
-              Eat right before collecting to get the most from the buff.
+              <strong>Time food buffs to your build.</strong> Bounty-boosting
+              food (+25% output) only lasts until your next harvest action, so
+              on a Power/Fertility Kami it is worth feeding and then collecting
+              while the buff is live. On an Intensity build, do the opposite:
+              feeding resets the intensity ramp you have been growing all
+              session. Feed between sits, not during one.
             </li>
             <li>
               <strong>Watch your HP.</strong> Collect and stop before your HP
@@ -334,9 +352,55 @@ export default function HarvestingFormulasPage() {
             Without any boost, the multiplier is 10/480 and Intensity stays
             marginal. Guardian-tree skills (Patience +5/level, Loyalty +15,
             Dedication +5/level, the Obsession ultimate +25) and Automata-line
-            pets (+15 to +25) raise it dramatically. The intensity timer resets
-            when the harvest is interrupted — including equipment changes — so
-            the ramp only pays if the Kami genuinely stays put.
+            pets (+15 to +25) raise it dramatically.
+          </p>
+
+          <h3>What Resets the Ramp</h3>
+          <p>
+            &ldquo;Minutes on Node&rdquo; is measured from the last{" "}
+            <strong>intensity reset</strong>, and exactly two things reset it:
+          </p>
+          <ul>
+            <li>
+              <strong>Starting a harvest.</strong> A fresh sit begins the ramp
+              at zero.
+            </li>
+            <li>
+              <strong>Using an item on the Kami.</strong> Any item — food,
+              potion, XP item — zeroes the ramp the moment it is used.
+            </li>
+          </ul>
+          <p>
+            Notably, <strong>collecting does not reset it</strong>. You can bank
+            accrued Musu mid-sit and the ramp keeps climbing from where it was.
+            A collect does settle the harvest, though, which costs you some of
+            the retroactive bonus described below — so collect when you need the
+            Musu or the HP headroom, not out of habit. Being liquidated ends the
+            harvest outright, so the question does not arise there.
+          </p>
+          <InfoBox variant="warning">
+            This is the trap that ruins intensity builds: feeding a parked Kami
+            — even a healing candy, even a strain-reduction snack — throws away
+            every minute of ramp it had accumulated. If you are running an
+            intensity build, feed it <em>between</em> sits, never during one.
+          </InfoBox>
+
+          <h3>Intensity Is Retroactive</h3>
+          <p>
+            Bounty is not integrated minute by minute. When a harvest is
+            settled, the game reads the Intensity rate <em>as it stands at that
+            moment</em> and multiplies it by the whole elapsed stretch since the
+            previous settlement. The consequence is that an untouched sit is
+            paid across all of its hours at the ramp&apos;s final, highest
+            value — not at its average.
+          </p>
+          <p>
+            That makes the Intensity half of your income grow with the{" "}
+            <em>square</em> of the time parked: a 16-hour sit does not earn
+            twice what an 8-hour sit earns, it earns roughly four times as
+            much. This is the entire economic case for the park-and-forget
+            build, and the reason those Kamis are built to survive many
+            uninterrupted hours rather than to harvest fast.
           </p>
 
           <h3>How Intensity Ramps Over Time</h3>
@@ -576,9 +640,10 @@ Fertility = 26 × 0.65 × 1.5 = 25.35 Musu per hour`}
           <p>
             Because Harmony appears in the denominator alongside a base value
             of 20, its impact follows a diminishing returns curve — and the
-            realistic range is narrow. Base Harmony across all Kamis runs from
-            the floor of 10 to 29 (average ~14), and even a fully built defensive
-            Kami tops out in the mid-30s effective. Within that real range:
+            band that matters is narrow. Base Harmony starts at 10 with no
+            trait contribution at all and reaches 38 on the single best trait
+            roll the catalogue allows; the average roll lands near 14. Skills
+            and a pet add on top of whatever you rolled.
           </p>
           <StatTable
             headers={[
@@ -587,18 +652,19 @@ Fertility = 26 × 0.65 × 1.5 = 25.35 Musu per hour`}
               "Strain per 100 Musu",
             ]}
             rows={[
-              ["10", "Weak base roll", "22 HP"],
-              ["14", "Average base roll", "20 HP"],
-              ["22", "Good roll, or average + Harmony skills", "16 HP"],
-              ["29", "Best base roll in the game", "14 HP"],
-              ["36", "Elite roll + skills + Ledger pet (near the practical max)", "12 HP"],
+              ["10", "Floor — no Harmony from any trait", "22 HP"],
+              ["14", "Average trait roll", "20 HP"],
+              ["22", "Average roll plus the Guardian Harmony skills", "16 HP"],
+              ["38", "Best possible trait roll", "12 HP"],
+              ["61", "Best roll + every Harmony skill + an Ancient Ledger", "9 HP"],
             ]}
           />
           <p>
-            From worst to best-in-game, strain per Musu nearly halves — which
-            means the same HP pool harvests almost twice the Musu per cycle.
-            That is why high-Harmony Kamis command a premium: unlike skills,
-            the base roll can never be changed.
+            From the floor to the theoretical ceiling, strain per Musu drops by
+            well over half — which means the same HP pool harvests more than
+            twice the Musu per cycle. That is why high-Harmony Kamis command a
+            premium: skills you can respec, but the trait roll is fixed at
+            mint and can never be changed.
           </p>
 
           <h3 id="starve-cutoff">Starve Cutoff (Bounty Cap by HP)</h3>
@@ -703,7 +769,7 @@ HP recovered = floor(Seconds Resting x HP per second)`}
             drained Kami takes <em>hours</em>, and the bigger your HP pool the
             longer a full recharge takes. Rest-speed bonuses (Resting Recovery
             Boost skills, Gumdrop-line pets) and healing food exist precisely
-            to shorten this dead time — many players feed candy instead of
+            to shorten this dead time — feeding candy is the alternative to
             waiting out the clock.
           </p>
           <p>
@@ -734,30 +800,33 @@ negative shift shortens the wait. Cooldown cannot go below 0 seconds.`}
 
           <h2>Tax</h2>
           <p>
-            When starting a harvest, you can assign a <strong>taxer</strong>{" "}
-            (for example, a faction leader or referrer). The taxer receives a
-            percentage of your Musu each time you collect.
+            When you start a harvest you can name <strong>one taxer</strong> —
+            another account you designate, such as a service you use or someone
+            who referred you — along with the rate they take. That single taxer
+            is bound to the harvest at the moment it starts, and receives their
+            cut of your Musu each time you collect or stop. There is no way to
+            attach a second taxer to the same harvest, and the pairing is
+            cleared and re-set every time you start a new one.
           </p>
           <FormulaBlock
             label="Tax"
             vars={{
               "Musu Collected": "gross Musu from this collect or stop action",
-              "Tax Rate": "percentage set by the taxer, up to 20% each",
+              "Tax Rate": "rate set when the harvest starts, capped at 20%",
             }}
           >
             {`Tax Amount = Musu Collected x Tax Rate / 100
 
-Tax Rate: up to 20% per taxer.
-Multiple taxes apply to the original amount, not sequentially.
-Your net = Collected Musu - sum of all taxes.`}
+Tax Rate: set at harvest start, capped at 20%.
+Your net = Collected Musu - Tax Amount.`}
           </FormulaBlock>
           <p>
-            In practice, the most common taxer you&apos;ll meet is an{" "}
-            <strong>automation service</strong>: community bots (which are
-            allowed and widely used) typically take their fee as a harvest tax
-            set when they start your Kami&apos;s harvest. When comparing your
-            in-game earnings against raw formula math, remember the formulas
-            here are gross — your net arrives after tax.
+            Because the taxer is fixed when the harvest starts, anything that
+            starts harvests on your behalf is in a position to name itself the
+            taxer — that is the usual way a third-party service charges for
+            running your Kami. Check who is set before you commit a long sit.
+            And when comparing your in-game earnings against the formulas on
+            this page, remember they are all gross: your net arrives after tax.
           </p>
 
           <h2>Scavenging</h2>
@@ -898,9 +967,13 @@ leftover = points mod tierCost`}
             ]}
           />
           <InfoBox variant="warning">
-            Food buffs are consumed on your next harvest action (collect, stop,
-            or feed). They do not persist through multiple collections. Eat
-            right before you collect to get the most value from the buff.
+            Food buffs are consumed on your next harvest action — collect, stop,
+            or feeding the Kami again. They do not persist through multiple
+            collections. On a Fertility build that means feeding and then
+            collecting while the buff is live. On an intensity build it means
+            the opposite: feeding also zeroes the intensity ramp (see{" "}
+            <strong>What Resets the Ramp</strong> above), so a buff eaten
+            mid-sit can easily cost more than it pays.
           </InfoBox>
 
           <h2>Strategic Comparisons</h2>
@@ -1025,16 +1098,19 @@ the Kami starve.`}
 
           <h3>6. Practical Strategy</h3>
           <p>
-            In practice, you would <strong>not</strong> harvest to death — a
-            dead Kami needs a revive, and a Kami hovering at low HP with a fat
-            uncollected bounty is exactly what predators scan for. You would
-            collect somewhere in the 250–400 Musu range, rest a few hours (or
-            feed healing food to skip the wait), and go again. On-chain data
-            bears this out: the median collect across all players is roughly
-            280 Musu, and a typical active Kami banks around 1,000 Musu per
-            day — while well-built, well-managed harvesters clear 3,000–5,000.
-            The gap between those numbers is exactly the stats, skills,
-            affinity matching, and cycle discipline described on this page.
+            In practice, you would <strong>not</strong> harvest to the cap — a
+            Kami hovering at low HP with a fat uncollected bounty is exactly
+            what predators scan for, and it has no HP left to pay the strain on
+            a big collect. Pulling out somewhere in the 250–400 Musu band on
+            this Kami leaves it enough health to absorb the strain and to sit
+            above a predator&apos;s kill threshold, then it rests a few hours
+            (or takes healing food to skip the wait) and goes again.
+          </p>
+          <p>
+            Everything that separates a weak cycle from a strong one is on this
+            page: the affinity match sets the Fertility rate, Harmony sets how
+            much Musu each point of HP buys, Health sets how big one cycle can
+            be, and the resting curve sets how often you can run it.
           </p>
 
           <h2>Liquidation (PvP Raiding)</h2>
