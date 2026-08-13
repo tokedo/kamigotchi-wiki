@@ -118,6 +118,44 @@
   --sidebar-ring: #5a5a7a;
 }
 
+/* Diagram figures.
+   Every inline SVG on the site draws from these tokens and nothing else, so
+   the whole set reads as one visual system and both themes are covered in
+   one place. Structural values derive from --foreground; the five accents
+   are stated per theme because a hue that reads on white is too dark on
+   #12121f. */
+:root {
+  --fig-ink: var(--foreground);
+  --fig-muted: var(--muted-foreground);
+  --fig-line: color-mix(in oklab, var(--foreground) 30%, transparent);
+  --fig-hairline: color-mix(in oklab, var(--foreground) 14%, transparent);
+  --fig-surface: color-mix(in oklab, var(--foreground) 5%, transparent);
+
+  --fig-blue: oklch(0.55 0.17 258);
+  --fig-violet: oklch(0.53 0.17 300);
+  --fig-green: oklch(0.52 0.13 155);
+  --fig-amber: oklch(0.55 0.13 68);
+  --fig-red: oklch(0.55 0.20 25);
+
+  --fig-blue-soft: color-mix(in oklab, var(--fig-blue) 14%, transparent);
+  --fig-violet-soft: color-mix(in oklab, var(--fig-violet) 14%, transparent);
+  --fig-green-soft: color-mix(in oklab, var(--fig-green) 16%, transparent);
+  --fig-amber-soft: color-mix(in oklab, var(--fig-amber) 16%, transparent);
+  --fig-red-soft: color-mix(in oklab, var(--fig-red) 14%, transparent);
+}
+
+.dark {
+  --fig-line: color-mix(in oklab, var(--foreground) 34%, transparent);
+  --fig-hairline: color-mix(in oklab, var(--foreground) 16%, transparent);
+  --fig-surface: color-mix(in oklab, var(--foreground) 7%, transparent);
+
+  --fig-blue: oklch(0.74 0.13 258);
+  --fig-violet: oklch(0.75 0.13 300);
+  --fig-green: oklch(0.77 0.13 158);
+  --fig-amber: oklch(0.82 0.13 74);
+  --fig-red: oklch(0.71 0.17 22);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

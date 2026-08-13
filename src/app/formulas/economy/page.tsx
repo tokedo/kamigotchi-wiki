@@ -6,6 +6,7 @@ import {
   StatTable,
   InfoBox,
 } from "@/components/mechanic-page";
+import { GdaPricingFigure } from "@/components/figures/gda-pricing";
 
 export const metadata: Metadata = {
   title: "Economy",
@@ -517,6 +518,8 @@ Every shop listing runs decay = 0.50, so:
 
   = 12.5% of target price`}
           </FormulaBlock>
+
+          <GdaPricingFigure />
           <StatTable
             headers={["Item", "Target Price", "Floor Price (12.5%)"]}
             rows={[

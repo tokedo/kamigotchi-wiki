@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { StrategyPage, DoctrineTable, MathLives } from "@/components/strategy-page";
+import { YieldThreatFigure } from "@/components/figures/yield-threat";
 
 export const metadata: Metadata = {
   title: "Choosing Ground and Counting Costs",
@@ -68,6 +69,8 @@ export default function StrategyGroundPage() {
         is hunting beats a rich node you have to defend, and it beats it
         without a food bill or a bodyguard squad attached.
       </p>
+
+      <YieldThreatFigure />
 
       <h2>The Second Currency</h2>
       <p>

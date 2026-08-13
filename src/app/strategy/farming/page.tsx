@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { StrategyPage, DoctrineTable, MathLives } from "@/components/strategy-page";
+import { HarvestCycleFigure } from "@/components/figures/harvest-cycle";
 
 export const metadata: Metadata = {
   title: "Farming Well",
@@ -100,6 +101,8 @@ export default function StrategyFarmingPage() {
         while feeding whenever the health bar looks low — that pays the food
         bill of one pattern and the intensity of neither.
       </p>
+
+      <HarvestCycleFigure />
 
       <MathLives>
         What resets the ramp, and how retroactive settlement works:{" "}

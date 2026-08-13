@@ -5,6 +5,9 @@ import {
   StatTable,
   InfoBox,
 } from "@/components/mechanic-page";
+import { AffinitySystemsFigure } from "@/components/figures/affinity-systems";
+import { BountySplitFigure } from "@/components/figures/bounty-split";
+import { KillThresholdFigure } from "@/components/figures/kill-threshold";
 
 export const metadata: Metadata = {
   title: "Liquidations",
@@ -89,6 +92,8 @@ export default function LiquidationsFormulasPage() {
             realistic stat difference — a predator&apos;s hand type effectively
             decides which bodies it hunts.
           </p>
+
+          <AffinitySystemsFigure />
 
           <h3>What Happens When You Kill</h3>
           <p>
@@ -473,6 +478,9 @@ The victim becomes killable once harvest strain drags it below
 numbers give only ~26 HP — the victim is nearly starving before
 it's ever in danger. That 3x swing is the triangle at work.`}
           </FormulaBlock>
+
+          <KillThresholdFigure />
+
           <p>
             Compare: if the attacker had only 12 Violence against the same
             20 Harmony victim:
@@ -655,6 +663,8 @@ attacker has not banked the 819 yet: it sits in their harvest
 bounty, and collecting it will cost them strain on top of the
 recoil they already took.`}
           </FormulaBlock>
+
+          <BountySplitFigure />
 
           {/* ───────────────────── RECOIL ───────────────────── */}
 

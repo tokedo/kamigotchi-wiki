@@ -178,10 +178,11 @@ export default function StartHerePage() {
           </li>
           <li>
             <strong>A rested, healthy Kami is never killable.</strong> A
-            resting Kami is not a legal target at all, and even a harvesting
-            one only becomes killable once its health has fallen below a
-            threshold — a bar that tops out well under half of maximum health
-            no matter how strong the attacker is.
+            resting Kami is not a legal target at all, and a harvesting one at
+            full health cannot be killed on stats alone. It only becomes
+            killable once its health has fallen below a threshold that sits at
+            a fraction of its maximum — a fraction that rises the bigger the
+            attacker&apos;s affinity advantage over it.
           </li>
           <li>
             <strong>Low health plus a fat uncollected bounty is the
@@ -196,7 +197,7 @@ export default function StartHerePage() {
           Shards — 33 of them, which restores 33 health rather than a full bar.
           Early on that is a real setback; later it is a line item. The{" "}
           <Link href="/formulas/liquidations">Liquidations</Link> page has the
-          exact threshold maths if you want to know precisely how much margin
+          exact threshold math if you want to know precisely how much margin
           you are carrying.
         </p>
       </Step>

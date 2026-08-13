@@ -5,6 +5,7 @@ import {
   FormulaBlock,
   StatTable,
 } from "@/components/mechanic-page";
+import { HarvestEnginesFigure } from "@/components/figures/harvest-engines";
 
 export const metadata: Metadata = {
   title: "Harvesting",
@@ -183,6 +184,8 @@ export default function HarvestingFormulasPage() {
             the ceiling — which is the whole game of building a Kami that can
             bank a big session.
           </InfoBox>
+
+          <HarvestEnginesFigure />
 
           <h3>Recovery While Resting</h3>
           <p>
