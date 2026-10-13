@@ -20,7 +20,7 @@
     "value": 1,
     "units": "Stat",
     "exclusion": null,
-    "description": "It’s possible to deliberately stoke the fires of Violence in Kami by traumatizing them in a very specific set of ways. "
+    "description": "It’s possible to deliberately stoke the fires of Violence in Kami by traumatizing them in a very specific set of ways."
   },
   {
     "index": 112,
@@ -158,7 +158,7 @@
     "value": 3,
     "units": "Stat",
     "exclusion": "132, 133",
-    "description": "More fighting, more violence, more fighting, more violence. "
+    "description": "More fighting, more violence, more fighting, more violence."
   },
   {
     "index": 132,
@@ -227,7 +227,7 @@
     "value": 1,
     "units": "Stat",
     "exclusion": null,
-    "description": "You just want it more. "
+    "description": "You just want it more."
   },
   {
     "index": 142,
@@ -250,7 +250,7 @@
     "value": 0.02,
     "units": "Percent",
     "exclusion": null,
-    "description": "Sheer will-to-hurt continues to go a long way. "
+    "description": "Sheer will-to-hurt continues to go a long way."
   },
   {
     "index": 143,
@@ -319,7 +319,7 @@
     "value": 0.02,
     "units": "Percent",
     "exclusion": null,
-    "description": "Your Kami is always ready to bandage up in case of a counter-liquidation…. Meaning they can hold on to a little more musu. "
+    "description": "Your Kami is always ready to bandage up in case of a counter-liquidation…. Meaning they can hold on to a little more musu."
   },
   {
     "index": 153,
@@ -342,7 +342,7 @@
     "value": 0.02,
     "units": "Percent",
     "exclusion": null,
-    "description": "Your Kami is really, really good at milking all possible profit from their targets. "
+    "description": "Your Kami is really, really good at milking all possible profit from their targets."
   },
   {
     "index": 161,
@@ -365,7 +365,7 @@
     "value": 5,
     "units": "Stat",
     "exclusion": "162, 163",
-    "description": "A paragon of pure aggression. This Kamigotchi will overpower almost any other when it comes to raw strength. "
+    "description": "A paragon of pure aggression. This Kamigotchi will overpower almost any other when it comes to raw strength."
   },
   {
     "index": 162,
@@ -388,7 +388,7 @@
     "value": 0.1,
     "units": "Percent",
     "exclusion": "161, 163",
-    "description": "Liquidating a Kamigotchi requires a certain firmness of intent. This is that kind of intent. "
+    "description": "Liquidating a Kamigotchi requires a certain firmness of intent. This is that kind of intent."
   },
   {
     "index": 163,
@@ -411,7 +411,7 @@
     "value": -50,
     "units": "Seconds",
     "exclusion": "161, 162",
-    "description": "A fully-trained Assassin can enter a node almost instantly. The complacent should live in fear.  "
+    "description": "A fully-trained Assassin can enter a node almost instantly. The complacent should live in fear."
   },
   {
     "index": 211,
@@ -503,7 +503,7 @@
     "value": 0.04,
     "units": "Percent",
     "exclusion": null,
-    "description": "It’s important to focus one’s mind on the bags. "
+    "description": "It’s important to focus one’s mind on the bags."
   },
   {
     "index": 222,
@@ -549,7 +549,7 @@
     "value": -0.025,
     "units": "Percent",
     "exclusion": null,
-    "description": "With enough concentration Kamigotchi can stave off their own death if only for a bit longer. "
+    "description": "With enough concentration Kamigotchi can stave off their own death if only for a bit longer."
   },
   {
     "index": 231,
@@ -756,7 +756,7 @@
     "value": 0.06,
     "units": "Percent",
     "exclusion": null,
-    "description": "You get things done. "
+    "description": "You get things done."
   },
   {
     "index": 261,
@@ -779,7 +779,7 @@
     "value": 0.2,
     "units": "Percent",
     "exclusion": "262, 263",
-    "description": "Mastery of action-without-action allows you to make a little more money, with no effort. Not bad. "
+    "description": "Mastery of action-without-action allows you to make a little more money, with no effort. Not bad."
   },
   {
     "index": 262,
@@ -802,7 +802,7 @@
     "value": 50,
     "units": "Stat",
     "exclusion": "261, 262",
-    "description": "Cardio for the hardcore. "
+    "description": "Cardio for the hardcore."
   },
   {
     "index": 263,
@@ -1009,7 +1009,7 @@
     "value": -0.075,
     "units": "Percent",
     "exclusion": "331, 333",
-    "description": "Survival is one thing, but another is knowing how to die effectively. "
+    "description": "Survival is one thing, but another is knowing how to die effectively."
   },
   {
     "index": 333,
@@ -1078,7 +1078,7 @@
     "value": 5,
     "units": "MUSU/hr",
     "exclusion": null,
-    "description": "Your Kami shows up 5 minutes early to literally everything. "
+    "description": "Your Kami shows up 5 minutes early to literally everything."
   },
   {
     "index": 343,
@@ -1124,7 +1124,7 @@
     "value": 1,
     "units": "Stat",
     "exclusion": null,
-    "description": "All that intensive physical training has built up some Violence… "
+    "description": "All that intensive physical training has built up some Violence…"
   },
   {
     "index": 352,
@@ -1147,7 +1147,7 @@
     "value": 10,
     "units": "Stat",
     "exclusion": null,
-    "description": "Raw physical mass can be a form of talent, too. "
+    "description": "Raw physical mass can be a form of talent, too."
   },
   {
     "index": 353,
@@ -1170,7 +1170,7 @@
     "value": 0.02,
     "units": "Percent",
     "exclusion": null,
-    "description": "Unbreakable. "
+    "description": "Unbreakable."
   },
   {
     "index": 361,
@@ -1216,7 +1216,7 @@
     "value": -0.125,
     "units": "Percent",
     "exclusion": "361, 363",
-    "description": "Your Kami gets every single ounce of juice from their Health points. "
+    "description": "Your Kami gets every single ounce of juice from their Health points."
   },
   {
     "index": 363,
@@ -1285,7 +1285,7 @@
     "value": 10,
     "units": "Stat",
     "exclusion": null,
-    "description": "Good fashion choices can be the first step on the road to massively outsized gains. "
+    "description": "Good fashion choices can be the first step on the road to massively outsized gains."
   },
   {
     "index": 413,
@@ -1354,7 +1354,7 @@
     "value": 0.06,
     "units": "Percent",
     "exclusion": null,
-    "description": "Your Kamigotchi has learned to drive taxi while harvesting, increasing their MUSU gains. "
+    "description": "Your Kamigotchi has learned to drive taxi while harvesting, increasing their MUSU gains."
   },
   {
     "index": 423,
@@ -1446,7 +1446,7 @@
     "value": 0.12,
     "units": "Percent",
     "exclusion": "431, 432",
-    "description": "You know how to maximise your own use of time and energy. "
+    "description": "You know how to maximise your own use of time and energy."
   },
   {
     "index": 441,
@@ -1469,7 +1469,7 @@
     "value": 1,
     "units": "Stat",
     "exclusion": null,
-    "description": "Sometimes, the competition just leave themselves open. "
+    "description": "Sometimes, the competition just leave themselves open."
   },
   {
     "index": 442,
@@ -1653,6 +1653,6 @@
     "value": 0.1,
     "units": "Percent",
     "exclusion": "461, 462",
-    "description": "What can we say? Are you actually going to choose this? We’re sure your parents still love you. "
+    "description": "What can we say? Are you actually going to choose this? We’re sure your parents still love you."
   }
 ]

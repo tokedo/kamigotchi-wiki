@@ -29,7 +29,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “Feel like you’re getting the hang of my interface?”\nMENU: “Excellent! Now that you’re oriented, let's start exploring your surroundings. You can move around the world using my map screen. Do you remember where it is? Go ahead and open it now.”\nMENU: “There are two ways to move around in the world. You can move to an adjacent tile by clicking the red highlight on the map, or you can right click on any tile to show the harvest screen for that tile as well as fast traveling to it.”\nMENU: “Movement costs five stamina, which comes out of the stamina pool shown in the bottom left corner of my interface.” \nMENU: “You have one hundred stamina to start with and you recover one point of stamina every minute, so you’ll have to plan out your moves a bit so that you don’t tire yourself out too much.”\nMENU: “But go ahead and explore around for now. When you’re ready to continue, head south and you’ll see a big Torii on the edge of town.\nMENU: “Once you get there, I’ll give you a Spell Card.”",
+    "introDialogue": "MENU: “Feel like you’re getting the hang of my interface?”\nMENU: “Excellent! Now that you’re oriented, let's start exploring your surroundings. You can move around the world using my map screen. Do you remember where it is? Go ahead and open it now.”\nMENU: “There are two ways to move around in the world. You can move to an adjacent tile by clicking the red highlight on the map, or you can right click on any tile to show the harvest screen for that tile as well as fast traveling to it.”\nMENU: “Movement costs five stamina, which comes out of the stamina pool shown in the bottom left corner of my interface.”\nMENU: “You have one hundred stamina to start with and you recover one point of stamina every minute, so you’ll have to plan out your moves a bit so that you don’t tire yourself out too much.”\nMENU: “But go ahead and explore around for now. When you’re ready to continue, head south and you’ll see a big Torii on the edge of town.\nMENU: “Once you get there, I’ll give you a Spell Card.”",
     "resolutionDialogue": "MENU: “Here you go!”\nMENU: “Spell Cards can have different effects. This one restores Stamina. If you get too tired to move, you can use it to restore yourself.”\nMENU: “You can also recover Stamina by eating the right foods, or by resting and letting it recover slowly.”\nMENU: “Even if you’re totally exhausted you’ll bounce back eventually, but it might take a bit of time without any items, so be careful not to run out at an inopportune moment.\nMENU: “Now, let’s head into town and find you a kami.”",
     "requirements": [
       {
@@ -177,7 +177,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “If your Kami isn’t enjoying Harvesting, it may not be built for such a relaxed existence.”\nMENU: “Kami with a high Violence stat are more content with a life of conflict.”\nMENU: “These predatory Kami can use their wild, violent natures to Liquidate other Kami in combat.”\nMENU: “Unlike Harvesting, this grants a large bounty of $MUSU at one time.”\nMENU: “Give it a shot if you’ve got the Kami for it. I won’t judge!”\n",
+    "introDialogue": "MENU: “If your Kami isn’t enjoying Harvesting, it may not be built for such a relaxed existence.”\nMENU: “Kami with a high Violence stat are more content with a life of conflict.”\nMENU: “These predatory Kami can use their wild, violent natures to Liquidate other Kami in combat.”\nMENU: “Unlike Harvesting, this grants a large bounty of $MUSU at one time.”\nMENU: “Give it a shot if you’ve got the Kami for it. I won’t judge!”",
     "resolutionDialogue": "MENU: “Liquidating other Kami may be antisocial, but there’s no real harm done.”\nMENU: “Just like a Kami isn’t really hurt when it’s low on Health, a Kami isn’t really dead when it’s Liquidated.”\nMENU: “It may be unable to hold its body in shape for a while, but it can always come back!”\nMENU: “You can revive fallen Kami with a Spell Card or some special food items.\"",
     "requirements": [
       {
@@ -215,7 +215,7 @@
     "type": "MAIN",
     "giver": "MENU",
     "introDialogue": "MENU: “Now that you’ve been harvesting for a bit, it’s time to teach you about $MUSU.”\nMENU: “$MUSU is what your kami have been harvesting, it’s a form of energy that exists everywhere in the universe.”\nMENU: “The Kamigotchi World has a particularly high concentration of $MUSU and $MUSU is what keeps everything here tied together, like the knots in a big rope net.”\nMENU: “Collect a moderate amount of $MUSU, I’ll tell you more afterwards.”",
-    "resolutionDialogue": "MENU: “Nicely done!”\nMENU: “In this world and the places that surround it, $MUSU is also a kind of currency.” \nMENU: “If you need a specific item, someone might sell just what you need, for the right price.”\nMENU: “You might even get the itch to start trading goods yourself!”",
+    "resolutionDialogue": "MENU: “Nicely done!”\nMENU: “In this world and the places that surround it, $MUSU is also a kind of currency.”\nMENU: “If you need a specific item, someone might sell just what you need, for the right price.”\nMENU: “You might even get the itch to start trading goods yourself!”",
     "requirements": [
       {
         "description": "Complete MSQ004",
@@ -621,7 +621,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “On my original maps, the area occupied by the scrapyard is supposed to be the location of the starter town, full of quest givers and shops.”\nMENU: “I want to find out what happened to that town. Is there anything left from it? Did it ever exist? \nMENU: “Please hike to the deepest part of the scrapyard and check it out for me.”\nMENU: “If there’s answers, they’ll be buried beneath all that scrap.”\nMENU: “All that strange machinery piled up in one place…”\nMENU: “It might be covering up something even more interesting.”\nMENU: “Harvest for at least 12 hours in the Scrap Confluence so I can run an extended analysis.”\nMENU: “If I find anything, I’ll let you know.”",
+    "introDialogue": "MENU: “On my original maps, the area occupied by the scrapyard is supposed to be the location of the starter town, full of quest givers and shops.”\nMENU: “I want to find out what happened to that town. Is there anything left from it? Did it ever exist?\nMENU: “Please hike to the deepest part of the scrapyard and check it out for me.”\nMENU: “If there’s answers, they’ll be buried beneath all that scrap.”\nMENU: “All that strange machinery piled up in one place…”\nMENU: “It might be covering up something even more interesting.”\nMENU: “Harvest for at least 12 hours in the Scrap Confluence so I can run an extended analysis.”\nMENU: “If I find anything, I’ll let you know.”",
     "resolutionDialogue": "MENU: “I’ve completed my analysis!”\nMENU: “Unfortunately I am now more confused than I was before.”\nMENU: “The only things from the town that exist in this world are the torii gate, the kami vending machine, and the bell from the church steeple.”\nMENU: “Nothing else from the town exists, and I’m not sure it ever existed. It’s like someone started designing it but stopped after only making the map and a few objects.”\nMENU: “That’s not even the weirdest part.”\nMENU: “That machine built from the church bell? It’s supposed to warp your kami through different dimensions or something crazy like that.”\nMENU: “I don’t think it’s functional, but I wouldn’t advise risking your kami to test it.”\nMENU: “Let’s move on.”",
     "requirements": [
       {
@@ -733,7 +733,7 @@
     "type": "MAIN",
     "giver": "MENU",
     "introDialogue": "MENU: “The holes in my memory are frustrating.”\nMENU: “I should know how to progress, but it’s like someone wanted me to forget.”\nMENU: “Bear with me for a while, okay? I have one more thing to try.”\nMENU: “A long, thorough, final search around the map, clockwise from the top.”\nMENU: “We’ll find something.”\nMENU: “Start at Scrap Trees and dig around. I’ll connect to your Kami and share what they learn.”",
-    "resolutionDialogue": "MENU: “I thought we’d find something juicy in that notebook, but the writing is just weird poetry.”\nMENU: “Not much of it either. It’s more of a sketchbook, really.”\nMENU: “Most of the drawings are pictures of the same young woman.”\nMENU: “She looks kind of familiar, but I can’t place her.”\nMENU: “The rest of them look like monsters…” \nMENU: “Some of them are kind of scary, but others look cute. They kind of resemble the Kamigotchi.”\nMENU: “The word “Moon” was written on the inside cover. Does that mean something to you?”",
+    "resolutionDialogue": "MENU: “I thought we’d find something juicy in that notebook, but the writing is just weird poetry.”\nMENU: “Not much of it either. It’s more of a sketchbook, really.”\nMENU: “Most of the drawings are pictures of the same young woman.”\nMENU: “She looks kind of familiar, but I can’t place her.”\nMENU: “The rest of them look like monsters…”\nMENU: “Some of them are kind of scary, but others look cute. They kind of resemble the Kamigotchi.”\nMENU: “The word “Moon” was written on the inside cover. Does that mean something to you?”",
     "requirements": [
       {
         "description": "Complete MIN013,Complete MSQ020",
@@ -806,7 +806,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “We haven’t gotten answers yet, but we’ve made a little progress. \nMENU: “More information helps. More context helps.”\nMENU: “Even if we don’t find something with a direct connection to the labs, I feel like we’re on the right track.”\nMENU: “Next, visit the Blooming Tree and make scavenging rolls.”\nMENU: “The weather here is always clear. It wasn’t lightning, so what blasted that tree apart?\nMENU: “It probably won’t open any doors for us, but I’m still curious.”",
+    "introDialogue": "MENU: “We haven’t gotten answers yet, but we’ve made a little progress.\nMENU: “More information helps. More context helps.”\nMENU: “Even if we don’t find something with a direct connection to the labs, I feel like we’re on the right track.”\nMENU: “Next, visit the Blooming Tree and make scavenging rolls.”\nMENU: “The weather here is always clear. It wasn’t lightning, so what blasted that tree apart?\nMENU: “It probably won’t open any doors for us, but I’m still curious.”",
     "resolutionDialogue": "MENU: “Didn’t come up with anything useful. That tree is still a mystery.”\nMENU: “It’s got a certain presence, that’s for sure.”\nMENU: “I thought it was dead, but it’s still hanging on.”\nMENU: “It’s probably one of the oldest things in this place. My circuits might corrode before it grows back, though.”\nMENU: “Interesting, but not what we’re looking for. Let’s keep going.”",
     "requirements": [
       {
@@ -844,7 +844,7 @@
     "type": "MAIN",
     "giver": "MENU",
     "introDialogue": "MENU: “Visit the Airplane Crash and scavenge around with your Kami.”\nMENU: “I haven’t mentioned that plane until now, but that’s because I have no clue where it came from or what it’s doing here.\nMENU: “I’m supposed to have pretty thorough data for this area!”\nMENU: “It’s not a gap I feel an absence from like the starter town or the labs data, this thing is a genuine foreign body.”\nMENU: “What’s the story? Who was on it? Where did they go? Could we follow them?”",
-    "resolutionDialogue": "MENU: “A small private jet with one pilot and four passengers. \nMENU: “They drew a primitive representation of their party on the interior roof of the plane.”\nMENU: “Later, something drove them away from this place. The last thing they left was this journal.”\nMENU: “If we find any of these people hanging around, you might want to talk to them.”\nMENU: “Still, I don’t think pursuing this story will help us pass the waterfall. We should move on.”",
+    "resolutionDialogue": "MENU: “A small private jet with one pilot and four passengers.\nMENU: “They drew a primitive representation of their party on the interior roof of the plane.”\nMENU: “Later, something drove them away from this place. The last thing they left was this journal.”\nMENU: “If we find any of these people hanging around, you might want to talk to them.”\nMENU: “Still, I don’t think pursuing this story will help us pass the waterfall. We should move on.”",
     "requirements": [
       {
         "description": "Complete MSQ023",
@@ -918,7 +918,7 @@
     "type": "MAIN",
     "giver": "MENU",
     "introDialogue": "MENU: “Let’s keep working our way around the perimeter of the map. Go back to the Labs Entrance one more time and make scavenging rolls.”\nMENU: “Where did that building come from and why is it sealed up so well? Who sealed it up like that?”\nMENU: “It honestly really bothers me. When we get the doors open, I’m going to have so many questions.”",
-    "resolutionDialogue": "MENU: “Someone’s definitely inside, and they definitely locked us out on purpose.”\nMENU: “I don’t know why they’d do that, though.”\nMENU: “Aren’t you supposed to go this way?“\nMENU: “I managed to get a list of users that passed through these doors. I’m still making the connections, but one of them… \nMENU: “I think we’re really close to finding something. I just remembered where to look next.”\nMENU: “Take a handful of Booster Packs. I put you through a real grind, so I hope you get lucky.”",
+    "resolutionDialogue": "MENU: “Someone’s definitely inside, and they definitely locked us out on purpose.”\nMENU: “I don’t know why they’d do that, though.”\nMENU: “Aren’t you supposed to go this way?“\nMENU: “I managed to get a list of users that passed through these doors. I’m still making the connections, but one of them…\nMENU: “I think we’re really close to finding something. I just remembered where to look next.”\nMENU: “Take a handful of Booster Packs. I put you through a real grind, so I hope you get lucky.”",
     "requirements": [
       {
         "description": "Complete MSQ025",
@@ -955,7 +955,7 @@
     "type": "MAIN",
     "giver": "MENU",
     "introDialogue": "MENU: “Let’s cut the boundary pushing. I remembered something.”\nMENU: “Go to the Lost Skeleton and make scavenging rolls. Let’s give the place a thorough check.”\nMENU: “That skeleton has a business laptop. That’s definitely an employee from the labs!”\nMENU: “Something’s been making me overlook him until now, but I won’t miss anything this time.”",
-    "resolutionDialogue": "MENU: “A data chip?! This is a goldmine!”\nMENU: “Keep that thing safe until we can read it!”\nMENU: “We can’t read it yet, but I’m not about to let something like that hold us back.”\nMENU: “The laptop’s battery is missing. I can’t read the chip without a device to interface with. \nMENU: “These are pretty big problems, but compared to the ones we had before? Light work.”\nMENU: “Thanks for doing this with me.”",
+    "resolutionDialogue": "MENU: “A data chip?! This is a goldmine!”\nMENU: “Keep that thing safe until we can read it!”\nMENU: “We can’t read it yet, but I’m not about to let something like that hold us back.”\nMENU: “The laptop’s battery is missing. I can’t read the chip without a device to interface with.\nMENU: “These are pretty big problems, but compared to the ones we had before? Light work.”\nMENU: “Thanks for doing this with me.”",
     "requirements": [
       {
         "description": "Complete MSQ026",
@@ -1177,7 +1177,7 @@
     "type": "MAIN",
     "giver": "MINA",
     "introDialogue": "MINA: “Next, some Holy Syrup.”\nMINA: “The holy syrup will help form a barrier against the purifying effects of flowing water.”\nMINA: “It also makes the potion spread more smoothly.”",
-    "resolutionDialogue": "MINA: “How does this work? Well, an ablution can’t purify what’s already pure.”\nMINA: “Something like that.”\nMINA: “Don’t fret about the logic behind magic, it’s not a hard science.”\nMINA: “Symbols, will, spirits, enchantments, it’s all a rather loose thing. \nMINA: “Just find two more ingredients and I’ll mix and apply the hex.”\nMINA: “And trust me, it will work.”",
+    "resolutionDialogue": "MINA: “How does this work? Well, an ablution can’t purify what’s already pure.”\nMINA: “Something like that.”\nMINA: “Don’t fret about the logic behind magic, it’s not a hard science.”\nMINA: “Symbols, will, spirits, enchantments, it’s all a rather loose thing.\nMINA: “Just find two more ingredients and I’ll mix and apply the hex.”\nMINA: “And trust me, it will work.”",
     "requirements": [
       {
         "description": "Complete MSQ032",
@@ -1287,7 +1287,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “I’ll be scrying you while you explore. I’m not coming in myself, but I’ll be watching closely.”\nMINA: “I can still send you messages through Menu when I need favors done.”\nMENU: “Between you and me, Mina seems excited.” \nMENU: She doesn’t show it like I do, but when it comes to not knowing the whole story, she gets just as frustrated. \nMINA: “I just said I’d be scrying you. That means watching and listening.” \nMINA: “But yes. I’m hoping to get some of my own questions answered inside.”\nMENU: “For me, it’s personal. I used to know things and someone took them away from me.”\nMENU: “Not only do I want to restore my data on the caves, I want to know who did this to me and why.”\nMENU: ”Then you can have your Kami eat them, I guess.”",
+    "introDialogue": "MINA: “I’ll be scrying you while you explore. I’m not coming in myself, but I’ll be watching closely.”\nMINA: “I can still send you messages through Menu when I need favors done.”\nMENU: “Between you and me, Mina seems excited.”\nMENU: She doesn’t show it like I do, but when it comes to not knowing the whole story, she gets just as frustrated.\nMINA: “I just said I’d be scrying you. That means watching and listening.”\nMINA: “But yes. I’m hoping to get some of my own questions answered inside.”\nMENU: “For me, it’s personal. I used to know things and someone took them away from me.”\nMENU: “Not only do I want to restore my data on the caves, I want to know who did this to me and why.”\nMENU: ”Then you can have your Kami eat them, I guess.”",
     "resolutionDialogue": "MENU: “This place…”\nMENU: “I’ll have to talk to you later.”\nMENU: “Sorry.”\nMENU: “I’m processing a lot.”",
     "requirements": [
       {
@@ -1324,7 +1324,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “This cave system is much larger than my scans from the surface seemed to imply.”\nMENU:  “I know this is exactly what we were looking for, but this place…it intimidates me.”\nMINA: “Not getting cold feet now are you dear? I, for one, remain quite intrigued by these caverns.”\nMINA: “From what my initial scrying has revealed, I suspect they will contain many valuable resources.” \nMINA: “Perhaps even some clues relating to those garish looking office buildings outside.”\nMINA: “Is that not what you’re here to discover?”\nMENU: “Yeah, you’re right Mina. Sorry for being weird.”\nMENU: “We won’t know more until we collect more data, so you know what to do.”\nMENU: “Get your kami harvesting and let's see what turns up.”",
+    "introDialogue": "MENU: “This cave system is much larger than my scans from the surface seemed to imply.”\nMENU: “I know this is exactly what we were looking for, but this place…it intimidates me.”\nMINA: “Not getting cold feet now are you dear? I, for one, remain quite intrigued by these caverns.”\nMINA: “From what my initial scrying has revealed, I suspect they will contain many valuable resources.”\nMINA: “Perhaps even some clues relating to those garish looking office buildings outside.”\nMINA: “Is that not what you’re here to discover?”\nMENU: “Yeah, you’re right Mina. Sorry for being weird.”\nMENU: “We won’t know more until we collect more data, so you know what to do.”\nMENU: “Get your kami harvesting and let's see what turns up.”",
     "resolutionDialogue": "MENU: “These caves are bizarre. It’s almost like they’re trying to confuse me.”\nMENU: “If this is supposed to be some sort of ancient temple, I certainly don't recognize the culture it came from.”\nMENU: “It’s frustrating, this stuff should all be in my database, but I’m as clueless as you are.”\nMENU: “Someone went through a lot of trouble to delete all those files and block my access.”\nMENU: “Which makes it highly probable that there’s something in here they don’t want us to find.”\nMENU: “Not only that, but the ambient energy here is insanely high.”\nMENU: “There’s so much ozone in the air.”\nMENU: “And I can feel the electricity.”\nMENU: “This is all so disorienting. I would say it’s giving me a headache, but I’m not sure I’m capable of getting those.”\nMENU: “...”\nMENU: “Maybe Mina will have some ideas.”",
     "requirements": [
       {
@@ -1361,7 +1361,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “I was just thinking. At long last, I got you to take a shower.”\nMINA: “...”\nMENU: “...”\nMINA: “...”\nMENU: “Mina please.”\nMINA: “Fine, fine, just let me review the results of my latest scry, be patient.”\nMINA: “...”\nMINA: “I can see where your headache came from.” \nMINA: “Someone has been treating the sacred grounds of your distant forebears like it’s free real estate.”\nMENU: “I don’t know if you should really consider me related to them. Weren’t these temples made by humans?”\nMINA: “Of course they were. Why would that…?”\nMINA: “Ah..I see, of course. My mistake.”\nMENU: “So anyway, do you think whoever messed with this place is connected to the labs?”\nMINA: “Well, Since that is presently our only and most likely lead, we can proceed from the assumption that they are, at least for now.”\nMINA: “We won’t know more until we investigate the depths of their desecration.”\nMINA: “Operator, have your kami scavenge around and we’ll see what they have wrought.”",
+    "introDialogue": "MINA: “I was just thinking. At long last, I got you to take a shower.”\nMINA: “...”\nMENU: “...”\nMINA: “...”\nMENU: “Mina please.”\nMINA: “Fine, fine, just let me review the results of my latest scry, be patient.”\nMINA: “...”\nMINA: “I can see where your headache came from.”\nMINA: “Someone has been treating the sacred grounds of your distant forebears like it’s free real estate.”\nMENU: “I don’t know if you should really consider me related to them. Weren’t these temples made by humans?”\nMINA: “Of course they were. Why would that…?”\nMINA: “Ah..I see, of course. My mistake.”\nMENU: “So anyway, do you think whoever messed with this place is connected to the labs?”\nMINA: “Well, Since that is presently our only and most likely lead, we can proceed from the assumption that they are, at least for now.”\nMINA: “We won’t know more until we investigate the depths of their desecration.”\nMINA: “Operator, have your kami scavenge around and we’ll see what they have wrought.”",
     "resolutionDialogue": "MINA: “Hm! Hm! Hm! Yes, I see.”\nMENU: “You found something related to those labs?”\nMINA: “No, but I am somewhat familiar with the nature of the resources you’ll gather here.\"\nMENU: “Oh, huh. That’s cool I guess.”\nMINA: “However, I do also sense a rare energy in the air.”\nMINA: “It only lingers here near the mouth of the cave, but if we could go deeper…”\nMINA: This place could be very useful. Keep looking around.”",
     "requirements": [
       {
@@ -1436,7 +1436,7 @@
     "type": "MAIN",
     "giver": "MENU",
     "introDialogue": "MENU: “Okay, you might not be able to trip off those little mushrooms, or eat them at all for that matter, but they’re still neat!”\nMINA: “They’re hard and solid, like a dense wood.”\nMINA: “Get a pile of stems and glue them together and you could make some lumber.”",
-    "resolutionDialogue": "MENU: “There you go! \nMENU: “This lumber could be very useful for something. I’m just not sure what.”\nMINA: “Maybe you could make a battering ram and break open the door to the labs with it.”\nMENU: “Ha, I wish.”\nMENU: “Keep looking around for now, we’ll save the property crime for later.”",
+    "resolutionDialogue": "MENU: “There you go!\nMENU: “This lumber could be very useful for something. I’m just not sure what.”\nMINA: “Maybe you could make a battering ram and break open the door to the labs with it.”\nMENU: “Ha, I wish.”\nMENU: “Keep looking around for now, we’ll save the property crime for later.”",
     "requirements": [
       {
         "description": "Complete MSQ039",
@@ -1583,7 +1583,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “This cute little temple doesn’t lead anywhere else within the cave system, but it might have some good leads for our investigation.”\nMENU: “The machines here are super weird.  And really, really old.”\nMENU: “There’s some modern equipment plugged into it though. Maybe from the labs? It’s in better shape than I’d expect stuff from the scrapyard to be.”\nMENU: “Let me scan the room and see what I can find.”\nMENU: “Do some harvesting in the meantime, it usually helps me think.”",
+    "introDialogue": "MENU: “This cute little temple doesn’t lead anywhere else within the cave system, but it might have some good leads for our investigation.”\nMENU: “The machines here are super weird. And really, really old.”\nMENU: “There’s some modern equipment plugged into it though. Maybe from the labs? It’s in better shape than I’d expect stuff from the scrapyard to be.”\nMENU: “Let me scan the room and see what I can find.”\nMENU: “Do some harvesting in the meantime, it usually helps me think.”",
     "resolutionDialogue": "MENU: “the only thing on the monitors is static and the internal “logic” of their equipment is like something out of a fever dream; it’s all black boxes with nonsense circuitry.”\nMENU: “It’s probably some kind of quantum tech, maybe we’ll find a book explaining it when we get into the labs.”\nMENU: “Sorry I didn’t find anything useful, but wait…what’s that?”\nMENU: “Another chip!”",
     "requirements": [
       {
@@ -1695,7 +1695,7 @@
     "type": "MAIN",
     "giver": "MINA",
     "introDialogue": "MINA: “Hey. You.”\nMINA “While Menu is doing her scans, can you examine that bell hanging above the crossroads for me?”\nMINA: “It doesn’t appear to match the age or style of the decor we’ve seen in prior rooms.”",
-    "resolutionDialogue": "MINA: “Aha! Right as usual.”\nMINA: “This bell is much more recent than the rest of the architecture.”\nMINA: “It seems to be Iron Age, maybe Bronze, it all kind of blurs together after a while.”\nMINA:  “I suppose that still isn’t very recent for you.”\nMINA: “Anyway, that doesn’t matter, because it wasn’t hung here anywhere near when it was made.”\nMINA: “Based on the way it’s anchored to the cave roof, I’d guess it was placed here within the last few decades.”\nMINA:  “That would likely make it the work of those ruffians from the labs, but I’ll need to see more before determining what they were doing with it.”",
+    "resolutionDialogue": "MINA: “Aha! Right as usual.”\nMINA: “This bell is much more recent than the rest of the architecture.”\nMINA: “It seems to be Iron Age, maybe Bronze, it all kind of blurs together after a while.”\nMINA: “I suppose that still isn’t very recent for you.”\nMINA: “Anyway, that doesn’t matter, because it wasn’t hung here anywhere near when it was made.”\nMINA: “Based on the way it’s anchored to the cave roof, I’d guess it was placed here within the last few decades.”\nMINA: “That would likely make it the work of those ruffians from the labs, but I’ll need to see more before determining what they were doing with it.”",
     "requirements": [
       {
         "description": "Complete MSQ046",
@@ -1731,7 +1731,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “In your world, there’s this concept called the law of superposition.” \nMENU: “It says that the rocks at the bottom are older than the rocks at the top and that stuff was laid down in sequential layers.”\nMENU: “Even if those layers get tipped or flipped or something, there’s an original stacking order.”\nMENU: “The pipes running through the walls kinda break that rule though. They’re actually older than the rock itself.”\nMINA: “That might be a result of some of the magic left behind from the original inhabitants of this place. Hard to say.”\nMINA: “If you scavenge some of the pipes, we might be able to tell you more.”",
+    "introDialogue": "MENU: “In your world, there’s this concept called the law of superposition.”\nMENU: “It says that the rocks at the bottom are older than the rocks at the top and that stuff was laid down in sequential layers.”\nMENU: “Even if those layers get tipped or flipped or something, there’s an original stacking order.”\nMENU: “The pipes running through the walls kinda break that rule though. They’re actually older than the rock itself.”\nMINA: “That might be a result of some of the magic left behind from the original inhabitants of this place. Hard to say.”\nMINA: “If you scavenge some of the pipes, we might be able to tell you more.”",
     "resolutionDialogue": "MENU: “My careful analysis has determined these pipes are probably the oldest things we’ve seen so far.”\nMENU: “They’re super sturdy and protected from decay by that lustrous tarnish.”\nMINA: “It’s like they’re being used as reinforcing bars for the stone.”\nMINA: “If that’s not natural rock, it’s concrete to beat the Romans. And with a beautiful natural finish.”\nMENU: “Don’t be silly. That doesn’t make any sense.”\nMENU: “Anyway. The pipes are solid and rich in iron. We might be able to use this metal.”",
     "requirements": [
       {
@@ -1917,7 +1917,7 @@
     "type": "MAIN",
     "giver": "MINA",
     "introDialogue": "MENU: “Mina, can you see the paper talismans around the Crossroads?”\nMENU: “They might be easy to miss with the naked eye.”\nMINA: “Of course. Obviously some sort of magical item or artifact.”\nMINA: “Bring one to me.”",
-    "resolutionDialogue": "MINA: “This looks to be the work of Menu’s magician friends.”\nMENU: “Don’t call them my friends please.”\nMENU: “They did a weird ritual on me, messed up my database, and deleted my memory files. That’s not very friendly.”\nMINA: “Fair enough dear, my apologies.”\nMINA: “In case case, I will correct myself. This talisman looks to be the work of Menu’s magician enemies.”\nMENU: “...”\nMENU: “What makes you think they’re connected?”\nMINA: “Look closely. See how it has a little picture of a Kamigotchi?”\nMENU: “Sure. Cute little guy.”\nMINA: “Those magicians would likely agree with you, they seem quite taken in by the kamigotchi, and references to them appear frequently in their spellwork.”\nMINA: “You could think of it as their calling card.”\nMENU: “Does that also mean I’m connected to them in the same way?”\nMINA: “Isn’t that already apparent? You are quite clearly connected to them, although the nature of that connection remains unclear.”\nMENU: “Mina focus please, what’s the deal with that talisman?”\nMINA: “Yes, yes, the talisman, I’m getting to that.”\nMINA: “Those magicians had quite a learned approach with their application of the craft.”\nMINA: “It’s a shame that their intellect was matched by what they lacked in wisdom.”\nMINA: “This talisman is a clever bit of spellwork, but very lacking in prudence.”\nMINA: “It sacrifices a part of the self for the power it grants.”\nMINA:  “There are always tradeoffs when it comes to magic, but there are better reagents than one’s own soul.”\nMINA: “I wouldn’t retain my stunning good looks if I relied on spells like this.”",
+    "resolutionDialogue": "MINA: “This looks to be the work of Menu’s magician friends.”\nMENU: “Don’t call them my friends please.”\nMENU: “They did a weird ritual on me, messed up my database, and deleted my memory files. That’s not very friendly.”\nMINA: “Fair enough dear, my apologies.”\nMINA: “In case case, I will correct myself. This talisman looks to be the work of Menu’s magician enemies.”\nMENU: “...”\nMENU: “What makes you think they’re connected?”\nMINA: “Look closely. See how it has a little picture of a Kamigotchi?”\nMENU: “Sure. Cute little guy.”\nMINA: “Those magicians would likely agree with you, they seem quite taken in by the kamigotchi, and references to them appear frequently in their spellwork.”\nMINA: “You could think of it as their calling card.”\nMENU: “Does that also mean I’m connected to them in the same way?”\nMINA: “Isn’t that already apparent? You are quite clearly connected to them, although the nature of that connection remains unclear.”\nMENU: “Mina focus please, what’s the deal with that talisman?”\nMINA: “Yes, yes, the talisman, I’m getting to that.”\nMINA: “Those magicians had quite a learned approach with their application of the craft.”\nMINA: “It’s a shame that their intellect was matched by what they lacked in wisdom.”\nMINA: “This talisman is a clever bit of spellwork, but very lacking in prudence.”\nMINA: “It sacrifices a part of the self for the power it grants.”\nMINA: “There are always tradeoffs when it comes to magic, but there are better reagents than one’s own soul.”\nMINA: “I wouldn’t retain my stunning good looks if I relied on spells like this.”",
     "requirements": [
       {
         "description": "Complete MSQ052",
@@ -2028,7 +2028,7 @@
     "type": "MAIN",
     "giver": "MENU",
     "introDialogue": "MENU: “Wow, the garden down the middle of this cave just keeps going.”\nMINA: “These mushrooms are rarely found in such dense numbers.”\nMINA: “If you look closely, you can see the second layer already growing in.”\nMINA: “It’s a fungus that grows like a weed when fed properly, but it can rarely get what it wants.”\nMENU: “My ‘magician enemies’ must have cultivated them hoping to block our way. I don’t think that’ll work very well.”\nMENU: “Set your Kami harvesting while I take a closer look.”",
-    "resolutionDialogue": "MENU: “Being in this place reminded me of something else.”\nMENU: “I think I remember one of the people from that ritual being a gardener of some sort.”\nMENU: “They always brought the most beautiful flowers and plants into the office.”\nMENU: “Maybe they had something to do with all these mushrooms.” \nMENU: “I unfortunately can’t tell you more with my memory files as fragmentary and blocked as they are right now.”\nMENU: “If you think it’s frustrating, imagine how I must feel, haha!”\nMENU: “Haha…”\nMENU: “They must have really wanted me out of the loop.”",
+    "resolutionDialogue": "MENU: “Being in this place reminded me of something else.”\nMENU: “I think I remember one of the people from that ritual being a gardener of some sort.”\nMENU: “They always brought the most beautiful flowers and plants into the office.”\nMENU: “Maybe they had something to do with all these mushrooms.”\nMENU: “I unfortunately can’t tell you more with my memory files as fragmentary and blocked as they are right now.”\nMENU: “If you think it’s frustrating, imagine how I must feel, haha!”\nMENU: “Haha…”\nMENU: “They must have really wanted me out of the loop.”",
     "requirements": [
       {
         "description": "Complete MSQ055",
@@ -2065,7 +2065,7 @@
     "type": "MAIN",
     "giver": "MENU",
     "introDialogue": "MENU: “That spot overlooking the pit… It seems like it would be a great place to stop and have a smoke.”\nMENU: “It’s strange, when I think about smoking I get the most peculiar cravings.”\nMENU: “It’s almost like I miss it, but how can I miss something I’ve never experienced?”\nMENU: “You don’t need to answer that, I’m just thinking out loud.”\nMENU: “I feel like, if I could just sit here with you and light one up right now, all my memory files would unlock and everything missing would come flooding back.”\nMENU: “I know that must sound very silly to you, it sounds silly to me.”\nMENU: “But still, can you get me some cigarette butts? Not even for the microplastics.”\nMENU: “Just…call it nostalgia for a life never lived.”",
-    "resolutionDialogue": "MENU: “If I had a body I would happily smoke the last of those butts.” \nMENU: “If you’ve ever really craved a cigarette and gone digging around in ashtrays for a half smoked cig, you’d know how I feel.”\nMENU: “Nothing we can really do about that though.”",
+    "resolutionDialogue": "MENU: “If I had a body I would happily smoke the last of those butts.”\nMENU: “If you’ve ever really craved a cigarette and gone digging around in ashtrays for a half smoked cig, you’d know how I feel.”\nMENU: “Nothing we can really do about that though.”",
     "requirements": [
       {
         "description": "Complete MSQ056",
@@ -2101,8 +2101,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “These blue flowers you find in the caves, they’re so striking.”\nMENU: “They look like the butterflies in the fields and woods outside.”\nMENU: “Maybe there’s a connection between them?” \nMENU: “You should deliver some to Mina, she can probably tell us more about them.”\nMINA: “I’ve already explained how they can be used in a delightful salad.”\nMINA: “But you raise an interesting question. I’ll be happy to take a look.”\n",
-    "resolutionDialogue": "MINA: “The resemblance is truly uncanny.”\nMINA:  “I doubt that’s a coincidence.” \nMINA: “The butterflies themselves are fragments of human souls, that’s what gives them their unique magic properties.”\nMINA: “However, these flowers are mere mimics.”\nMINA: “I’m not sensing even a trace of soul within them. They’re just flowers.”\nMINA: “Perhaps their appearance allows them to attract real souls for pollination?”\nMINA: “Or maybe they look like this so that soul predators will eat them and spread their seeds?”\nMINA: “I think I would like to study these further, thank you for bringing them to me.”\nMINA:  “Menu was right to think I’d find them interesting.”\nMINA:  “Since she’s helped me with this and with so many other things, I should help her with something too.”\nMINA: “That’s what friends are for is it not?”",
+    "introDialogue": "MENU: “These blue flowers you find in the caves, they’re so striking.”\nMENU: “They look like the butterflies in the fields and woods outside.”\nMENU: “Maybe there’s a connection between them?”\nMENU: “You should deliver some to Mina, she can probably tell us more about them.”\nMINA: “I’ve already explained how they can be used in a delightful salad.”\nMINA: “But you raise an interesting question. I’ll be happy to take a look.”",
+    "resolutionDialogue": "MINA: “The resemblance is truly uncanny.”\nMINA: “I doubt that’s a coincidence.”\nMINA: “The butterflies themselves are fragments of human souls, that’s what gives them their unique magic properties.”\nMINA: “However, these flowers are mere mimics.”\nMINA: “I’m not sensing even a trace of soul within them. They’re just flowers.”\nMINA: “Perhaps their appearance allows them to attract real souls for pollination?”\nMINA: “Or maybe they look like this so that soul predators will eat them and spread their seeds?”\nMINA: “I think I would like to study these further, thank you for bringing them to me.”\nMINA: “Menu was right to think I’d find them interesting.”\nMINA: “Since she’s helped me with this and with so many other things, I should help her with something too.”\nMINA: “That’s what friends are for is it not?”",
     "requirements": [
       {
         "description": "Complete MSQ057",
@@ -2134,12 +2134,12 @@
     "key": "MSQ059",
     "index": 59,
     "status": "In Game",
-    "title": "Ordinary Intermediate Potion Crafting (Very Boring) I\n",
+    "title": "Ordinary Intermediate Potion Crafting (Very Boring) I",
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “Hey, shh.” \nMINA: “Be quiet. We don’t want Menu to hear us.”\nMINA: “I’m sure that’s impossible considering where this conversation is taking place, but I’m trying.”\nMINA: “Menu is more magical than she likes to think, so I put up anti-scrying measures.”\nMINA: “They should work as long as she remains unaware of their presence.”\nMINA: “It’s time to teach you some intermediate hexerei with a recipe I’ve just invented.”\nMINA: “Start by scavenging some cigarette butts from the cave system. You know I find them disgusting, but it’s important.”\nMINA: “And don’t tell Menu anything, we don’t want to spoil the surprise.”",
-    "resolutionDialogue": "MINA: “Ahh, perfect! That will do nicely.”\nMINA: “This might look like useless smelly trash, but many things are more than they appear.”\nMINA: “We just need two more ingredients. They’ll be hard to get, but not impossible.” \nMINA: “Head down the central passageway of the caves, stop in that fungus garden, and wait for me.”\nMINA: “Be quick about it.”",
+    "introDialogue": "MINA: “Hey, shh.”\nMINA: “Be quiet. We don’t want Menu to hear us.”\nMINA: “I’m sure that’s impossible considering where this conversation is taking place, but I’m trying.”\nMINA: “Menu is more magical than she likes to think, so I put up anti-scrying measures.”\nMINA: “They should work as long as she remains unaware of their presence.”\nMINA: “It’s time to teach you some intermediate hexerei with a recipe I’ve just invented.”\nMINA: “Start by scavenging some cigarette butts from the cave system. You know I find them disgusting, but it’s important.”\nMINA: “And don’t tell Menu anything, we don’t want to spoil the surprise.”",
+    "resolutionDialogue": "MINA: “Ahh, perfect! That will do nicely.”\nMINA: “This might look like useless smelly trash, but many things are more than they appear.”\nMINA: “We just need two more ingredients. They’ll be hard to get, but not impossible.”\nMINA: “Head down the central passageway of the caves, stop in that fungus garden, and wait for me.”\nMINA: “Be quick about it.”",
     "requirements": [
       {
         "description": "Complete MSQ058",
@@ -2171,7 +2171,7 @@
     "key": "MSQ060",
     "index": 60,
     "status": "In Game",
-    "title": "Ordinary Intermediate Potion Crafting (Very Boring) II\n",
+    "title": "Ordinary Intermediate Potion Crafting (Very Boring) II",
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
@@ -2249,7 +2249,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “Is she gone?”\nMINA: “Phew, that was a close one.”\nMINA: “Now, observe closely. Even though these butts have been smoked down to stubs, there is still a bit of tobacco left inside them.”\nMINA:  “Menu doesn’t have a physical form. Obviously, just collecting the loose tobacco won’t let her actually smoke.”\nMINA: “And even with the Essence trick we tried with that bell, it’s too short-lived and singular.”\nMINA: “But I’ve got it all worked out now.”\nMINA: “Peel the petals of the Essence of Taste and grind them up in your mortar.”\nMINA: “They’ll release oil and emulsify into a thin slurry.”\nMINA: “Now, fold in the tobacco.”",
+    "introDialogue": "MINA: “Is she gone?”\nMINA: “Phew, that was a close one.”\nMINA: “Now, observe closely. Even though these butts have been smoked down to stubs, there is still a bit of tobacco left inside them.”\nMINA: “Menu doesn’t have a physical form. Obviously, just collecting the loose tobacco won’t let her actually smoke.”\nMINA: “And even with the Essence trick we tried with that bell, it’s too short-lived and singular.”\nMINA: “But I’ve got it all worked out now.”\nMINA: “Peel the petals of the Essence of Taste and grind them up in your mortar.”\nMINA: “They’ll release oil and emulsify into a thin slurry.”\nMINA: “Now, fold in the tobacco.”",
     "resolutionDialogue": "MINA: “That looks perfect, now we can give it to Menu.”\nMINA: “I wish I could see the look on her face…”\nMINA: “But not so much that I want to deal with the smell.”",
     "requirements": [
       {
@@ -2324,7 +2324,7 @@
     "type": "MAIN",
     "giver": "MINA",
     "introDialogue": "MINA: “Hey you, let’s give Menu some space, I have another task for you in the meantime.”\nMINA: “Head back into the caves and make your way to the mural on the wall outside of that antediluvian facility.”\nMINA: “Do you recognize the story it depicts?”\nMINA: “Nearly all cultures have their own version of the tale. It happened many, many times over the years.”\nMINA: “Harvest in that room and I shall study the mural. Perhaps this will tell the story in a way we haven’t all heard before.”",
-    "resolutionDialogue": "MINA: “The people who painted this lived in a society of great wealth and technological advancement.”\nMINA: “As a great flood befell them, gods descended from the heavens to assist a chosen few.” \nMINA: “More or less the same story as always. The details change, but the core remains.”\nMINA: “You may even remember tales like this from your own history.”\nMINA: “More have been forgotten than remembered.”",
+    "resolutionDialogue": "MINA: “The people who painted this lived in a society of great wealth and technological advancement.”\nMINA: “As a great flood befell them, gods descended from the heavens to assist a chosen few.”\nMINA: “More or less the same story as always. The details change, but the core remains.”\nMINA: “You may even remember tales like this from your own history.”\nMINA: “More have been forgotten than remembered.”",
     "requirements": [
       {
         "description": "Complete MSQ063",
@@ -2360,7 +2360,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “There’s a calm underground stream at the bottom of these caves.\"\nMENU: “The little carving on the rock there seems familiar to me somehow. I think I recognize the initials.” \nMENU: “Do some harvesting here while I try to remember.\"\nMENU: “That tobacco you gave me earlier is kind of helping me focus.”",
+    "introDialogue": "MENU: “There’s a calm underground stream at the bottom of these caves.\"\nMENU: “The little carving on the rock there seems familiar to me somehow. I think I recognize the initials.”\nMENU: “Do some harvesting here while I try to remember.\"\nMENU: “That tobacco you gave me earlier is kind of helping me focus.”",
     "resolutionDialogue": "MENU: “I studied that engraved message. It brought some memories flashing back.”\nMENU: “I think I actually knew those people.”\nMENU: “One of them, I definitely remember her being really scary.”\nMENU: “The other one, he thought he was really funny for some reason.”\nMENU: “But I don’t think he was all that clever.\"\nMENU: “Still can’t remember their names, though.”",
     "requirements": [
       {
@@ -2398,7 +2398,7 @@
     "type": "MAIN",
     "giver": "MINA",
     "introDialogue": "MINA: “In the middle of that facility, there’s a huge black door that doesn’t quite match the rest of it.”\nMINA: “It’s sealed up tight. I want you to check out the engraving on the face.”\nMINA: “Another old story that happened many times over the course of history.”\nMINA: “Gods granting knowledge to humanity, advancing their progress.”\nMINA: “Harvest some $MUSU while I read this and I’ll tell you about it.\"",
-    "resolutionDialogue": "MINA: “Like the great flood, this is another recurring story.”\nMINA: “The gods can’t seem to help themselves.”\nMINA: “A fascination with the ephemeral, perhaps?”\nMINA: “Or possibly, it’s like wanting the best for your pets.”\nMINA: “Whatever the motivation, gods have granted knowledge or power to humans  countless times throughout history.”\nMINA: “This is just one of many. A mythic world forgotten and left abandoned.”\nMINA: “Until recently, it seems.”",
+    "resolutionDialogue": "MINA: “Like the great flood, this is another recurring story.”\nMINA: “The gods can’t seem to help themselves.”\nMINA: “A fascination with the ephemeral, perhaps?”\nMINA: “Or possibly, it’s like wanting the best for your pets.”\nMINA: “Whatever the motivation, gods have granted knowledge or power to humans countless times throughout history.”\nMINA: “This is just one of many. A mythic world forgotten and left abandoned.”\nMINA: “Until recently, it seems.”",
     "requirements": [
       {
         "description": "Complete MSQ065",
@@ -2546,7 +2546,7 @@
     "type": "MAIN",
     "giver": "MINA",
     "introDialogue": "MINA: “Something foul took place in the room with that broken tube. The $MUSU in there room feels tainted.”\nMINA: “Whatever was contained within those tubes left an unpleasant imprint onto the world around it.”\nMINA: “It seems like a bad idea to loiter for too long, but it’s worth investigating.”\nMINA: “Harvest some of the room’s $MUSU and I’ll see to figuring out what happened.\"",
-    "resolutionDialogue": "MINA: “Those shattered tubes once contained something very powerful.”\nMINA: “I shouldn’t go into much detail. You wouldn’t accept it anyway, I think.”\nMINA: “The residue of this power lingers within every object in the room.”\nMINA:  “It’s strongest in the glass of the shattered tube and the hoses around it, but everything here has been touched.”\nMINA: “To capture and use something like that as a power source…”\nMINA: “Truly perverse.”",
+    "resolutionDialogue": "MINA: “Those shattered tubes once contained something very powerful.”\nMINA: “I shouldn’t go into much detail. You wouldn’t accept it anyway, I think.”\nMINA: “The residue of this power lingers within every object in the room.”\nMINA: “It’s strongest in the glass of the shattered tube and the hoses around it, but everything here has been touched.”\nMINA: “To capture and use something like that as a power source…”\nMINA: “Truly perverse.”",
     "requirements": [
       {
         "description": "Complete MSQ069",
@@ -2582,7 +2582,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “Hey so, I know Mina told you not to hang out too long in that broken tube room, but…”\nMENU: “I can’t sense whatever she’s picking up on and there’s something of interest to us here.” \nMENU: “According to the map data, this room has a chance of dropping a screwdriver.”\nMENU: “If you haven’t already grabbed one from the junkyard then this would be a great place to scavenge one.”\nMENU: “Even if you don’t find one, give it a shot.”",
+    "introDialogue": "MENU: “Hey so, I know Mina told you not to hang out too long in that broken tube room, but…”\nMENU: “I can’t sense whatever she’s picking up on and there’s something of interest to us here.”\nMENU: “According to the map data, this room has a chance of dropping a screwdriver.”\nMENU: “If you haven’t already grabbed one from the junkyard then this would be a great place to scavenge one.”\nMENU: “Even if you don’t find one, give it a shot.”",
     "resolutionDialogue": "MENU: “While you were scavenging, I cross referenced the drop table in this room with the one in the junkyard. It’s the same model screwdriver.”\nMENU: “It must have been someone’s favorite.”\nMENU: “I wonder who?”",
     "requirements": [
       {
@@ -2693,7 +2693,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “Go on. Get moving.”\nMINA: “Menu tells me there’s a campsite ahead.” \nMINA: “You’re bound to find a clue left behind, the way these scoundrels litter.”",
+    "introDialogue": "MINA: “Go on. Get moving.”\nMINA: “Menu tells me there’s a campsite ahead.”\nMINA: “You’re bound to find a clue left behind, the way these scoundrels litter.”",
     "resolutionDialogue": "MINA: “A complete mess, as expected.”\nMINA: “Not much of interest to me.”\nMINA: “That charcoal drawing on the wall, though…”\nMINA: “Have you seen anything like that before?”",
     "requirements": [
       {
@@ -2841,7 +2841,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “Have you seen that book leaning against the pillar?”\nMINA: “Menu seems to have no interest.”\nMINA: “She takes fascination in the strangest things.”\nMINA: “I’m always happy to find some new magical text, however.”\nMINA: “Have your Kami spend some time harvesting here while I negotiate with our mutual friend.” ",
+    "introDialogue": "MINA: “Have you seen that book leaning against the pillar?”\nMINA: “Menu seems to have no interest.”\nMINA: “She takes fascination in the strangest things.”\nMINA: “I’m always happy to find some new magical text, however.”\nMINA: “Have your Kami spend some time harvesting here while I negotiate with our mutual friend.”",
     "resolutionDialogue": "MINA: “Apparently she’s already got the contents recorded somewhere.”\nMINA: “For some reason it’s been difficult to show these files to you.”\nMINA: “She’ll figure it out eventually.”\nMINA: “Oh, the book? Nonsense. Foolish fancy. I didn’t finish it.\"",
     "requirements": [
       {
@@ -2989,7 +2989,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MENU: “Let’s check out those giant crystals in the geometric caves next!”\nMENU: “There’s gotta be something cool in there.”\nMINA: “I don’t need to give you the lesson about $MUSU currents again do I?”\nMINA: “It should be obvious that just as I predicted, you’ll find another essence there.”\nMINA: “It seems you can’t touch that lantern though. No great worry.”\nMINA: “A bit strange, but no obstacle.” \nMINA: “As long as you and your Kami can scavenge, you’re gold.”",
+    "introDialogue": "MENU: “Let’s check out those giant crystals in the geometric caves next!”\nMENU: “There’s gotta be something cool in there.”\nMINA: “I don’t need to give you the lesson about $MUSU currents again do I?”\nMINA: “It should be obvious that just as I predicted, you’ll find another essence there.”\nMINA: “It seems you can’t touch that lantern though. No great worry.”\nMINA: “A bit strange, but no obstacle.”\nMINA: “As long as you and your Kami can scavenge, you’re gold.”",
     "resolutionDialogue": "MINA: “That lantern burns with a familiar element.”\nMINA: “The lingering radiation in the antediluvian facility, you remember?”\nMINA: “In a way, that tube was really just a bigger lantern.”\nMINA: “Consider yourself lucky being unable to touch it.”\nMINA: “Just extract the essence from the light it casts on the wall.”",
     "requirements": [
       {
@@ -3175,7 +3175,7 @@
     "type": "MAIN",
     "giver": "MENU",
     "introDialogue": "MENU: “Hey, so I tried to scan that giant crystal in the back of the caves.”\nMENU: “It made me feel kinda sick.”\nMENU: “Maybe kinda really sick actually.”\nMENU: “Uh.”\nMENU: “Mina, you take this one. My vision is bugging out.”\nMINA: “Operator, make your way to the radiant crystal chamber and take stock of the materials there.”\nMINA: “And make it quick.”",
-    "resolutionDialogue": "MINA: “I see why our friend was uncomfortable.”\nMINA: “I feel it too.” \nMINA: “This crystal is radiating with incredible magical power.”\nMINA: “It feels just like the leftovers in the broken tube.”\nMINA: “A setting like this appears more natural than that prison…”\nMINA: “But still, something feels wrong.”",
+    "resolutionDialogue": "MINA: “I see why our friend was uncomfortable.”\nMINA: “I feel it too.”\nMINA: “This crystal is radiating with incredible magical power.”\nMINA: “It feels just like the leftovers in the broken tube.”\nMINA: “A setting like this appears more natural than that prison…”\nMINA: “But still, something feels wrong.”",
     "requirements": [
       {
         "description": "Complete MSQ086",
@@ -3248,7 +3248,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “I think I’m getting used to that room the more you visit.”\nMENU: “There’s a unique item to be found by the Radiant Crystal. Did you know?”\nMENU: “The roots wrapped around the crystal absorb the energy it radiates.”\nMENU: “Some of them fall off, but they keep that blue radiance.” \nMENU: “Grab a few.”",
+    "introDialogue": "MENU: “I think I’m getting used to that room the more you visit.”\nMENU: “There’s a unique item to be found by the Radiant Crystal. Did you know?”\nMENU: “The roots wrapped around the crystal absorb the energy it radiates.”\nMENU: “Some of them fall off, but they keep that blue radiance.”\nMENU: “Grab a few.”",
     "resolutionDialogue": "MENU: “This seems like the sort of item that only ever shows up in one place.”\nMENU: “Something unpleasant about holding these things, too.”\nMENU: “Kind of like the crystal itself, but weaker.”\nMENU: “I’ll get used to it.”",
     "requirements": [
       {
@@ -3286,7 +3286,7 @@
     "type": "MAIN",
     "giver": "MINA",
     "introDialogue": "MINA: “I think that I’ve properly established how distasteful I find the act of drawing power from this crystal.”\nMINA: “With that said, I’ve also been considering the ethics of using these roots in hexerei.”\nMINA: “If your kami just happen to pick up whats already there…”\nMINA: “It’s acceptable.”",
-    "resolutionDialogue": "MINA: “Hmm… Indeed, something unpleasant about holding this.”\nMINA: “Though I can feel the potential.” \nMINA: “Get your tools ready, apprentice. Let’s try something new.”",
+    "resolutionDialogue": "MINA: “Hmm… Indeed, something unpleasant about holding this.”\nMINA: “Though I can feel the potential.”\nMINA: “Get your tools ready, apprentice. Let’s try something new.”",
     "requirements": [
       {
         "description": "Complete MSQ089",
@@ -3323,7 +3323,7 @@
     "type": "MAIN",
     "giver": "MINA",
     "introDialogue": "MINA: “Make an extract of the root, but leave one unprocessed for later.”\nMINA: “I’ve got two recipes in mind.”",
-    "resolutionDialogue": "MINA: “I’m still not entirely comfortable working with this reagent.”\nMINA: “Ah well. There’s nothing to be done.” ",
+    "resolutionDialogue": "MINA: “I’m still not entirely comfortable working with this reagent.”\nMINA: “Ah well. There’s nothing to be done.”",
     "requirements": [
       {
         "description": "Complete MSQ090",
@@ -3360,7 +3360,7 @@
     "type": "MAIN",
     "giver": "MINA",
     "introDialogue": "MINA: “Mix the extract with a little mint and steep with freshly boiled water.”\nMINA: “Let it rest, then bottle it. Shake before drinking.”\nMINA: “Go on, give it a try.”",
-    "resolutionDialogue": "MINA: “These roots produce a startling effect on your Kami.”\nMINA: “But a very useful one.”\nMINA: “I’ll look the other way if you decide to use more of these potions.” ",
+    "resolutionDialogue": "MINA: “These roots produce a startling effect on your Kami.”\nMINA: “But a very useful one.”\nMINA: “I’ll look the other way if you decide to use more of these potions.”",
     "requirements": [
       {
         "description": "Complete MSQ091",
@@ -3470,7 +3470,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “The rod senses something.” \nMINA: “You see what I meant? You might have figured this out already, Operator.”\nMINA: “Not many trees that look like this.”\nMINA: “Get a little closer and buy something. I want to see how it reacts.”",
+    "introDialogue": "MINA: “The rod senses something.”\nMINA: “You see what I meant? You might have figured this out already, Operator.”\nMINA: “Not many trees that look like this.”\nMINA: “Get a little closer and buy something. I want to see how it reacts.”",
     "resolutionDialogue": "MINA: “Awful.”\nMINA: “It gave me the shivers, even from the distance of scrying.”\nMINA: “There’s more than just the crystal in the caves.”\nMINA: “Something else is living in that tree. Tied in to those roots.”",
     "requirements": [
       {
@@ -3581,7 +3581,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “That dowsing rod is wiggling again.”\nMINA: “The Blooming Tree has a certain presence. I’m not surprised.”\nMINA: “Something similar may have happened here.” ",
+    "introDialogue": "MENU: “That dowsing rod is wiggling again.”\nMINA: “The Blooming Tree has a certain presence. I’m not surprised.”\nMINA: “Something similar may have happened here.”",
     "resolutionDialogue": "MINA: “It’s possible this tree once held a great crystal heart.”\nMINA: “Something of similar size and power as the great crystal in the caves.”\nMENU: “And someone stole it away?”\nMENU: “If we don’t find it in down in those tunnels, I wonder where it went…”",
     "requirements": [
       {
@@ -3729,8 +3729,8 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MENU",
-    "introDialogue": "MENU: “This is the deepest part of the cave system.”\nMENU: “We’re deep below the central point of Kamigotchi World’s axial mountain.”\nMENU: “The location just feels important.”\nMENU: “These pillars and brickwork don’t match anything else in the caves, aesthetically. Let me run some scans.\nMENU: “You might trust the results more than I do, though.” \nMENU: “I’ll check the marble. You grab some stuff from the room to compare.”",
-    "resolutionDialogue": "MENU: “Weirdest thing.”\nMENU: “These old marble pillars? Every one I check is just plaster with distressing. They just look old.”\nMENU: “This whole temple might have been built within the last fifty years.” \nMENU: “Everything in it except the bones…”",
+    "introDialogue": "MENU: “This is the deepest part of the cave system.”\nMENU: “We’re deep below the central point of Kamigotchi World’s axial mountain.”\nMENU: “The location just feels important.”\nMENU: “These pillars and brickwork don’t match anything else in the caves, aesthetically. Let me run some scans.\nMENU: “You might trust the results more than I do, though.”\nMENU: “I’ll check the marble. You grab some stuff from the room to compare.”",
+    "resolutionDialogue": "MENU: “Weirdest thing.”\nMENU: “These old marble pillars? Every one I check is just plaster with distressing. They just look old.”\nMENU: “This whole temple might have been built within the last fifty years.”\nMENU: “Everything in it except the bones…”",
     "requirements": [
       {
         "description": "Complete MSQ101",
@@ -3767,7 +3767,7 @@
     "type": "MAIN",
     "giver": "MINA",
     "introDialogue": "MENU: “Hey, the dowsing rod is wiggling.”\nMENU: “I almost didn’t notice it in there. It’s barely moving.”\nMENU: “Actually, it seems to be indicating something below, not in the sacrarium itself.”\nMENU: “I don’t think you’ll be swimming through ooze anytime soon. It might even be deeper than that pool.”\nMENU: “Might as well put it out of your mind for now.”\nMINA: “Not so fast.”\nMINA: “Do me the favor of spending a few hours investigating. And tell me all the details.”",
-    "resolutionDialogue": "MINA: “Hmm.”\nMINA: “The pillars are laid out along the lines of a sigil.”\nMINA: “This sacrarium, bones and all, may have been constructed to seal whatever sleeps below.”\nMINA: “It’s despicable to put the old man to work in this state. He deserves to rest.”\nMINA: “But I’m still thankful he’s here.”\nMINA: “The dowsing rod can barely sense it, but the weakness of the signal matters not.”\nMINA: “At a far enough distance, or behind a great enough barrier, the most radiant power can be as faint as a candle’s flame.”\nMINA: “In my opinion, you should be happy you can’t yet find a way down there.”\n",
+    "resolutionDialogue": "MINA: “Hmm.”\nMINA: “The pillars are laid out along the lines of a sigil.”\nMINA: “This sacrarium, bones and all, may have been constructed to seal whatever sleeps below.”\nMINA: “It’s despicable to put the old man to work in this state. He deserves to rest.”\nMINA: “But I’m still thankful he’s here.”\nMINA: “The dowsing rod can barely sense it, but the weakness of the signal matters not.”\nMINA: “At a far enough distance, or behind a great enough barrier, the most radiant power can be as faint as a candle’s flame.”\nMINA: “In my opinion, you should be happy you can’t yet find a way down there.”",
     "requirements": [
       {
         "description": "Complete MSQ094,Own the Dowsing Rod,In Room: Sacrarium",
@@ -4210,7 +4210,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “With human garbage as far as the eye can see, one might expect to see more humans along with it.”\nMINA: “There are mountains of their attachments changing the landscape of this place, but few actual souls.”\nMINA: “A dead one was laying by the edge of the forest, you know.” \nMINA: “It looked young, at least compared to the dusty old saints in the local graves.”\nMINA: “Go harvest $MUSU from its location. Maybe it will start to feel chatty.”\nMINA: “——— Mina.”",
+    "introDialogue": "MINA: “With human garbage as far as the eye can see, one might expect to see more humans along with it.”\nMINA: “There are mountains of their attachments changing the landscape of this place, but few actual souls.”\nMINA: “A dead one was laying by the edge of the forest, you know.”\nMINA: “It looked young, at least compared to the dusty old saints in the local graves.”\nMINA: “Go harvest $MUSU from its location. Maybe it will start to feel chatty.”\nMINA: “——— Mina.”",
     "resolutionDialogue": "MINA: “You can’t hear it speak?”\nMINA: “Strange. I thought you might be able to understand each other.”\nMINA: “Ah well. Nothing to be done.”\nMINA: “——— Mina.”",
     "requirements": [
       {
@@ -4321,7 +4321,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “One must break down the raw materials before they can be measured out and mixed into a hex.”\nMINA: “I won’t do this for you more than once. Have some self-respect.”\nMINA: “I’ve stocked my shop with Spice Grinders, and they’re just the tool you need.”\nMINA: “You may be a model student who already bought one.”\nMINA: “If so, you get a pat on the head.”\nMINA: “If not, you won’t get much further without it, so fork over the dough, kid.”\nMINA: “Once you own a Spice Grinder, use it to extract some Pine Pollen from a Pine Cone.”\nMINA: “You should already have a Pine Cone in your inventory.” \nMINA: “——— Mina.”",
+    "introDialogue": "MINA: “One must break down the raw materials before they can be measured out and mixed into a hex.”\nMINA: “I won’t do this for you more than once. Have some self-respect.”\nMINA: “I’ve stocked my shop with Spice Grinders, and they’re just the tool you need.”\nMINA: “You may be a model student who already bought one.”\nMINA: “If so, you get a pat on the head.”\nMINA: “If not, you won’t get much further without it, so fork over the dough, kid.”\nMINA: “Once you own a Spice Grinder, use it to extract some Pine Pollen from a Pine Cone.”\nMINA: “You should already have a Pine Cone in your inventory.”\nMINA: “——— Mina.”",
     "resolutionDialogue": "MINA: “That was fine.”\nMINA: “You might prove yourself a capable hexer one of these years.”\nMINA: “Just don’t expect me to hold your hand every step of the way.”\nMINA: “——— Mina.”",
     "requirements": [
       {
@@ -4506,7 +4506,7 @@
     "daily": false,
     "type": "MAIN",
     "giver": "MINA",
-    "introDialogue": "MINA: “It appears there’s more to this Menu being than I first thought.”\nMINA: “She’s intimately tied to this place, a sort of genius loci.”\nMINA: “That is, not a demon or spirit, but some form of protective entity that exists within the very essence of the location.”\nMINA: “As much as I and my shop are connected, she is with the Kamigotchi World.”\nMINA: “As soon as possible, I’ll send over an apology letter. \nMINA: “I just need you to help me find the necessary materials.”\nMINA: “——— Mina.”",
+    "introDialogue": "MINA: “It appears there’s more to this Menu being than I first thought.”\nMINA: “She’s intimately tied to this place, a sort of genius loci.”\nMINA: “That is, not a demon or spirit, but some form of protective entity that exists within the very essence of the location.”\nMINA: “As much as I and my shop are connected, she is with the Kamigotchi World.”\nMINA: “As soon as possible, I’ll send over an apology letter.\nMINA: “I just need you to help me find the necessary materials.”\nMINA: “——— Mina.”",
     "resolutionDialogue": "MINA: “Thank you.”\nMINA: “She and I have been talking since you reached out on her behalf, but it’s good etiquette to put it in writing.”\nMINA: “And yes, I think I can help.”\nMINA: “——— Mina.”",
     "requirements": [
       {
@@ -4766,7 +4766,7 @@
     "type": "SIDE",
     "giver": "MENU",
     "introDialogue": "MENU: “I see one of your Kami got Liquidated.”\nMENU: “That sucks!”\nMENU: “Of course, that’s just a temporary condition.”\nMENU: “In this world it’s usually possible to return to form no matter what happens.”\nMENU: “The essence of something remains unless it’s been totally erased from existence.”",
-    "resolutionDialogue": "MENU: Take this and use it on a Kami that has been Liquidated.\nMENU: “Just read the incantation printed on the front, and presto! This powerful spell card brings your Kami back to action. \nMENU: “It’s the only freebie I’m allowed to give you. You’ll have to work for more spell cards like this one.”\nMENU: “Certain shopkeepers might sell different kinds of revival magic, but these cards are premium SSR.”",
+    "resolutionDialogue": "MENU: Take this and use it on a Kami that has been Liquidated.\nMENU: “Just read the incantation printed on the front, and presto! This powerful spell card brings your Kami back to action.\nMENU: “It’s the only freebie I’m allowed to give you. You’ll have to work for more spell cards like this one.”\nMENU: “Certain shopkeepers might sell different kinds of revival magic, but these cards are premium SSR.”",
     "requirements": [
       {
         "description": "Have one of your own Kami liquidated",
@@ -4905,7 +4905,7 @@
     "daily": false,
     "type": "SIDE",
     "giver": "MINA",
-    "introDialogue": "MINA: “I demand a tribute of $MUSU.”\nMINA: “You should feel privileged to have this opportunity and expect nothing in return.”\n",
+    "introDialogue": "MINA: “I demand a tribute of $MUSU.”\nMINA: “You should feel privileged to have this opportunity and expect nothing in return.”",
     "resolutionDialogue": "MINA: “Well done.”\nMINA: “Have you considered paying me tribute on a more regular basis?”\nMINA: “I can tell you find it satisfying.”",
     "requirements": [
       {
@@ -5017,7 +5017,7 @@
     "type": "SIDE",
     "giver": "MINA",
     "introDialogue": "MINA: “On the wall in my shop hangs a board tracking my favorite customers.”\nMINA: “That could be you one day at the top, among the angels.”\nMINA: “You won’t get better prices anywhere else, you know.”",
-    "resolutionDialogue": "MINA: “An oblation from your wallet to my register.” \nMINA: “Thank you.”",
+    "resolutionDialogue": "MINA: “An oblation from your wallet to my register.”\nMINA: “Thank you.”",
     "requirements": [
       {
         "description": "Complete MIN007",
@@ -5054,7 +5054,7 @@
     "type": "SIDE",
     "giver": "MINA",
     "introDialogue": "MINA: “I came across this beverage long ago when I met the peoples of Lake Shala.”\nMINA: “I was quite taken by its taste, though I can’t recall when I last had it.”\nMINA: “We don’t have access to the real ingredients here, but I believe materials are available to make an approximation.”\nMINA: “Start by crafting a proper receptacle: Chisel a chunk of Stone with a Screwdriver to make an Empty Cup.”\nMINA: “For the approximate materials, seek out a Sanguine Shroom for the color and body, and a Pine Cone for the dry finish and spicy floral aroma.”\nMINA: “It may sound unpleasant, but wait until it’s been brewed before you judge.”",
-    "resolutionDialogue": "MINA: “You might think it possible to drink this potion from a plastic bottle or a glass jar, but it isn’t.”\nMINA: “Only a proper stone cup will do.” \nMINA: “A spiced floral bouquet, and on the palate a touch of acid leading into a bitter finish…”\nMINA: “You did well.”\nMINA: “I’d nearly forgotten how pleasant an experience it is to share a drink with someone.”\nMINA: “We’ll have to do this again sometime.”",
+    "resolutionDialogue": "MINA: “You might think it possible to drink this potion from a plastic bottle or a glass jar, but it isn’t.”\nMINA: “Only a proper stone cup will do.”\nMINA: “A spiced floral bouquet, and on the palate a touch of acid leading into a bitter finish…”\nMINA: “You did well.”\nMINA: “I’d nearly forgotten how pleasant an experience it is to share a drink with someone.”\nMINA: “We’ll have to do this again sometime.”",
     "requirements": [
       {
         "description": "Complete SQ012",
@@ -5165,7 +5165,7 @@
     "type": "SIDE",
     "giver": "MENU",
     "introDialogue": "MENU: “I know there’s a window on me somewhere, a secret shop where you can use those Obols to buy something.”\nMENU: “Don’t tell me it’s not real, I can feel it there.”\nMENU: “They refuse to sell to me, so you’re going to have to shell out just this once.”\nMENU: “I want you to buy what they’re selling and give it to Mina.”\nMENU: “She’ll probably be able to tell us something about it.”",
-    "resolutionDialogue": "MINA: “They’re serpent eggs, hollowed out and filled with treasure.”\nMENU: “She got really upset when I asked if she had anything to do with it.”\nMINA: ”It’s distasteful to the extreme.”\nMINA: “The fiends who craft these eggs should hope I never meet them.” ",
+    "resolutionDialogue": "MINA: “They’re serpent eggs, hollowed out and filled with treasure.”\nMENU: “She got really upset when I asked if she had anything to do with it.”\nMINA: ”It’s distasteful to the extreme.”\nMINA: “The fiends who craft these eggs should hope I never meet them.”",
     "requirements": [
       {
         "description": "Complete SQ015",
@@ -5275,7 +5275,7 @@
     "daily": false,
     "type": "SIDE",
     "giver": "MINA",
-    "introDialogue": "MINA: “If you haven’t figured it out yet, this is another world entirely.”\nMINA: “We’re far, far from the Kamigotchi World, warped through the reflection off of a mirrored blade.”\nMINA: “The trophies on display commemorate the slaying of monsters you may have never seen before.”\nMINA: “But don’t get fired up to explore.”\nMINA: “We’re locked in a treasure room with sealed exits.”\nMENU: “The world beyond might be sealed off, but we can take treasure back with us, right?”\nMINA: “Oh, of course.”\nMINA: “Scavenge some things while you’re here. You might find something interesting.” ",
+    "introDialogue": "MINA: “If you haven’t figured it out yet, this is another world entirely.”\nMINA: “We’re far, far from the Kamigotchi World, warped through the reflection off of a mirrored blade.”\nMINA: “The trophies on display commemorate the slaying of monsters you may have never seen before.”\nMINA: “But don’t get fired up to explore.”\nMINA: “We’re locked in a treasure room with sealed exits.”\nMENU: “The world beyond might be sealed off, but we can take treasure back with us, right?”\nMINA: “Oh, of course.”\nMINA: “Scavenge some things while you’re here. You might find something interesting.”",
     "resolutionDialogue": "MENU: “The stuff here is so cool, but I’m starting to not like the vibes here.”\nMENU: “It feels like we’re being watched.”\nMINA: “We might be.”\nMINA: “It’s nothing to get worked up over.”\nMINA: “I would have felt a presence if there were anyone here of any importance.”\nMINA: “If someone really is watching, it’s likely a worthless creature of no concern.”",
     "requirements": [
       {
@@ -5563,7 +5563,7 @@
     "daily": false,
     "type": "SIDE",
     "giver": "ROB",
-    "introDialogue": "ROB: “Beautiful little place here, can’t say it enough. I’ll be stickin’ around, I think.”\nROB: “You’re gonna have to help a fella out.”\nROB: “I broke the stone that kept me fettered in the otherworld. Gave you a piece earlier.”\nROB: “Help me make a new anchor so I can stick myself here just the same.”\nROB: “Not just any rock’ll do. Get your boy Rob a hefty block of stone.” ",
+    "introDialogue": "ROB: “Beautiful little place here, can’t say it enough. I’ll be stickin’ around, I think.”\nROB: “You’re gonna have to help a fella out.”\nROB: “I broke the stone that kept me fettered in the otherworld. Gave you a piece earlier.”\nROB: “Help me make a new anchor so I can stick myself here just the same.”\nROB: “Not just any rock’ll do. Get your boy Rob a hefty block of stone.”",
     "resolutionDialogue": "ROB: “Great stuff, kid.”\nROB: “You wanna know a little of how this works? Ehhh… Yeah, whatever.”\nROB: “See, I’m such a foreigner here, I can’t stay forever on my own.”\nROB: “I’m not like you or those skeleton deaf mutes layin’ around.”\nROB: “Even though I got friends now, even if I eat some food, I’d eventually fade away.”\nROB: “Just don’t belong here. Not a world that naturally supports a man of my stature.”\nROB: “But if I have a little rock of my own to bind myself to, that’s different.”\nROB: “It’d be like I got my own world inside this world, and I’d be safe as long as I want.”\nROB: “I’ll build this outta the way. Don’t go lookin’, but you might run into it later.”",
     "requirements": [
       {
@@ -5600,8 +5600,8 @@
     "daily": false,
     "type": "SIDE",
     "giver": "ROB",
-    "introDialogue": "ROB: “I don’t know about you, but I’ve been smellin’ sulfur in the air.”\nROB: “Could be somethin’ bad. But I got somethin’ else on my mind about it.”\nROB: “It’s makin’ me think about eggs. Haven’t had an egg for about a thousand years.” \nROB: “Hell, but I’m never gonna get tired of usin’ that for an excuse.”\nROB: “If you get your hands on a fried egg, give it here. I’m beggin’ for one.”\nROB: “Don’t even care if it’s spoiled.”",
-    "resolutionDialogue": "ROB: “Beautiful color. Smells like hell. I’m gonna cry, kid.”\nROB: “Here, take this cuppa coffee. I prefer cream and sugar, myself.”\nROB: “As a bonus, I even heated it up.” \nROB: “Always good tradin’ with ya.”",
+    "introDialogue": "ROB: “I don’t know about you, but I’ve been smellin’ sulfur in the air.”\nROB: “Could be somethin’ bad. But I got somethin’ else on my mind about it.”\nROB: “It’s makin’ me think about eggs. Haven’t had an egg for about a thousand years.”\nROB: “Hell, but I’m never gonna get tired of usin’ that for an excuse.”\nROB: “If you get your hands on a fried egg, give it here. I’m beggin’ for one.”\nROB: “Don’t even care if it’s spoiled.”",
+    "resolutionDialogue": "ROB: “Beautiful color. Smells like hell. I’m gonna cry, kid.”\nROB: “Here, take this cuppa coffee. I prefer cream and sugar, myself.”\nROB: “As a bonus, I even heated it up.”\nROB: “Always good tradin’ with ya.”",
     "requirements": [
       {
         "description": "Complete SQ032",
@@ -5918,7 +5918,7 @@
     "type": "SIDE",
     "giver": "MENU",
     "introDialogue": "MENU: “The dowsing rod is picking something up? Here?”\nMINA: “Does that surprise you?”\nMINA: “The mundane and modern aesthetic of these structures is what’s truly out of place here.”\nMINA: “The presence of some alien vastness within them is to be expected.”\nMENU: “I mean… It’s weird for sure. I guess I just hadn’t thought about what that would mean for the local energy.”\nMENU: “For me, that’s a strange oversight to make.”\nMENU: “It might be the result of the tampering that was done to me.”\nMENU: “Set your Kami harvesting in here for a while, Operator. I’ll run some more scans.”",
-    "resolutionDialogue": "MINA: “Can you sense it now, Menu?”\nMINA: “Are you able to pick up on the energy that flows from the depths within?” \nMENU: “Yeah, I think so actually.”\nMENU: “It’s subtle, but it’s still leaking out from around the doors. Feels like you could trace it back down from there.”\nMINA: “Very good! Seems you’re a quick study.”\nMINA: “This skill will serve you and the Operator well in the future.”\nMENU: “Yeah! I just realized that myself.”\nMENU: “We might be able to use this rod not just to passively notice interesting stuff, but to actively navigate.”\nMENU: “You know, once we finally get inside this office.”",
+    "resolutionDialogue": "MINA: “Can you sense it now, Menu?”\nMINA: “Are you able to pick up on the energy that flows from the depths within?”\nMENU: “Yeah, I think so actually.”\nMENU: “It’s subtle, but it’s still leaking out from around the doors. Feels like you could trace it back down from there.”\nMINA: “Very good! Seems you’re a quick study.”\nMINA: “This skill will serve you and the Operator well in the future.”\nMENU: “Yeah! I just realized that myself.”\nMENU: “We might be able to use this rod not just to passively notice interesting stuff, but to actively navigate.”\nMENU: “You know, once we finally get inside this office.”",
     "requirements": [
       {
         "description": "Complete MSQ094,Own the Dowsing Rod,In Room: Lab Entrance",
@@ -6029,7 +6029,7 @@
     "type": "SIDE",
     "giver": "MINA",
     "introDialogue": "MENU: “The dowsing rod is picking something up again.”\nMENU: “And by something, I mean that weird pool of ooze.”\nMENU: “It’s pretty obvious that it’s the source.”\nMINA: “Hmm, ooze you say? Interesting, interesting.”\nMENU: “Dimidiatus says its possible to travel through it.”\nMINA: “Indeed, indeed, although it has been eons since it was utilized properly.”\nMINA: “Harvest here for a while I do some scrying.”\nMINA: “This unassuming pool may be of great use in the future.”",
-    "resolutionDialogue": "MENU: “All these machines, they’re beyond ancient. \nMENU: “Even moreso than the ones we found in the caves earlier.”\nMENU: “But I can’t tell at all what they’re doing, or how they interact with the pool!”\nMENU: “It’s totally beyond me right now. Really need more upgrades…”\nMENU: “Mina, have you had better luck with your scrying?”\nMINA: “My luck is always impeccable, dear; my intuitions have proven correct once again.”\nMINA: “Dimidiatus is correct. This pool can indeed serve as a gateway to distant lands.”\nMINA: “As I have discovered, it is unbroken and in fairly good condition.”\nMINA: “It merely sits at rest. In sleep mode, as you might say.”\nMINA: “Reawakening it will be a great challenge, one that requires substantial sacrifice.”\nMINA: “Despite that, it will be a worthwhile mission to undertake, sometime down the line.”\nMINA: “For now, satisfy yourself with my gratitude.” ",
+    "resolutionDialogue": "MENU: “All these machines, they’re beyond ancient.\nMENU: “Even moreso than the ones we found in the caves earlier.”\nMENU: “But I can’t tell at all what they’re doing, or how they interact with the pool!”\nMENU: “It’s totally beyond me right now. Really need more upgrades…”\nMENU: “Mina, have you had better luck with your scrying?”\nMINA: “My luck is always impeccable, dear; my intuitions have proven correct once again.”\nMINA: “Dimidiatus is correct. This pool can indeed serve as a gateway to distant lands.”\nMINA: “As I have discovered, it is unbroken and in fairly good condition.”\nMINA: “It merely sits at rest. In sleep mode, as you might say.”\nMINA: “Reawakening it will be a great challenge, one that requires substantial sacrifice.”\nMINA: “Despite that, it will be a worthwhile mission to undertake, sometime down the line.”\nMINA: “For now, satisfy yourself with my gratitude.”",
     "requirements": [
       {
         "description": "Complete MSQ094,Own the Dowsing Rod,In Room: Black Pool",
@@ -6325,7 +6325,7 @@
     "type": "SIDE",
     "giver": "MENU",
     "introDialogue": "MENU: “This one has been bugging me for a long time. Even more after we got that chip.”\nMENU: “Call out with that fancy ring of yours.”\nMENU: “Maybe this skeleton will finally have something to chatter about.”\nMENU: “…”\nLOST SKELETON: “Holy shit, you look scary!”\nLOST SKELETON: “You’re going to swallow my soul, right? I don’t deserve it!”\nLOST SKELETON: “It’s love! I wasn’t doing anything wrong!”\nLOST SKELETON: “Wait, you aren’t after me? Yeah, that’s what I mean, I’m innocent.”\nMENU: “He doesn’t sound innocent.”\nLOST SKELETON: “Say, you know, I actually lost something around here.”\nLOST SKELETON: “It’s this screwdriver with a red handle. It has an ‘A’ on it, maybe.”\nLOST SKELETON: “Can you get it for me?”",
-    "resolutionDialogue": "LOST SKELETON: “Wow! You really did it!”\nLOST SKELETON: “It’s just like the one the guy at Arawn uses.”\nLOST SKELETON: “I mean, it’s my old screwdriver! Thank you!”\nMENU: “I don’t know who this guy is, but he sounds like a stalker.”\nMENU: “Doesn’t seem like I was paying much attention back then. Kind of glad.”\nLOST SKELETON: “You’re nice for being some kind of shadow person freak.”\nLOST SKELETON: “Maybe we could, uh, hang out more?”\nLOST SKELETON: “Share some information, something like that?”\nLOST SKELETON: “It’s nice to have an accomplice.”\n",
+    "resolutionDialogue": "LOST SKELETON: “Wow! You really did it!”\nLOST SKELETON: “It’s just like the one the guy at Arawn uses.”\nLOST SKELETON: “I mean, it’s my old screwdriver! Thank you!”\nMENU: “I don’t know who this guy is, but he sounds like a stalker.”\nMENU: “Doesn’t seem like I was paying much attention back then. Kind of glad.”\nLOST SKELETON: “You’re nice for being some kind of shadow person freak.”\nLOST SKELETON: “Maybe we could, uh, hang out more?”\nLOST SKELETON: “Share some information, something like that?”\nLOST SKELETON: “It’s nice to have an accomplice.”",
     "requirements": [
       {
         "description": "Own the Ring of Spirits,In Room: Lost Skeleton",
@@ -6436,7 +6436,7 @@
     "type": "SIDE",
     "giver": "MINA",
     "introDialogue": "MINA: “My large old friend in the caves has surely lost all but his body.”\nMINA: “And I have of course accepted his loss and had you pay respects on my behalf.”\nMINA: “But a part of me remains hopeful.”\nMINA: “And another part, curious if some spiritual parasite might have taken residence in his corpse.”\nMINA: “Please take some time here and call out with the Kami at your side.”\nMINA: “If only as a favor to me.”",
-    "resolutionDialogue": "MENU: “So what do you mean that he’s lost all but his body? I thought that wasn’t really how it worked here.”\nMINA: “For human souls, no. Other things follow other rules.” \nMINA: “The skeletal giant ‘lives’, but without a mind or animating soul.”\nMINA: “The body might linger and grow for eternity, even in this form.”\nMINA: “It still pains me to see him like this, but I’m reassured it’s not worse.”",
+    "resolutionDialogue": "MENU: “So what do you mean that he’s lost all but his body? I thought that wasn’t really how it worked here.”\nMINA: “For human souls, no. Other things follow other rules.”\nMINA: “The skeletal giant ‘lives’, but without a mind or animating soul.”\nMINA: “The body might linger and grow for eternity, even in this form.”\nMINA: “It still pains me to see him like this, but I’m reassured it’s not worse.”",
     "requirements": [
       {
         "description": "Own the Ring of Spirits,In Room: Guardian Skull",
@@ -6583,7 +6583,7 @@
     "daily": false,
     "type": "SIDE",
     "giver": "MINA",
-    "introDialogue": "MINA: “I want you to go visit the Lost Skeleton again to speak with him.”\nMINA: “Menu seems to hate him now, but he might still be useful.” \nMENU: “I told you, he’s just a creep. A stalker.”\nMINA: “That’s useful.”\nMINA: “Anyway, go see him.”\nMINA: “Get your Kami out and stir the place up if he won’t talk right away.”",
+    "introDialogue": "MINA: “I want you to go visit the Lost Skeleton again to speak with him.”\nMINA: “Menu seems to hate him now, but he might still be useful.”\nMENU: “I told you, he’s just a creep. A stalker.”\nMINA: “That’s useful.”\nMINA: “Anyway, go see him.”\nMINA: “Get your Kami out and stir the place up if he won’t talk right away.”",
     "resolutionDialogue": "LOST SKELETON: “You’re not gonna find anything good here. C’mon.”\nLOST SKELETON: “Think I haven’t already combed over every inch? Find a better place.”\nMINA: “See? There he goes.”\nMINA: “By the way, note the pristine quality of those ridiculous pants.”\nMINA: “This skeleton acts like a lost soul, but…”\nMINA: “In the details, this is quite a strong self-image to maintain.”",
     "requirements": [
       {
@@ -6689,7 +6689,7 @@
   {
     "key": "SQ802",
     "index": 3802,
-    "status": "In Game",
+    "status": "Defunct",
     "title": "Quest Diagnostics",
     "daily": false,
     "type": "SIDE",
@@ -6761,6 +6761,36 @@
     ]
   },
   {
+    "key": "SQ900",
+    "index": 3900,
+    "status": "In Game",
+    "title": "Warm Your Hands",
+    "daily": true,
+    "type": "SIDE",
+    "giver": "MENU",
+    "introDialogue": "MENU: “Operator, something’s tugging at my sensors. It points back to the old graves.”\nMENU: “Mina said there were no lost souls left there. Not even remnants. So what’s calling?”\nMENU: “Whatever it is, it feels cold. Bring three sticks and let’s give it a fire.”",
+    "resolutionDialogue": "MENU: “Whoa. That’s a lot of flame for three sticks.”\nMENU: “There’s something in the ashes… a card. It’s warm. Looks like someone climbing out of a fire.”\nMENU: “The tug’s gone quiet. I bet it’ll be back tomorrow.”",
+    "requirements": [],
+    "objectives": [
+      {
+        "description": "Move to the Trash-Strewn Graves,Give 3 Wooden Sticks",
+        "deltaType": null,
+        "type": null,
+        "index": null,
+        "value": null
+      }
+    ],
+    "rewards": [
+      {
+        "description": "1x ”Melkarth’s Heroic Awakening” Spell Card",
+        "type": "ITEM",
+        "index": 11002,
+        "value": 1,
+        "itemName": "Melkarth's Heroic Awakening Spell Card"
+      }
+    ]
+  },
+  {
     "key": "SQ998",
     "index": 3998,
     "status": "In Game",
@@ -6800,13 +6830,13 @@
   {
     "key": "SQ999",
     "index": 10002,
-    "status": "In Game",
+    "status": "Defunct",
     "title": "Claim Your Free Gift!",
     "daily": false,
     "type": "",
     "giver": "",
-    "introDialogue": "I was really going through it on the 21st. It had me feeling bad enough that it must have affected you too. Here, take this. ",
-    "resolutionDialogue": "I’m back to 100 percent and processing faster than ever. I hope that gift helped you get back on your feet again. ",
+    "introDialogue": "I was really going through it on the 21st. It had me feeling bad enough that it must have affected you too. Here, take this.",
+    "resolutionDialogue": "I’m back to 100 percent and processing faster than ever. I hope that gift helped you get back on your feet again.",
     "requirements": [
       {
         "description": "Before 25/10/25 0 GMT,At least 1 Kami liquidated",
@@ -6835,7 +6865,7 @@
     "type": "SIDE",
     "giver": "MENU",
     "introDialogue": "MENU: “I was not having a good time this weekend, and it seems like you weren’t either.”\nMENU: “Take these, they should help you get back on your feet.”",
-    "resolutionDialogue": "MENU: “I’m back to 100 percent and processing faster than ever. I hope that gift helped you get back on your feet too. ",
+    "resolutionDialogue": "MENU: “I’m back to 100 percent and processing faster than ever. I hope that gift helped you get back on your feet too.",
     "requirements": [
       {
         "description": "At least 1 Kami liquidated",
@@ -7052,5 +7082,26 @@
         "itemName": null
       }
     ]
+  },
+  {
+    "key": "TTX01",
+    "index": 10001,
+    "status": "Defunct",
+    "title": "Proof of Honesty",
+    "daily": false,
+    "type": "",
+    "giver": "",
+    "introDialogue": null,
+    "resolutionDialogue": null,
+    "requirements": [
+      {
+        "description": "Missed Mina",
+        "type": "MINA_LAUNCH_VICTIM",
+        "index": 0,
+        "value": 0
+      }
+    ],
+    "objectives": [],
+    "rewards": []
   }
 ]

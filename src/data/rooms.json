@@ -168,20 +168,26 @@
       "name": "Labs Entrance",
       "affinity": "Eerie",
       "levelLimit": 0,
-      "yieldIndex": 1,
-      "yieldName": "MUSU",
-      "scavCost": 100,
-      "droptableName": "Stone Only",
+      "yieldIndex": 2,
+      "yieldName": "VIPP",
+      "scavCost": 300,
+      "droptableName": "Stone Bottle Apple",
       "droptable": {
-        "name": "Stone Only",
+        "name": "Stone Bottle Apple",
         "indices": [
-          1002
+          1002,
+          1003,
+          11313
         ],
         "tiers": [
-          9
+          9,
+          6,
+          4
         ],
         "items": [
-          "Stone"
+          "Stone",
+          "Plastic Bottle",
+          "Golden Apple"
         ]
       }
     }
@@ -197,7 +203,7 @@
     "description": "You step into the forest and seem to enter a primordial age. The buzz of giant insects overwhelms your hearing.",
     "node": {
       "name": "Forest: Old Growth",
-      "affinity": "Insect",
+      "affinity": "Insect, Eerie",
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
@@ -213,7 +219,7 @@
         "tiers": [
           9,
           7,
-          2
+          3
         ],
         "items": [
           "Wooden Stick",
@@ -344,7 +350,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 100,
+      "scavCost": 200,
       "droptableName": "Pipe Butt Burger",
       "droptable": {
         "name": "Pipe Butt Burger",
@@ -356,7 +362,7 @@
         "tiers": [
           9,
           9,
-          7
+          2
         ],
         "items": [
           "Patinated Pipe",
@@ -381,7 +387,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 500,
+      "scavCost": 1000,
       "droptableName": "Pipe Burger Cone Hearing",
       "droptable": {
         "name": "Pipe Burger Cone Hearing",
@@ -393,9 +399,9 @@
         ],
         "tiers": [
           9,
-          7,
-          7,
-          5
+          2,
+          2,
+          1
         ],
         "items": [
           "Patinated Pipe",
@@ -421,27 +427,24 @@
       "levelLimit": 0,
       "yieldIndex": 2,
       "yieldName": "VIPP",
-      "scavCost": 200,
-      "droptableName": "Stems Shroom Scale Talisman",
+      "scavCost": 400,
+      "droptableName": "Stems Shroom Scale",
       "droptable": {
-        "name": "Stems Shroom Scale Talisman",
+        "name": "Stems Shroom Scale",
         "indices": [
           1016,
           1013,
-          11312,
-          11412
+          11312
         ],
         "tiers": [
           9,
-          8,
-          6,
-          4
+          2,
+          1
         ],
         "items": [
           "Dried Stems",
           "Sanguine Shroom",
-          "Honeydew Scale",
-          "Flash Talisman"
+          "Honeydew Scale"
         ]
       }
     }
@@ -463,7 +466,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 300,
+      "scavCost": 600,
       "droptableName": "Butt Pipe Daffodil Mint",
       "droptable": {
         "name": "Butt Pipe Daffodil Mint",
@@ -476,8 +479,8 @@
         "tiers": [
           9,
           9,
-          7,
-          4
+          2,
+          1
         ],
         "items": [
           "Cigarette Butt",
@@ -536,7 +539,7 @@
     "description": "Ancient gravestones emerge from the thinning piles of trash at the farthest edge of the scrapyard.",
     "node": {
       "name": "Trash-Strewn Graves",
-      "affinity": "Eerie",
+      "affinity": "Eerie, Scrap",
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
@@ -648,7 +651,7 @@
     "node": {
       "name": "Scrapyard Exit",
       "affinity": "Scrap",
-      "levelLimit": 0,
+      "levelLimit": 35,
       "yieldIndex": 1,
       "yieldName": "MUSU",
       "scavCost": 100,
@@ -732,7 +735,7 @@
         ],
         "tiers": [
           9,
-          7
+          6
         ],
         "items": [
           "Wooden Stick",
@@ -787,13 +790,13 @@
     "node": {
       "name": "Elder Path",
       "affinity": "Normal",
-      "levelLimit": 0,
+      "levelLimit": 35,
       "yieldIndex": 1,
       "yieldName": "MUSU",
       "scavCost": 200,
-      "droptableName": "Stick Cone Poppy",
+      "droptableName": "Stick Cone Poppy (Elder Path)",
       "droptable": {
-        "name": "Stick Cone Poppy",
+        "name": "Stick Cone Poppy (Elder Path)",
         "indices": [
           1001,
           1004,
@@ -801,7 +804,7 @@
         ],
         "tiers": [
           9,
-          7,
+          6,
           2
         ],
         "items": [
@@ -824,7 +827,7 @@
     "node": {
       "name": "Parting Path",
       "affinity": "Insect",
-      "levelLimit": 0,
+      "levelLimit": 35,
       "yieldIndex": 1,
       "yieldName": "MUSU",
       "scavCost": 200,
@@ -874,7 +877,7 @@
         ],
         "tiers": [
           9,
-          7
+          6
         ],
         "items": [
           "Wooden Stick",
@@ -895,7 +898,7 @@
     "node": {
       "name": "Scrap Paths",
       "affinity": "Scrap",
-      "levelLimit": 0,
+      "levelLimit": 35,
       "yieldIndex": 1,
       "yieldName": "MUSU",
       "scavCost": 100,
@@ -933,25 +936,28 @@
       "name": "Murky Forest Path",
       "affinity": "Insect",
       "levelLimit": 0,
-      "yieldIndex": 1,
-      "yieldName": "MUSU",
-      "scavCost": 200,
-      "droptableName": "Stick Resin Poppy",
+      "yieldIndex": 2,
+      "yieldName": "VIPP",
+      "scavCost": 300,
+      "droptableName": "Stick Resin Scale Poppy",
       "droptable": {
-        "name": "Stick Resin Poppy",
+        "name": "Stick Resin Scale Poppy",
         "indices": [
           1001,
           11311,
+          11312,
           1010
         ],
         "tiers": [
           9,
           7,
+          5,
           2
         ],
         "items": [
           "Wooden Stick",
           "Resin",
+          "Honeydew Scale",
           "Black Poppy"
         ]
       }
@@ -970,25 +976,28 @@
       "name": "Clearing",
       "affinity": "Normal",
       "levelLimit": 0,
-      "yieldIndex": 1,
-      "yieldName": "MUSU",
+      "yieldIndex": 2,
+      "yieldName": "VIPP",
       "scavCost": 300,
-      "droptableName": "Stick Stone Mint",
+      "droptableName": "Stick Stone Burger Mint",
       "droptable": {
-        "name": "Stick Stone Mint",
+        "name": "Stick Stone Burger Mint",
         "indices": [
           1001,
           1002,
+          11302,
           1012
         ],
         "tiers": [
           9,
           9,
+          6,
           4
         ],
         "items": [
           "Wooden Stick",
           "Stone",
+          "Cheeseburger",
           "Mint"
         ]
       }
@@ -1006,7 +1015,7 @@
     "node": {
       "name": "Ancient Forest Entrance",
       "affinity": "Insect",
-      "levelLimit": 0,
+      "levelLimit": 35,
       "yieldIndex": 1,
       "yieldName": "MUSU",
       "scavCost": 200,
@@ -1039,28 +1048,31 @@
     "description": "There are fragments of scrap metal littered around the forest here.",
     "node": {
       "name": "Scrap-Littered Undergrowth",
-      "affinity": "Insect",
+      "affinity": "Scrap, Insect",
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
       "scavCost": 300,
-      "droptableName": "Bottle Scrap Resin",
+      "droptableName": "Scrap Bottle Burger Cone",
       "droptable": {
-        "name": "Bottle Scrap Resin",
+        "name": "Scrap Bottle Burger Cone",
         "indices": [
-          1003,
           1005,
-          11311
+          1003,
+          11302,
+          1004
         ],
         "tiers": [
           9,
-          9,
-          7
+          8,
+          6,
+          4
         ],
         "items": [
-          "Plastic Bottle",
           "Scrap Metal",
-          "Resin"
+          "Plastic Bottle",
+          "Cheeseburger",
+          "Pine Cone"
         ]
       }
     }
@@ -1080,8 +1092,8 @@
       "name": "Airplane Crash",
       "affinity": "Eerie",
       "levelLimit": 0,
-      "yieldIndex": 1,
-      "yieldName": "MUSU",
+      "yieldIndex": 2,
+      "yieldName": "VIPP",
       "scavCost": 300,
       "droptableName": "Bottle Scrap Jar",
       "droptable": {
@@ -1131,7 +1143,7 @@
         "tiers": [
           9,
           7,
-          4
+          3
         ],
         "items": [
           "Wooden Stick",
@@ -1203,7 +1215,7 @@
     "node": {
       "name": "Butterfly Forest",
       "affinity": "Insect",
-      "levelLimit": 0,
+      "levelLimit": 35,
       "yieldIndex": 1,
       "yieldName": "MUSU",
       "scavCost": 200,
@@ -1240,7 +1252,7 @@
     "node": {
       "name": "River Crossing",
       "affinity": "Normal",
-      "levelLimit": 0,
+      "levelLimit": 35,
       "yieldIndex": 1,
       "yieldName": "MUSU",
       "scavCost": 200,
@@ -1278,8 +1290,8 @@
       "name": "Mouth of Scrap",
       "affinity": "Scrap",
       "levelLimit": 0,
-      "yieldIndex": 1,
-      "yieldName": "MUSU",
+      "yieldIndex": 2,
+      "yieldName": "VIPP",
       "scavCost": 100,
       "droptableName": "Stone Scrap Burger",
       "droptable": {
@@ -1316,27 +1328,27 @@
     "node": {
       "name": "Black Pool",
       "affinity": "Eerie",
-      "levelLimit": 0,
+      "levelLimit": 35,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 100,
-      "droptableName": "Pipe Butt Burger",
+      "scavCost": 200,
+      "droptableName": "Pipe Butt Apple",
       "droptable": {
-        "name": "Pipe Butt Burger",
+        "name": "Pipe Butt Apple",
         "indices": [
           1017,
           1018,
-          11302
+          11313
         ],
         "tiers": [
           9,
           9,
-          7
+          4
         ],
         "items": [
           "Patinated Pipe",
           "Cigarette Butt",
-          "Cheeseburger"
+          "Golden Apple"
         ]
       }
     }
@@ -1357,22 +1369,25 @@
       "yieldIndex": 2,
       "yieldName": "VIPP",
       "scavCost": 500,
-      "droptableName": "Scrap Daffodil Driver",
+      "droptableName": "Scrap Daffodil Shroom Driver",
       "droptable": {
-        "name": "Scrap Daffodil Driver",
+        "name": "Scrap Daffodil Shroom Driver",
         "indices": [
           1005,
           1011,
+          1013,
           23102
         ],
         "tiers": [
           9,
           7,
+          5,
           2
         ],
         "items": [
           "Scrap Metal",
           "Daffodil",
+          "Sanguine Shroom",
           "Screwdriver"
         ]
       }
@@ -1394,9 +1409,9 @@
       "yieldIndex": 2,
       "yieldName": "VIPP",
       "scavCost": 200,
-      "droptableName": "Stick Cone Rename",
+      "droptableName": "Stick Cone Rename (Musty Forest Path)",
       "droptable": {
-        "name": "Stick Cone Rename",
+        "name": "Stick Cone Rename (Musty Forest Path)",
         "indices": [
           1001,
           1004,
@@ -1404,7 +1419,7 @@
         ],
         "tiers": [
           9,
-          7,
+          4,
           4
         ],
         "items": [
@@ -1442,7 +1457,7 @@
         "tiers": [
           9,
           8,
-          4
+          3
         ],
         "items": [
           "Stone",
@@ -1465,8 +1480,8 @@
       "name": "Deeper Forest Path",
       "affinity": "Normal",
       "levelLimit": 0,
-      "yieldIndex": 2,
-      "yieldName": "VIPP",
+      "yieldIndex": 1,
+      "yieldName": "MUSU",
       "scavCost": 300,
       "droptableName": "Stone Daffodil Pinecone Poppy",
       "droptable": {
@@ -1480,7 +1495,7 @@
         "tiers": [
           9,
           7,
-          7,
+          4,
           2
         ],
         "items": [
@@ -1570,7 +1585,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 200,
+      "scavCost": 400,
       "droptableName": "Chunk Butt Pansy",
       "droptable": {
         "name": "Chunk Butt Pansy",
@@ -1582,7 +1597,7 @@
         "tiers": [
           9,
           9,
-          9
+          2
         ],
         "items": [
           "Bone Chunk",
@@ -1607,7 +1622,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 200,
+      "scavCost": 400,
       "droptableName": "Chunk Butt Pansy",
       "droptable": {
         "name": "Chunk Butt Pansy",
@@ -1619,7 +1634,7 @@
         "tiers": [
           9,
           9,
-          9
+          2
         ],
         "items": [
           "Bone Chunk",
@@ -1644,7 +1659,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 500,
+      "scavCost": 1000,
       "droptableName": "Butt Stems Berry Smell",
       "droptable": {
         "name": "Butt Stems Berry Smell",
@@ -1657,8 +1672,8 @@
         "tiers": [
           9,
           9,
-          8,
-          6
+          2,
+          1
         ],
         "items": [
           "Cigarette Butt",
@@ -1684,7 +1699,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 100,
+      "scavCost": 200,
       "droptableName": "Chunk Pipe Pansy",
       "droptable": {
         "name": "Chunk Pipe Pansy",
@@ -1696,7 +1711,7 @@
         "tiers": [
           9,
           9,
-          8
+          2
         ],
         "items": [
           "Bone Chunk",
@@ -1721,7 +1736,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 200,
+      "scavCost": 400,
       "droptableName": "Butt Pipe Scale",
       "droptable": {
         "name": "Butt Pipe Scale",
@@ -1733,7 +1748,7 @@
         "tiers": [
           9,
           9,
-          8
+          2
         ],
         "items": [
           "Cigarette Butt",
@@ -1760,10 +1775,10 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 500,
-      "droptableName": "Chunk Pipe Shroom Touch",
+      "scavCost": 1000,
+      "droptableName": "Stems Pipe Shroom Touch",
       "droptable": {
-        "name": "Chunk Pipe Shroom Touch",
+        "name": "Stems Pipe Shroom Touch",
         "indices": [
           1016,
           1017,
@@ -1773,8 +1788,8 @@
         "tiers": [
           9,
           9,
-          8,
-          6
+          2,
+          1
         ],
         "items": [
           "Dried Stems",
@@ -1800,7 +1815,7 @@
       "levelLimit": 0,
       "yieldIndex": 2,
       "yieldName": "VIPP",
-      "scavCost": 300,
+      "scavCost": 600,
       "droptableName": "Butt Pipe Driver",
       "droptable": {
         "name": "Butt Pipe Driver",
@@ -1812,7 +1827,7 @@
         "tiers": [
           9,
           9,
-          2
+          1
         ],
         "items": [
           "Cigarette Butt",
@@ -1837,7 +1852,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 200,
+      "scavCost": 400,
       "droptableName": "Butt Chunk Apple Dust",
       "droptable": {
         "name": "Butt Chunk Apple Dust",
@@ -1850,8 +1865,8 @@
         "tiers": [
           9,
           9,
-          6,
-          4
+          1,
+          1
         ],
         "items": [
           "Cigarette Butt",
@@ -1877,7 +1892,7 @@
       "levelLimit": 0,
       "yieldIndex": 2,
       "yieldName": "VIPP",
-      "scavCost": 200,
+      "scavCost": 400,
       "droptableName": "Chunk Berry Floss",
       "droptable": {
         "name": "Chunk Berry Floss",
@@ -1888,8 +1903,8 @@
         ],
         "tiers": [
           9,
-          7,
-          6
+          2,
+          1
         ],
         "items": [
           "Bone Chunk",
@@ -1914,7 +1929,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 500,
+      "scavCost": 1000,
       "droptableName": "Stems Shroom Taste",
       "droptable": {
         "name": "Stems Shroom Taste",
@@ -1925,8 +1940,8 @@
         ],
         "tiers": [
           9,
-          7,
-          5
+          2,
+          1
         ],
         "items": [
           "Dried Stems",
@@ -1951,7 +1966,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 100,
+      "scavCost": 200,
       "droptableName": "Stems Chunk Scale",
       "droptable": {
         "name": "Stems Chunk Scale",
@@ -1963,7 +1978,7 @@
         "tiers": [
           9,
           9,
-          7
+          2
         ],
         "items": [
           "Dried Stems",
@@ -1988,7 +2003,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 200,
+      "scavCost": 400,
       "droptableName": "Stems Butt Burger",
       "droptable": {
         "name": "Stems Butt Burger",
@@ -2000,7 +2015,7 @@
         "tiers": [
           9,
           9,
-          7
+          2
         ],
         "items": [
           "Dried Stems",
@@ -2025,7 +2040,7 @@
       "levelLimit": 0,
       "yieldIndex": 2,
       "yieldName": "VIPP",
-      "scavCost": 100,
+      "scavCost": 200,
       "droptableName": "Butt Stems Shroom Pansy",
       "droptable": {
         "name": "Butt Stems Shroom Pansy",
@@ -2038,8 +2053,8 @@
         "tiers": [
           9,
           9,
-          8,
-          7
+          2,
+          2
         ],
         "items": [
           "Cigarette Butt",
@@ -2065,7 +2080,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 200,
+      "scavCost": 400,
       "droptableName": "Stems Pipe Berry Apple Root",
       "droptable": {
         "name": "Stems Pipe Berry Apple Root",
@@ -2079,9 +2094,9 @@
         "tiers": [
           9,
           9,
-          8,
-          6,
-          6
+          2,
+          1,
+          1
         ],
         "items": [
           "Dried Stems",
@@ -2108,7 +2123,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 200,
+      "scavCost": 400,
       "droptableName": "Chunk Butt Pansy",
       "droptable": {
         "name": "Chunk Butt Pansy",
@@ -2120,7 +2135,7 @@
         "tiers": [
           9,
           9,
-          9
+          2
         ],
         "items": [
           "Bone Chunk",
@@ -2145,7 +2160,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 500,
+      "scavCost": 1000,
       "droptableName": "Chunk Butt Floss Sight",
       "droptable": {
         "name": "Chunk Butt Floss Sight",
@@ -2158,8 +2173,8 @@
         "tiers": [
           9,
           9,
-          7,
-          6
+          2,
+          1
         ],
         "items": [
           "Bone Chunk",
@@ -2185,7 +2200,7 @@
       "levelLimit": 0,
       "yieldIndex": 2,
       "yieldName": "VIPP",
-      "scavCost": 100,
+      "scavCost": 200,
       "droptableName": "Chunk Pipe Pansy",
       "droptable": {
         "name": "Chunk Pipe Pansy",
@@ -2197,7 +2212,7 @@
         "tiers": [
           9,
           9,
-          8
+          2
         ],
         "items": [
           "Bone Chunk",
@@ -2222,7 +2237,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 200,
+      "scavCost": 400,
       "droptableName": "Stems Butt Burger",
       "droptable": {
         "name": "Stems Butt Burger",
@@ -2234,7 +2249,7 @@
         "tiers": [
           9,
           9,
-          7
+          2
         ],
         "items": [
           "Dried Stems",
@@ -2259,24 +2274,21 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 200,
-      "droptableName": "Chunk Pansy Talisman",
+      "scavCost": 400,
+      "droptableName": "Chunk Pansy",
       "droptable": {
-        "name": "Chunk Pansy Talisman",
+        "name": "Chunk Pansy",
         "indices": [
           1020,
-          11314,
-          11412
+          11314
         ],
         "tiers": [
           9,
-          8,
-          5
+          2
         ],
         "items": [
           "Bone Chunk",
-          "Blue Pansy",
-          "Flash Talisman"
+          "Blue Pansy"
         ]
       }
     }
@@ -2296,7 +2308,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 500,
+      "scavCost": 1000,
       "droptableName": "Chunk Scale Thought Crystal",
       "droptable": {
         "name": "Chunk Scale Thought Crystal",
@@ -2308,9 +2320,9 @@
         ],
         "tiers": [
           9,
-          7,
-          5,
-          4
+          2,
+          1,
+          1
         ],
         "items": [
           "Bone Chunk",
@@ -2336,7 +2348,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 300,
+      "scavCost": 600,
       "droptableName": "Chunk Berry Floss Dust",
       "droptable": {
         "name": "Chunk Berry Floss Dust",
@@ -2348,9 +2360,9 @@
         ],
         "tiers": [
           9,
-          7,
-          6,
-          4
+          2,
+          1,
+          1
         ],
         "items": [
           "Bone Chunk",
@@ -2378,7 +2390,7 @@
       "levelLimit": 0,
       "yieldIndex": 2,
       "yieldName": "VIPP",
-      "scavCost": 300,
+      "scavCost": 600,
       "droptableName": "Coin Apple Jar",
       "droptable": {
         "name": "Coin Apple Jar",
@@ -2389,8 +2401,8 @@
         ],
         "tiers": [
           9,
-          7,
-          5
+          2,
+          1
         ],
         "items": [
           "Otherworld Coin",
@@ -2415,7 +2427,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 300,
+      "scavCost": 600,
       "droptableName": "Coin Dust Tablet",
       "droptable": {
         "name": "Coin Dust Tablet",
@@ -2426,8 +2438,8 @@
         ],
         "tiers": [
           9,
-          6,
-          3
+          1,
+          1
         ],
         "items": [
           "Otherworld Coin",
@@ -2452,7 +2464,7 @@
       "levelLimit": 0,
       "yieldIndex": 1,
       "yieldName": "MUSU",
-      "scavCost": 200,
+      "scavCost": 400,
       "droptableName": "Coin Resin",
       "droptable": {
         "name": "Coin Resin",
@@ -2462,7 +2474,7 @@
         ],
         "tiers": [
           9,
-          7
+          2
         ],
         "items": [
           "Otherworld Coin",

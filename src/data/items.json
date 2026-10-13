@@ -252,6 +252,18 @@
     "description": "Kamigotchi World's premium game currency. You want this. You want this so bad."
   },
   {
+    "index": 103,
+    "name": "Ether Shard",
+    "type": "ERC20",
+    "rarity": "Uncommon",
+    "forTarget": null,
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "Crystallized gas. Not the kind you breathe."
+  },
+  {
     "index": 1001,
     "name": "Wooden Stick",
     "type": "Material",
@@ -1979,8 +1991,10 @@
     "name": "Flash Talisman",
     "type": "Potion",
     "rarity": "Epic",
-    "forTarget": "Enemy_Kami",
-    "flags": [],
+    "forTarget": "Any_Kami",
+    "flags": [
+      "BYPASS_BONUS_RESET"
+    ],
     "effects": [
       {
         "name": "ATR+10%_KK",
@@ -3402,5 +3416,17 @@
     "requirements": null,
     "status": "In Game",
     "description": "The crystal in the caves radiates a strange power. Mina alleges that this item can sense traces of that power."
+  },
+  {
+    "index": 100011,
+    "name": "Homecoming Data Chip",
+    "type": "Key Item",
+    "rarity": "Epic",
+    "forTarget": "Account",
+    "flags": [],
+    "effects": [],
+    "requirements": null,
+    "status": "In Game",
+    "description": "A data chip found at the Temple by the Waterfall to those who held the ground when the caves began to shake. It seems to point the way home."
   }
 ]

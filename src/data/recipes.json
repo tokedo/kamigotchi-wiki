@@ -18,7 +18,7 @@
       {
         "index": 1104,
         "name": "Pine Pollen",
-        "amount": 250
+        "amount": 1000
       }
     ],
     "staminaCost": 20,
@@ -48,7 +48,7 @@
       {
         "index": 1104,
         "name": "Pine Pollen",
-        "amount": 2500
+        "amount": 15000
       }
     ],
     "staminaCost": 50,
@@ -545,17 +545,17 @@
       {
         "index": 1001,
         "name": "Wooden Stick",
-        "amount": 2
+        "amount": 5
       },
       {
         "index": 1113,
         "name": "Sanguineous Powder",
-        "amount": 125
+        "amount": 150
       },
       {
         "index": 1202,
         "name": "Resin Tincture",
-        "amount": 125
+        "amount": 150
       }
     ],
     "staminaCost": 20,
@@ -650,12 +650,12 @@
       {
         "index": 1103,
         "name": "Microplastics",
-        "amount": 200
+        "amount": 250
       },
       {
         "index": 1114,
         "name": "Berry Chalk",
-        "amount": 200
+        "amount": 250
       }
     ],
     "staminaCost": 20,
@@ -680,20 +680,20 @@
       {
         "index": 1202,
         "name": "Resin Tincture",
-        "amount": 150
+        "amount": 100
       },
       {
         "index": 11314,
         "name": "Blue Pansy",
-        "amount": 5
+        "amount": 1
       },
       {
         "index": 1113,
         "name": "Sanguineous Powder",
-        "amount": 150
+        "amount": 100
       }
     ],
-    "staminaCost": 25,
+    "staminaCost": 20,
     "xpOutput": 200,
     "tool": {
       "index": 23101,
@@ -744,13 +744,13 @@
     "output": {
       "index": 11412,
       "name": "Flash Talisman",
-      "amount": 7
+      "amount": 5
     },
     "inputs": [
       {
         "index": 1016,
         "name": "Dried Stems",
-        "amount": 2
+        "amount": 5
       },
       {
         "index": 6005,
@@ -782,7 +782,7 @@
       {
         "index": 1113,
         "name": "Sanguineous Powder",
-        "amount": 5000
+        "amount": 2500
       },
       {
         "index": 1110,
