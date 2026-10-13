@@ -448,9 +448,9 @@ function DetailPanel({
             <div className="flex items-center gap-1.5 mt-1">
               <span className="text-xs text-gray-500">Drops:</span>
               <img
-                src="/img/items/musu.png"
-                alt="Musu"
-                title="Musu (yield)"
+                src={`/img/items/${itemToFilename(room.node.yieldName)}.png`}
+                alt={room.node.yieldName}
+                title={`${room.node.yieldName} (yield)`}
                 className="w-5 h-5"
                 style={{ imageRendering: "pixelated" }}
               />
