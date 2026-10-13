@@ -240,11 +240,18 @@ function GameGrid({
                   onMouseEnter={() => setHoveredRoom(room)}
                   onMouseLeave={() => setHoveredRoom(null)}
                 >
-                  {/* Affinity icon(s) */}
+                  {/* Affinity icon(s): top-left; a dual-type node shows both along the top */}
                   {room.node && (() => {
                     const parts = getAffinityParts(room.node.affinity);
                     const isDual = parts.length > 1;
-                    return isDual ? (
+                    const iconStyle = {
+                      width: "46%",
+                      height: "46%",
+                      top: "5%",
+                      imageRendering: "pixelated" as const,
+                      filter: "drop-shadow(1px 1px 2px rgba(0,0,0,0.6))",
+                    };
+                    return (
                       <div
                         className="absolute inset-0"
                         style={{ opacity: isSelected ? 1 : 0.85 }}
@@ -253,47 +260,40 @@ function GameGrid({
                           src={getAffinityIcon(parts[0])}
                           alt=""
                           className="absolute"
-                          style={{
-                            width: "50%",
-                            height: "50%",
-                            top: "8%",
-                            left: "8%",
-                            imageRendering: "pixelated",
-                            filter: "drop-shadow(1px 1px 2px rgba(0,0,0,0.6))",
-                          }}
+                          style={{ ...iconStyle, left: "5%" }}
                           draggable={false}
                         />
-                        <img
-                          src={getAffinityIcon(parts[1])}
-                          alt=""
-                          className="absolute"
-                          style={{
-                            width: "50%",
-                            height: "50%",
-                            bottom: "8%",
-                            right: "8%",
-                            imageRendering: "pixelated",
-                            filter: "drop-shadow(1px 1px 2px rgba(0,0,0,0.6))",
-                          }}
-                          draggable={false}
-                        />
+                        {isDual && (
+                          <img
+                            src={getAffinityIcon(parts[1])}
+                            alt=""
+                            className="absolute"
+                            style={{ ...iconStyle, right: "5%" }}
+                            draggable={false}
+                          />
+                        )}
                       </div>
-                    ) : (
-                      <img
-                        src={getAffinityIcon(parts[0])}
-                        alt=""
-                        className="absolute inset-0 m-auto"
-                        style={{
-                          width: "55%",
-                          height: "55%",
-                          imageRendering: "pixelated",
-                          opacity: isSelected ? 1 : 0.85,
-                          filter: "drop-shadow(1px 1px 2px rgba(0,0,0,0.6))",
-                        }}
-                        draggable={false}
-                      />
                     );
                   })()}
+
+                  {/* Yield item: bottom-right, as the game's own map shows it */}
+                  {room.node && (
+                    <img
+                      src={`/img/items/${itemToFilename(room.node.yieldName)}.png`}
+                      alt={room.node.yieldName}
+                      className="absolute"
+                      style={{
+                        width: "42%",
+                        height: "42%",
+                        bottom: "4%",
+                        right: "4%",
+                        imageRendering: "pixelated",
+                        opacity: isSelected ? 1 : 0.9,
+                        filter: "drop-shadow(1px 1px 2px rgba(0,0,0,0.7))",
+                      }}
+                      draggable={false}
+                    />
+                  )}
 
                   {/* Cross-plane exit indicator */}
                   {room.exits.some((e) => {
@@ -301,7 +301,7 @@ function GameGrid({
                     return t && t.z !== room.z;
                   }) && (
                     <div
-                      className="absolute bottom-0.5 right-0.5 w-2 h-2 rounded-full bg-purple-400"
+                      className="absolute bottom-0.5 left-0.5 w-2 h-2 rounded-full bg-purple-400"
                       style={{ boxShadow: "0 0 4px rgba(168, 85, 247, 0.8)" }}
                     />
                   )}
@@ -316,7 +316,7 @@ function GameGrid({
                         <span className="font-medium">{room.name}</span>
                         {room.node && (
                           <span className="text-white/50 ml-1.5 text-[10px]">
-                            {room.node.affinity}
+                            {room.node.affinity} · {room.node.yieldName}
                           </span>
                         )}
                       </div>
@@ -719,6 +719,18 @@ export function WorldMap() {
               style={{ imageRendering: "pixelated" }}
             />
             {aff}
+          </span>
+        ))}
+        <span className="font-medium text-foreground/60 ml-2">Yields:</span>
+        {["MUSU", "VIPP"].map((item) => (
+          <span key={item} className="inline-flex items-center gap-1.5">
+            <img
+              src={`/img/items/${itemToFilename(item)}.png`}
+              alt=""
+              className="w-4 h-4"
+              style={{ imageRendering: "pixelated" }}
+            />
+            {item}
           </span>
         ))}
         <span className="inline-flex items-center gap-1.5">
