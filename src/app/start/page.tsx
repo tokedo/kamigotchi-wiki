@@ -134,10 +134,13 @@ export default function StartHerePage() {
         <h3>Starter nodes are quieter than the rest</h3>
         <p>
           Some nodes carry a <strong>maximum</strong> Kami level for harvesting
-          there — a common cap is level 15. That is a ceiling, not a floor:
-          high-level Kamis are locked out of those nodes entirely, which is why
-          early ground is relatively calm. Enjoy it while you are under the
-          cap.
+          there. Two cap tiers exist: <strong>level 15</strong> on the starter
+          nodes and <strong>level 35</strong> on a second group of mid-game
+          nodes; every other node takes any level. That is a ceiling, not a
+          floor: a Kami above a node&apos;s cap cannot start harvesting there,
+          which is why early ground is relatively calm. Enjoy it while you are
+          under the cap — the <Link href="/map">World Map</Link> shows each
+          node&apos;s cap.
         </p>
 
         <h3>The harvest costs health, and your health caps the payout</h3>
