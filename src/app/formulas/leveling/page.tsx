@@ -508,12 +508,12 @@ for precision, but the result is the same.`}
               [
                 "XP Potion",
                 "1,000",
-                "Crafted: 1 Plastic Bottle + 250 Pine Pollen (20 stamina)",
+                "Crafted: 1 Plastic Bottle + 1,000 Pine Pollen (20 stamina)",
               ],
               [
                 "Greater XP Potion",
                 "15,000",
-                "Crafted: 1 Glass Jar + 2,500 Pine Pollen (50 stamina)",
+                "Crafted: 1 Glass Jar + 15,000 Pine Pollen (50 stamina)",
               ],
               [
                 "Fortified XP Potion",
@@ -534,7 +534,7 @@ for precision, but the result is the same.`}
           />
           <InfoBox variant="tip">
             Notice the crafting chain: Pine Pollen → Greater XP Potion →
-            Fortified XP Potion. This single chain is why Pine Pollen nodes
+            Fortified XP Potion. This single chain is why Pine Cone nodes
             are permanently farmed and why Pine Pollen holds its value on the
             player market — every serious build in the game is fed through it.
           </InfoBox>
@@ -676,7 +676,7 @@ for precision, but the result is the same.`}
               ["Attack Spoils Ratio", "Increases the percentage of loot you take from kills", "Percentage per level"],
               ["Defense Threshold Shift", "Raises the threshold attackers need to overcome", "Percentage per level"],
               ["Defense Threshold Ratio", "Multiplier on your defense threshold calculation", "Percentage per level"],
-              ["Defense Salvage Ratio", "Increases the share of your harvest bounty your account keeps (as Musu) when your Kami is liquidated — the Kami also gains that much XP", "Percentage per level"],
+              ["Defense Salvage Ratio", "Increases the share of your harvest bounty your account keeps (in the node's yield item) when your Kami is liquidated — the Kami also gains that much XP", "Percentage per level"],
               ["Resting Recovery Boost", "Speeds up HP recovery while resting", "Percentage per level"],
               ["Strain Boost", "Reduces strain accumulation (negative values = less strain)", "Percentage per level"],
               ["Cooldown Shift", "Reduces action cooldowns (negative values = faster)", "Seconds per level"],
