@@ -856,14 +856,14 @@ XP earned        = recipe XP      * batchAmount`}
               ],
               [
                 "Brew XP Potion (+1,000 XP)",
-                "1 Plastic Bottle + 250 Pine Pollen",
+                "1 Plastic Bottle + 1,000 Pine Pollen",
                 "1 XP Potion",
                 "20",
                 "Portable Burner",
               ],
               [
                 "Brew Greater XP Potion (+15,000 XP)",
-                "1 Glass Jar + 2,500 Pine Pollen",
+                "1 Glass Jar + 15,000 Pine Pollen",
                 "1 Greater XP Potion",
                 "50",
                 "Portable Burner",
@@ -885,11 +885,12 @@ XP earned        = recipe XP      * batchAmount`}
             ]}
           />
           <p>
-            Follow the chain: one Greater XP Potion needs 2,500 Pine Pollen =
-            5 Pine Cones&apos; worth of grinding, and a Fortified adds rare
+            Follow the chain: one Greater XP Potion needs 15,000 Pine Pollen =
+            30 Pine Cones&apos; worth of grinding, and a Fortified adds rare
             scavenge drops (Red Amber, Essence of Thought) on top. Multiply by
-            the ~4 Fortified potions a level-32 build costs and you can see why
-            these materials hold their value on the player market.
+            the ~4 Fortified potions a level-32 build costs — some 120 Pine
+            Cones before the rare drops — and you can see why these materials
+            hold their value on the player market.
           </p>
 
           <h2>Auction Pricing</h2>
