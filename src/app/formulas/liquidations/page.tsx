@@ -104,11 +104,11 @@ export default function LiquidationsFormulasPage() {
             rows={[
               [
                 "Steals a portion of the victim's harvest (spoils)",
-                "Keeps a portion of their own harvest (salvage)",
+                "Keeps a portion of their own harvest (salvage), paid in the node's yield item",
               ],
               [
                 "Receives 1 Obol as a trophy",
-                "Any unsalvaged, unspoiled Musu is destroyed",
+                "Any unsalvaged, unspoiled bounty is destroyed",
               ],
               [
                 "Takes recoil damage — karma multiplied by the strain cost of the loot just taken, modified by affinity",
@@ -557,8 +557,10 @@ catch it moments from starving anyway.`}
           <h2>Salvage — What the Victim Keeps</h2>
           <p>
             When your Kami is killed, you do not lose everything. A portion of
-            your uncollected harvest bounty is salvaged to your account as Musu,
-            and your Kami earns XP equal to the salvage amount:
+            your uncollected harvest bounty is salvaged to your account in the
+            node&apos;s yield item (Musu on a Musu node, VIPP on a VIPP node;
+            the spoils and the destroyed remainder are counted in the same
+            item), and your Kami earns XP equal to the salvage amount:
           </p>
           <FormulaBlock
             label="Salvage"
@@ -566,8 +568,8 @@ catch it moments from starving anyway.`}
               "salvageRatio": "percentage of the bounty the victim keeps (capped at 100%)",
               "victimPower": "the killed Kami's total Power stat — 1 point = 1% kept",
               "DEF_SALVAGE_RATIO": "bonus salvage from Guardian skills and defensive equipment",
-              "salvage": "final Musu amount the victim retains",
-              "bounty": "victim's total uncollected harvest Musu at the time of death",
+              "salvage": "final amount the victim's account receives, in the node's yield item",
+              "bounty": "victim's total uncollected harvest bounty at the time of death",
             }}
           >
             {`salvageRatio = victimPower × 1%  +  DEF_SALVAGE_RATIO bonuses
@@ -592,8 +594,8 @@ salvage = bounty × salvageRatio      (capped at 100% of bounty)`}
               "1,500": "victim's uncollected bounty in Musu (a fat but realistic target)",
             }}
           >
-            {`A Power-16 Kami is killed sitting on a 1,500 Musu bounty.
-No salvage skill bonuses:
+            {`A Power-16 Kami is killed on a Musu node, sitting on a
+1,500 Musu bounty. No salvage skill bonuses:
 
   salvageRatio = 16 × 1% = 16%
   salvage = 1,500 × 16% = 240 Musu
@@ -614,9 +616,9 @@ The victim's account receives 240 Musu, and the dead Kami earns
               "45": "base spoils percentage before Power",
               "attackerPower": "the killer's total Power stat — 1 point = +1% stolen",
               "ATK_SPOILS_RATIO": "bonus spoils from Predator skills and offensive equipment",
-              "spoils": "final Musu amount added to the killer's harvest bounty",
-              "bounty": "victim's total uncollected harvest Musu at the time of death",
-              "salvage": "Musu already claimed by the victim (subtracted before spoils)",
+              "spoils": "final amount credited to the killer's harvest bounty",
+              "bounty": "victim's total uncollected harvest bounty at the time of death",
+              "salvage": "amount already salvaged to the victim (subtracted before spoils)",
             }}
           >
             {`spoilsRatio = (45 + attackerPower) × 1%  +  ATK_SPOILS_RATIO bonuses
@@ -630,14 +632,14 @@ spoils = (bounty − salvage) × spoilsRatio      (capped at 100% of remainder)`
             takes ~60% of the remainder; Predator-tree ATK_SPOILS_RATIO skills
             push it higher. Note that spoils land in your <em>harvest
             bounty</em>, not directly in your inventory — you still need to
-            collect (and pay the strain) to bank the stolen Musu.
+            collect (and pay the strain) to bank the stolen spoils.
           </p>
 
           <InfoBox>
             Whatever is left after salvage and spoils is destroyed. The full
             equation is:{" "}
             <strong>bounty = salvage + spoils + destroyed</strong>. Neither side
-            gets 100% — PvP always burns some Musu from the economy.
+            gets 100% — PvP always burns part of the bounty.
           </InfoBox>
 
           <h4>Spoils Example</h4>
