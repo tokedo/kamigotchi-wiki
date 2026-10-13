@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   MechanicPage,
   InfoBox,
@@ -25,6 +26,14 @@ export default function HarvestingFormulasPage() {
             passively generates <strong>Musu</strong> — the core currency of
             Kamigotchi. Think of it as mining: your Kami works a resource vein,
             earning Musu every second it stays on the node.
+          </p>
+          <p>
+            Each node pays out one <strong>yield item</strong>. Most nodes
+            yield Musu; some yield <strong>VIPP</strong> instead, and the{" "}
+            <Link href="/map">World Map</Link> shows which. Everything a
+            harvest pays out comes in that node&apos;s item — your collections,
+            and the salvage your account keeps if the Kami is liquidated there.
+            This page says Musu throughout; on a VIPP node, read VIPP.
           </p>
           <p>
             The catch? Harvesting hurts. Every bit of Musu your Kami earns
@@ -58,8 +67,9 @@ export default function HarvestingFormulasPage() {
             <li>
               <strong>Liquidate</strong> (by another player) — someone on the
               same node raids your harvest, takes a cut of your bounty, and
-              kills your Kami. You keep a small salvage portion, but the rest is
-              lost or stolen.
+              kills your Kami. You keep a small salvage portion, paid to your
+              account in the node&apos;s yield item, but the rest is lost or
+              stolen.
             </li>
           </ul>
 
@@ -833,6 +843,17 @@ Your net = Collected Musu - Tax Amount.`}
             this page, remember they are all gross: your net arrives after tax.
           </p>
 
+          <h2>Node Level Caps</h2>
+          <p>
+            Some nodes accept only Kamis up to a <strong>maximum level</strong>.
+            The cap is checked when a harvest starts: a Kami above it cannot
+            start harvesting on that node, and a harvest already running is not
+            checked again. Two cap tiers exist — level 15 on the starter nodes
+            and level 35 on a second group of mid-game nodes; every other node
+            has no cap. The <Link href="/map">World Map</Link> shows each
+            node&apos;s cap.
+          </p>
+
           <h2>Scavenging</h2>
           <p>
             Scavenge points accumulate alongside your harvest output — you earn
@@ -845,7 +866,7 @@ Your net = Collected Musu - Tax Amount.`}
             vars={{
               "Scavenge Points": "cumulative points earned from harvesting (1 point per Musu collected)",
               "Musu Collected": "Musu received on this collect or stop action",
-              "Tier Cost": "points required per scavenge tier (100 to 500, depends on node)",
+              "Tier Cost": "points required per scavenge tier (100 to 1,000, depends on node)",
               "Claimable Tiers": "number of complete tiers you can claim rewards from",
               "Leftover Points": "remaining points that carry over to the next cycle",
             }}
@@ -863,17 +884,43 @@ Leftover points carry over to the next cycle.`}
             rows={[
               [
                 "100",
-                "Starter nodes (often capped to Kami level ≤15)",
-                "Misty Riverside, Tunnel of Trees, Misty Forest Path",
+                "Starter and basic surface nodes",
+                "Misty Riverside, Tunnel of Trees, Scrapyard Entrance",
               ],
-              ["300", "Advanced nodes", "Blooming Tree"],
-              ["500", "Premium nodes", "Scrap Confluence, Guardian Skull"],
+              [
+                "200",
+                "Forest paths and the cheapest cave nodes",
+                "Forest Entrance, Elder Path, Temple Cave",
+              ],
+              [
+                "300",
+                "Advanced surface nodes",
+                "Blooming Tree, Labs Entrance, Airplane Crash",
+              ],
+              [
+                "400",
+                "Mid cave and castle nodes",
+                "Cave Crossroads, Boulder Tunnel, Scenic View",
+              ],
+              ["500", "Premium scrap nodes", "Scrap Confluence, Scrap Trees"],
+              [
+                "600",
+                "Deep cave and castle nodes",
+                "Temple of the Wheel, Sacrarium, Treasure Hoard",
+              ],
+              [
+                "1,000",
+                "The essence nodes",
+                "Techno Temple, Lotus Pool, Guardian Skull",
+              ],
             ]}
           />
           <p>
-            Higher tier costs mean more harvesting per reward, but premium
-            nodes tend to have rarer and more valuable loot. This is a real
-            economic decision: players park Kamis on specific nodes purely for
+            Every cave and castle node costs at least 200 points per tier, and
+            all of the 400-, 600- and 1,000-point bars are underground or in
+            the castle. Higher tier costs mean more harvesting per reward, but
+            premium nodes tend to have rarer and more valuable loot. This is a
+            real economic decision: players park Kamis on specific nodes purely for
             the scavenge — for example, farming a node whose droptable carries
             a high-demand crafting material can out-earn the Musu itself when
             you sell the drops on the player market.
@@ -892,7 +939,7 @@ Leftover points carry over to the next cycle.`}
             vars={{
               "rolls": "how many draws from the node's droptable this claim is worth",
               "points": "scavenge points currently on the node's bar",
-              "tierCost": "points per tier for that node (100 to 500)",
+              "tierCost": "points per tier for that node (100 to 1,000)",
               "leftover": "points that remain on the bar after the claim",
             }}
           >
@@ -1128,7 +1175,7 @@ the Kami starve.`}
             rows={[
               [
                 "Salvage",
-                "The victim retains a small portion of their bounty",
+                "The victim's account keeps a small portion of the bounty, in the node's yield item, and the dead Kami gains that much XP",
               ],
               [
                 "Spoils",
@@ -1136,7 +1183,7 @@ the Kami starve.`}
               ],
               [
                 "Destroyed",
-                "Any Musu not salvaged or spoiled is burned — gone forever",
+                "Any bounty not salvaged or spoiled is burned — gone forever",
               ],
               [
                 "Recoil",
